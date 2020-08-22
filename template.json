@@ -1,0 +1,369 @@
+{
+  "Actor": {
+    "types": [
+      "character"
+    ],
+    "templates": {
+      "base": {
+        "health": {
+          "value": 10,
+          "min": 0,
+          "max": 10
+        },
+        "power": {
+          "value": 5,
+          "min": 0,
+          "max": 5
+        }
+      },
+      "grundwerte": {
+        "attribute": {
+          "aus": {
+            "start": 1,
+            "mod": 0
+          },
+          "bew": {
+            "start": 1,
+            "mod": 0
+          },
+          "int": {
+            "start": 1,
+            "mod": 0
+          },
+          "kon": {
+            "start": 1,
+            "mod": 0
+          },
+          "mys": {
+            "start": 1,
+            "mod": 0
+          },
+          "sta": {
+            "start": 1,
+            "mod": 0
+          },
+          "ver": {
+            "start": 1,
+            "mod": 0
+          },
+          "wil": {
+            "start": 1,
+            "mod": 0
+          }
+        },
+        "abgeleiteteWerte": {
+          "gk": {
+            "mod": 0,
+            "temp": 0
+          },
+          "gsw": {
+            "mod": 0,
+            "temp": 0
+          },
+          "ini": {
+            "mod": 0,
+            "temp": 0
+          },
+          "lp": {
+            "mod": 0,
+            "temp": 0
+          },
+          "fo": {
+            "mod": 0,
+            "temp": 0
+          },
+          "vtd": {
+            "mod": 0,
+            "temp": 0
+          },
+          "gw": {
+            "mod": 0,
+            "temp": 0
+          },
+          "kw": {
+            "mod": 0,
+            "temp": 0
+          }
+        }
+      },
+      "skills": {
+        "fertigkeiten": {
+          "akrobatik": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "alchemie": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "anfuehren": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "arkaneKunde": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "athletik": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "darbietung": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "diplomatie": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "edelhandwerk": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "empathie": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "entschlossenheit": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "fingerfertigkeit": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "geschichteUndMythen": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "handwerk": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "heilkunde": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "heimlichkeit": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "jagdkunst": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "laenderkunde": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "naturkunde": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "redegewandtheit": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "schloesserUndFallen": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "schwimmen": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "seefahrt": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "strassenkunde": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "tierfuehrung": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "ueberleben": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "wahrnehmung": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "zaehigkeit": {
+            "punkte": 0,
+            "mod": 0
+          }
+        },
+        "kampffertigkeiten": {
+          "handgemenge": {
+            "punkte": 0
+          },
+          "hiebwaffen": {
+            "punkte": 0
+          },
+          "kettenwaffen": {
+            "punkte": 0
+          },
+          "klingenwaffen": {
+            "punkte": 0
+          },
+          "stangenwaffen": {
+            "punkte": 0
+          },
+          "schusswaffen": {
+            "punkte": 0
+          },
+          "wurfwaffen": {
+            "punkte": 0
+          }
+        }
+      }
+    },
+    "character": {
+      "templates": [
+        "base",
+        "grundwerte",
+        "skills"
+      ],
+      "hg": 1,
+      "rasse": "Mensch",
+      "biography": "",
+      "attributes": {
+        "level": {
+          "value": 1
+        }
+      },
+      "abilities": {
+        "str": {
+          "value": 10
+        },
+        "dex": {
+          "value": 10
+        },
+        "con": {
+          "value": 10
+        },
+        "int": {
+          "value": 10
+        },
+        "wis": {
+          "value": 10
+        },
+        "cha": {
+          "value": 10
+        }
+      }
+    }
+  },
+  "Item": {
+    "types": [
+      "waffe",
+      "item",
+      "feature",
+      "spell"
+    ],
+    "templates": {
+      "base": {
+        "verfuegbarkeit": {
+          "normal": "kleinstadt"
+        },
+        "preis": {
+          "normal": 1000
+        },
+        "beschreibung": "",
+        "ausgeruestet": true
+      },
+      "material": {
+        "last": {
+          "normal": 2,
+          "mod": 0
+        },
+        "haerte": {
+          "normal": 7,
+          "mod": 0
+        },
+        "komplexitaet": {
+          "normal": "G"
+        },
+        "angeschlagen": false
+      },
+      "negativeQualitaet": false,
+
+      "class": {
+        "classes": [],
+        "level": 0
+      }
+    },
+    "waffe": {
+      "templates": [
+        "base",
+        "material"
+      ],
+      "kampffertigkeit": {
+        "key": "klingenwaffen",
+        "mod": 0
+      },
+      "schaden": {
+        "normal": "1W6+4",
+        "mod": 0
+      },
+      "wgs": {
+        "normal": 8,
+        "mod": 0
+      },
+      "attribut1": {
+        "key": "bew"
+      },
+      "attribut2": {
+        "key": "sta"
+      },
+      "minAttribut1": {
+        "key": "bew",
+        "wert": 2
+      },
+      "minAttribut2": {
+        "key": "sta",
+        "wert": 2
+      },
+      "merkmale": [
+        {
+          "key": "scharf",
+          "stufe": 2
+        },
+        {
+          "key": "vielseitig",
+          "stufe": 0
+        }
+      ],
+      "reichweite": 0
+    },
+    "item": {
+      "templates": [
+        "base"
+      ],
+      "quantity": 1,
+      "weight": 0
+    },
+    "feature": {
+      "templates": [
+        "base",
+        "class"
+      ],
+      "usage": "",
+      "roll": ""
+    },
+    "spell": {
+      "templates": [
+        "base",
+        "class"
+      ],
+      "spellLevel": 1,
+      "school": "",
+      "save_dc": "",
+      "effect": ""
+    }
+  }
+}

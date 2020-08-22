@@ -1,0 +1,173 @@
+{
+    "SPLITTERMOND": {
+
+        "ActorName": "Name der Spielfigur",
+
+        "Rasse": {
+            "Alb": "Alb",
+            "Gnom": "Gnom",
+            "Mensch": "Mensch",
+            "Varg": "Varg",
+            "Zwerg": "Zwerg"
+        },
+
+        "Attribut": {
+            "aus": {"name": "Ausstrahlung",  "abk": "AUS"},
+            "bew": {"name": "Beweglichkeit", "abk": "BEW"},
+            "int": {"name": "Intuition",     "abk": "INT"},
+            "kon": {"name": "Konstitution",  "abk": "KON"},
+            "mys": {"name": "Mystik",        "abk": "MYS"},
+            "sta": {"name": "Stärke",        "abk": "STÄ"},
+            "ver": {"name": "Verstand",      "abk": "VER"},
+            "wil": {"name": "Willenskraft",  "abk": "WIL"}
+        },
+
+        "AbgeleiteterWert": {
+            "gk":  {"name": "Größenklasse",         "abk": "GK",  "formel": "GK = siehe Rasse"},
+            "gsw": {"name": "Geschwindigkeit",      "abk": "GSW", "formel": "GSW = BEW + GK"},
+            "ini": {"name": "Initiative",           "abk": "INI", "formel": "INI = 10 - INT"},
+            "lp":  {"name": "Lebenspunkte",         "abk": "LP",  "formel": "LP = GK + KON"},
+            "fo":  {"name": "Fokus",                "abk": "FO",  "formel": "FO = (MYS + WIL) x 2"},
+            "vtd": {"name": "Verteidigung",         "abk": "VTD", "formel": "VTD = 12 + BEW + STÄ ± GK-Modifikator"},
+            "gw":  {"name": "Geistiger Widerstand", "abk": "GW",  "formel": "GW = 12 + VER + WIL"},
+            "kw":  {"name": "Körperl. Widerstand",  "abk": "KW",  "formel": "KW = 12 + KON + WIL"}
+        },
+    
+        "Fertigkeit": {
+            "akrobatik": {"name": "Akrobatik"},
+            "alchemie": {"name": "Alchemie"},
+            "anfuehren": {"name": "Anführen"},
+            "arkaneKunde": {"name": "Arkane Kunde"},
+            "athletik": {"name": "Athletik"},
+            "darbietung": {"name": "Darbietung"},
+            "diplomatie": {"name": "Diplomatie"},
+            "edelhandwerk": {"name": "Edelhandwerk"},
+            "empathie": {"name": "Empathie"},
+            "entschlossenheit": {"name": "Entschlossenheit"},
+            "fingerfertigkeit": {"name": "Fingerfertigkeit"},
+            "geschichteUndMythen": {"name": "Geschichte & Mythen"},
+            "handwerk": {"name": "Handwerk"},
+            "heilkunde": {"name": "Heilkunde"},
+            "heimlichkeit": {"name": "Heimlichkeit"},
+            "jagdkunst": {"name": "Jagdkunst"},
+            "laenderkunde": {"name": "Länderkunde"},
+            "naturkunde": {"name": "Naturkunde"},
+            "redegewandtheit": {"name": "Redegewandtheit"},
+            "schloesserUndFallen": {"name": "Schlösser & Fallen"},
+            "schwimmen": {"name": "Schwimmen"},
+            "seefahrt": {"name": "Seefahrt"},
+            "strassenkunde": {"name": "Straßenkunde"},
+            "tierfuehrung": {"name": "Tierführung"},
+            "ueberleben": {"name": "Überleben"},
+            "wahrnehmung": {"name": "Wahrnehmung"},
+            "zaehigkeit": {"name": "Zähigkeit"}
+        },
+
+        "Kampffertigkeit": {
+            "handgemenge": {"name": "Handgemenge",     "abk": "Handg."},
+            "hiebwaffen": {"name": "Hiebwaffen",       "abk": "Hiebw."},
+            "kettenwaffen": {"name": "Kettenwaffen",   "abk": "Kettenw."},
+            "klingenwaffen": {"name": "Klingenwaffen", "abk": "Klingenw."},
+            "stangenwaffen": {"name": "Stangenwaffen", "abk": "Stangenw."},
+            "schusswaffen": {"name": "Schusswaffen",   "abk": "Schussw."},
+            "wurfwaffen": {"name": "Wurfwaffen",       "abk": "Wurfw."}
+        },
+
+        "Verfuegbarkeit": {
+            "dorf": "Dorf",
+            "kleinstadt": "Kleinstadt",
+            "stadt": "Stadt",
+            "metropole": "Metropole"
+        },
+
+        "Komplexitaet" : {
+            "U": {"name": "ungeübt", "abk": "U"},
+            "G": {"name": "Geselle", "abk": "G"},
+            "F": {"name": "Fachmann", "abk": "F"},
+            "M": {"name": "Meister", "abk": "M"},
+            "A": {"name": "Anleitung", "abk": "A"}
+        },
+
+        "Waffenmerkmal" : {
+            "deckung": "Deckung",
+            "defensiv": "Defensiv",
+            "doppelwaffe": "Doppelwaffe",
+            "durchdringung": "Durchdringung",
+            "improvisiert": "Improvisiert",
+            "entwaffnend": "Entwaffnend",
+            "langeWaffe": "Lange Waffe",
+            "nahkampftauglich": "Nahkampftauglich",
+            "parierwaffe": "Parierwaffe",
+            "primitiv": "Primitiv",
+            "reiterwaffe": "Reiterwaffe",
+            "scharf": "Scharf",
+            "standfestigkeit": "Standfestigkeit",
+            "stumpf": "Stumpf",
+            "teilbar": "Teilbar",
+            "teilbar_": "Teilbar(*)",
+            "umklammern": "Umklammern",
+            "unhandlich": "Unhandlich",
+            "vielseitig": "Vielseitig",
+            "wattiert": "Wattiert",
+            "wuchtig": "Wuchtig",
+            "wurffaehig": "Wurffähig",
+            "zweihaendig": "Zweihändig"
+        },
+
+        "Label": {
+            "Heldengrad": "Heldengrad",
+            "Rasse": "Rasse",
+            "Grundwerte": "Grundwerte",
+            "Fertigkeit": "Fertigkeit",
+            "Fertigkeiten": "Fertigkeiten",
+            "Kampf": "Kampf",
+            "Attribute": "Attribute",
+            "AbgeleiteteWerte": "Abgeleitete Werte",
+            "Kampffertigkeiten": "Kampffertigkeiten",
+            "Start": "Start",
+            "Wert": "Wert",
+            "mod": "mod.",
+            "temp": "temp.",
+            "Punkte": "Punkte",
+            "Att1": "Att 1",
+            "Att2": "Att 2",
+            "FP": "FP",
+            "Probe": "Probe",
+            "auf": "auf",
+            "gegen": "gegen",
+            "Fertigkeitswert": "Fertigkeitswert",
+            "Modifikator": "Modifikator",
+            "Schwierigkeit": "Schwierigkeit",
+            "RollMode": "Wurfmodus",
+            "Standardwurf": "Standardwurf",
+            "Risikowurf": "Risikowurf",
+            "Sicherheitswurf": "Sicherheitswurf",
+            "Patzer": "Patzer",
+            "Triumph": "Triumph",
+            "HerausragendGelungen": "Herausragend gelungen",
+            "GutGelungen": "Gut gelungen",
+            "Gelungen": "Gelungen",
+            "KnappGelungen": "Knapp gelungen",
+            "KnappMisslungen": "Knapp misslungen",
+            "Misslungen": "Misslungen",
+            "SchwerMisslungen": "Schwer misslungen",
+            "VerheerendMisslungen": "Verheerend misslungen",
+            "Erfolgsgrad": "Erfolgsgrad",
+            "Erfolgsgrade": "Erfolgsgrade",
+            "Mindestattribute": "Mindestattribute",
+            "Werte": "Werte",
+            "Beschreibung": "Beschreibung",
+            "FW": "FW",
+            "Schaden": "Schaden",
+            "WGS": "WGS",
+            "Last": "Last",
+            "Haerte": "Härte",
+            "Qualitaet": "Qualität",
+            "Verfuegbarkeit": "Verfügbarkeit",
+            "Preis": "Preis",
+            "Komplexitaet": "Komplexität",
+            "NegativeQualitaet": "Negative Qualität",
+            "Waffen": "Waffen"
+        }
+    }
+}

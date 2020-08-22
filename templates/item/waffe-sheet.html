@@ -1,0 +1,86 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="Waffeninfo"/>
+        <div class="header-fields">
+            <h1 class="itemname">{{item.name}}</h1>
+            <div class="kampffertigkeit">{{data.kampffertigkeit.name}}</div>
+            <div class="waffenattribute">
+                <span><b>{{localize 'SPLITTERMOND.Label.Attribute'}}:</b> {{data.attribut1.abk}}+{{data.attribut2.abk}}</span>
+                {{#if data.minAttribut1}}<span><b>{{localize 'SPLITTERMOND.Label.Mindestattribute'}}:</b> 
+                {{data.minAttribut1.abk}} {{data.minAttribut1.wert}}{{#if data.minAttribut2}}, {{data.minAttribut2.abk}} {{data.minAttribut2.wert}}{{/if}}</span>{{/if}}
+            </div>
+        <div>{{#each data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{merkmal.nameStufe}}</span>{{/each}}</div>
+        </div>
+    </header>
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="werte">{{localize 'SPLITTERMOND.Label.Werte'}}</a>
+        <a class="item" data-tab="beschreibung">{{localize 'SPLITTERMOND.Label.Beschreibung'}}</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+        {{!-- Werte Tab --}}
+        <div class="tab werte" data-group="primary" data-tab="werte">
+            <div class="grid grid-2col">
+                <div>
+                    <div class="flexrow flex-group-center">
+                        <label>{{localize 'SPLITTERMOND.Label.FW'}}</label>
+                        <input type="text" name="data.kampffertigkeit.wert" value="{{data.kampffertigkeit.wert}}" disabled/>
+                        <input type="text" name="data.kampffertigkeit.mod" value="{{data.kampffertigkeit.mod}}" placeholder="{{localize 'SPLITTERMOND.Label.mod'}}" data-dtype="Number"/>
+                    </div>
+                    <div class="flexrow flex-group-center">
+                        <label>{{localize 'SPLITTERMOND.Label.Schaden'}}</label>
+                        <input type="text" name="data.schaden.wert" value="{{data.schaden.normal}}" disabled/>
+                        <input type="text" name="data.schaden.mod" value="{{data.schaden.mod}}" placeholder="{{localize 'SPLITTERMOND.Label.mod'}}" data-dtype="Number"/>
+                    </div>
+                    <div class="flexrow flex-group-center">
+                        <label>{{localize 'SPLITTERMOND.Label.WGS'}}</label>
+                        <input type="text" name="data.wgs.wert" value="{{data.wgs.wert}}" disabled/>
+                        <input type="text" name="data.wgs.mod" value="{{data.wgs.mod}}" placeholder="{{localize 'SPLITTERMOND.Label.mod'}}" data-dtype="Number"/>
+                    </div>
+                    <div class="flexrow flex-group-center">
+                        <label>{{localize 'SPLITTERMOND.Label.Last'}}</label>
+                        <input type="text" name="data.last.wert" value="{{data.last.wert}}" disabled/>
+                        <input type="text" name="data.last.mod" value="{{data.last.mod}}" placeholder="{{localize 'SPLITTERMOND.Label.mod'}}" data-dtype="Number"/>
+                    </div>
+                    <div class="flexrow flex-group-center">
+                        <label>{{localize 'SPLITTERMOND.Label.Haerte'}}</label>
+                        <input type="text" name="data.haerte.wert" value="{{data.haerte.wert}}" disabled/>
+                        <input type="text" name="data.haerte.mod" value="{{data.haerte.mod}}" placeholder="{{localize 'SPLITTERMOND.Label.mod'}}" data-dtype="Number"/>
+                    </div>
+                </div>
+                <div>
+                    <div class="flexrow flex-group-center">
+                        <label>{{localize 'SPLITTERMOND.Label.Qualitaet'}}</label>
+                        <input type="text" name="data.qualitaet" value="{{data.qualitaet}}" disabled/>
+                    </div>
+                    <div class="flexrow flex-group-center">
+                        <label>{{localize 'SPLITTERMOND.Label.Verfuegbarkeit'}}</label>
+                        <input type="text" name="data.verfuegbarkeit.name" value="{{data.verfuegbarkeit.name}}" disabled/>
+                    </div>
+                    <div class="flexrow flex-group-center">
+                        <label>{{localize 'SPLITTERMOND.Label.Preis'}}</label>
+                        <input type="text" name="data.preis.berechnet" value="{{preisFormat data.preis.berechnet}}" disabled/>
+                    </div>
+                    <div class="flexrow flex-group-center">
+                        <label>{{localize 'SPLITTERMOND.Label.Komplexitaet'}}</label>
+                        <input type="text" name="data.komplexitaet.name" value="{{data.komplexitaet.name}}" disabled/>
+                    </div>
+                    <div class="flexrow flex-group-center">
+                        <label>{{localize 'SPLITTERMOND.Label.NegativeQualitaet'}}</label>
+                        <input type="checkbox" name="data.negativeQualitaet" value="{{data.negativeQualitaet}}" data-dtype="Boolean" {{checked data.negativeQualitaet}}/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{!-- Beschreibung Tab --}}
+        <div class="tab" data-group="primary" data-tab="beschreibung">
+            {{editor content=data.beschreibung target="data.beschreibung" button=true owner=owner editable=editable}}
+        </div>
+
+    </section>
+</form>
