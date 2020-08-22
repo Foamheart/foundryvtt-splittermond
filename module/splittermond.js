@@ -102,7 +102,7 @@ Hooks.on("renderChatMessage", (message, html, data) => {
         html.find(".dice-total").addClass('gelungen');
       }
       html.find(".probenergebnis").text(probe.probenergebnisText);
-      html.find(".schaden").attr("hidden", probe.schaden && probe.differenz < 0);
+      html.find(".schaden").attr("hidden", !probe.schaden || probe.differenz < 0);
       html.on('click', '.dice-buttons button', onClickSchadenButton.bind(probe));
     }
   }

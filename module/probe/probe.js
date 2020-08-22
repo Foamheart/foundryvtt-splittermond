@@ -37,6 +37,7 @@ async function oeffneDialogKampffertigkeitsprobe(actor, dataset) {
     let dialogData = {
         fertigkeitWert: Number(dataset.wert),
         modifikator: 0,
+        gegner: target.data.name,
         schwierigkeit: target.data.data.abgeleiteteWerte.vtd.wert,
         rollMode: game.settings.get("core", "rollMode"),
         rollModes: CONFIG.Dice.rollModes,
@@ -220,5 +221,8 @@ class Sicherheitswurf extends Probe {
 /***** Schadenswurf *****/
 
 export function schadenswurfNachProbe(probe) {
-    console.log('>>>>>> schadenswurfNachProbe: ' + probe.fertigkeitName + ' wgs:' + probe.wgs + ' schaden:' + probe.schaden);
+        console.log('>>>>>> schadenswurfNachProbe: ' + probe.fertigkeitName + ' wgs:' + probe.wgs + ' schaden:' + probe.schaden);
+        let formula = probe.schaden.replace(/w/gi, 'd');
+        let roll = new Roll(formula).roll();
+        roll.toMessage();
 }

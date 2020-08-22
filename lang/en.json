@@ -169,7 +169,8 @@
             "NegativeQualitaet": "Negative Qualität",
             "Waffen": "Waffen",
             "Angriff": "Angriff",
-            "mit": "mit"
+            "mit": "mit",
+            "Gegner": "Gegner"
         }
     }
 }
