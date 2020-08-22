@@ -3,6 +3,7 @@ import { SplittermondActor } from "./actor/actor.js";
 import { SplittermondActorSheet } from "./actor/actor-sheet.js";
 import { SplittermondItem } from "./item/item.js";
 import { SplittermondItemSheet } from "./item/item-sheet.js";
+import { schadenswurfNachProbe } from "./probe/probe.js";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -101,9 +102,15 @@ Hooks.on("renderChatMessage", (message, html, data) => {
         html.find(".dice-total").addClass('gelungen');
       }
       html.find(".probenergebnis").text(probe.probenergebnisText);
+      html.find(".schaden").attr("hidden", probe.schaden && probe.differenz < 0);
+      html.on('click', '.dice-buttons button', onClickSchadenButton.bind(probe));
     }
   }
 });
+
+function onClickSchadenButton() {
+  schadenswurfNachProbe(this);
+}
 
 /* -------------------------------------------- */
 /*  Hotbar Macros                               */

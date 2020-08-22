@@ -167,7 +167,9 @@
             "Preis": "Preis",
             "Komplexitaet": "Komplexität",
             "NegativeQualitaet": "Negative Qualität",
-            "Waffen": "Waffen"
+            "Waffen": "Waffen",
+            "Angriff": "Angriff",
+            "mit": "mit"
         }
     }
 }

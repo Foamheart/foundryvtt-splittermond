@@ -48,6 +48,7 @@ export class SplittermondItem extends Item {
       itemDD.attribut2.wert = attribut2.wert;
       itemDD.mindestAttributAbzug = mindestAttributAbzugBerechnen(itemDD, actorDD);
       itemDD.kampffertigkeit.wert = fp + itemDD.attribut1.wert + itemDD.attribut2.wert + itemDD.kampffertigkeit.mod - itemDD.mindestAttributAbzug;
+      itemDD.kampffertigkeit.punkte = fp;
     } else {
       itemDD.kampffertigkeit.wert = '???';
     }

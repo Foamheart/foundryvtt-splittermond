@@ -2,6 +2,15 @@ import { modifikatorString } from "../utils.js";
 
 export async function oeffneDialogFertigkeitsprobe(actor, dataset) {
 
+    if (dataset.probe === 'fertigkeit') {
+        oeffneDialogAllgemeineFertigkeitsprobe(actor, dataset);
+    } else if (dataset.probe === 'kampffertigkeit') {
+        oeffneDialogKampffertigkeitsprobe(actor, dataset);
+    }
+    
+}
+
+async function oeffneDialogAllgemeineFertigkeitsprobe(actor, dataset) {
     let dialogData = {
         fertigkeitWert: Number(dataset.wert),
         modifikator: 0,
@@ -11,8 +20,34 @@ export async function oeffneDialogFertigkeitsprobe(actor, dataset) {
        };
     
     const title = actor.name + ': ' + game.i18n.localize('SPLITTERMOND.Label.Probe') + ' ' + game.i18n.localize('SPLITTERMOND.Label.auf') + ' ' + dataset.name;
-    const html = await renderTemplate('systems/splittermond/templates/dialog/roll-dialog.html', dialogData);
+    const html = await renderTemplate('systems/splittermond/templates/dialog/fertigkeitsprobe-dialog.html', dialogData);
+    oeffneDialog(actor, dataset, title, html);
+}
 
+async function oeffneDialogKampffertigkeitsprobe(actor, dataset) {
+
+    const targets = Array.from(game.user.targets);
+    if (targets.length !== 1) {
+        ui.notifications.info("Bitte erst genau 1 Ziel für den Angriff markieren.");
+        return;
+    }
+
+    const target = targets[0].actor;
+
+    let dialogData = {
+        fertigkeitWert: Number(dataset.wert),
+        modifikator: 0,
+        schwierigkeit: target.data.data.abgeleiteteWerte.vtd.wert,
+        rollMode: game.settings.get("core", "rollMode"),
+        rollModes: CONFIG.Dice.rollModes,
+       };
+    
+    const title = actor.name + ': ' + game.i18n.localize('SPLITTERMOND.Label.Angriff') + ' ' + game.i18n.localize('SPLITTERMOND.Label.mit') + ' ' + dataset.name;
+    const html = await renderTemplate('systems/splittermond/templates/dialog/kampffertigkeitsprobe-dialog.html', dialogData);
+    oeffneDialog(actor, dataset, title, html);
+}
+
+function oeffneDialog(actor, dataset, title, html) {
     let d = new Dialog({
         title: title,
         content: html,
@@ -46,6 +81,8 @@ class Probe {
         this.fertigkeitName = dataset.name;
         this.fertigkeitWert = Number(dataset.wert);
         this.fertigkeitPunkte = Number(dataset.punkte);
+        this.wgs = Number(dataset.wgs);
+        this.schaden = dataset.schaden;
         this.modifikator = Number(form.modifikator.value);
         this.schwierigkeit = Number(form.schwierigkeit.value);
         this.rollMode = form.rollMode.value;
@@ -178,4 +215,10 @@ class Sicherheitswurf extends Probe {
     patzerUndTriumphBehandeln(options) {
         // Kein Patzer oder Triumph beim Sicherheitswurf (GRW 20 links oben).
     }
+}
+
+/***** Schadenswurf *****/
+
+export function schadenswurfNachProbe(probe) {
+    console.log('>>>>>> schadenswurfNachProbe: ' + probe.fertigkeitName + ' wgs:' + probe.wgs + ' schaden:' + probe.schaden);
 }
