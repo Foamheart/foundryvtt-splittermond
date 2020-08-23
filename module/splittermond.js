@@ -95,18 +95,31 @@ Hooks.on("renderChatMessage", (message, html, data) => {
   if ( message.isRoll && message.isContentVisible) {
     let options = message.roll.dice[0].options;
     let probe = options.probe;
+    let schadenswurf = options.schadenswurf;
     if (probe) {
       if (probe.kritisch) {
         html.find(".dice-total").addClass(probe.kritisch);
       } else if (probe.differenz >= 0) {
         html.find(".dice-total").addClass('gelungen');
       }
-      html.find(".probenergebnis").text(probe.probenergebnisText);
-      html.find(".schaden").attr("hidden", !probe.schaden || probe.differenz < 0);
-      html.on('click', '.dice-buttons button', onClickSchadenButton.bind(probe));
+      // TODO Button: Splitterpunkt einsetzen für 3 Punkte Bonus?
+      // TODO Button: Wenn gegnerischer Angriff: Splitterpunkt einsetzen für 3 Punkte auf Widerstandswert?
+      // TODO Button: Aktive Abwehr würfeln
+      renderSchadenButton(html, probe);
+      html.find(".ergebnis").text(probe.ergebnisText);
+    } else if (schadenswurf) {
+      html.find(".ergebnis").text(schadenswurf.ergebnisText);
     }
   }
 });
+
+function renderSchadenButton(html, probe) {
+  if (probe.schaden && probe.differenz >= 0) {
+    html.find(".dice-buttons").attr("hidden", false);
+    html.find(".schaden").attr("hidden", false);
+    html.on('click', '.schaden', onClickSchadenButton.bind(probe));
+  }
+}
 
 function onClickSchadenButton() {
   schadenswurfNachProbe(this);

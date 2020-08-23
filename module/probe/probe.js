@@ -21,7 +21,7 @@ async function oeffneDialogAllgemeineFertigkeitsprobe(actor, dataset) {
     
     const title = actor.name + ': ' + game.i18n.localize('SPLITTERMOND.Label.Probe') + ' ' + game.i18n.localize('SPLITTERMOND.Label.auf') + ' ' + dataset.name;
     const html = await renderTemplate('systems/splittermond/templates/dialog/fertigkeitsprobe-dialog.html', dialogData);
-    oeffneDialog(actor, dataset, title, html);
+    oeffneDialog(actor, null, dataset, title, html);
 }
 
 async function oeffneDialogKampffertigkeitsprobe(actor, dataset) {
@@ -32,38 +32,38 @@ async function oeffneDialogKampffertigkeitsprobe(actor, dataset) {
         return;
     }
 
-    const target = targets[0].actor;
+    const target = targets[0].actor.data;
 
     let dialogData = {
         fertigkeitWert: Number(dataset.wert),
         modifikator: 0,
-        gegner: target.data.name,
-        schwierigkeit: target.data.data.abgeleiteteWerte.vtd.wert,
+        gegner: target.name,
+        schwierigkeit: target.data.abgeleiteteWerte.vtd.wert,
         rollMode: game.settings.get("core", "rollMode"),
         rollModes: CONFIG.Dice.rollModes,
        };
     
     const title = actor.name + ': ' + game.i18n.localize('SPLITTERMOND.Label.Angriff') + ' ' + game.i18n.localize('SPLITTERMOND.Label.mit') + ' ' + dataset.name;
     const html = await renderTemplate('systems/splittermond/templates/dialog/kampffertigkeitsprobe-dialog.html', dialogData);
-    oeffneDialog(actor, dataset, title, html);
+    oeffneDialog(actor, target, dataset, title, html);
 }
 
-function oeffneDialog(actor, dataset, title, html) {
+function oeffneDialog(actor, target, dataset, title, html) {
     let d = new Dialog({
         title: title,
         content: html,
         buttons: {
          standard: {
           label: '<b>' + game.i18n.localize('SPLITTERMOND.Label.Standardwurf') + '</b>',
-          callback: html => new Standardwurf(actor, dataset, html[0].querySelector("form")).execute()
+          callback: html => new Standardwurf(actor, target, dataset, html[0].querySelector("form")).execute()
          },
          risiko: {
           label: game.i18n.localize('SPLITTERMOND.Label.Risikowurf'),
-          callback: html => new Risikowurf(actor, dataset, html[0].querySelector("form")).execute()
+          callback: html => new Risikowurf(actor, target, dataset, html[0].querySelector("form")).execute()
          },
         sicherheit: {
          label: game.i18n.localize('SPLITTERMOND.Label.Sicherheitswurf'),
-         callback: html => new Sicherheitswurf(actor, dataset, html[0].querySelector("form")).execute()
+         callback: html => new Sicherheitswurf(actor, target, dataset, html[0].querySelector("form")).execute()
         }
        },
         default: 'standard'
@@ -77,8 +77,9 @@ function oeffneDialog(actor, dataset, title, html) {
 
 class Probe {
 
-    constructor(actor, dataset, form) {
+    constructor(actor, target, dataset, form) {
         this.actor = actor;
+        this.target = target;
         this.fertigkeitName = dataset.name;
         this.fertigkeitWert = Number(dataset.wert);
         this.fertigkeitPunkte = Number(dataset.punkte);
@@ -159,7 +160,7 @@ class Probe {
           text = game.i18n.localize('SPLITTERMOND.Label.VerheerendMisslungen') + '.';
         }
         let erfolgsgradText = (Math.abs(this.erfolgsgrade) == 1 ? game.i18n.localize('SPLITTERMOND.Label.Erfolgsgrad') : game.i18n.localize('SPLITTERMOND.Label.Erfolgsgrade')) + '.';
-        this.probenergebnisText = text + ' ' + this.erfolgsgrade + ' ' + erfolgsgradText;
+        this.ergebnisText = text + ' ' + this.erfolgsgrade + ' ' + erfolgsgradText;
       }
       
 }
@@ -224,5 +225,32 @@ export function schadenswurfNachProbe(probe) {
         console.log('>>>>>> schadenswurfNachProbe: ' + probe.fertigkeitName + ' wgs:' + probe.wgs + ' schaden:' + probe.schaden);
         let formula = probe.schaden.replace(/w/gi, 'd');
         let roll = new Roll(formula).roll();
-        roll.toMessage();
+        const messageData = roll.toMessage({}, {create: false});
+
+        messageData.speaker = ChatMessage.getSpeaker({ actor: probe.actor });
+        let schadenswurf = game.i18n.localize('SPLITTERMOND.Label.Schadenswurf');
+        let mit = game.i18n.localize('SPLITTERMOND.Label.mit');
+        messageData.flavor = `${schadenswurf} ${mit} <b>${probe.fertigkeitName}</b>.`;
+        // TODO Schadensreduktion von target berücksichtigen
+        messageData.roll.dice[0].options.schadenswurf = {ergebnisText: probe.target.name + ' nimmt ' + roll.total + ' Schaden.'};
+        ChatMessage.create(messageData, {rollMode: probe.rollMode});
+        // TODO Schaden vom target abziehen
+}
+
+
+/******* Angriff ******/
+
+/**
+ * Ein Angriff wird durch Bestätigen des Angriffsdialogs erzeugt.
+ * Ein Angriff hat einen Zustand, der bestimmt, was als nächstes passiert.
+ * 
+ * Einfacher Fall des Ablaufs eines Angriffs:
+ * Angriffsprobe ---> (Aktive Abwehr Probe) ---> Schadenswurf
+ * 
+ */
+class Angriff {
+
+    constructor(actor, waffe, target, form) {
+
+    }
 }
