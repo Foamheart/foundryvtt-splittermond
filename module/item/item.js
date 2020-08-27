@@ -1,9 +1,9 @@
 import { checkValueRange } from "../utils.js";
 import { modifikatorString } from "../utils.js";
 
-const VERFUEGBARKEIT = ['dorf', 'kleinstadt', 'stadt', 'metropole'];
+const VERFUEGBARKEIT = ['dorf', 'kleinstadt', 'grossstadt', 'metropole'];
 const PREIS_AUFSCHLAG = [0, 1500, 3000, 6000, 9000, 15000, 21000];
-const KOMPLEXITAET = ['U', 'G', 'F', 'M', 'A'];
+const KOMPLEXITAET = ['u', 'g', 'f', 'm', 'a'];
 
 /**
  * Extend the basic Item with some very simple modifications.

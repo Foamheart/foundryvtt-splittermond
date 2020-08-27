@@ -56,14 +56,23 @@ export class SplittermondActorSheet extends ActorSheet {
       fertigkeit.name = game.i18n.localize('SPLITTERMOND.Fertigkeit.' + key + '.name');
       fertigkeit.att1.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + fertigkeit.att1.key + '.abk');
       fertigkeit.att2.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + fertigkeit.att2.key + '.abk');
-      fertigkeit.punkte = fertigkeit.punkte == 0 ? "" : fertigkeit.punkte;
+      fertigkeit.fp = fertigkeit.fp == 0 ? "" : fertigkeit.fp;
       fertigkeit.mod = fertigkeit.mod == 0 ? "" : fertigkeit.mod;
     }    
 
     // Localize Kampffertigkeiten labels
     for (let [key, kampffertigkeit] of Object.entries(data.data.kampffertigkeiten)){
       kampffertigkeit.name = game.i18n.localize('SPLITTERMOND.Kampffertigkeit.' + key + '.name');
-      kampffertigkeit.punkte = kampffertigkeit.punkte == 0 ? "" : kampffertigkeit.punkte;
+      kampffertigkeit.fp = kampffertigkeit.fp == 0 ? "" : kampffertigkeit.fp;
+    }    
+
+    // Localize Magieschulen labels
+    for (let [key, magieschule] of Object.entries(data.data.magieschulen)){
+      magieschule.name = game.i18n.localize('SPLITTERMOND.Magieschule.' + key + '.name');
+      magieschule.att1.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + magieschule.att1.key + '.abk');
+      magieschule.att2.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + magieschule.att2.key + '.abk');
+      magieschule.fp = magieschule.fp == 0 ? "" : magieschule.fp;
+      magieschule.mod = magieschule.mod == 0 ? "" : magieschule.mod;
     }    
 
     // Prepare items.

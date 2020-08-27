@@ -219,6 +219,84 @@
           "wurfwaffen": {
             "punkte": 0
           }
+        },
+        "magieschulen": {
+          "bann": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "beherrschung": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "bewegung": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "erkenntnis": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "fels": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "feuer": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "heilung": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "illusion": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "kampf": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "licht": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "natur": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "schatten": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "schicksal": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "schutz": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "staerkung": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "tod": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "verwandlung": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "wasser": {
+            "punkte": 0,
+            "mod": 0
+          },
+          "wind": {
+            "punkte": 0,
+            "mod": 0
+          }
         }
       }
     },
@@ -229,7 +307,7 @@
         "skills"
       ],
       "hg": 1,
-      "rasse": "Mensch",
+      "rasse": "mensch",
       "biography": "",
       "attributes": {
         "level": {
@@ -268,10 +346,10 @@
     "templates": {
       "base": {
         "verfuegbarkeit": {
-          "normal": "kleinstadt"
+          "normal": "dorf"
         },
         "preis": {
-          "normal": 1000
+          "normal": 100
         },
         "beschreibung": "",
         "ausgeruestet": true
@@ -282,20 +360,15 @@
           "mod": 0
         },
         "haerte": {
-          "normal": 7,
+          "normal": 3,
           "mod": 0
         },
         "komplexitaet": {
-          "normal": "G"
+          "normal": "u"
         },
         "angeschlagen": false
       },
-      "negativeQualitaet": false,
-
-      "class": {
-        "classes": [],
-        "level": 0
-      }
+      "negativeQualitaet": false
     },
     "waffe": {
       "templates": [
@@ -303,38 +376,30 @@
         "material"
       ],
       "kampffertigkeit": {
-        "key": "klingenwaffen",
+        "key": "hiebwaffen",
         "mod": 0
       },
       "schaden": {
-        "normal": "1W6+4",
+        "normal": "1W6+2",
         "mod": 0
       },
       "wgs": {
-        "normal": 8,
+        "normal": 7,
         "mod": 0
       },
       "attribut1": {
-        "key": "bew"
+        "key": "kon"
       },
       "attribut2": {
         "key": "sta"
       },
       "minAttribut1": {
-        "key": "bew",
-        "wert": 2
-      },
-      "minAttribut2": {
         "key": "sta",
         "wert": 2
       },
       "merkmale": [
         {
-          "key": "scharf",
-          "stufe": 2
-        },
-        {
-          "key": "vielseitig",
+          "key": "primitiv",
           "stufe": 0
         }
       ],

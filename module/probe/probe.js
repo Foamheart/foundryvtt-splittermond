@@ -248,9 +248,27 @@ export function schadenswurfNachProbe(probe) {
  * Angriffsprobe ---> (Aktive Abwehr Probe) ---> Schadenswurf
  * 
  */
+
+/*
+const AngriffState = { IN_VORBEREITUNG: 0, PROBE_GEWUERFELT: 1, AKTIVE_ABWEHR_GEWUERFELT: 2, SCHADEN_GEWUERFELT: 3 };
+
 class Angriff {
 
     constructor(actor, waffe, target, form) {
+        this.state = AngriffState.IN_VORBEREITUNG;
+    }
 
+    continue() {
+
+        switch(this.state) {
+            case AngriffState.IN_VORBEREITUNG: {
+
+            }
+            default: {
+
+            }            
+        }
     }
 }
+
+*/

@@ -3,7 +3,9 @@ import { SplittermondActor } from "./actor/actor.js";
 import { SplittermondActorSheet } from "./actor/actor-sheet.js";
 import { SplittermondItem } from "./item/item.js";
 import { SplittermondItemSheet } from "./item/item-sheet.js";
+
 import { schadenswurfNachProbe } from "./probe/probe.js";
+import { importWaffen } from "./import/import.js";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -85,6 +87,10 @@ Handlebars.registerHelper('concat', function() {
 Hooks.once("ready", async function() {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
   Hooks.on("hotbarDrop", (bar, data, slot) => createBoilerplateMacro(data, slot));
+
+  /***** IMPORT COMPENDIUM PACK */
+  importWaffen();
+
 });
 
 /* -------------------------------------------- */

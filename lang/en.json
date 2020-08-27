@@ -73,19 +73,41 @@
             "wurfwaffen": {"name": "Wurfwaffen",       "abk": "Wurfw."}
         },
 
+        "Magieschule": {
+            "bann": {"name": "Bann"},
+            "beherrschung": {"name": "Beherrschung"},
+            "bewegung": {"name": "Bewegung"},
+            "erkenntnis": {"name": "Erkenntnis"},
+            "fels": {"name": "Fels"},
+            "feuer": {"name": "Feuer"},
+            "heilung": {"name": "Heilung"},
+            "illusion": {"name": "Illusion"},
+            "kampf": {"name": "Kampf"},
+            "licht": {"name": "Licht"},
+            "natur": {"name": "Natur"},
+            "schatten": {"name": "Schatten"},
+            "schicksal": {"name": "Schicksal"},
+            "schutz": {"name": "Schutz"},
+            "staerkung": {"name": "Stärkung"},
+            "tod": {"name": "Tod"},
+            "verwandlung": {"name": "Verwandlung"},
+            "wasser": {"name": "Wasser"},
+            "wind": {"name": "Wind"}
+        },
+
         "Verfuegbarkeit": {
             "dorf": "Dorf",
             "kleinstadt": "Kleinstadt",
-            "stadt": "Stadt",
+            "grossstadt": "Großstadt",
             "metropole": "Metropole"
         },
 
         "Komplexitaet" : {
-            "U": {"name": "ungeübt", "abk": "U"},
-            "G": {"name": "Geselle", "abk": "G"},
-            "F": {"name": "Fachmann", "abk": "F"},
-            "M": {"name": "Meister", "abk": "M"},
-            "A": {"name": "Anleitung", "abk": "A"}
+            "u": {"name": "ungeübt", "abk": "U"},
+            "g": {"name": "Geselle", "abk": "G"},
+            "f": {"name": "Fachmann", "abk": "F"},
+            "m": {"name": "Meister", "abk": "M"},
+            "a": {"name": "Anleitung", "abk": "A"}
         },
 
         "Waffenmerkmal" : {
@@ -171,7 +193,9 @@
             "Angriff": "Angriff",
             "mit": "mit",
             "Gegner": "Gegner",
-            "Schadenswurf": "Schadenswurf"
+            "Schadenswurf": "Schadenswurf",
+            "Zauber": "Zauber",
+            "Magieschulen": "Magieschulen"
         }
     }
 }
