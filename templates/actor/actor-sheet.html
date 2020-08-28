@@ -169,7 +169,8 @@
                   <th width="10%">{{localize 'SPLITTERMOND.Label.mod'}}</th>
                   <th width="10%">{{localize 'SPLITTERMOND.Label.WGS'}}</th>
                   <th width="10%">{{localize 'SPLITTERMOND.Label.Schaden'}}</th>
-                  <th><a class="item-control waffe-create" title="Waffe hinzufügen" data-type="waffe"><i class="fas fa-plus"></i></a></th>
+                  <th>{{localize 'SPLITTERMOND.Label.Merkmale'}}</th>
+                  <th width="10%"><a class="item-control waffe-create" title="Waffe hinzufügen" data-type="waffe"><i class="fas fa-plus"></i></a></th>
                 </tr>
               </thead>
               <tbody class="waffen">
@@ -183,6 +184,7 @@
                       <td>{{waffe.data.kampffertigkeit.mod}}</td>
                       <td>{{waffe.data.wgs.wert}}</td>
                       <td>{{waffe.data.schaden.wert}}</td>
+                      <td>{{#each waffe.data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{merkmal.nameStufe}}</span>{{/each}}</td>
                       <td>
                         <a class="item-control waffe-edit" title="Waffe bearbeiten"><i class="fas fa-edit"></i></a>
                         <a class="item-control waffe-delete" title="Waffe löschen"><i class="fas fa-trash"></i></a>

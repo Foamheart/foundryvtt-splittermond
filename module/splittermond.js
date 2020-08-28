@@ -89,7 +89,7 @@ Hooks.once("ready", async function() {
   Hooks.on("hotbarDrop", (bar, data, slot) => createBoilerplateMacro(data, slot));
 
   /***** IMPORT COMPENDIUM PACK */
-  importWaffen();
+  // importWaffen();
 
 });
 

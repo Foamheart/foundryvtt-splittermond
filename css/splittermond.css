@@ -371,6 +371,7 @@ table input[type="text"]:focus {
   text-align: center;
   font-size: 12px;
   line-height: 18px;
+  white-space: nowrap;
 }
 
 .dice-button {

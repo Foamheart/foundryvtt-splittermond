@@ -2,7 +2,7 @@ import { SplittermondItem } from "../item/item.js";
 
 export async function importWaffen() {
 
-    const pack = createWaffenCompendium();
+    const pack = await createWaffenCompendium();
 
     const response = await fetch("systems/splittermond/module/import/waffen-raw.json");
     const rawArray = await response.json();
@@ -22,10 +22,10 @@ export async function importWaffen() {
         data.wgs.normal = rawData.wgs;
         data.attribut1.key = rawData.attribut1;
         data.attribut2.key = rawData.attribut2;
-        createMinAttribut(data, rawData, 'attribut1');
-        createMinAttribut(data, rawData, 'attribut2');
+        createMinAttribut(data, rawData, 'minAttribut1');
+        createMinAttribut(data, rawData, 'minAttribut2');
         createMerkmale(data, rawData);
-        data.reichweite = rawData.reichweite;
+        data.reichweite = Number(rawData.reichweite);
             
         await pack.importEntity(waffe);
 
@@ -65,10 +65,12 @@ function createMinAttribut(data, rawData, key) {
 
 function createMerkmale(data, rawData) {
     data.merkmale = [];
-    let rawMerkmale = rawData.merkmale.split(',');
-    for(let rawMerkmal of rawMerkmale) {
-        let groups = rawMerkmal.split('_');
-        let stufe = groups.length > 1 ? Number(groups[1]) : 0;
-        data.merkmale.push({key: groups[0], stufe: stufe});
+    if (rawData.merkmale.length > 0) {
+        let rawMerkmale = rawData.merkmale.split(',');
+        for(let rawMerkmal of rawMerkmale) {
+            let groups = rawMerkmal.split('_');
+            let stufe = groups.length > 1 ? Number(groups[1]) : 0;
+            data.merkmale.push({key: groups[0], stufe: stufe});
+        }
     }
 }

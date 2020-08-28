@@ -393,16 +393,7 @@
       "attribut2": {
         "key": "sta"
       },
-      "minAttribut1": {
-        "key": "sta",
-        "wert": 2
-      },
-      "merkmale": [
-        {
-          "key": "primitiv",
-          "stufe": 0
-        }
-      ],
+      "merkmale": [],
       "reichweite": 0
     },
     "item": {

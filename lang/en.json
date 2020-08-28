@@ -195,7 +195,9 @@
             "Gegner": "Gegner",
             "Schadenswurf": "Schadenswurf",
             "Zauber": "Zauber",
-            "Magieschulen": "Magieschulen"
+            "Magieschulen": "Magieschulen",
+            "Reichweite": "Reichweite",
+            "Merkmale": "Merkmale"
         }
     }
 }

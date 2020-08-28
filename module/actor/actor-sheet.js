@@ -27,6 +27,7 @@ export class SplittermondActorSheet extends ActorSheet {
   /** @override */
   getData() {
     const data = super.getData();
+    const dd = data.data;
     data.dtypes = ["String", "Number", "Boolean"];
     
     /*
@@ -36,14 +37,14 @@ export class SplittermondActorSheet extends ActorSheet {
     */
    
     // Localize Attribute labels
-    for (let [key, attribut] of Object.entries(data.data.attribute)){
+    for (let [key, attribut] of Object.entries(dd.attribute)){
       attribut.name = game.i18n.localize('SPLITTERMOND.Attribut.' + key + '.name');
       attribut.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + key + '.abk');
       attribut.mod = attribut.mod == 0 ? "" : attribut.mod;
     }    
     
     // Localize Abgeleitete Werte labels
-    for (let [key, abgeleiteterWert] of Object.entries(data.data.abgeleiteteWerte)){
+    for (let [key, abgeleiteterWert] of Object.entries(dd.abgeleiteteWerte)){
       abgeleiteterWert.name = game.i18n.localize('SPLITTERMOND.AbgeleiteterWert.' + key + '.name');
       abgeleiteterWert.abk = game.i18n.localize('SPLITTERMOND.AbgeleiteterWert.' + key + '.abk');
       abgeleiteterWert.formel = game.i18n.localize('SPLITTERMOND.AbgeleiteterWert.' + key + '.formel');
@@ -52,7 +53,7 @@ export class SplittermondActorSheet extends ActorSheet {
     }    
 
     // Localize Fertigkeiten labels
-    for (let [key, fertigkeit] of Object.entries(data.data.fertigkeiten)){
+    for (let [key, fertigkeit] of Object.entries(dd.fertigkeiten)){
       fertigkeit.name = game.i18n.localize('SPLITTERMOND.Fertigkeit.' + key + '.name');
       fertigkeit.att1.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + fertigkeit.att1.key + '.abk');
       fertigkeit.att2.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + fertigkeit.att2.key + '.abk');
@@ -61,13 +62,13 @@ export class SplittermondActorSheet extends ActorSheet {
     }    
 
     // Localize Kampffertigkeiten labels
-    for (let [key, kampffertigkeit] of Object.entries(data.data.kampffertigkeiten)){
+    for (let [key, kampffertigkeit] of Object.entries(dd.kampffertigkeiten)){
       kampffertigkeit.name = game.i18n.localize('SPLITTERMOND.Kampffertigkeit.' + key + '.name');
       kampffertigkeit.fp = kampffertigkeit.fp == 0 ? "" : kampffertigkeit.fp;
     }    
 
     // Localize Magieschulen labels
-    for (let [key, magieschule] of Object.entries(data.data.magieschulen)){
+    for (let [key, magieschule] of Object.entries(dd.magieschulen)){
       magieschule.name = game.i18n.localize('SPLITTERMOND.Magieschule.' + key + '.name');
       magieschule.att1.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + magieschule.att1.key + '.abk');
       magieschule.att2.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + magieschule.att2.key + '.abk');
@@ -145,6 +146,11 @@ export class SplittermondActorSheet extends ActorSheet {
       waffe.data.kampffertigkeit.abk = game.i18n.localize('SPLITTERMOND.Kampffertigkeit.' + waffe.data.kampffertigkeit.key + '.abk');
       waffe.data.attribut1.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + waffe.data.attribut1.key + '.abk');
       waffe.data.attribut2.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + waffe.data.attribut2.key + '.abk');
+      // Localize Waffenmerkmale
+      for (let [waffeKey, merkmal] of Object.entries(waffe.data.merkmale)){
+        let stufe = merkmal.stufe == 0 ? '' : ' ' + merkmal.stufe;
+        merkmal.nameStufe = game.i18n.localize('SPLITTERMOND.Waffenmerkmal.' + merkmal.key) + stufe;
+      }    
     }    
 
   }

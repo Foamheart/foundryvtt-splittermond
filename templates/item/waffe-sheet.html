@@ -9,7 +9,8 @@
                 {{#if data.minAttribut1}}<span><b>{{localize 'SPLITTERMOND.Label.Mindestattribute'}}:</b> 
                 {{data.minAttribut1.abk}} {{data.minAttribut1.wert}}{{#if data.minAttribut2}}, {{data.minAttribut2.abk}} {{data.minAttribut2.wert}}{{/if}}</span>{{/if}}
             </div>
-        <div>{{#each data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{merkmal.nameStufe}}</span>{{/each}}</div>
+            {{#if data.reichweite}}<div><b>{{localize 'SPLITTERMOND.Label.Reichweite'}}:</b> {{data.reichweite}}</div>{{/if}}
+            <div>{{#each data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{merkmal.nameStufe}}</span>{{/each}}</div>
         </div>
     </header>
 

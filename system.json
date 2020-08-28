@@ -3,14 +3,22 @@
   "title": "Splittermond",
   "description": "Splittermond for FoundryVTT",
   "version": "0.0.1",
-  "minimumCoreVersion": "0.6.5",
-  "compatibleCoreVersion": "0.6.5",
+  "minimumCoreVersion": "0.6.6",
+  "compatibleCoreVersion": "0.6.6",
   "templateVersion": 2,
   "author": "Peter Laubender",
   "esmodules": ["module/splittermond.js"],
   "styles": ["css/splittermond.css"],
   "scripts": [],
-  "packs": [],
+  "packs": [
+    {
+      "name": "waffen",
+      "label": "Waffenliste",
+      "system": "splittermond",
+      "path": "./packs/waffen.db",
+      "entity": "Item"
+    }
+  ],
   "languages": [
     {
       "lang": "en",
