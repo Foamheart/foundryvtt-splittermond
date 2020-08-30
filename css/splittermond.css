@@ -405,6 +405,8 @@ table input[type="text"]:focus {
   font-weight: bold;
   padding: 0.3em;
   line-height: 32px;
+  border: solid #009CE9;
+  border-width: 0 thin;
 }
 
 .compendium .entry-group {

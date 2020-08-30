@@ -64,6 +64,18 @@ Handlebars.registerHelper('preisFormat', function (value) {
   return solare + lunare + telare;
 });
 
+Handlebars.registerHelper('smLocalize', function(value) {
+  return game.i18n.localize('SPLITTERMOND.' + value);
+});
+
+Handlebars.registerHelper('smLocalize1', function(prefix, key) {
+  return game.i18n.localize('SPLITTERMOND.' + prefix + '.' + key);
+});
+
+Handlebars.registerHelper('smLocalize2', function(prefix, key, postfix) {
+  return game.i18n.localize('SPLITTERMOND.' + prefix + '.' + key + '.' + postfix);
+});
+
 Handlebars.registerHelper('concat', function() {
     var outStr = '';
     for (var arg in arguments) {
@@ -113,16 +125,14 @@ Hooks.on("renderCompendium", async (compendium, html, data) => {
   }, {});
 
   // Gruppiere Items
+  let groups = {handgemenge: [], klingenwaffen: [], hiebwaffen: [], stangenwaffen: [], kettenwaffen: [], schusswaffen: [], wurfwaffen: []};
   let newData = duplicate(data);
   newData.index = newData.index.reduce((groups, indexElement) => {
     let itemDD = indexElement.data;
     let groupKey = itemDD.kampffertigkeit.key;
-    if (!groups[groupKey]) {
-      groups[groupKey] = [];
-    }
     groups[groupKey].push(indexElement);
     return groups;
-  }, {});
+  }, groups);
 
   // Replace the markup.
   html.find('.compendium').empty();
@@ -143,6 +153,7 @@ function lokalisiereWaffenDaten(dd) {
       merkmal.nameStufe = game.i18n.localize('SPLITTERMOND.Waffenmerkmal.' + merkmal.key) + stufe;
     }    
 
+    /*
     dd.attribut1.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + dd.attribut1.key + '.abk');
     dd.attribut2.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + dd.attribut2.key + '.abk');
 
@@ -156,7 +167,7 @@ function lokalisiereWaffenDaten(dd) {
 
     dd.verfuegbarkeit.name = game.i18n.localize('SPLITTERMOND.Verfuegbarkeit.' + dd.verfuegbarkeit.normal);
     dd.komplexitaet.abk = game.i18n.localize('SPLITTERMOND.Komplexitaet.' + dd.komplexitaet.normal + '.abk');
-
+    */
 }
 
 /* -------------------------------------------- */
