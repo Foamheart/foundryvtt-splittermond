@@ -389,6 +389,8 @@ table input[type="text"]:focus {
   color: #FF0000;
 }
 
+/*** Compendium ****/
+
 .compendium {
   display: contents;
 }
@@ -396,3 +398,19 @@ table input[type="text"]:focus {
 .compendium .directory-list .directory-item {
   line-height: 16px;
 }
+
+.compendium table thead th {
+	background-color: #5DC3F3;
+	color: #000000;
+  font-weight: bold;
+  padding: 0.3em;
+  line-height: 32px;
+}
+
+.compendium .entry-group {
+	background-color: #009CE9;
+	color: #ffffff;
+  font-weight: bold;
+  padding: 0.3em;
+}
+

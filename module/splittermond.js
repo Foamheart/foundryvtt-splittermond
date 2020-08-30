@@ -106,16 +106,28 @@ Hooks.once("ready", async function() {
 Hooks.on("renderCompendium", async (compendium, html, data) => {
   let items = await compendium.getContent();
   items.forEach(item => {
-    let index = data.index.find(index => index._id == item._id);
+    let indexElement = data.index.find(indexElement => indexElement._id == item._id);
     let itemDD = item.data.data;
     lokalisiereWaffenDaten(itemDD);
-    index.data = itemDD;
+    indexElement.data = itemDD;
+  }, {});
+
+  // Gruppiere Items
+  let newData = duplicate(data);
+  newData.index = newData.index.reduce((groups, indexElement) => {
+    let itemDD = indexElement.data;
+    let groupKey = itemDD.kampffertigkeit.key;
+    if (!groups[groupKey]) {
+      groups[groupKey] = [];
+    }
+    groups[groupKey].push(indexElement);
+    return groups;
   }, {});
 
   // Replace the markup.
   html.find('.compendium').empty();
   let template = 'systems/splittermond/templates/apps/waffen.html';
-  let content = await renderTemplate(template, data);
+  let content = await renderTemplate(template, newData);
   html.find('.compendium').append(content);
 
   // Handle dragdrop.
