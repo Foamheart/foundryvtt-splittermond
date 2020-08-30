@@ -46,8 +46,8 @@ export class SplittermondItem extends Item {
       const attribut2 = actorDD.attribute[itemDD.attribut2.key];
       itemDD.attribut1.wert = attribut1.wert;
       itemDD.attribut2.wert = attribut2.wert;
-      itemDD.mindestAttributAbzug = mindestAttributAbzugBerechnen(itemDD, actorDD);
-      itemDD.kampffertigkeit.wert = fp + itemDD.attribut1.wert + itemDD.attribut2.wert + itemDD.kampffertigkeit.mod - itemDD.mindestAttributAbzug;
+      itemDD.minAttributAbzug = mindestAttributAbzugBerechnen(itemDD, actorDD);
+      itemDD.kampffertigkeit.wert = fp + itemDD.attribut1.wert + itemDD.attribut2.wert + itemDD.kampffertigkeit.mod - itemDD.minAttributAbzug;
       itemDD.kampffertigkeit.punkte = fp;
     } else {
       itemDD.kampffertigkeit.wert = '???';
@@ -59,7 +59,7 @@ export class SplittermondItem extends Item {
 
     // WGS berechnen
     itemDD.wgs.mod = qpos ? checkValueRange(itemDD.wgs.mod, -1, 0) : checkValueRange(itemDD.wgs.mod, 0, 1);
-    itemDD.wgs.wert = itemDD.wgs.normal + itemDD.wgs.mod + (itemDD.mindestAttributAbzug ? itemDD.mindestAttributAbzug : 0);
+    itemDD.wgs.wert = itemDD.wgs.normal + itemDD.wgs.mod + (itemDD.minAttributAbzug ? itemDD.minAttributAbzug : 0);
 
     // Last berechnen
     itemDD.last.mod = qpos ? checkValueRange(itemDD.last.mod, -itemDD.last.normal/2, 0) : checkValueRange(itemDD.last.mod, 0, itemDD.last.normal/2);
@@ -200,10 +200,6 @@ function berechneKomplexitaet(normalkomplexitaet, qualitaet) {
  * F = Qu 2-4
  * M = Qu 5-6
  * 
- * -----
- * 
- * CHARAKTERBLATT
- * Anzeige (Name in Rot?) wenn Mindestattribute nicht erfüllt sind und es somit Abzüge gibt.
  *  
  */
 

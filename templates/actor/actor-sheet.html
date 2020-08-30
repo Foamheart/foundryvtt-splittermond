@@ -170,19 +170,19 @@
                   <th width="10%">{{localize 'SPLITTERMOND.Label.WGS'}}</th>
                   <th width="10%">{{localize 'SPLITTERMOND.Label.Schaden'}}</th>
                   <th>{{localize 'SPLITTERMOND.Label.Merkmale'}}</th>
-                  <th width="10%"><a class="item-control waffe-create" title="Waffe hinzufügen" data-type="waffe"><i class="fas fa-plus"></i></a></th>
+                  <th width="10%"><a class="item-control waffe-add" title="Waffe hinzufügen" data-type="waffe"><i class="fas fa-plus"></i></a></th>
                 </tr>
               </thead>
               <tbody class="waffen">
                 {{#each actor.waffen as |waffe key|}}
                     <tr class="waffe" data-item-id="{{waffe._id}}">
                       <td class="rollable" data-probe="kampffertigkeit" data-name="{{waffe.name}}" data-wert="{{waffe.data.kampffertigkeit.wert}}" data-wgs="{{waffe.data.wgs.wert}}" data-schaden="{{waffe.data.schaden.wert}}" data-punkte="{{waffe.data.kampffertigkeit.punkte}}">{{waffe.name}}</td>
-                      <td>{{waffe.data.kampffertigkeit.wert}}</td>
+                      <td {{#if waffe.data.minAttributAbzug}}class="malus"{{/if}}>{{waffe.data.kampffertigkeit.wert}}</td>
                       <td>{{waffe.data.kampffertigkeit.abk}}</td>
                       <td title="{{waffe.data.attribut1.abk}}">{{waffe.data.attribut1.wert}}</td>
                       <td title="{{waffe.data.attribut2.abk}}">{{waffe.data.attribut2.wert}}</td>
                       <td>{{waffe.data.kampffertigkeit.mod}}</td>
-                      <td>{{waffe.data.wgs.wert}}</td>
+                      <td {{#if waffe.data.minAttributAbzug}}class="malus"{{/if}}>{{waffe.data.wgs.wert}}</td>
                       <td>{{waffe.data.schaden.wert}}</td>
                       <td>{{#each waffe.data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{merkmal.nameStufe}}</span>{{/each}}</td>
                       <td>

@@ -19,6 +19,7 @@ export class SplittermondActorSheet extends ActorSheet {
           initial: "grundwerte",
         },
       ],
+      dragDrop: [{dragSelector: ".waffen .waffe", dropSelector: null}]
     });
   }
 
@@ -137,9 +138,9 @@ export class SplittermondActorSheet extends ActorSheet {
 
     // Assign and return
     actorData.waffen = waffen; 
-    actorData.gear = gear;
-    actorData.features = features;
-    actorData.spells = spells;
+    // actorData.gear = gear;
+    // actorData.features = features;
+    // actorData.spells = spells;
 
     // Lokalisierung der Waffenliste
     for (let [key, waffe] of Object.entries(waffen)){
@@ -162,6 +163,13 @@ export class SplittermondActorSheet extends ActorSheet {
     // Everything below here is only needed if the sheet is editable
     if (!this.options.editable) return;
 
+    // Add Waffe Item
+    html.find(".waffe-add").click(async(ev) => {
+      const pack = game.packs.get("splittermond.waffen");
+      pack.render(true);
+      pack.maximize();
+    });
+
     // Update Waffe Item
     html.find(".waffe-edit").click((ev) => {
       const li = $(ev.currentTarget).parents(".waffe");
@@ -177,6 +185,7 @@ export class SplittermondActorSheet extends ActorSheet {
     });
 
     // Add Inventory Item
+    /*
     html.find(".item-create").click(this._onItemCreate.bind(this));
 
     // Update Inventory Item
@@ -192,12 +201,13 @@ export class SplittermondActorSheet extends ActorSheet {
       this.actor.deleteOwnedItem(li.data("itemId"));
       li.slideUp(200, () => this.render(false));
     });
+    */
 
     // Drag&Drop für Waffenliste
     /*
     const dragDrop = new DragDrop({
-       dragSelector: ".item",
-       dropSelector: ".items",
+       dragSelector: ".waffe",
+       dropSelector: ".waffen",
        permissions: { dragstart: this._canDragStart.bind(this), drop: this._canDragDrop.bind(this) },
        callbacks: { dragstart: this._onDragStart.bind(this), drop: this._onDragDrop.bind(this) }
      });
@@ -219,6 +229,7 @@ export class SplittermondActorSheet extends ActorSheet {
         li.addEventListener("dragstart", handler, false);
       });
     }
+
   }
 
   /* -------------------------------------------- */

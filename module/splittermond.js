@@ -91,7 +91,61 @@ Hooks.once("ready", async function() {
   /***** IMPORT COMPENDIUM PACK */
   // importWaffen();
 
+  // Individuelles Template für Compendium "Waffenliste"
+  const waffenliste = game.packs.get('splittermond.waffen');
+  // waffenliste.options.template = 'systems/splittermond/templates/apps/waffen1.html'
+  waffenliste.options.resizable = true;
+  waffenliste.options.width = 700;
+
 });
+
+/* -------------------------------------------- */
+/*  RenderCompendium Hook                       */
+/* -------------------------------------------- */
+
+Hooks.on("renderCompendium", async (compendium, html, data) => {
+  let items = await compendium.getContent();
+  items.forEach(item => {
+    let index = data.index.find(index => index._id == item._id);
+    let itemDD = item.data.data;
+    lokalisiereWaffenDaten(itemDD);
+    index.data = itemDD;
+  }, {});
+
+  // Replace the markup.
+  html.find('.compendium').empty();
+  let template = 'systems/splittermond/templates/apps/waffen.html';
+  let content = await renderTemplate(template, data);
+  html.find('.compendium').append(content);
+
+  // Handle dragdrop.
+  const dragDrop = new DragDrop(compendium.options.dragDrop[0]);
+  dragDrop.bind(html[0]);
+});
+
+function lokalisiereWaffenDaten(dd) {
+
+    // Localize Waffenmerkmale
+    for (let [key, merkmal] of Object.entries(dd.merkmale)){
+      let stufe = merkmal.stufe == 0 ? '' : ' ' + merkmal.stufe;
+      merkmal.nameStufe = game.i18n.localize('SPLITTERMOND.Waffenmerkmal.' + merkmal.key) + stufe;
+    }    
+
+    dd.attribut1.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + dd.attribut1.key + '.abk');
+    dd.attribut2.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + dd.attribut2.key + '.abk');
+
+    if (dd.minAttribut1) {
+      dd.minAttribut1.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + dd.minAttribut1.key + '.abk');
+    }
+
+    if (dd.minAttribut2) {
+      dd.minAttribut2.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + dd.minAttribut2.key + '.abk');
+    }
+
+    dd.verfuegbarkeit.name = game.i18n.localize('SPLITTERMOND.Verfuegbarkeit.' + dd.verfuegbarkeit.normal);
+    dd.komplexitaet.abk = game.i18n.localize('SPLITTERMOND.Komplexitaet.' + dd.komplexitaet.normal + '.abk');
+
+}
 
 /* -------------------------------------------- */
 /*  RenderChatMessage Hook                      */

@@ -1,0 +1,34 @@
+    <table>
+        <thead>
+          <tr>
+            <th>{{localize 'SPLITTERMOND.Label.Name'}}</th>
+            <th width="10%">{{localize 'SPLITTERMOND.Label.Verfuegbarkeit'}}</th>
+            <th width="10%">{{localize 'SPLITTERMOND.Label.Preis'}}</th>
+            <th width="5%">{{localize 'SPLITTERMOND.Label.Last'}}</th>
+            <th width="5%">{{localize 'SPLITTERMOND.Label.Haerte'}}</th>
+            <th width="10%">{{localize 'SPLITTERMOND.Label.Komplexitaet'}}</th>
+            <th width="10%">{{localize 'SPLITTERMOND.Label.Schaden'}}</th>
+            <th width="5%">{{localize 'SPLITTERMOND.Label.WGS'}}</th>
+            <th width="10%">{{localize 'SPLITTERMOND.Label.Attribute'}}</th>
+            <th width="10%">{{localize 'SPLITTERMOND.Label.Mindestattribute'}}</th>
+            <th>{{localize 'SPLITTERMOND.Label.Merkmale'}}</th>
+          </tr>
+        </thead>
+        <tbody class="directory-list waffen">
+          {{#each index}}
+            <tr class="directory-item item waffe" data-entry-id="{{this._id}}">
+                <td>{{this.name}}</td>
+                <td>{{this.data.verfuegbarkeit.name}}</td>
+                <td>{{preisFormat this.data.preis.normal}}</td>
+                <td>{{this.data.last.normal}}</td>
+                <td>{{this.data.haerte.normal}}</td>
+                <td>{{this.data.komplexitaet.abk}}</td>
+                <td>{{this.data.schaden.normal}}</td>
+                <td>{{this.data.wgs.normal}}</td>
+                <td>{{this.data.attribut1.abk}}+{{this.data.attribut2.abk}}</td>
+                <td>{{#if this.data.minAttribut1}}{{this.data.minAttribut1.abk}} {{this.data.minAttribut1.wert}}{{#if this.data.minAttribut2}}, {{this.data.minAttribut2.abk}} {{this.data.minAttribut2.wert}}{{/if}}{{/if}}</td>
+                <td>{{#each this.data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{merkmal.nameStufe}}</span>{{/each}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>

@@ -384,3 +384,15 @@ table input[type="text"]:focus {
   font-size: 12px;
   line-height: 20px;
 }
+
+.malus {
+  color: #FF0000;
+}
+
+.compendium {
+  display: contents;
+}
+
+.compendium .directory-list .directory-item {
+  line-height: 16px;
+}
