@@ -140,6 +140,12 @@ Hooks.on("renderCompendium", async (compendium, html, data) => {
   let content = await renderTemplate(template, newData);
   html.find('.compendium').append(content);
 
+  // Handle folder toggles.
+  html.find('.entry-group').on('click', event => {
+    event.preventDefault();
+    $(event.currentTarget).parent().next().toggleClass('hidden');
+  })
+  
   // Handle dragdrop.
   const dragDrop = new DragDrop(compendium.options.dragDrop[0]);
   dragDrop.bind(html[0]);

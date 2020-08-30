@@ -1,4 +1,4 @@
-    <table data-pack="{{collection}}">
+    <table class="directory-list waffen" data-pack="{{collection}}">
         <thead>
           <tr>
             <th>{{smLocalize 'Label.Name'}}</th>
@@ -14,24 +14,26 @@
             <th>{{smLocalize 'Label.Merkmale'}}</th>
           </tr>
         </thead>
-        <tbody class="directory-list waffen">
-          {{#each index as |group key|}}
+        {{#each index as |group key|}}
+          <tbody>
             <tr class="entry-group" data-key="{{key}}"><td colspan="11">{{smLocalize2 'Kampffertigkeit' key 'name'}}</td></tr>
-            {{#each group}}
-              <tr class="directory-item item waffe" data-entry-id="{{this._id}}">
-                  <td>{{this.name}}</td>
-                  <td>{{smLocalize1 'Verfuegbarkeit' this.data.verfuegbarkeit.normal}}</td>
-                  <td>{{preisFormat this.data.preis.normal}}</td>
-                  <td>{{this.data.last.normal}}</td>
-                  <td>{{this.data.haerte.normal}}</td>
-                  <td>{{smLocalize2 'Komplexitaet' this.data.komplexitaet.normal 'abk'}}</td>
-                  <td>{{this.data.schaden.normal}}</td>
-                  <td>{{this.data.wgs.normal}}</td>
-                  <td>{{smLocalize2 'Attribut' this.data.attribut1.key 'abk'}}+{{smLocalize2 'Attribut' this.data.attribut2.key 'abk'}}</td>
-                  <td>{{#if this.data.minAttribut1}}{{smLocalize2 'Attribut' this.data.minAttribut1.key 'abk'}} {{this.data.minAttribut1.wert}}{{#if this.data.minAttribut2}}, {{smLocalize2 'Attribut' this.data.minAttribut2.key 'abk'}} {{this.data.minAttribut2.wert}}{{/if}}{{/if}}</td>
-                  <td>{{#each this.data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{merkmal.nameStufe}}</span>{{/each}}</td>
-              </tr>
-            {{/each}}
+          </tbody>
+          <tbody>
+          {{#each group}}
+            <tr class="directory-item item waffe" data-entry-id="{{this._id}}">
+                <td>{{this.name}}</td>
+                <td>{{smLocalize1 'Verfuegbarkeit' this.data.verfuegbarkeit.normal}}</td>
+                <td>{{preisFormat this.data.preis.normal}}</td>
+                <td>{{this.data.last.normal}}</td>
+                <td>{{this.data.haerte.normal}}</td>
+                <td>{{smLocalize2 'Komplexitaet' this.data.komplexitaet.normal 'abk'}}</td>
+                <td>{{this.data.schaden.normal}}</td>
+                <td>{{this.data.wgs.normal}}</td>
+                <td>{{smLocalize2 'Attribut' this.data.attribut1.key 'abk'}}+{{smLocalize2 'Attribut' this.data.attribut2.key 'abk'}}</td>
+                <td>{{#if this.data.minAttribut1}}{{smLocalize2 'Attribut' this.data.minAttribut1.key 'abk'}} {{this.data.minAttribut1.wert}}{{#if this.data.minAttribut2}}, {{smLocalize2 'Attribut' this.data.minAttribut2.key 'abk'}} {{this.data.minAttribut2.wert}}{{/if}}{{/if}}</td>
+                <td>{{#each this.data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{merkmal.nameStufe}}</span>{{/each}}</td>
+            </tr>
           {{/each}}
-        </tbody>
+          </tbody>
+        {{/each}}
       </table>
