@@ -64,6 +64,10 @@ Handlebars.registerHelper('preisFormat', function (value) {
   return solare + lunare + telare;
 });
 
+Handlebars.registerHelper('zeroIsDash', function(value) {
+  return value ? value : '-';
+});
+
 Handlebars.registerHelper('smLocalize', function(value) {
   return game.i18n.localize('SPLITTERMOND.' + value);
 });
