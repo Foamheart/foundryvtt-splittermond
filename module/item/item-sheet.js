@@ -39,7 +39,7 @@ export class SplittermondItemSheet extends ItemSheet {
 
     // Localize Waffenmerkmale
     for (let [key, merkmal] of Object.entries(dd.merkmale)){
-      let stufe = merkmal.stufe == 0 ? '' : ' ' + merkmal.stufe;
+      let stufe = merkmal.stufe === undefined ? '' : ' ' + merkmal.stufe;
       merkmal.nameStufe = game.i18n.localize('SPLITTERMOND.Waffenmerkmal.' + merkmal.key) + stufe;
     }    
 

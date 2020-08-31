@@ -69,8 +69,11 @@ function createMerkmale(data, rawData) {
         let rawMerkmale = rawData.merkmale.split(',');
         for(let rawMerkmal of rawMerkmale) {
             let groups = rawMerkmal.split('_');
-            let stufe = groups.length > 1 ? Number(groups[1]) : 0;
-            data.merkmale.push({key: groups[0], stufe: stufe});
+            if (groups.length > 1) {
+                data.merkmale.push({key: groups[0], stufe: Number(groups[1])});
+            } else {
+                data.merkmale.push({key: groups[0]});
+            }
         }
     }
 }
