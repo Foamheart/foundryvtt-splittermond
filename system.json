@@ -12,10 +12,10 @@
   "scripts": [],
   "packs": [
     {
-      "name": "waffen",
-      "label": "Waffenliste",
+      "name": "ausruestung",
+      "label": "Ausrüstung",
       "system": "splittermond",
-      "path": "./packs/waffen.db",
+      "path": "./packs/ausruestung.db",
       "entity": "Item"
     }
   ],

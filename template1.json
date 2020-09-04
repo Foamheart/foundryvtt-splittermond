@@ -4,6 +4,18 @@
       "character"
     ],
     "templates": {
+      "base": {
+        "health": {
+          "value": 10,
+          "min": 0,
+          "max": 10
+        },
+        "power": {
+          "value": 5,
+          "min": 0,
+          "max": 5
+        }
+      },
       "grundwerte": {
         "attribute": {
           "aus": {
@@ -290,18 +302,46 @@
     },
     "character": {
       "templates": [
+        "base",
         "grundwerte",
         "skills"
       ],
       "hg": 1,
-      "rasse": "mensch"
+      "rasse": "mensch",
+      "biography": "",
+      "attributes": {
+        "level": {
+          "value": 1
+        }
+      },
+      "abilities": {
+        "str": {
+          "value": 10
+        },
+        "dex": {
+          "value": 10
+        },
+        "con": {
+          "value": 10
+        },
+        "int": {
+          "value": 10
+        },
+        "wis": {
+          "value": 10
+        },
+        "cha": {
+          "value": 10
+        }
+      }
     }
   },
   "Item": {
     "types": [
       "waffe",
-      "ruestung",
-      "schild"
+      "item",
+      "feature",
+      "spell"
     ],
     "templates": {
       "base": {
@@ -326,20 +366,9 @@
         "komplexitaet": {
           "normal": "u"
         },
-        "angeschlagen": false,
-        "negativeQualitaet": false
+        "angeschlagen": false
       },
-      "ruestwerte": {
-        "vtdPlus": 0,
-        "behinderung": {
-          "normal": 0,
-          "mod": 0
-        },
-        "tickzuschlag": {
-          "normal": 0,
-          "mod": 0
-        }
-      }
+      "negativeQualitaet": false
     },
     "waffe": {
       "templates": [
@@ -367,34 +396,30 @@
       "merkmale": [],
       "reichweite": 0
     },
-    "ruestung": {
+    "item": {
       "templates": [
-        "base",
-        "material",
-        "ruestwerte"
+        "base"
       ],
-      "sr": {
-        "normal": 0,
-        "mod": 0
-      },
-      "merkmale": []
+      "quantity": 1,
+      "weight": 0
     },
-    "schild": {
+    "feature": {
       "templates": [
         "base",
-        "material",
-        "ruestwerte"
+        "class"
       ],
-      "kampffertigkeit": {
-        "mod": 0
-      },
-      "attribut1": {
-        "key": "bew"
-      },
-      "attribut2": {
-        "key": "sta"
-      },
-      "merkmale": []
+      "usage": "",
+      "roll": ""
+    },
+    "spell": {
+      "templates": [
+        "base",
+        "class"
+      ],
+      "spellLevel": 1,
+      "school": "",
+      "save_dc": "",
+      "effect": ""
     }
   }
 }

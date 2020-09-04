@@ -1,15 +1,14 @@
 <form class="{{cssClass}}" autocomplete="off">
     <header class="sheet-header">
-        <img class="profile-img" src="{{item.img}}" data-edit="img" title="Waffe"/>
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="Rüstung"/>
         <div class="header-fields">
             <h1 class="itemname">{{item.name}}</h1>
-            <div class="kampffertigkeit">{{smLocalize2 'Kampffertigkeit' data.kampffertigkeit.key 'name'}}</div>
+            <div class="ruestung">{{smLocalize 'Label.Ruestung'}}</div>
             <div class="waffenattribute">
-                <span><b>{{smLocalize 'Label.Attribute'}}:</b> {{smLocalize2 'Attribut' data.attribut1.key 'abk'}}+{{smLocalize2 'Attribut' data.attribut2.key 'abk'}}</span>
-                {{#if data.minAttribut1}}<span><b>{{smLocalize 'Label.Mindestattribute'}}:</b> 
-                {{smLocalize2 'Attribut' data.minAttribut1.key 'abk'}} {{data.minAttribut1.wert}}{{#if data.minAttribut2}}, {{smLocalize2 'Attribut' data.minAttribut2.key 'abk'}} {{data.minAttribut2.wert}}{{/if}}</span>{{/if}}
+                {{#if data.minAttribut}}<span><b>{{smLocalize 'Label.Mindestattribut'}}:</b> 
+                {{smLocalize2 'Attribut' data.minAttribut.key 'abk'}} {{data.minAttribut.wert}}</span>{{/if}}
             </div>
-            {{#if data.reichweite}}<div><b>{{smLocalize 'Label.Reichweite'}}:</b> {{data.reichweite}}</div>{{/if}}
+            <div><b>{{smLocalize 'Label.VTDplus'}}:</b> {{data.vtdPlus}}</div>
             <div>{{#each data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{merkmal.nameStufe}}</span>{{/each}}</div>
         </div>
     </header>
@@ -28,19 +27,19 @@
             <div class="grid grid-2col">
                 <div>
                     <div class="flexrow flex-group-center">
-                        <label>{{smLocalize 'Label.FW'}}</label>
-                        <input type="text" name="data.kampffertigkeit.wert" value="{{data.kampffertigkeit.wert}}" disabled/>
-                        <input type="text" name="data.kampffertigkeit.mod" value="{{zeroIsEmpty data.kampffertigkeit.mod}}" placeholder="{{smLocalize 'Label.mod'}}" data-dtype="Number"/>
+                        <label>{{smLocalize 'Label.SR'}}</label>
+                        <input type="text" name="data.sr.wert" value="{{data.sr.wert}}" disabled/>
+                        <input type="text" name="data.sr.mod" value="{{zeroIsEmpty data.sr.mod}}" placeholder="{{smLocalize 'Label.mod'}}" data-dtype="Number"/>
                     </div>
                     <div class="flexrow flex-group-center">
-                        <label>{{smLocalize 'Label.Schaden'}}</label>
-                        <input type="text" name="data.schaden.wert" value="{{data.schaden.wert}}" disabled/>
-                        <input type="text" name="data.schaden.mod" value="{{zeroIsEmpty data.schaden.mod}}" placeholder="{{smLocalize 'Label.mod'}}" data-dtype="Number"/>
+                        <label>{{smLocalize 'Label.Behinderung'}}</label>
+                        <input type="text" name="data.behinderung.wert" value="{{data.behinderung.wert}}" disabled/>
+                        <input type="text" name="data.behinderung.mod" value="{{zeroIsEmpty data.behinderung.mod}}" placeholder="{{smLocalize 'Label.mod'}}" data-dtype="Number"/>
                     </div>
                     <div class="flexrow flex-group-center">
-                        <label>{{smLocalize 'Label.WGS'}}</label>
-                        <input type="text" name="data.wgs.wert" value="{{data.wgs.wert}}" disabled/>
-                        <input type="text" name="data.wgs.mod" value="{{zeroIsEmpty data.wgs.mod}}" placeholder="{{smLocalize 'Label.mod'}}" data-dtype="Number"/>
+                        <label>{{smLocalize 'Label.Tickzuschlag'}}</label>
+                        <input type="text" name="data.tickzuschlag.wert" value="{{data.tickzuschlag.wert}}" disabled/>
+                        <input type="text" name="data.tickzuschlag.mod" value="{{zeroIsEmpty data.tickzuschlag.mod}}" placeholder="{{smLocalize 'Label.mod'}}" data-dtype="Number"/>
                     </div>
                     <div class="flexrow flex-group-center">
                         <label>{{smLocalize 'Label.Last'}}</label>

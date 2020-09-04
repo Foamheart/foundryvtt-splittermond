@@ -1,10 +1,6 @@
 import { checkValueRange } from "../utils.js";
 import { modifikatorString } from "../utils.js";
 
-const VERFUEGBARKEIT = ['dorf', 'kleinstadt', 'grossstadt', 'metropole'];
-const PREIS_AUFSCHLAG = [0, 1500, 3000, 6000, 9000, 15000, 21000];
-const KOMPLEXITAET = ['u', 'g', 'f', 'm', 'a'];
-
 /**
  * Extend the basic Item with some very simple modifications.
  * @extends {Item}
@@ -23,6 +19,8 @@ export class SplittermondItem extends Item {
     // Make separate methods for each Item type (waffe, ruestung, etc.) to keep
     // things organized.
     if (itemData.type === 'waffe') this._prepareWaffeData(itemData, actorData);
+    if (itemData.type === 'ruestung') this._prepareRuestungData(itemData, actorData);
+    if (itemData.type === 'schild') this._prepareSchildData(itemData, actorData);
   }
 
   /**
@@ -61,30 +59,83 @@ export class SplittermondItem extends Item {
     itemDD.wgs.mod = qpos ? checkValueRange(itemDD.wgs.mod, -1, 0) : checkValueRange(itemDD.wgs.mod, 0, 1);
     itemDD.wgs.wert = itemDD.wgs.normal + itemDD.wgs.mod + (itemDD.minAttributAbzug ? itemDD.minAttributAbzug : 0);
 
-    // Last berechnen
-    itemDD.last.mod = qpos ? checkValueRange(itemDD.last.mod, -itemDD.last.normal/2, 0) : checkValueRange(itemDD.last.mod, 0, itemDD.last.normal/2);
-    itemDD.last.wert= itemDD.last.normal + itemDD.last.mod;
+    // Qualität berechnen (siehe GRW 142 unten)
+    const qfunction = (itemDD) => itemDD.kampffertigkeit.mod * 2 + itemDD.schaden.mod - itemDD.wgs.mod * 2 - itemDD.last.mod + itemDD.haerte.mod;
+    allgemeineAusruestungswerteBerechnen(itemDD, qpos, qfunction);
+  }
 
-    // Härte berechnen
-    itemDD.haerte.mod = qpos ? checkValueRange(itemDD.haerte.mod, 0, 2) : checkValueRange(itemDD.haerte.mod, -2, 0);
-    itemDD.haerte.wert = itemDD.haerte.normal + itemDD.haerte.mod;
+  /**
+   * Prepare Rüstung type specific data
+   */
+  _prepareRuestungData(itemData, actorData) {
+    const itemDD = itemData.data;
+    const actorDD = actorData.data;
+
+    // Verbesserungen und Qualität der Waffe (siehe GRW 142)
+
+    // Negative Qualität?
+    const qpos = !itemDD.negativeQualitaet;
+
+    if (actorDD) {
+      itemDD.minAttributAbzug = mindestAttributAbzugBerechnen(itemDD, actorDD);
+    }
+    
+    // SR berechnen
+    itemDD.sr.mod = qpos ? checkValueRange(itemDD.sr.mod, 0, 1) : checkValueRange(itemDD.schaden.mod, -1, 0);
+    itemDD.sr.wert = itemDD.sr.normal + itemDD.sr.mod;
+
+    // Behinderung berechnen
+    itemDD.behinderung.mod = qpos ? checkValueRange(itemDD.behinderung.mod, -1, 0) : checkValueRange(itemDD.wgs.mod, 0, 1);
+    itemDD.behinderung.wert = itemDD.behinderung.normal + itemDD.behinderung.mod + (itemDD.minAttributAbzug ? itemDD.minAttributAbzug : 0);
+
+    // Tickzuschlag berechnen
+    itemDD.tickzuschlag.mod = qpos ? checkValueRange(itemDD.tickzuschlag.mod, -1, 0) : checkValueRange(itemDD.tickzuschlag.mod, 0, 1);
+    itemDD.tickzuschlag.wert = itemDD.tickzuschlag.normal + itemDD.tickzuschlag.mod + (itemDD.minAttributAbzug ? itemDD.minAttributAbzug : 0);
 
     // Qualität berechnen (siehe GRW 142 unten)
-    itemDD.qualitaet = itemDD.kampffertigkeit.mod * 2 + itemDD.schaden.mod - itemDD.wgs.mod * 2 - itemDD.last.mod + itemDD.haerte.mod;
+    const qfunction = (itemDD) => itemDD.sr.mod * 2 - itemDD.behinderung.mod * 2 - itemDD.tickzuschlag.mod * 2 - itemDD.last.mod + itemDD.haerte.mod;
+    allgemeineAusruestungswerteBerechnen(itemDD, qpos, qfunction);
+  }
 
-    // Verfügbarkeit berechnen (siehe GRW 181 links unten)
-    var verfuegbarkeitStufe = VERFUEGBARKEIT.indexOf(itemDD.verfuegbarkeit.normal);
-    if (itemDD.qualitaet > 0) {
-      verfuegbarkeitStufe = Math.min(verfuegbarkeitStufe + Math.floor(itemDD.qualitaet/2), 3);
+  /**
+   * Prepare Schild type specific data
+   */
+  _prepareSchildData(itemData, actorData) {
+    const itemDD = itemData.data;
+    const actorDD = actorData.data;
+
+    // Verbesserungen und Qualität der Waffe (siehe GRW 142)
+
+    // Negative Qualität?
+    const qpos = !itemDD.negativeQualitaet;
+
+    // Fertigkeitswert berechnen
+    itemDD.kampffertigkeit.mod = qpos ? checkValueRange(itemDD.kampffertigkeit.mod, 0, 3) : checkValueRange(itemDD.kampffertigkeit.mod, -3, 0);
+    if (actorDD) {
+      const kampffertigkeit = itemDD.kampffertigkeit.key = ermittleSchildstossKampffertigkeit(actorDD);
+      const fp = actorDD.kampffertigkeiten[kampffertigkeit].punkte;
+      const attribut1 = actorDD.attribute.bew; // BEW
+      const attribut2 = actorDD.attribute.sta; // STÄ
+      itemDD.attribut1.wert = attribut1.wert;
+      itemDD.attribut2.wert = attribut2.wert;
+      itemDD.minAttributAbzug = mindestAttributAbzugBerechnen(itemDD, actorDD);
+      itemDD.kampffertigkeit.wert = fp + itemDD.attribut1.wert + itemDD.attribut2.wert + itemDD.kampffertigkeit.mod;
+      itemDD.kampffertigkeit.punkte = fp;
+    } else {
+      itemDD.kampffertigkeit.wert = '???';
     }
-    itemDD.verfuegbarkeit.berechnet = VERFUEGBARKEIT[verfuegbarkeitStufe];
+    
+    // Behinderung berechnen
+    itemDD.behinderung.mod = qpos ? checkValueRange(itemDD.behinderung.mod, -1, 0) : checkValueRange(itemDD.wgs.mod, 0, 1);
+    itemDD.behinderung.wert = itemDD.behinderung.normal + itemDD.behinderung.mod + (itemDD.minAttributAbzug ? itemDD.minAttributAbzug : 0);
 
-    // Preis berechnen
-    itemDD.preis.berechnet = berechnePreis(itemDD.preis.normal, itemDD.qualitaet);
+    // Tickzuschlag berechnen
+    itemDD.tickzuschlag.mod = qpos ? checkValueRange(itemDD.tickzuschlag.mod, -1, 0) : checkValueRange(itemDD.tickzuschlag.mod, 0, 1);
+    itemDD.tickzuschlag.wert = itemDD.tickzuschlag.normal + itemDD.tickzuschlag.mod + (itemDD.minAttributAbzug ? itemDD.minAttributAbzug : 0);
 
-    // Komplexitaet berechnen
-    itemDD.komplexitaet.berechnet = berechneKomplexitaet(itemDD.komplexitaet.normal, itemDD.qualitaet);
-
+    // Qualität berechnen (siehe GRW 142 unten)
+    const qfunction = (itemDD) => itemDD.kampffertigkeit.mod * 2 + itemDD.behinderung.mod * 2 - itemDD.tickzuschlag.mod * 2 - itemDD.last.mod + itemDD.haerte.mod;
+    allgemeineAusruestungswerteBerechnen(itemDD, qpos, qfunction);
   }
 
   /**
@@ -92,6 +143,8 @@ export class SplittermondItem extends Item {
    * @param {Event} event   The originating click event
    * @private
    */
+
+   /*
   async roll() {
     // Basic template rendering data
     const token = this.actor.token;
@@ -108,7 +161,40 @@ export class SplittermondItem extends Item {
       flavor: label
     });
   }
+  */
+}
 
+function allgemeineAusruestungswerteBerechnen(itemDD, qpos, qfunction) {
+
+  // Last berechnen
+  itemDD.last.mod = qpos ? checkValueRange(itemDD.last.mod, -itemDD.last.normal/2, 0) : checkValueRange(itemDD.last.mod, 0, itemDD.last.normal/2);
+  itemDD.last.wert= itemDD.last.normal + itemDD.last.mod;
+
+  // Härte berechnen
+  itemDD.haerte.mod = qpos ? checkValueRange(itemDD.haerte.mod, 0, 2) : checkValueRange(itemDD.haerte.mod, -2, 0);
+  itemDD.haerte.wert = itemDD.haerte.normal + itemDD.haerte.mod;
+
+  // Qualität berechnen (siehe GRW 142 unten)
+  itemDD.qualitaet = qfunction(itemDD);
+
+  // Verfügbarkeit berechnen (siehe GRW 181 links unten)
+  var verfuegbarkeitStufe = VERFUEGBARKEIT.indexOf(itemDD.verfuegbarkeit.normal);
+  if (itemDD.qualitaet > 0) {
+    verfuegbarkeitStufe = Math.min(verfuegbarkeitStufe + Math.floor(itemDD.qualitaet/2), 3);
+  }
+  itemDD.verfuegbarkeit.berechnet = VERFUEGBARKEIT[verfuegbarkeitStufe];
+
+  // Preis berechnen
+  itemDD.preis.berechnet = berechnePreis(itemDD.preis.normal, itemDD.qualitaet);
+
+  // Komplexitaet berechnen
+  itemDD.komplexitaet.berechnet = berechneKomplexitaet(itemDD.komplexitaet.normal, itemDD.qualitaet);
+}
+
+// (siehe GRW 161 links oben)
+function ermittleSchildstossKampffertigkeit(actorDD) {
+  return Object.keys(actorDD.kampffertigkeiten).reduce((resultKey, currentKey) =>
+      actorDD.kampffertigkeiten[currentKey].punkte > actorDD.kampffertigkeiten[resultKey].punkte ? currentKey : resultKey, 'handgemenge');
 }
 
 // (siehe GRW 186 links oben)
@@ -159,6 +245,10 @@ function berechneKomplexitaet(normalkomplexitaet, qualitaet) {
   return KOMPLEXITAET[Math.max(index1, index2)];
 }
 
+const VERFUEGBARKEIT = ['dorf', 'kleinstadt', 'grossstadt', 'metropole'];
+const PREIS_AUFSCHLAG = [0, 1500, 3000, 6000, 9000, 15000, 21000];
+const KOMPLEXITAET = ['u', 'g', 'f', 'm', 'a'];
+
 /**
  * 
  * bonusMod -3 bis +3
@@ -167,10 +257,10 @@ function berechneKomplexitaet(normalkomplexitaet, qualitaet) {
  * wgsMod -1 bis +1
  * srMod -1 bis +1
  * behinderungMod -1 bis +1
- * tickZuschlagMod -1 bis +1
+ * tickzuschlagMod -1 bis +1
  * haerteMod -2 bis +2
  * 
- * qualitaet = bonusMod*2 +schadenMod -wgsMod*2 +schadensreduktionMod*2 -behinderungMod*2 -tickZuschlagMod*2 -lastMod +haerteMod
+ * qualitaet = bonusMod*2 +schadenMod -wgsMod*2 +srMod*2 -behinderungMod*2 -tickzuschlagMod*2 -lastMod +haerteMod
  * 
  * MODIFIZIERBAR
  * Fertigkeitswert/VTD+ bonusMod              Waffe bzw. Rüstung

@@ -1,0 +1,37 @@
+<h1>Rüstungen</h1>
+<table class="directory-list ruestungen" data-pack="{{collection}}">
+  <thead>
+    <tr>
+      <th>{{smLocalize 'Label.Name'}}</th>
+      <th width="10%">{{smLocalize 'Label.Verfuegbarkeit'}}</th>
+      <th width="10%">{{smLocalize 'Label.Preis'}}</th>
+      <th width="5%">{{smLocalize 'Label.Last'}}</th>
+      <th width="5%">{{smLocalize 'Label.Haerte'}}</th>
+      <th width="10%">{{smLocalize 'Label.Komplexitaet'}}</th>
+      <th width="5%">{{smLocalize 'Label.VTDplus'}}</th>
+      <th width="5%">{{smLocalize 'Label.SR'}}</th>
+      <th width="5%">{{smLocalize 'Label.Behinderung'}}</th>
+      <th width="10%">{{smLocalize 'Label.Tickzuschlag'}}</th>
+      <th width="10%">{{smLocalize 'Label.Mindestattribut'}}</th>
+      <th>{{smLocalize 'Label.Merkmale'}}</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each group}}
+    <tr class="directory-item item ruestung" data-entry-id="{{this._id}}">
+        <td>{{this.name}}</td>
+        <td>{{smLocalize1 'Verfuegbarkeit' this.data.verfuegbarkeit.normal}}</td>
+        <td>{{preisFormat this.data.preis.normal}}</td>
+        <td>{{zeroIsDash this.data.last.normal}}</td>
+        <td>{{zeroIsDash this.data.haerte.normal}}</td>
+        <td>{{smLocalize2 'Komplexitaet' this.data.komplexitaet.normal 'abk'}}</td>
+        <td>{{this.data.vtdPlus}}</td>
+        <td>{{this.data.sr.normal}}</td>
+        <td>{{this.data.behinderung.normal}}</td>
+        <td>{{this.data.tickzuschlag.normal}}</td>
+        <td>{{#if this.data.minAttribut}}{{smLocalize2 'Attribut' this.data.minAttribut.key 'abk'}} {{this.data.minAttribut.wert}}{{else}}-{{/if}}</td>
+        <td>{{#each this.data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{merkmal.nameStufe}}</span>{{/each}}</td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>

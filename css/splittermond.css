@@ -391,6 +391,11 @@ table input[type="text"]:focus {
 
 /*** Compendium ****/
 
+.compendium h1 {
+  flex: none;
+  margin-top: 24px;
+}
+
 .compendium {
   display: contents;
 }

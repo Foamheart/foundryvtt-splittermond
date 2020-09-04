@@ -42,28 +42,6 @@ export class SplittermondItemSheet extends ItemSheet {
       let stufe = merkmal.stufe === undefined ? '' : ' ' + merkmal.stufe;
       merkmal.nameStufe = game.i18n.localize('SPLITTERMOND.Waffenmerkmal.' + merkmal.key) + stufe;
     }    
-
-    // Localize Waffe labels
-    dd.kampffertigkeit.name = game.i18n.localize('SPLITTERMOND.Kampffertigkeit.' + dd.kampffertigkeit.key + '.name');
-    dd.attribut1.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + dd.attribut1.key + '.abk');
-    dd.attribut2.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + dd.attribut2.key + '.abk');
-
-    if (dd.minAttribut1) {
-      dd.minAttribut1.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + dd.minAttribut1.key + '.abk');
-    }
-
-    if (dd.minAttribut2) {
-      dd.minAttribut2.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + dd.minAttribut2.key + '.abk');
-    }
-
-    dd.verfuegbarkeit.name = game.i18n.localize('SPLITTERMOND.Verfuegbarkeit.' + dd.verfuegbarkeit.berechnet);
-    dd.komplexitaet.name = game.i18n.localize('SPLITTERMOND.Komplexitaet.' + dd.komplexitaet.berechnet + '.name');
-
-    dd.kampffertigkeit.mod = dd.kampffertigkeit.mod == 0 ? '' : dd.kampffertigkeit.mod;
-    dd.schaden.mod = dd.schaden.mod == 0 ? '' : dd.schaden.mod;
-    dd.wgs.mod = dd.wgs.mod == 0 ? '' : dd.wgs.mod;
-    dd.last.mod = dd.last.mod == 0 ? '' : dd.last.mod;
-    dd.haerte.mod = dd.haerte.mod == 0 ? '' : dd.haerte.mod;
     
     return data;
   }
