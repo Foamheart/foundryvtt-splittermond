@@ -37,7 +37,8 @@ export class SplittermondActor extends Actor {
     // Heldengrad checken (TODO: Ist nur temporär ein Eingabefeld, soll berechnet werden aus EP)
     actorDD.hg = checkValueRange(actorDD.hg, 1, 4);
     const hg = actorDD.hg;
-    const maxFP = hg * 3 + 3;
+    const maxFP = hg * 3 + 3; // (siehe GRW 88 links)
+    const widerstandsbonus = (hg - 1) * 2; // (siehe GRW 89 links oben)
 
     // Attribute berechnen
     const attribute = actorDD.attribute;
@@ -56,9 +57,9 @@ export class SplittermondActor extends Actor {
     awerte.ini.wert = 10 - attribute.int.wert + awerte.ini.mod;
     awerte.lp.wert = awerte.gk.wert + attribute.kon.wert + awerte.lp.mod;
     awerte.fo.wert = 2 * (attribute.mys.wert + attribute.wil.wert) + awerte.fo.mod;
-    awerte.vtd.wert = 12 + attribute.bew.wert + attribute.sta.wert + vtd_mod(awerte.gk.wert) + awerte.vtd.mod;
-    awerte.gw.wert = 12 + attribute.ver.wert + attribute.wil.wert + awerte.gw.mod;
-    awerte.kw.wert = 12 + attribute.kon.wert + attribute.wil.wert + awerte.kw.mod;
+    awerte.vtd.wert = 12 + attribute.bew.wert + attribute.sta.wert + vtd_mod(awerte.gk.wert) + awerte.vtd.mod + widerstandsbonus;
+    awerte.gw.wert = 12 + attribute.ver.wert + attribute.wil.wert + awerte.gw.mod + widerstandsbonus;
+    awerte.kw.wert = 12 + attribute.kon.wert + attribute.wil.wert + awerte.kw.mod + widerstandsbonus;
 
     // Fertigkeiten berechnen
     const fertigkeiten = actorDD.fertigkeiten;
