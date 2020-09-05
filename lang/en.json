@@ -205,7 +205,9 @@
             "Tickzuschlag": "Tick-Zuschlag",
             "VTDplus": "VTD+",
             "Schild": "Schild",
-            "Mindestattribut": "Mindestattribut"
+            "Mindestattribut": "Mindestattribut",
+            "Schildstoss": "Schildstoß",
+            "Summe": "Summe"
         }
     }
 }

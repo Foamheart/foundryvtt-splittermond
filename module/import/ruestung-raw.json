@@ -11,7 +11,7 @@
     "sr": 0,
     "behinderung": 0,
     "tickzuschlag": 0,
-    "minAttribut": "",
+    "minAttribut1": "",
     "merkmale": ""
   },
   {
@@ -26,7 +26,7 @@
     "sr": 1,
     "behinderung": 1,
     "tickzuschlag": 0,
-    "minAttribut": "sta_1",
+    "minAttribut1": "sta_1",
     "merkmale": ""
   },
   {
@@ -41,7 +41,7 @@
     "sr": 1,
     "behinderung": 2,
     "tickzuschlag": 0,
-    "minAttribut": "sta_1",
+    "minAttribut1": "sta_1",
     "merkmale": "standfest"
   },
   {
@@ -56,7 +56,7 @@
     "sr": 0,
     "behinderung": 0,
     "tickzuschlag": 1,
-    "minAttribut": "sta_1",
+    "minAttribut1": "sta_1",
     "merkmale": ""
   },
   {
@@ -71,7 +71,7 @@
     "sr": 2,
     "behinderung": 0,
     "tickzuschlag": 1,
-    "minAttribut": "sta_1",
+    "minAttribut1": "sta_1",
     "merkmale": "primitiv"
   },
   {
@@ -86,7 +86,7 @@
     "sr": 2,
     "behinderung": 1,
     "tickzuschlag": 1,
-    "minAttribut": "sta_2",
+    "minAttribut1": "sta_2",
     "merkmale": ""
   },
   {
@@ -101,7 +101,7 @@
     "sr": 2,
     "behinderung": 3,
     "tickzuschlag": 2,
-    "minAttribut": "sta_2",
+    "minAttribut1": "sta_2",
     "merkmale": "wattiert"
   },
   {
@@ -116,7 +116,7 @@
     "sr": 2,
     "behinderung": 4,
     "tickzuschlag": 2,
-    "minAttribut": "sta_3",
+    "minAttribut1": "sta_3",
     "merkmale": "wattiert"
   },
   {
@@ -131,7 +131,7 @@
     "sr": 1,
     "behinderung": 2,
     "tickzuschlag": 1,
-    "minAttribut": "sta_3",
+    "minAttribut1": "sta_3",
     "merkmale": "standfest"
   },
   {
@@ -146,7 +146,7 @@
     "sr": 4,
     "behinderung": 3,
     "tickzuschlag": 3,
-    "minAttribut": "sta_4",
+    "minAttribut1": "sta_4",
     "merkmale": ""
   },
   {
@@ -161,7 +161,7 @@
     "sr": "",
     "behinderung": 1,
     "tickzuschlag": 0,
-    "minAttribut": "bew_2",
+    "minAttribut1": "bew_2",
     "merkmale": "defensiv_2"
   },
   {
@@ -176,7 +176,7 @@
     "sr": "",
     "behinderung": 1,
     "tickzuschlag": 1,
-    "minAttribut": "sta_2",
+    "minAttribut1": "sta_2",
     "merkmale": "defensiv_2"
   },
   {
@@ -191,7 +191,7 @@
     "sr": "",
     "behinderung": 2,
     "tickzuschlag": 0,
-    "minAttribut": "sta_2",
+    "minAttribut1": "sta_2",
     "merkmale": "defensiv_1"
   },
   {
@@ -206,7 +206,7 @@
     "sr": "",
     "behinderung": 2,
     "tickzuschlag": 1,
-    "minAttribut": "sta_3",
+    "minAttribut1": "sta_3",
     "merkmale": "defensiv_2"
   },
   {
@@ -221,7 +221,7 @@
     "sr": "",
     "behinderung": 2,
     "tickzuschlag": 2,
-    "minAttribut": "sta_4",
+    "minAttribut1": "sta_4",
     "merkmale": "defensiv_1,deckung"
   }
 ]

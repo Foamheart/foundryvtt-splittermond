@@ -286,12 +286,19 @@
             "mod": 0
           }
         }
+      },
+      "ruestungssumme": {
+        "vtdPlus": 0,
+        "sr": 0,
+        "behinderung": 0,
+        "tickzuschlag": 0
       }
     },
     "character": {
       "templates": [
         "grundwerte",
-        "skills"
+        "skills",
+        "ruestungssumme"
       ],
       "hg": 1,
       "rasse": "mensch"

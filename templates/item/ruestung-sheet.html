@@ -5,8 +5,8 @@
             <h1 class="itemname">{{item.name}}</h1>
             <div class="ruestung">{{smLocalize 'Label.Ruestung'}}</div>
             <div class="waffenattribute">
-                {{#if data.minAttribut}}<span><b>{{smLocalize 'Label.Mindestattribut'}}:</b> 
-                {{smLocalize2 'Attribut' data.minAttribut.key 'abk'}} {{data.minAttribut.wert}}</span>{{/if}}
+                {{#if data.minAttribut1}}<span><b>{{smLocalize 'Label.Mindestattribut'}}:</b> 
+                {{smLocalize2 'Attribut' data.minAttribut1.key 'abk'}} {{data.minAttribut1.wert}}</span>{{/if}}
             </div>
             <div><b>{{smLocalize 'Label.VTDplus'}}:</b> {{data.vtdPlus}}</div>
             <div>{{#each data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{merkmal.nameStufe}}</span>{{/each}}</div>

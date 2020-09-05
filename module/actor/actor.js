@@ -29,37 +29,39 @@ export class SplittermondActor extends Actor {
    * Prepare Character type specific data
    */
   _prepareCharacterData(actorData) {
-    const data = actorData.data;
+    const actorDD = actorData.data;
 
     // Rasse
-    const rasse = data.rasse;
+    const rasse = actorDD.rasse;
 
     // Heldengrad checken (TODO: Ist nur temporär ein Eingabefeld, soll berechnet werden aus EP)
-    data.hg = checkValueRange(data.hg, 1, 4);
-    const hg = data.hg;
+    actorDD.hg = checkValueRange(actorDD.hg, 1, 4);
+    const hg = actorDD.hg;
     const maxFP = hg * 3 + 3;
 
     // Attribute berechnen
-    const attribute = data.attribute;
+    const attribute = actorDD.attribute;
     for (let [key, attribut] of Object.entries(attribute)) {
       attribut.start = checkValueRange(attribut.start, 0, 5);
       attribut.mod = checkValueRange(attribut.mod, 0, hg);
       attribut.wert = attribut.start + attribut.mod;
     }
 
+    // TODO Sind mod- und/oder temp-Werte keine Eingabefelder, sondern werden alle berechnet??
+
     // Abgeleitete Werte berechnen
-    const awerte = data.abgeleiteteWerte;
-    awerte.gk.wert = RASSE_GK[rasse] + awerte.gk.mod + awerte.gk.temp;
-    awerte.gsw.wert = awerte.gk.wert + attribute.bew.wert + awerte.gsw.mod + awerte.gsw.temp;
-    awerte.ini.wert = 10 - attribute.int.wert + awerte.ini.mod + awerte.ini.temp;
-    awerte.lp.wert = awerte.gk.wert + attribute.kon.wert + awerte.lp.mod + awerte.lp.temp;
-    awerte.fo.wert = 2 * (attribute.mys.wert + attribute.wil.wert) + awerte.fo.mod + awerte.fo.temp;
-    awerte.vtd.wert = 12 + attribute.bew.wert + attribute.sta.wert + vtd_mod(awerte.gk.wert) + awerte.vtd.mod + awerte.vtd.temp;
-    awerte.gw.wert = 12 + attribute.ver.wert + attribute.wil.wert + awerte.gw.mod + awerte.gw.temp;
-    awerte.kw.wert = 12 + attribute.kon.wert + attribute.wil.wert + awerte.kw.mod + awerte.kw.temp;
+    const awerte = actorDD.abgeleiteteWerte;
+    awerte.gk.wert = RASSE_GK[rasse] + awerte.gk.mod;
+    awerte.gsw.wert = awerte.gk.wert + attribute.bew.wert + awerte.gsw.mod;
+    awerte.ini.wert = 10 - attribute.int.wert + awerte.ini.mod;
+    awerte.lp.wert = awerte.gk.wert + attribute.kon.wert + awerte.lp.mod;
+    awerte.fo.wert = 2 * (attribute.mys.wert + attribute.wil.wert) + awerte.fo.mod;
+    awerte.vtd.wert = 12 + attribute.bew.wert + attribute.sta.wert + vtd_mod(awerte.gk.wert) + awerte.vtd.mod;
+    awerte.gw.wert = 12 + attribute.ver.wert + attribute.wil.wert + awerte.gw.mod;
+    awerte.kw.wert = 12 + attribute.kon.wert + attribute.wil.wert + awerte.kw.mod;
 
     // Fertigkeiten berechnen
-    const fertigkeiten = data.fertigkeiten;
+    const fertigkeiten = actorDD.fertigkeiten;
     for (let [key, fertigkeit] of Object.entries(fertigkeiten)) {
       const att1_key = FERTIGKEITEN_ATTRIBUTE[key].att1;
       const att2_key = FERTIGKEITEN_ATTRIBUTE[key].att2;
@@ -70,13 +72,13 @@ export class SplittermondActor extends Actor {
     }
 
     // Kampffertigkeiten checken
-    const kampffertigkeiten = data.kampffertigkeiten;
+    const kampffertigkeiten = actorDD.kampffertigkeiten;
     for (let [key, kampffertigkeit] of Object.entries(kampffertigkeiten)) {
       kampffertigkeit.fp = checkValueRange(kampffertigkeit.fp, 0, maxFP);
     }
 
     // Magieschulen berechnen
-    const magieschulen = data.magieschulen;
+    const magieschulen = actorDD.magieschulen;
     for (let [key, magieschule] of Object.entries(magieschulen)) {
       const att1_key = 'mys';
       const att2_key = MAGIESCHULEN_ATTRIBUT[key];
@@ -86,8 +88,32 @@ export class SplittermondActor extends Actor {
       magieschule.wert = magieschule.fp + magieschule.att1.wert + magieschule.att2.wert + magieschule.mod;
     }
 
-    this.prepareEmbeddedEntities(); // TODO Alle Items des Actors neu erzeugen. Möglicherweise unperformant?
+    // Alle Items des Actors neu erzeugen
+    this.prepareEmbeddedEntities(); // TODO Möglicherweise unperformant?
     
+    // Rüstungssumme berechnen
+    actorDD.vtdPlus = 0;
+    actorDD.sr = 0;
+    actorDD.behinderung = 0;
+    actorDD.tickzuschlag = 0;
+    let ruestungen = actorData.items.filter(item => item.type == 'ruestung' || item.type == 'schild');
+    ruestungen.forEach(item => {
+      actorDD.vtdPlus += item.data.vtdPlus;
+      if (item.data.sr) { // Schilde haben keine SR
+        actorDD.sr += item.data.sr.wert;
+      }
+      actorDD.behinderung += item.data.behinderung.wert;
+      actorDD.tickzuschlag += item.data.tickzuschlag.wert;
+    });
+
+    // VTD korrigieren
+    awerte.vtd.temp = actorDD.vtdPlus;
+    awerte.vtd.wert += awerte.vtd.temp;
+
+    // GSW korrigieren
+    awerte.gsw.temp = -Math.floor(actorDD.behinderung/2);
+    awerte.gsw.wert += awerte.gsw.temp;
+
   }
 
 }

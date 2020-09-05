@@ -10,16 +10,18 @@ export class SplittermondActorSheet extends ActorSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["splittermond", "sheet", "actor"],
       template: "systems/splittermond/templates/actor/actor-sheet.html",
-      width: 600,
-      height: 600,
+      width: 1000,
+      height: 800,
       tabs: [
         {
           navSelector: ".sheet-tabs",
           contentSelector: ".sheet-body",
-          initial: "grundwerte",
+          initial: "kampf",
         },
       ],
-      dragDrop: [{dragSelector: ".waffen .waffe", dropSelector: null}]
+      dragDrop: [
+        {dragSelector: ".waffen .waffe", dropSelector: null}
+      ]
     });
   }
 
@@ -96,6 +98,8 @@ export class SplittermondActorSheet extends ActorSheet {
 
     // Initialize containers.
     const waffen = [];
+    const schilde = [];
+    const ruestungen = [];
     const gear = [];
     const features = [];
     const spells = {
@@ -120,6 +124,13 @@ export class SplittermondActorSheet extends ActorSheet {
       if (i.type === "waffe") {
         waffen.push(i);
       }
+      if (i.type === "schild") {
+        schilde.push(i);
+        ruestungen.push(i);
+      }
+      if (i.type === "ruestung") {
+        ruestungen.push(i);
+      }
       // Append to gear.
       else if (i.type === "item") {
         gear.push(i);
@@ -138,18 +149,41 @@ export class SplittermondActorSheet extends ActorSheet {
 
     // Assign and return
     actorData.waffen = waffen; 
+    actorData.schilde = schilde;
+    actorData.ruestungen = ruestungen;
     // actorData.gear = gear;
     // actorData.features = features;
     // actorData.spells = spells;
 
+    // TODO Lokalisierung sollte komplett im HTML mit Handlebars erfolgen
+
     // Lokalisierung der Waffenliste
-    for (let [key, waffe] of Object.entries(waffen)){
-      waffe.data.kampffertigkeit.abk = game.i18n.localize('SPLITTERMOND.Kampffertigkeit.' + waffe.data.kampffertigkeit.key + '.abk');
-      waffe.data.attribut1.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + waffe.data.attribut1.key + '.abk');
-      waffe.data.attribut2.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + waffe.data.attribut2.key + '.abk');
+    for (let [key, item] of Object.entries(waffen)){
+      item.data.kampffertigkeit.abk = game.i18n.localize('SPLITTERMOND.Kampffertigkeit.' + item.data.kampffertigkeit.key + '.abk');
+      item.data.attribut1.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + item.data.attribut1.key + '.abk');
+      item.data.attribut2.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + item.data.attribut2.key + '.abk');
       // Localize Waffenmerkmale
-      for (let [waffeKey, merkmal] of Object.entries(waffe.data.merkmale)){
-        let stufe = merkmal.stufe == 0 ? '' : ' ' + merkmal.stufe;
+      for (let [itemKey, merkmal] of Object.entries(item.data.merkmale)){
+        let stufe = merkmal.stufe === undefined ? '' : ' ' + merkmal.stufe;
+        merkmal.nameStufe = game.i18n.localize('SPLITTERMOND.Waffenmerkmal.' + merkmal.key) + stufe;
+      }    
+    }    
+
+    // Lokalisierung der Schildliste
+    for (let [key, item] of Object.entries(schilde)){
+      item.data.kampffertigkeit.abk = game.i18n.localize('SPLITTERMOND.Kampffertigkeit.' + item.data.kampffertigkeit.key + '.abk');
+      // Localize Waffenmerkmale
+      for (let [itemKey, merkmal] of Object.entries(item.data.merkmale)){
+        let stufe = merkmal.stufe === undefined ? '' : ' ' + merkmal.stufe;
+        merkmal.nameStufe = game.i18n.localize('SPLITTERMOND.Waffenmerkmal.' + merkmal.key) + stufe;
+      }    
+    }    
+
+    // Lokalisierung der Ruestungsliste
+    for (let [key, item] of Object.entries(ruestungen)){
+      // Localize Waffenmerkmale
+      for (let [itemKey, merkmal] of Object.entries(item.data.merkmale)){
+        let stufe = merkmal.stufe === undefined ? '' : ' ' + merkmal.stufe;
         merkmal.nameStufe = game.i18n.localize('SPLITTERMOND.Waffenmerkmal.' + merkmal.key) + stufe;
       }    
     }    
@@ -163,23 +197,23 @@ export class SplittermondActorSheet extends ActorSheet {
     // Everything below here is only needed if the sheet is editable
     if (!this.options.editable) return;
 
-    // Add Waffe Item
-    html.find(".waffe-add").click(async(ev) => {
-      const pack = game.packs.get("splittermond.waffen");
+    // Add Item
+    html.find(".item-add").click(async(ev) => {
+      const pack = game.packs.get("splittermond.ausruestung");
       pack.render(true);
       pack.maximize();
     });
 
-    // Update Waffe Item
-    html.find(".waffe-edit").click((ev) => {
-      const li = $(ev.currentTarget).parents(".waffe");
+    // Update Item
+    html.find(".item-edit").click((ev) => {
+      const li = $(ev.currentTarget).parents(".item");
       const item = this.actor.getOwnedItem(li.data("itemId"));
       item.sheet.render(true);
     });
 
-    // Delete Waffe Item
-    html.find(".waffe-delete").click((ev) => {
-      const li = $(ev.currentTarget).parents(".waffe");
+    // Delete Item
+    html.find(".item-delete").click((ev) => {
+      const li = $(ev.currentTarget).parents(".item");
       this.actor.deleteOwnedItem(li.data("itemId"));
       li.slideUp(200, () => this.render(false));
     });

@@ -27,7 +27,7 @@
         <td>{{this.data.vtdPlus}}</td>
         <td>{{this.data.behinderung.normal}}</td>
         <td>{{this.data.tickzuschlag.normal}}</td>
-        <td>{{#if this.data.minAttribut}}{{smLocalize2 'Attribut' this.data.minAttribut.key 'abk'}} {{this.data.minAttribut.wert}}{{else}}-{{/if}}</td>
+        <td>{{#if this.data.minAttribut1}}{{smLocalize2 'Attribut' this.data.minAttribut1.key 'abk'}} {{this.data.minAttribut1.wert}}{{else}}-{{/if}}</td>
         <td>{{#each this.data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{merkmal.nameStufe}}</span>{{/each}}</td>
     </tr>
   {{/each}}

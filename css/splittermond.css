@@ -287,6 +287,7 @@ th:first-child {
   text-align: left;
 }
 
+/* Tabellenzeilen abwechselnd weiß und blau */
 tr {
 	background-color: #CCECFC;
 	color: #000000;
@@ -294,6 +295,11 @@ tr {
 
 tr:nth-child(even) {
 	background-color: #ffffff;
+}
+
+/* Für Tabellenzeile Rüstungssumme */
+tr.summe {
+  font-weight: bold;
 }
 
 td {
@@ -306,6 +312,7 @@ td:first-child {
   text-align: left;
 }
 
+/* markColX umrandet Tabellenspalte X dick */
 .markCol2 td:nth-child(2) {
   border-width: 0 medium medium medium;
 }

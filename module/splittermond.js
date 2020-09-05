@@ -114,9 +114,9 @@ Hooks.once("ready", async function() {
 
   // Individuelles Template für Compendium "Ausrüstung"
   const ausruestung = game.packs.get('splittermond.ausruestung');
-  // waffenliste.options.template = 'systems/splittermond/templates/apps/waffen1.html'
   ausruestung.options.resizable = true;
-  ausruestung.options.width = 700;
+  ausruestung.options.width = 1280;
+  ausruestung.options.height = 1000;
 
 });
 

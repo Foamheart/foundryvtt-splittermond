@@ -11,6 +11,9 @@ export async function oeffneDialogFertigkeitsprobe(actor, dataset) {
 }
 
 async function oeffneDialogAllgemeineFertigkeitsprobe(actor, dataset) {
+
+    // TODO Modifikator aufgrund von Behinderung berücksichtigen (siehe GRW 165 links)
+    
     let dialogData = {
         fertigkeitWert: Number(dataset.wert),
         modifikator: 0,
@@ -18,7 +21,7 @@ async function oeffneDialogAllgemeineFertigkeitsprobe(actor, dataset) {
         rollMode: game.settings.get("core", "rollMode"),
         rollModes: CONFIG.Dice.rollModes,
        };
-    
+
     const title = actor.name + ': ' + game.i18n.localize('SPLITTERMOND.Label.Probe') + ' ' + game.i18n.localize('SPLITTERMOND.Label.auf') + ' ' + dataset.name;
     const html = await renderTemplate('systems/splittermond/templates/dialog/fertigkeitsprobe-dialog.html', dialogData);
     oeffneDialog(actor, null, dataset, title, html);
@@ -26,6 +29,8 @@ async function oeffneDialogAllgemeineFertigkeitsprobe(actor, dataset) {
 
 async function oeffneDialogKampffertigkeitsprobe(actor, dataset) {
 
+    // TODO Tickzuschlag berücksichtigen (siehe GRW 165 links)
+    
     const targets = Array.from(game.user.targets);
     if (targets.length !== 1) {
         ui.notifications.info("Bitte erst genau 1 Ziel für den Angriff markieren.");

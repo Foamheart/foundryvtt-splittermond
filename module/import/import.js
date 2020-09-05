@@ -83,7 +83,7 @@ async function importRuestung(pack) {
         }
         data.behinderung.normal = rawData.behinderung;
         data.tickzuschlag.normal = rawData.tickzuschlag;
-        createMinAttribut(data, rawData, 'minAttribut');
+        createMinAttribut(data, rawData, 'minAttribut1');
         createMerkmale(data, rawData);
             
         await pack.importEntity(item);
