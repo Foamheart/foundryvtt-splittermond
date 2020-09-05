@@ -1,0 +1,30 @@
+<div class="grid grid-2col">
+
+  <table class="markCol2">
+    <thead>
+      <tr>
+        <th>{{localize 'SPLITTERMOND.Label.Fertigkeiten'}}</th>
+        <th width="10%">{{localize 'SPLITTERMOND.Label.Wert'}}</th>
+        <th width="10%">{{localize 'SPLITTERMOND.Label.Punkte'}}</th>
+        <th width="10%">{{localize 'SPLITTERMOND.Label.Att1'}}</th>
+        <th width="10%">{{localize 'SPLITTERMOND.Label.Att2'}}</th>
+        <th width="10%">{{localize 'SPLITTERMOND.Label.mod'}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each data.fertigkeiten as |fertigkeit key|}}
+          <tr>
+            <td class="rollable" data-probe="fertigkeit" data-name="{{fertigkeit.name}}" data-wert="{{fertigkeit.wert}}" data-punkte="{{fertigkeit.fp}}">{{fertigkeit.name}}</td>
+            <td>{{fertigkeit.wert}}</td>
+            <td><input type="text" name="data.fertigkeiten.{{key}}.fp" value="{{fertigkeit.fp}}" data-dtype="Number"/></td>
+            <td title="{{fertigkeit.att1.abk}}">{{fertigkeit.att1.wert}}</td>
+            <td title="{{fertigkeit.att2.abk}}">{{fertigkeit.att2.wert}}</td>
+            <td><input type="text" name="data.fertigkeiten.{{key}}.mod" value="{{fertigkeit.mod}}" data-dtype="Number"/></td>
+          </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  <div>platzhalter für meisterschaften-tabelle</div>
+
+</div>

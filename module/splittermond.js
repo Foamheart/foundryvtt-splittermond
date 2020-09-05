@@ -6,6 +6,7 @@ import { SplittermondItemSheet } from "./item/item-sheet.js";
 
 import { importAusruestung } from "./import/import.js";
 import { renderCompendium } from "./compendium.js";
+import { initializeHandlebars } from "./handlebars.js";
 import { schadenswurfNachProbe } from "./probe/probe.js";
 
 /* -------------------------------------------- */
@@ -44,60 +45,8 @@ Hooks.once('init', async function() {
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("splittermond", SplittermondItemSheet, { makeDefault: true });
 
-  /**
-  * Handlebar Helpers
-  * If you need to add Handlebars helpers, here are a few useful examples:
-  */
-
-  Handlebars.registerHelper('preisFormat', function (value) {
-    let telare = parseInt(value);
-    if (telare == 0) {
-      return '-'
-    }
-    let lunare = Math.floor(telare/100);
-    telare = telare % 100;
-    let solare = Math.floor(lunare/100);
-    lunare = lunare % 100;
-
-    solare = solare !== 0 ? (solare + ' S ') : '';
-    lunare = lunare !== 0 ? (lunare + ' L ') : '';
-    telare = telare !== 0 ? (telare + ' T ') : '';
-    return solare + lunare + telare;
-  });
-
-  Handlebars.registerHelper('zeroIsEmpty', function(value) {
-    return value ? value : '';
-  });
-
-  Handlebars.registerHelper('zeroIsDash', function(value) {
-    return value ? value : '-';
-  });
-
-  Handlebars.registerHelper('smLocalize', function(value) {
-    return game.i18n.localize('SPLITTERMOND.' + value);
-  });
-
-  Handlebars.registerHelper('smLocalize1', function(prefix, key) {
-    return game.i18n.localize('SPLITTERMOND.' + prefix + '.' + key);
-  });
-
-  Handlebars.registerHelper('smLocalize2', function(prefix, key, postfix) {
-    return game.i18n.localize('SPLITTERMOND.' + prefix + '.' + key + '.' + postfix);
-  });
-
-  Handlebars.registerHelper('concat', function() {
-      var outStr = '';
-      for (var arg in arguments) {
-        if (typeof arguments[arg] != 'object') {
-          outStr += arguments[arg];
-        }
-      }
-      return outStr;
-    });
-
-  Handlebars.registerHelper('toLowerCase', function(str) {
-    return str.toLowerCase();
-  });
+  // Handlebars are registered in handlebars.js
+  initializeHandlebars();
 
 });
 
