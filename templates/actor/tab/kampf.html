@@ -18,7 +18,7 @@
     </thead>
     <tbody class="waffen">
       {{#each actor.waffen as |item key|}}
-          <tr class="item waffe" data-item-id="{{item._id}}">
+          <tr class="item waffe {{active item.data.ausgeruestet}}" data-item-id="{{item._id}}">
             <td class="rollable" data-probe="kampffertigkeit" data-name="{{item.name}}" data-wert="{{item.data.kampffertigkeit.wert}}" data-wgs="{{item.data.wgs.wert}}" data-schaden="{{item.data.schaden.wert}}" data-punkte="{{item.data.kampffertigkeit.punkte}}">{{item.name}}</td>
             <td {{#if item.data.minAttributAbzug}}class="malus"{{/if}}>{{item.data.kampffertigkeit.wert}}</td>
             <td>{{item.data.kampffertigkeit.abk}}</td>
@@ -30,6 +30,7 @@
             <td>{{zeroIsDash item.data.reichweite}}</td>
             <td>{{#each item.data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{merkmal.nameStufe}}</span>{{/each}}</td>
             <td>
+              <a class="item-control item-toggle" title="Ausgerüstet"><i class="fas fa-shield-alt"></i></a>
               <a class="item-control item-edit" title="Waffe bearbeiten"><i class="fas fa-edit"></i></a>
               <a class="item-control item-delete" title="Waffe löschen"><i class="fas fa-trash"></i></a>
             </td>
@@ -55,7 +56,7 @@
     </thead>
     <tbody class="schilde">
       {{#each actor.schilde as |item key|}}
-          <tr class="item schild" data-item-id="{{item._id}}">
+          <tr class="item schild {{active item.data.ausgeruestet}}" data-item-id="{{item._id}}">
             <td class="rollable" data-probe="kampffertigkeit" data-name="{{item.name}}" data-wert="{{item.data.kampffertigkeit.wert}}" data-wgs="7" data-schaden="1W6+1" data-punkte="{{item.data.kampffertigkeit.punkte}}">{{item.name}}</td>
             <td>{{item.data.kampffertigkeit.wert}}</td>
             <td>{{item.data.kampffertigkeit.abk}}</td>
@@ -66,6 +67,7 @@
             <td>1W6+1</td>
             <td>{{#each item.data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{merkmal.nameStufe}}</span>{{/each}}</td>
             <td>
+              <a class="item-control item-toggle" title="Ausgerüstet"><i class="fas fa-shield-alt"></i></a>
               <a class="item-control item-edit" title="Schild bearbeiten"><i class="fas fa-edit"></i></a>
               <a class="item-control item-delete" title="Schild löschen"><i class="fas fa-trash"></i></a>
             </td>
@@ -108,7 +110,7 @@
     </thead>
     <tbody class="ruestungen">
       {{#each actor.ruestungen as |item key|}}
-      <tr class="item ruestung" data-item-id="{{item._id}}">
+      <tr class="item ruestung {{active item.data.ausgeruestet}}" data-item-id="{{item._id}}">
         <td>{{item.name}}</td>
         <td>{{item.data.vtdPlus}}</td>
         <td>{{item.data.sr.wert}}</td>
@@ -116,6 +118,7 @@
         <td {{#if item.data.minAttributAbzug}}class="malus"{{/if}}>{{item.data.tickzuschlag.wert}}</td>
         <td>{{#each item.data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{merkmal.nameStufe}}</span>{{/each}}</td>
         <td>
+          <a class="item-control item-toggle" title="Ausgerüstet"><i class="fas fa-shield-alt"></i></a>
           <a class="item-control item-edit" title="Rüstung bearbeiten"><i class="fas fa-edit"></i></a>
           <a class="item-control item-delete" title="Rüstung löschen"><i class="fas fa-trash"></i></a>
         </td>

@@ -26,6 +26,10 @@ function registerHandlebarsHelpers() {
     return solare + lunare + telare;
   });
 
+  Handlebars.registerHelper('active', function(value) {
+    return value ? '' : 'inactive';
+  });
+
   Handlebars.registerHelper('zeroIsEmpty', function(value) {
     return value ? value : '';
   });

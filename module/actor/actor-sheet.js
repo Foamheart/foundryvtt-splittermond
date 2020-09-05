@@ -204,6 +204,9 @@ export class SplittermondActorSheet extends ActorSheet {
       pack.maximize();
     });
 
+    // Item State Toggling
+    html.find('.item-toggle').click(this._onToggleItem.bind(this));
+
     // Update Item
     html.find(".item-edit").click((ev) => {
       const li = $(ev.currentTarget).parents(".item");
@@ -300,12 +303,16 @@ export class SplittermondActorSheet extends ActorSheet {
    * @param {Event} event   The triggering click event
    * @private
    */
-  _onToggleWaffe(event) {
+  _onToggleItem(event) {
     event.preventDefault();
-    const itemId = event.currentTarget.closest('.waffe').dataset.itemId;
+    const element = event.currentTarget.closest('.item');
+    const itemId = element.dataset.itemId;
     const item = this.actor.getOwnedItem(itemId);
+    const ausgeruestet = !item.data.data.ausgeruestet;
+    $(element).toggleClass('inactive', !ausgeruestet);
     const attr = 'data.ausgeruestet';
     return item.update({[attr]: !getProperty(item.data, attr)});
+
   }
 
   /**

@@ -96,7 +96,7 @@ export class SplittermondActor extends Actor {
     actorDD.sr = 0;
     actorDD.behinderung = 0;
     actorDD.tickzuschlag = 0;
-    let ruestungen = actorData.items.filter(item => item.type == 'ruestung' || item.type == 'schild');
+    let ruestungen = actorData.items.filter(item => item.data.ausgeruestet && (item.type == 'ruestung' || item.type == 'schild'));
     ruestungen.forEach(item => {
       actorDD.vtdPlus += item.data.vtdPlus;
       if (item.data.sr) { // Schilde haben keine SR
