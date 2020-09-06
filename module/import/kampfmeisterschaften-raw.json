@@ -1,0 +1,641 @@
+[
+  {
+    "name": "Abdrängen",
+    "key": "abdraengen",
+    "fertigkeit": "nahkampf",
+    "schwelle": 1,
+    "manoever": "manoever",
+    "voraussetzung": "",
+    "beschreibung": "Der Kämpfer versucht, seinen Gegner mit ausholenden Schlägen wegzudrängen. Dazu würfelt er einen <i>Nahkampfangriff</i> gegen den <i>Körperlichen Widerstand</i> des Gegners. Trifft er seinen Gegner, erleidet dieser nur den halben Schaden, muss aber einen Meter zurückweichen. Der Angreifer kann weitere Erfolgsgrade nutzen, um seinen Gegner jeweils einen weiteren halben Meter zurückzudrängen. Falls der Gegner zurückgedrängt wird, kann der Angreifer ohne Tickaufwand bis zu 2 Meter nachrücken. Sollte nicht ausreichend Platz zum Zurückweichen vorhanden sein, etwa weil der Gegner an eine Wand gedrängt wird oder einen Abhang hinunterstürzen würde, geht er stattdessen vor dem Hindernis zu Boden und gilt als <i>liegend</i>. Dieses <i>Manöver</i> funktioniert nur gegen Gegner bis maximal Größenklasse 7."
+  },
+  {
+    "name": "Improvisation",
+    "key": "improvisation",
+    "fertigkeit": "nahkampf",
+    "schwelle": 1,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer hat gelernt, alltägliche Gegenstände als Waffen einzusetzen. Waffen mit dem Merkmal<i> Improvisiert </i>richten bei Einsatz der entsprechenden <i>Nahkampffertigkeit</i> zwei zusätzliche Punkte Schaden an. Zusätzlich ist ihre Waffengeschwindigkeit um 2 Punkte verbessert."
+  },
+  {
+    "name": "Kampf mit zwei Waffen",
+    "key": "kampf_mit_zwei_waffen",
+    "fertigkeit": "nahkampf",
+    "schwelle": 1,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer hat gelernt, in beiden Händen eine Waffe zu führen. Die Abzüge für den Kampf mit der falschen Hand (S. 171) entfallen vollständig, wenn er eine Waffe der entsprechenden <i>Kampffertigkeit</i> führt."
+  },
+  {
+    "name": "Rückzugsgefecht",
+    "key": "rueckzugsgefecht",
+    "fertigkeit": "nahkampf",
+    "schwelle": 1,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer hat gelernt, sich <i>aus dem </i><i>Kampf zu lösen</i> (S. 159), indem er sich den Weg frei kämpft. Er kann zu diesem Zweck statt der üblichen <i>Akrobatik</i>-Probe eine Probe auf seine entsprechende <i>Waffenfertigkeit</i> ablegen, sofern er gerade eine zugehörige Waffe führt."
+  },
+  {
+    "name": "Umklammern",
+    "key": "umklammern",
+    "fertigkeit": "nahkampf",
+    "schwelle": 1,
+    "manoever": "manoever",
+    "voraussetzung": "",
+    "beschreibung": "Ist dieser <i>Nahkampfangriff</i> gegen den <i>Körperlichen Widerstand</i> des Gegners (bis max. GK 7) erfolgreich, erleidet der Getroffene nur halben Schaden und beide Beteiligte gelten als <i>Ringend</i>. Dieses <i>Manöver</i> ist nur im unbewaffneten Nahkampf oder mit Waffen mit dem Merkmal <i>Umklammern</i> auszuführen. Wie eine Umklammerung gelöst werden kann, wird auf S. 164 beschrieben."
+  },
+  {
+    "name": "Umreißen",
+    "key": "umreissen",
+    "fertigkeit": "nahkampf",
+    "schwelle": 1,
+    "manoever": "manoever",
+    "voraussetzung": "",
+    "beschreibung": "Dieses <i>Manöver</i> richtet sich gegen den <i>Körperlichen Widerstand</i> des Gegners (bis max. GK 7). Ist der Nahkampfangriff erfolgreich, erleidet das Opfer nur halben Schaden, muss aber eine Probe auf <i>Akrobatik</i> oder <i>Athletik</i> gegen 15 + die Fertigkeitspunkte des Angreifers in der verwendeten <i>Nahkampffertigkeit</i> ablegen. Gelingt ihm diese Probe, erhält es für 20 Ticks den Zustand <i>Benommen</i> <i>1,</i> misslingt sie oder verzichtet das Opfer darauf, geht es zu Boden und zählt als <i>liegend</i>. Der Angreifer kann weitere Erfolgsgrade nutzen, um dem Opfer einen Malus in Höhe von jeweils 5 Punkten auf die Probe zu erteilen."
+  },
+  {
+    "name": "Verteidiger",
+    "key": "verteidiger",
+    "fertigkeit": "nahkampf",
+    "schwelle": 1,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer ist in der Lage, <i>Aktive Abwehr</i> (siehe S. 138) zur Erhöhung der Verteidigung für jemand anderen einzusetzen (hierfür darf nur die entsprechende <i>Nahkampffertigkeit</i> genutzt werden, nicht <i>Akrobatik</i>). Diese Person darf nicht weiter als 2 m von ihm entfernt sein. Die Probe zur <i>Aktiven </i><i>Abwehr</i> erleidet einen Malus in Höhe von 3 Punkten. Sollte der Angegriffene auch eine eigene <i>Aktive Abwehr</i> einsetzen, zählt das bessere Ergebnis."
+  },
+  {
+    "name": "Vorstürmen",
+    "key": "vorstuermen",
+    "fertigkeit": "nahkampf",
+    "schwelle": 1,
+    "manoever": "manoever",
+    "voraussetzung": "",
+    "beschreibung": "Wenn der Abenteurer vor einem <i>Nahkampfangriff</i> mit diesem Manöver mindestens 2 m Anlauf in gerader Linie hatte (egal auf welche Weise), kann er seine halbe <i>Geschwindigkeit</i> zum Waffenschaden addieren. Der maximale Schadensbonus beträgt 8 Punkte."
+  },
+  {
+    "name": "Beidhändige Abwehr",
+    "key": "beidhaendige_abwehr",
+    "fertigkeit": "nahkampf",
+    "schwelle": 2,
+    "manoever": "",
+    "voraussetzung": "meisterschaft:kampf_mit_zwei_waffen",
+    "beschreibung": "Wenn der Abenteurer in dieser <i>Kampffertigkeit</i> mit zwei Waffen, einer <i>Doppelwaffe</i> oder einer Waffe und einer <i>Parierwaffe</i> kämpft, benötigt er für eine <i>Aktive Abwehr </i>mit seiner jeweils zugehörigen <i>Kampffertigkeit</i> nur noch 2 Ticks."
+  },
+  {
+    "name": "Beidhändiger Angriff",
+    "key": "beidhaendiger_angriff",
+    "fertigkeit": "nahkampf",
+    "schwelle": 2,
+    "manoever": "",
+    "voraussetzung": "meisterschaft:kampf_mit_zwei_waffen",
+    "beschreibung": "Der Abenteurer ist in der Lage, effektiver mit zwei Waffen zu kämpfen. Wenn er mit dieser Kampffertigkeit abwechselnd mit beiden Waffen angreift (der erste Angriff muss immer mit der Hauptwaffe erfolgen, was bei ungleichen Waffen stets die langsamere ist), kann er bei erfolgreichem Nahkampfangriff seiner Nebenwaffe nachträglich einen Erfolgsgrad nutzen, um seine Waffengeschwindigkeit für diesen Nahkampfangriff zu halbieren. <i>Zweihändige</i>, <i>Vielseitige</i> und <i>Lange</i> Waffen (mit Ausnahme von <i>Doppelwaffen</i>) dürfen nicht auf diese Art genutzt werden."
+  },
+  {
+    "name": "Entwaffnen",
+    "key": "entwaffnen",
+    "fertigkeit": "nahkampf",
+    "schwelle": 2,
+    "manoever": "manoever",
+    "voraussetzung": "",
+    "beschreibung": "Dieses <i>Manöver</i> benötigt fünf Ticks zuzüglich der halben <i>Waffengeschwindigkeit</i>. Trifft dieses <i>Manöver</i>, erleidet der Gegner zwar keinen Schaden, kann aber entwaffnet werden: Er darf eine Probe auf <i>Athletik</i> oder <i>Fingerfertigkeit</i> gegen 20 + die Fertigkeitspunkte des Angreifers in der verwendeten <i>Nahkampffertigkeit</i> ablegen. Gelingt ihm diese Probe, gewährt er seinen Gegnern für 15 Ticks einen <i>Taktischen Vorteil, </i>behält aber seine Waffe. Misslingt sie oder verzichtet der Getroffene darauf, fällt seine Waffe zu Boden. Mit diesem Manöver ist es nur möglich, eine Waffe bis zur <i>Last</i> der eigenen Waffe zu entwaffnen. Unbewaffnet kann maximal eine Waffe bis <i>Last 1</i> entwaffnet werden."
+  },
+  {
+    "name": "Rundumschlag",
+    "key": "rundumschlag",
+    "fertigkeit": "nahkampf",
+    "schwelle": 2,
+    "manoever": "manoever",
+    "voraussetzung": "",
+    "beschreibung": "Dieses <i>Manöver</i> richtet sich nicht nur gegen einen Gegner, sondern auch gegen bei ihm stehende Feinde in Nahkampfentfernung zum Abenteurer. Ist der <i>Nahkampfangriff</i> erfolgreich, richtet er sich nicht nur gegen das ursprüngliche Ziel, sondern auch gegen bis zu zwei weitere nebenstehende Gegner, sofern diese maximal dieselbe <i>Verteidigung</i> wie das Hauptziel besitzen. Jeder der Getroffenen und das ursprüngliche Ziel erleiden den halben normalen Schaden des <i>Nahkampfangriffs</i>. Der Angreifer kann einen weiteren Erfolgsgrad nutzen, um zwei zusätzliche, sich in Nahkampfentfernung befindliche Feinde, deren <i>Verteidigung</i> maximal so hoch ist wie die des Hauptziels, zu treffen. Ob ein Ziel in Nahkampfentfernung ist, kann im Zweifel darüber bestimmt werden, ob der Abenteurer ohne Bewegung in der Lage wäre, das entsprechende Ziel im Nahkampf anzugreifen. Ein <i>Rundumschlag</i> ist nur mit <i>zweihändigen</i> oder <i>vielseitigen</i> Waffen in zweihändiger Führung möglich."
+  },
+  {
+    "name": "Klingentanz",
+    "key": "klingentanz",
+    "fertigkeit": "nahkampf",
+    "schwelle": 3,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Die <i>Waffengeschwindigkeit</i> aller Waffen und natürlichen Angriffsarten der <i>Nahkampffertigkeit</i>, in der diese Meisterschaft erlernt wurde, zählt für den Abenteurer als um einen Tick gesenkt (Minimum von 3 Ticks)."
+  },
+  {
+    "name": "Meister mit zwei Waffen",
+    "key": "meister_mit_zwei_waffen",
+    "fertigkeit": "nahkampf",
+    "schwelle": 3,
+    "manoever": "",
+    "voraussetzung": "meisterschaft:beidhaendige_abwehr,meisterschaft:beidhaendiger_angriff",
+    "beschreibung": "Wenn ein Kämpfer, wie unter <i>Beidhändiger Angriff</i> beschrieben ist, abwechselnd mit beiden Waffen angreift, kann er beim Nahkampfangriff seiner Nebenwaffe immer die Waffengeschwindigkeit halbieren, egal ob der Nahkampfangriff gelingt oder nicht. <i>Zweihändige</i>, <i>Vielseitige</i> und <i>Lange</i> Waffen (mit Ausnahme von <i>Doppelwaffen</i>) dürfen nicht für den Kampf mit zwei Waffen genutzt werden."
+  },
+  {
+    "name": "Block",
+    "key": "block",
+    "fertigkeit": "handgemenge",
+    "schwelle": 1,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann die Fertigkeit <i>Handgemenge</i> nutzen, um eine <i>Aktive Abwehr</i> (siehe S. 138) gegen einen bewaffneten Gegner durchzuführen."
+  },
+  {
+    "name": "Halten",
+    "key": "halten",
+    "fertigkeit": "handgemenge",
+    "schwelle": 1,
+    "manoever": "",
+    "voraussetzung": "meisterschaft:umklammern",
+    "beschreibung": "Packt ein Kämpfer mit dieser <i>Meisterschaft</i> seinen Gegner im <i>Handgemenge</i> mit dem Manöver <i>Umklammern,</i> wird zusätzlich zum Zustand <i>Ringend</i> dessen Verteidigung um 2 weitere Punkte gesenkt. Auch erhalten die Aktionen des Gegners einen zusätzlichen Malus in Höhe von 2 Punkten."
+  },
+  {
+    "name": "Verwirrung",
+    "key": "verwirrung",
+    "fertigkeit": "handgemenge",
+    "schwelle": 1,
+    "manoever": "manoever",
+    "voraussetzung": "",
+    "beschreibung": "Dieser <i>Nahkampfangriff</i> geht gegen den <i>Geistigen Widerstand</i> und richtet bei Erfolg nur halben Schaden an. Dafür erhält der nächste <i>Angriff</i> gegen denselben Gegner (egal von wem) einen Bonus in Höhe von 2 Punkten. Der Angreifer kann weitere Erfolgsgrade einsetzen, um den Bonus um 1 je Erfolgsgrad zu erhöhen. Ein Kämpfer kann gleichzeitig nur Ziel einer <i>Verwirrung</i> sein."
+  },
+  {
+    "name": "Schmerzhafter Hieb",
+    "key": "schmerzhafter_hieb",
+    "fertigkeit": "handgemenge",
+    "schwelle": 2,
+    "manoever": "manoever",
+    "voraussetzung": "",
+    "beschreibung": "Dieser <i>Nahkampfangriff</i> verursacht zusätzlich zum normalen Schaden beim Gegner für 60 Ticks den Zustand <i>Lahm</i>."
+  },
+  {
+    "name": "Tödlicher Schaden",
+    "key": "toedlicher_schaden",
+    "fertigkeit": "handgemenge",
+    "schwelle": 2,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Die waffenlosen <i>Nahkampfangriffe</i> des Abenteurers verursachen auf Wunsch <i>echten Schaden</i> statt <i>Betäubungsschaden</i>."
+  },
+  {
+    "name": "Verbessertes Umreißen",
+    "key": "verbessertes_umreissen",
+    "fertigkeit": "handgemenge",
+    "schwelle": 2,
+    "manoever": "",
+    "voraussetzung": "meisterschaft:umreissen",
+    "beschreibung": "Der Kämpfer hat gelernt, wie er seinen Gegner noch stärker verletzen kann, während er ihn von den Beinen holt. Ein über Handgemenge ausgeführter <i>Nahkampfangriff</i> mit dem Manöver<i> Umreißen</i> verursacht den vollen Schaden statt wie üblich den halben Schaden."
+  },
+  {
+    "name": "Verbessertes Entwaffnen",
+    "key": "verbessertes_entwaffnen",
+    "fertigkeit": "handgemenge",
+    "schwelle": 3,
+    "manoever": "",
+    "voraussetzung": "meisterschaft:block,meisterschaft:entwaffnen",
+    "beschreibung": "Gelingt ihm über <i>Handgemenge</i> das <i>Manöver Entwaffnen</i>, hat der Besitzer dieser Meisterschaft nicht nur seinen Gegner entwaffnet, sondern ihm die Waffe abgenommen und kann sie selbst führen. Diese Meisterschaft lässt sich nur einsetzen, wenn der Angreifer selbst unbewaffnet ist und die Waffe des Gegners höchstens eine Last von 3 hat. Zudem kann der Angreifer ein reguläres Manöver <i>Entwaffnen</i> unbewaffnet gegen Waffen bis Last 3 einsetzen."
+  },
+  {
+    "name": "Würgegriff",
+    "key": "wuergegriff",
+    "fertigkeit": "handgemenge",
+    "schwelle": 3,
+    "manoever": "manoever",
+    "voraussetzung": "meisterschaft:umklammern",
+    "beschreibung": "Dieses Manöver kann nur eingesetzt werden, wenn der Angreifer sein Opfer vorher mit dem Manöver<i> Umklammern </i>angegriffen hat und beide <i>ringend</i> sind. Der <i>Nahkampfangriff</i> verursacht Bonusschaden in Höhe der <i>Stärke</i> des Angreifers."
+  },
+  {
+    "name": "Berserker",
+    "key": "berserker",
+    "fertigkeit": "hiebwaffen",
+    "schwelle": 1,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Bevor der Abenteurer einen <i>Risikowurf</i> für einen <i>Nahkampfangriff</i> mit einer <i>Hiebwaffe</i> benutzt, kann er sich entscheiden, bis zu seiner nächsten Aktion einen Malus in Höhe von 4 Punkten auf die <i>Verteidigung</i> hinzunehmen, um einen Bonus in Höhe seiner halben <i>Stärke </i>zum Schaden zu addieren."
+  },
+  {
+    "name": "Schildbrecher",
+    "key": "schildbrecher",
+    "fertigkeit": "hiebwaffen",
+    "schwelle": 1,
+    "manoever": "manoever",
+    "voraussetzung": "",
+    "beschreibung": "Dieser Angriff zielt auf den Schild des Gegners. Ein erfolgreicher Schildbrecher fügt keinen Schaden zu, beschädigt aber einen Schild dessen Härte höchstens 3 beträgt, sodass dieser als <i>angeschlagen</i> gilt. Um einen härteren Schild zu beschädigen, wird ein weiterer Erfolgsgrad pro Punkt Härte benötigt. Wird die doppelte Anzahl an Erfolgsgraden erreicht oder ein <i>angeschlagener</i> Schild ein weiteres Mal mit einem erfolgreichen <i>Schildbrecher</i> mit den benötigten Erfolgsgraden getroffen, ist er <i>demoliert </i>und kann nicht mehr verwendet werden."
+  },
+  {
+    "name": "Todesschlag",
+    "key": "todesschlag",
+    "fertigkeit": "hiebwaffen",
+    "schwelle": 1,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer verursacht gegen am Boden <i>liegende</i> und/oder mit dem Zustand <i>Benommen</i> belegte Gegner mit jedem Nahkampfangriff mit einer <i>Hiebwaffe</i> 1 Punkt zusätzlichen Schaden."
+  },
+  {
+    "name": "Hammerschlag",
+    "key": "hammerschlag",
+    "fertigkeit": "hiebwaffen",
+    "schwelle": 2,
+    "manoever": "manoever",
+    "voraussetzung": "",
+    "beschreibung": "Bei einem erfolgreichen <i>Nahkampfangriff</i> mit diesem <i>Manöver</i> verursacht der Abenteurer 1W6 Schaden zusätzlich."
+  },
+  {
+    "name": "Kraftvoller Rundumschlag",
+    "key": "kraftvoller_rundumschlag",
+    "fertigkeit": "hiebwaffen",
+    "schwelle": 2,
+    "manoever": "",
+    "voraussetzung": "meisterschaft:rundumschlag",
+    "beschreibung": "Wenn ein Kenner dieser Meisterschaft mit dem Manöver <i>Rundumschlag</i> mit einer <i>Hiebwaffe</i> trifft, erleidet jedes Ziel 2 Punkte Schaden mehr."
+  },
+  {
+    "name": "Schmetterschlag",
+    "key": "schmetterschlag",
+    "fertigkeit": "hiebwaffen",
+    "schwelle": 2,
+    "manoever": "manoever",
+    "voraussetzung": "",
+    "beschreibung": "Dieser <i>Nahkampfangriff</i> verursacht zusätzlich zum normalen Schaden beim Gegner für 30 Ticks den Zustand <i>Benommen 1</i>."
+  },
+  {
+    "name": "Knochenbrecher",
+    "key": "knochenbrecher",
+    "fertigkeit": "hiebwaffen",
+    "schwelle": 3,
+    "manoever": "manoever",
+    "voraussetzung": "meisterschaft:schmetterschlag",
+    "beschreibung": "Dieser <i>Nahkampfangriff</i> verursacht zusätzlich zum normalen Schaden beim Gegner den Zustand <i>Verwundet 1</i>."
+  },
+  {
+    "name": "Kraftvoller Hammerschlag",
+    "key": "kraftvoller_hammerschlag",
+    "fertigkeit": "hiebwaffen",
+    "schwelle": 3,
+    "manoever": "",
+    "voraussetzung": "meisterschaft:hammerschlag",
+    "beschreibung": "Nach einem erfolgreichen mit einer <i>Hiebwaffe</i> ausgeführten Manöver <i>Hammerschlag</i> kann der Kämpfer in einer weiteren Kraftanstrengung seinen Schaden erhöhen. Für jeweils einen Tick und einen weiteren Erfolgsgrad, die er nachträglich aufwendet, kann er den Schaden um weitere 1W6 Schaden erhöhen. Dies ist maximal zweimal pro Angriff möglich."
+  },
+  {
+    "name": "Berserker",
+    "key": "berserker",
+    "fertigkeit": "kettenwaffen",
+    "schwelle": 1,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Bevor der Abenteurer einen <i>Risikowurf</i> für einen <i>Nahkampfangriff</i> mit einer <i>Kettenwaffe</i> benutzt, kann er sich entscheiden, bis zu seiner nächsten Aktion einen Malus in Höhe von 4 Punkten auf die <i>Verteidigung</i> hinzunehmen, um einen Bonus in Höhe seiner halben <i>Stärke </i>zum Schaden zu addieren."
+  },
+  {
+    "name": "Schild umschlagen",
+    "key": "schild_umschlagen",
+    "fertigkeit": "kettenwaffen",
+    "schwelle": 1,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann bei Angriffen mit einer Kettenwaffe den aus Schilden stammenden gegnerischen Bonus auf <i>Verteidigung</i> ignorieren. Sollte ein Schildträger eine <i>Aktive Abwehr</i> gegen seine Nahkampfangriffe nutzen, erhält er keinen Bonus durch seinen Schild."
+  },
+  {
+    "name": "Verteidigungswirbel",
+    "key": "verteidigungswirbel",
+    "fertigkeit": "kettenwaffen",
+    "schwelle": 1,
+    "manoever": "manoever",
+    "voraussetzung": "",
+    "beschreibung": "Zusätzlich zu seinem regulären <i>Nahkampfangriff</i> bringt der Kämpfer sich mit diesem <i>Manöver</i> in eine vorteilhafte Defensivposition. Für den nächsten <i>Angriff</i> gegen seine <i>Verteidigung</i> in diesem Kampf ist diese um 2 Punkte erhöht. Zudem kann er weitere Erfolgsgrade nutzen, um seine <i>Verteidigung</i> je eingesetztem Erfolgsgrad um einen weiteren Punkt zu erhöhen."
+  },
+  {
+    "name": "Andauernder Verteidigungswirbel",
+    "key": "andauernder_verteidigungswirbel",
+    "fertigkeit": "kettenwaffen",
+    "schwelle": 2,
+    "manoever": "",
+    "voraussetzung": "meisterschaft:verteidigungswirbel",
+    "beschreibung": "Die erhöhte <i>Verteidigung</i> aus dem Manöver<i> Verteidigungswirbel</i> hält nicht nur für einen Angriff, sondern bis zur nächsten eigenen Aktion."
+  },
+  {
+    "name": "Hammerschlag",
+    "key": "hammerschlag",
+    "fertigkeit": "kettenwaffen",
+    "schwelle": 2,
+    "manoever": "manoever",
+    "voraussetzung": "",
+    "beschreibung": "Bei einem erfolgreichen <i>Nahkampfangriff</i> mit diesem <i>Manöver</i> verursacht der Abenteurer 1W6 Schaden mehr."
+  },
+  {
+    "name": "Unerbittlich",
+    "key": "unerbittlich",
+    "fertigkeit": "kettenwaffen",
+    "schwelle": 2,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Angriffe des Abenteurers richten beim Gegner zuverlässig hohen Schaden an. Seine <i>Nahkampfangriffe</i> mit <i>Kettenwaffen</i> erhalten das Merkmal <i>Scharf 2</i> bei allen Waffen mit mehreren Schadenswürfeln und <i>Scharf 3</i> bei Waffen mit nur einem Schadenswürfel. Hat die Waffe bereits das Merkmal <i>Scharf</i>, erhöht es sich um 1 bzw. 2 Punkte."
+  },
+  {
+    "name": "Durchschlagender Hieb",
+    "key": "durchschlagender_hieb",
+    "fertigkeit": "kettenwaffen",
+    "schwelle": 3,
+    "manoever": "",
+    "voraussetzung": "meisterschaft:hammerschlag",
+    "beschreibung": "Wird das mit einer <i>Kettenwaffe</i> ausgeführte Manöver <i>Hammerschlag</i> des Abenteurers mit einer <i>Aktiven Abwehr </i>pariert, hätte aber ohne diese getroffen, so richtet er dennoch ein Drittel des Waffenschadens an."
+  },
+  {
+    "name": "Kettenfesseln",
+    "key": "kettenfesseln",
+    "fertigkeit": "kettenwaffen",
+    "schwelle": 3,
+    "manoever": "",
+    "voraussetzung": "meisterschaft:umklammern",
+    "beschreibung": "Der Abenteurer zählt nicht selbst als <i>Ringend</i>, wenn er einen Gegner mit dem Manöver <i>Umklammern</i> mit einer <i>Kettenwaffe</i> gepackt hat. Sein Gegner kann zudem keine anderen Aktionen mehr ausführen, außer sich aus der <i>Umklammerung </i>zu befreien. Der Abenteurer selbst kann, solange das <i>Umklammern</i> anhält, keine weiteren Gegner mit der hierfür genutzten Waffe angreifen."
+  },
+  {
+    "name": "Ausfall",
+    "key": "ausfall",
+    "fertigkeit": "klingenwaffen",
+    "schwelle": 1,
+    "manoever": "manoever",
+    "voraussetzung": "",
+    "beschreibung": "Der Gegner erleidet bei diesem Manöver den üblichen Schaden und verliert zusätzlich 3 Ticks. Sollte das Manöver gelingen, kann der Gegner nicht mehr von einem anderen <i>Ausfall</i> betroffen werden, bevor er das nächste Mal gehandelt hat."
+  },
+  {
+    "name": "Verteidigungswirbel",
+    "key": "verteidigungswirbel",
+    "fertigkeit": "klingenwaffen",
+    "schwelle": 1,
+    "manoever": "manoever",
+    "voraussetzung": "",
+    "beschreibung": "Zusätzlich zu seinem regulären <i>Nahkampfangriff</i> bringt der Kämpfer sich mit diesem <i>Manöver</i> in eine vorteilhafte defensive Position. Für den nächsten <i>Angriff</i> gegen seine <i>Verteidigung</i> in diesem Kampf ist diese um 2 Punkte erhöht. Zudem kann er weitere Erfolgsgrade nutzen, um seine <i>Verteidigung</i> pro eingesetztem Erfolgsgrad um einen weiteren Punkt zu erhöhen."
+  },
+  {
+    "name": "Verwirrung",
+    "key": "verwirrung",
+    "fertigkeit": "klingenwaffen",
+    "schwelle": 1,
+    "manoever": "manoever",
+    "voraussetzung": "",
+    "beschreibung": "Dieser <i>Nahkampfangriff</i> geht gegen den <i>Geistigen Widerstand</i> und richtet bei Erfolg nur halben Schaden an. Dafür erhält der nächste <i>Angriff</i> gegen denselben Gegner (egal von wem) einen Bonus in Höhe von 2 Punkten. Der Angreifer kann weitere Erfolgsgrade einsetzen, um diesen Bonus um 1 je Erfolgsgrad zu erhöhen. Ein Kämpfer kann nur Ziel einer <i>Verwirrung</i> zur gleichen Zeit sein."
+  },
+  {
+    "name": "Gezielte Treffer",
+    "key": "gezielte_treffer",
+    "fertigkeit": "klingenwaffen",
+    "schwelle": 2,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Die präzisen <i>Nahkampfangriffe</i> des Abenteurers erlauben es ihm, bis zu 2 Punkte <i>Schadensreduktion</i> bei seinen Gegnern zu ignorieren, sofern er mit einer <i>Klingenwaffe</i> kämpft. Dies zählt zusätzlich zu allen anderen Möglichkeiten des Kämpfers, die <i>Schadensreduktion</i> seines Gegners zu umgehen."
+  },
+  {
+    "name": "Klingenwirbel",
+    "key": "klingenwirbel",
+    "fertigkeit": "klingenwaffen",
+    "schwelle": 2,
+    "manoever": "manoever",
+    "voraussetzung": "",
+    "beschreibung": "Gelingt das Manöver <i>Klingenwirbel</i>, rückt der Angreifer nach Abhandlung des <i>Nahkampfangriffs</i> noch einmal seine halbe Waffengeschwindigkeit in Ticks vor. Dafür kann er einen zweiten sofortigen <i>Nahkampfangriff</i> mit derselben Waffe und einem Malus in Höhe von 3 Punkten ausführen. Hierfür muss er nicht die sonst übliche Waffengeschwindigkeit aufwenden. Dieser Angriff kann gegen ein zweites in <i>Nahkampfdistanz</i> befindliches Ziel gerichtet sein, darf aber keine <i>Meisterschafts-Manöver</i> verwenden."
+  },
+  {
+    "name": "Riposte",
+    "key": "riposte",
+    "fertigkeit": "klingenwaffen",
+    "schwelle": 2,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Diese Meisterschaft kann nur bei einer <i>Aktiven Abwehr</i> durch Klingenwaffen zur Erhöhung der <i>Verteidigung</i> gegen einen gegnerischen <i>Nahkampfangriff</i> eingesetzt werden. Dies muss vorher angesagt werden, die <i>Aktive Abwehr</i> erhält einen Malus in Höhe von 3 Punkten. Wird der gegnerische Nahkampfangriff vollständig abgewehrt, erhält der Kämpfer einen Bonus in Höhe von 1 Punkt bei seinem nächsten <i>Nahkampfangriff </i>mit Klingenwaffen, solange dieser gegen den Angreifer gerichtet ist. Dieser Bonus erhöht sich um jeweils 1 Punkt für jeden negativen Erfolgsgrad des Angreifers."
+  },
+  {
+    "name": "Blutiger Aderlass",
+    "key": "blutiger_aderlass",
+    "fertigkeit": "klingenwaffen",
+    "schwelle": 3,
+    "manoever": "manoever",
+    "voraussetzung": "meisterschaft:gezielte_treffer",
+    "beschreibung": "Dieser <i>Nahkampfangriff</i> verursacht zusätzlich zum normalen Schaden beim Gegner den Zustand <i>Blutend 1</i>."
+  },
+  {
+    "name": "Eleganter Klingenwirbel",
+    "key": "eleganter_klingenwirbel",
+    "fertigkeit": "klingenwaffen",
+    "schwelle": 3,
+    "manoever": "",
+    "voraussetzung": "meisterschaft:klingenwirbel",
+    "beschreibung": "Der zweite Angriff des Manövers<i> </i><i>Klingenwirbels</i> ist bei Verwendung einer <i>Klingenwaffe</i> für Kenner dieser <i>Meisterschaft</i> nicht mehr erschwert. Zudem kann man beim zweiten Angriff eines Klingenwirbels auch <i>Meisterschafts-Manöver</i> einsetzen (nicht aber einen weiteren Klingenwirbel)."
+  },
+  {
+    "name": "Belagerungsschütze",
+    "key": "belagerungsschuetze",
+    "fertigkeit": "schusswaffen",
+    "schwelle": 1,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Für den Abenteurer zählt die <i>Deckung</i> von Zielen, die er mit <i>Schusswaffen</i> angreift, um eine Stufe niedriger."
+  },
+  {
+    "name": "Scharfschütze",
+    "key": "scharfschuetze",
+    "fertigkeit": "schusswaffen",
+    "schwelle": 1,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Der Angreifer kann bei Verwendung von <i>Schusswaffen</i> die Modifikatoren für <i>Schüsse ins Kampfgetümmel</i> ignorieren."
+  },
+  {
+    "name": "Schnellschütze I",
+    "key": "schnellschuetze_1",
+    "fertigkeit": "schusswaffen",
+    "schwelle": 1,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Der Zeitaufwand für das <i>Bereitmachen</i> einer <i>Schusswaffe</i> sinkt für den Abenteurer um 1 Tick."
+  },
+  {
+    "name": "Gezielte Schüsse I",
+    "key": "gezielte_schuesse_1",
+    "fertigkeit": "schusswaffen",
+    "schwelle": 2,
+    "manoever": "",
+    "voraussetzung": "meisterschaft:belagerungsschuetze",
+    "beschreibung": "Die präzisen <i>Fernkampfangriffe</i> des Abenteurers erlauben es ihm, bis zu 2 Punkte <i>Schadensreduktion</i> beim Gegner zu ignorieren, sofern er mit einer <i>Schusswaffe</i> kämpft. Dies zählt zusätzlich zu allen anderen Möglichkeiten des Kämpfers, die <i>Schadensreduktion</i> des Gegners zu umgehen."
+  },
+  {
+    "name": "Sehnenschneider",
+    "key": "sehnenschneider",
+    "fertigkeit": "schusswaffen",
+    "schwelle": 2,
+    "manoever": "manoever",
+    "voraussetzung": "",
+    "beschreibung": "Dieser <i>Fernkampfangriff</i> verursacht zusätzlich zum normalen Schaden beim Gegner den Zustand <i>Lahm</i>."
+  },
+  {
+    "name": "Zielschuss",
+    "key": "zielschuss",
+    "fertigkeit": "schusswaffen",
+    "schwelle": 2,
+    "manoever": "",
+    "voraussetzung": "meisterschaft:scharfschuetze",
+    "beschreibung": "Wenn der Abenteurer bei einem Fernkampfangriff mit Schusswaffen mindestens eine <i>Zielen</i>-Aktion ausgeführt hat, verursacht dieser <i>Fernkampfangriff</i> neben den normalen Auswirkungen 1W6 zusätzlichen Schaden."
+  },
+  {
+    "name": "Gezielte Schüsse II",
+    "key": "gezielte_schuesse_2",
+    "fertigkeit": "schusswaffen",
+    "schwelle": 3,
+    "manoever": "",
+    "voraussetzung": "meisterschaft:gezielte_schuesse_1",
+    "beschreibung": "Die präzisen <i>Schusswaffen-Fernkampfangriffe</i> des Abenteurers erlauben es ihm, bis zu insgesamt 3 Punkte <i>Schadensreduktion</i> beim Gegner zu ignorieren.<i> </i>Dies zählt zusätzlich zu allen anderen Möglichkeiten des Kämpfers, die <i>Schadensreduktion</i> des Gegners zu umgehen."
+  },
+  {
+    "name": "Meisterschuss",
+    "key": "meisterschuss",
+    "fertigkeit": "schusswaffen",
+    "schwelle": 3,
+    "manoever": "manoever",
+    "voraussetzung": "meisterschaft:scharfschuetze",
+    "beschreibung": "Wenn der Abenteurer dieses Manöver nutzen möchte, muss er mindestens eine <i>Zielen</i>-Aktion ausführen. Dafür richtet sein <i>Fernkampfangriff</i> zusätzlichen Schaden in Höhe seiner <i>Intuition</i> an."
+  },
+  {
+    "name": "Schnellschütze II",
+    "key": "schnellschuetze_2",
+    "fertigkeit": "schusswaffen",
+    "schwelle": 3,
+    "manoever": "",
+    "voraussetzung": "meisterschaft:schnellschuetze_1",
+    "beschreibung": "Der Zeitaufwand für das Bereitmachen einer <i>Schusswaffe</i> sinkt um insgesamt 2 Ticks."
+  },
+  {
+    "name": "Ausfall",
+    "key": "ausfall",
+    "fertigkeit": "stangenwaffen",
+    "schwelle": 1,
+    "manoever": "manoever",
+    "voraussetzung": "",
+    "beschreibung": "Der Gegner erleidet bei diesem Manöver den üblichen Schaden und verliert zusätzlich 3 Ticks. Sollte das Manöver gelingen, kann der Gegner nicht mehr von einem anderen <i>Ausfall</i> betroffen werden, bevor er das nächste Mal gehandelt hat."
+  },
+  {
+    "name": "Opportunist",
+    "key": "opportunist",
+    "fertigkeit": "stangenwaffen",
+    "schwelle": 1,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann <i>Gelegenheitsangriffe</i> mit <i>Stangenwaffen</i> 3 Ticks schneller ausführen."
+  },
+  {
+    "name": "Sturmlauf",
+    "key": "sturmlauf",
+    "fertigkeit": "stangenwaffen",
+    "schwelle": 1,
+    "manoever": "",
+    "voraussetzung": "meisterschaft:vorstuermen",
+    "beschreibung": "Ein durch den Abenteurer bei Einsatz einer <i>Stangenwaffe</i> mit dem Manöver <i>Vorstürmen</i> getroffenes Ziel verliert zusätzlich zu den normalen Auswirkungen 3 Ticks."
+  },
+  {
+    "name": "Gezielte Treffer",
+    "key": "gezielte_treffer",
+    "fertigkeit": "stangenwaffen",
+    "schwelle": 2,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Die präzisen <i>Nahkampfangriffe</i> des Abenteurers erlauben es ihm, bis zu 2 Punkte <i>Schadensreduktion</i> bei seinen Gegnern zu ignorieren, sofern er mit einer <i>Stangenwaffe</i> kämpft. Dies zählt zusätzlich zu allen anderen Möglichkeiten des Kämpfers, die <i>Schadensreduktion</i> seines Gegners zu umgehen."
+  },
+  {
+    "name": "Klingenwirbel",
+    "key": "klingenwirbel",
+    "fertigkeit": "stangenwaffen",
+    "schwelle": 2,
+    "manoever": "manoever",
+    "voraussetzung": "",
+    "beschreibung": "Gelingt das Manöver <i>Klingenwirbel</i>, rückt der Angreifer nach Abhandlung des <i>Nahkampfangriffs</i> noch einmal seine halbe Waffengeschwindigkeit in Ticks vor. Dafür kann er einen zweiten sofortigen <i>Nahkampfangriff</i> ohne eigene Tickkosten mit derselben Waffe und einem Malus in Höhe von 3 Punkten ausführen. Hierfür muss er nicht die sonst übliche Waffengeschwindigkeit aufwenden. Dieser Angriff kann gegen ein zweites in <i>Nahkampfdistanz</i> befindliches Ziel gerichtet sein, darf aber keine <i>Meisterschafts-Manöver</i> verwenden."
+  },
+  {
+    "name": "Schmetterschlag",
+    "key": "schmetterschlag",
+    "fertigkeit": "stangenwaffen",
+    "schwelle": 2,
+    "manoever": "manoever",
+    "voraussetzung": "",
+    "beschreibung": "Dieser <i>Nahkampfangriff</i> verursacht zusätzlich zum normalen Schaden beim Gegner für 30 Ticks den Zustand <i>Benommen 1</i>."
+  },
+  {
+    "name": "Auf Abstand halten",
+    "key": "auf_abstand_halten",
+    "fertigkeit": "stangenwaffen",
+    "schwelle": 3,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Solange der Abenteurer eine <i>Stangenwaffe</i> mit dem <i>Merkmal</i> <i>Lange Waffe</i> führt, gelingt sein etwaiges <i>Lösen aus dem Kampf </i>(S. 159) automatisch und seine Gegner können die entsprechende Aktion nicht nutzen. Zudem lösen seine <i>Laufen</i>-Aktionen und die <i>freie Bewegung</i> keine <i>Gelegenheitsangriffe</i> aus. Dies gilt nicht, wenn der betroffene Gegner auch eine <i>Lange Waffe</i> führt, allerdings erhöht sich dann der Bonus der eigenen <i>Langen Waffe</i> zum <i>Lösen aus dem Kampf</i> auf 5 Punkte."
+  },
+  {
+    "name": "Weitreichender Klingenwirbel",
+    "key": "weitreichender_klingenwirbel",
+    "fertigkeit": "stangenwaffen",
+    "schwelle": 3,
+    "manoever": "",
+    "voraussetzung": "meisterschaft:klingenwirbel",
+    "beschreibung": "Der zweite Angriff des Manövers<i> Klingenwirbels</i> ist bei Verwendung einer <i>Stangenwaffe</i> für Kenner dieser <i>Meisterschaft</i> nicht mehr erschwert. Zudem kann der Abenteurer ohne weiteren Aufwand einen dritten <i>Nahkampfangriff</i> ohne eigene Tickkosten ausführen, der nur halben Schaden verursacht und auch ein drittes Ziel in <i>Nahkampfdistanz</i> treffen kann. Auch dieser dritte Angriff darf keine <i>Meisterschafts-Manöver</i> nutzen. Insgesamt dürfen nicht mehr als zwei der <i>Nahkampfangriffe</i> gegen denselben Gegner gerichtet sein."
+  },
+  {
+    "name": "Improvisation",
+    "key": "improvisation",
+    "fertigkeit": "wurfwaffen",
+    "schwelle": 1,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer hat gelernt, alltägliche Gegenstände als <i>Wurfwaffen</i> einzusetzen. Entsprechende Waffen mit dem Merkmal<i> Improvisiert </i>richten zwei zusätzliche Punkte Schaden an. Zusätzlich ist ihre <i>Waffengeschwindigkeit</i> 2 Punkte verbessert."
+  },
+  {
+    "name": "Scharfschütze",
+    "key": "scharfschuetze",
+    "fertigkeit": "wurfwaffen",
+    "schwelle": 1,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Der Angreifer kann bei Verwendung von <i>Wurfwaffen</i> die Modifikatoren für <i>Schüsse ins Kampfgetümmel</i> ignorieren."
+  },
+  {
+    "name": "Starker Wurfarm",
+    "key": "starker_wurfarm",
+    "fertigkeit": "wurfwaffen",
+    "schwelle": 1,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Die erste Erhöhung der <i>Grundreichweite</i> erfordert vom Abenteurer bei Einsatz von <i>Wurfwaffen</i> keinen zusätzlichen Erfolgsgrad."
+  },
+  {
+    "name": "Harter Wurf",
+    "key": "harter_wurf",
+    "fertigkeit": "wurfwaffen",
+    "schwelle": 2,
+    "manoever": "manoever",
+    "voraussetzung": "meisterschaft:starker_wurfarm",
+    "beschreibung": "Wenn der Abenteurer mindestens eine <i>Zielen</i>-Aktion ausgeführt hat, verursacht dieser <i>Fernkampfangriff</i> neben den normalen Auswirkungen zusätzlichen Schaden in Höhe der halben<i> Stärke</i> des Abenteurers."
+  },
+  {
+    "name": "Mehrfachwurf",
+    "key": "mehrfachwurf",
+    "fertigkeit": "wurfwaffen",
+    "schwelle": 2,
+    "manoever": "manoever",
+    "voraussetzung": "",
+    "beschreibung": "Trifft das Manöver <i>Mehrfachwurf </i>und hält der Angreifer eine zweite Wurfwaffe<i> </i>in der Hand<i>,</i> muss der Angreifer sofort 2 weitere Ticks aufbringen. Dafür kann er sofort einen zweiten Fernkampfangriff ausführen, ohne die dafür üblichen Ticks aufzuwenden. Dieser Angriff kann gegen ein zweites Ziel gerichtet sein, darf aber in keinem Fall <i>MeisterschaftsManöver</i> beinhalten. Für einen <i>Mehrfachwurf</i> können nur Wurfwaffen bis unmodifizierter <i>Last 1</i> verwendet werden."
+  },
+  {
+    "name": "Nahkampfwerfer",
+    "key": "nahkampfwerfer",
+    "fertigkeit": "wurfwaffen",
+    "schwelle": 2,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann seine <i>Wurfwaffen</i> <i>bereitmachen</i>, während er in einen Nahkampf verwickelt ist, ohne einen <i>Gelegenheitsangriff</i> zu provozieren."
+  },
+  {
+    "name": "Geschosshagel",
+    "key": "geschosshagel",
+    "fertigkeit": "wurfwaffen",
+    "schwelle": 3,
+    "manoever": "manoever",
+    "voraussetzung": "meisterschaft:mehrfachwurf",
+    "beschreibung": "Der Abenteurer kann mit diesem Manöver mehrere <i>Wurfwaffen</i> mit jeweils höchstens unmodifizierter <i>Last 1</i> gleichzeitig werfen. Der Angriffswurf kann gegen bis zu drei Ziele angewendet werden (es können nicht mehrere <i>Wurfwaffen</i> auf ein einzelnes Ziel geschleudert werden). Als Schwierigkeit gilt die höchste Verteidigung, es wird nur eine Probe für alle Ziele gewürfelt. Eventueller zusätzlicher Schaden aus dem freien Manöver<i> Wuchtangriff</i> zählt für alle Ziele. Der Angreifer kann einen weiteren Erfolgsgrad nutzen, um zwei zusätzliche, sich in Reichweite befindliche Feinde, deren Verteidigung übertroffen wurde, zu treffen. Es können nicht mehr Treffer verursacht werden, als Geschosse verwendet wurden. Maximal können fünf Geschosse gleichzeitig geworfen werden."
+  },
+  {
+    "name": "Meisterwurf",
+    "key": "meisterwurf",
+    "fertigkeit": "wurfwaffen",
+    "schwelle": 3,
+    "manoever": "manoever",
+    "voraussetzung": "meisterschaft:scharfschuetze",
+    "beschreibung": "Wenn der Abenteurer dieses <i>Manöver</i> nutzen möchte, muss er mindestens eine <i>Zielen</i>-Aktion ausführen. Dafür richtet sein <i>Fernkampfangriff</i> zusätzlichen Schaden in Höhe seiner <i>Intuition</i> an."
+  }
+]

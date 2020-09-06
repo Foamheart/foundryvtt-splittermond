@@ -308,17 +308,20 @@
     "types": [
       "waffe",
       "ruestung",
-      "schild"
+      "schild",
+      "meisterschaft"
     ],
     "templates": {
       "base": {
+        "beschreibung": ""
+      },
+      "erwerb": {
         "verfuegbarkeit": {
           "normal": "dorf"
         },
         "preis": {
           "normal": 100
         },
-        "beschreibung": "",
         "ausgeruestet": true
       },
       "material": {
@@ -351,6 +354,7 @@
     "waffe": {
       "templates": [
         "base",
+        "erwerb",
         "material"
       ],
       "kampffertigkeit": {
@@ -377,6 +381,7 @@
     "ruestung": {
       "templates": [
         "base",
+        "erwerb",
         "material",
         "ruestwerte"
       ],
@@ -389,6 +394,7 @@
     "schild": {
       "templates": [
         "base",
+        "erwerb",
         "material",
         "ruestwerte"
       ],
@@ -402,6 +408,17 @@
         "key": "sta"
       },
       "merkmale": []
+    },
+    "meisterschaft": {
+      "templates": [
+        "base"
+      ],
+      "key": "",
+      "fertigkeit": "",
+      "schwerpunkt": false,
+      "schwelle": 1,
+      "manoever": false,
+      "voraussetzung": ""
     }
   }
 }

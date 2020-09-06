@@ -17,6 +17,13 @@
       "system": "splittermond",
       "path": "./packs/ausruestung.db",
       "entity": "Item"
+    },
+    {
+      "name": "meisterschaften",
+      "label": "Meisterschaften",
+      "system": "splittermond",
+      "path": "./packs/meisterschaften.db",
+      "entity": "Item"
     }
   ],
   "languages": [

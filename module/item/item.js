@@ -21,6 +21,7 @@ export class SplittermondItem extends Item {
     if (itemData.type === 'waffe') this._prepareWaffeData(itemData, actorData);
     if (itemData.type === 'ruestung') this._prepareRuestungData(itemData, actorData);
     if (itemData.type === 'schild') this._prepareSchildData(itemData, actorData);
+    if (itemData.type === 'meisterschaft') this._prepareMeisterschaftData(itemData, actorData);
   }
 
   /**
@@ -137,6 +138,18 @@ export class SplittermondItem extends Item {
     const qfunction = (itemDD) => itemDD.kampffertigkeit.mod * 2 + itemDD.behinderung.mod * 2 - itemDD.tickzuschlag.mod * 2 - itemDD.last.mod + itemDD.haerte.mod;
     allgemeineAusruestungswerteBerechnen(itemDD, qpos, qfunction);
   }
+
+  /**
+   * Prepare Schild type specific data
+   */
+  _prepareMeisterschaftData(itemData, actorData) {
+    const itemDD = itemData.data;
+    const actorDD = actorData.data;
+
+    // TODO Machen wir hier irgendwas?
+
+  }
+
 
   /**
    * Handle clickable rolls.

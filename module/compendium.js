@@ -1,12 +1,6 @@
-export async function renderCompendium(compendium, html, data) {
+export async function renderAusruestungCompendium(compendium, html, data) {
 
     data.items = await compendium.getContent();
-    data.items.forEach(item => {
-      // let indexElement = data.index.find(indexElement => indexElement._id == item._id);
-      // let itemDD = item.data.data;
-      lokalisiereMerkmale(item.data.data);
-      // indexElement.data = itemDD;
-    }, {});
 
     html.find('.compendium').empty();
     await renderWaffen(html, data);
@@ -17,15 +11,6 @@ export async function renderCompendium(compendium, html, data) {
     const dragDrop = new DragDrop(compendium.options.dragDrop[0]);
     dragDrop.bind(html[0]);  
     
-}
-
-function lokalisiereMerkmale(dd) {
-    if (dd.merkmale) {
-        for (let [key, merkmal] of Object.entries(dd.merkmale)){
-            let stufe = merkmal.stufe === undefined ? '' : ' ' + merkmal.stufe;
-            merkmal.nameStufe = game.i18n.localize('SPLITTERMOND.Waffenmerkmal.' + merkmal.key) + stufe;
-        }    
-    }
 }
 
 async function renderWaffen(html, data) {

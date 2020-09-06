@@ -1,11 +1,14 @@
 import { SplittermondItem } from "../item/item.js";
 
 export async function importAusruestung() {
-
     const pack = await createCompendium('ausruestung', 'Ausrüstung');
-    
     await importWaffen(pack);
     await importRuestung(pack);
+}
+
+export async function importMeisterschaften() {
+    const pack = await createCompendium('meisterschaften', 'Meisterschaften');
+    await importKampfmeisterschaften(pack);
 }
 
 async function createCompendium(packName, packLabel) {
@@ -56,7 +59,7 @@ async function importWaffen(pack) {
             
         await pack.importEntity(item);
 
-        console.log('>>> Item importiert: ' + itemData.name);
+        console.log('>>> Waffe importiert: ' + itemData.name);
     }
 
 }
@@ -88,7 +91,7 @@ async function importRuestung(pack) {
             
         await pack.importEntity(item);
 
-        console.log('>>> Item importiert: ' + itemData.name);
+        console.log('>>> Ruestung/Schild importiert: ' + itemData.name);
     }
 
 }
@@ -115,8 +118,43 @@ function createMerkmale(data, rawData) {
     }
 }
 
+async function importKampfmeisterschaften(pack) {
+
+    const response = await fetch("systems/splittermond/module/import/kampfmeisterschaften-raw.json");
+    const rawArray = await response.json();
+    
+    for (let rawData of rawArray) {
+        const fertigkeit = rawData.fertigkeit;
+        if (fertigkeit == 'nahkampf') {
+            ['handgemenge', 'hiebwaffen', 'kettenwaffen', 'klingenwaffen', 'stangenwaffen'].forEach((key) => {
+                importKampfmeisterschaft(pack, rawData, key);
+            });
+        } else {
+            importKampfmeisterschaft(pack, rawData, fertigkeit);
+        }
+    }
+}
+
+async function importKampfmeisterschaft(pack, rawData, fertigkeit) {
+    let itemData = {name: rawData.name, type: 'meisterschaft', img: ITEM_IMG.kampfmeisterschaft};
+    let item = await SplittermondItem.create(itemData, {temporary: true});
+    let data = item.data.data;
+
+    data.key = rawData.key;
+    data.fertigkeit = fertigkeit;
+    data.schwerpunkt = false;
+    data.schwelle = Number(rawData.schwelle);
+    data.manoever = rawData.manoever == 'manoever';
+    data.voraussetzung = rawData.voraussetzung;
+    data.beschreibung = rawData.beschreibung;
+
+    await pack.importEntity(item);
+    console.log('>>> Kampfmeisterschaft importiert: ' + fertigkeit + ' ' + itemData.name);
+}
+
 const ITEM_IMG = {
     waffe: 'modules/game-icons-net/whitetransparent/axe-sword.svg',
     ruestung: 'modules/game-icons-net/whitetransparent/chest-armor.svg',
-    schild: 'modules/game-icons-net/whitetransparent/attached-shield.svg'
+    schild: 'modules/game-icons-net/whitetransparent/attached-shield.svg',
+    kampfmeisterschaft: 'modules/game-icons-net/whitetransparent/master-of-arms.svg'
 }
