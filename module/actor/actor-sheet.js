@@ -32,52 +32,6 @@ export class SplittermondActorSheet extends ActorSheet {
     const data = super.getData();
     const dd = data.data;
     data.dtypes = ["String", "Number", "Boolean"];
-    
-    /*
-    for (let attr of Object.values(data.data.attributes)) {
-      attr.isCheckbox = attr.dtype === "Boolean";
-    }
-    */
-   
-    // Localize Attribute labels
-    for (let [key, attribut] of Object.entries(dd.attribute)){
-      attribut.name = game.i18n.localize('SPLITTERMOND.Attribut.' + key + '.name');
-      attribut.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + key + '.abk');
-      attribut.mod = attribut.mod == 0 ? "" : attribut.mod;
-    }    
-    
-    // Localize Abgeleitete Werte labels
-    for (let [key, abgeleiteterWert] of Object.entries(dd.abgeleiteteWerte)){
-      abgeleiteterWert.name = game.i18n.localize('SPLITTERMOND.AbgeleiteterWert.' + key + '.name');
-      abgeleiteterWert.abk = game.i18n.localize('SPLITTERMOND.AbgeleiteterWert.' + key + '.abk');
-      abgeleiteterWert.formel = game.i18n.localize('SPLITTERMOND.AbgeleiteterWert.' + key + '.formel');
-      abgeleiteterWert.mod = abgeleiteterWert.mod == 0 ? "" : abgeleiteterWert.mod;
-      abgeleiteterWert.temp = abgeleiteterWert.temp == 0 ? "" : abgeleiteterWert.temp;
-    }    
-
-    // Localize Fertigkeiten labels
-    for (let [key, fertigkeit] of Object.entries(dd.fertigkeiten)){
-      fertigkeit.name = game.i18n.localize('SPLITTERMOND.Fertigkeit.' + key + '.name');
-      fertigkeit.att1.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + fertigkeit.att1.key + '.abk');
-      fertigkeit.att2.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + fertigkeit.att2.key + '.abk');
-      fertigkeit.fp = fertigkeit.fp == 0 ? "" : fertigkeit.fp;
-      fertigkeit.mod = fertigkeit.mod == 0 ? "" : fertigkeit.mod;
-    }    
-
-    // Localize Kampffertigkeiten labels
-    for (let [key, kampffertigkeit] of Object.entries(dd.kampffertigkeiten)){
-      kampffertigkeit.name = game.i18n.localize('SPLITTERMOND.Kampffertigkeit.' + key + '.name');
-      kampffertigkeit.fp = kampffertigkeit.fp == 0 ? "" : kampffertigkeit.fp;
-    }    
-
-    // Localize Magieschulen labels
-    for (let [key, magieschule] of Object.entries(dd.magieschulen)){
-      magieschule.name = game.i18n.localize('SPLITTERMOND.Magieschule.' + key + '.name');
-      magieschule.att1.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + magieschule.att1.key + '.abk');
-      magieschule.att2.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + magieschule.att2.key + '.abk');
-      magieschule.fp = magieschule.fp == 0 ? "" : magieschule.fp;
-      magieschule.mod = magieschule.mod == 0 ? "" : magieschule.mod;
-    }    
 
     // Prepare items.
     if (this.actor.data.type == "character") {
@@ -96,12 +50,13 @@ export class SplittermondActorSheet extends ActorSheet {
   _prepareCharacterItems(sheetData) {
     const actorData = sheetData.actor;
 
+    // TODO Aufräumen, weil hier derzeit nichts mehr gemacht wird. Sämtliche Lokalisierung findet mittels Handlebars statt.
+
     // Initialize containers.
     const waffen = [];
     const schilde = [];
     const ruestungen = [];
-    const gear = [];
-    const features = [];
+
     const spells = {
       0: [],
       1: [],
@@ -131,14 +86,6 @@ export class SplittermondActorSheet extends ActorSheet {
       if (i.type === "ruestung") {
         ruestungen.push(i);
       }
-      // Append to gear.
-      else if (i.type === "item") {
-        gear.push(i);
-      }
-      // Append to features.
-      else if (i.type === "feature") {
-        features.push(i);
-      }
       // Append to spells.
       else if (i.type === "spell") {
         if (i.data.spellLevel != undefined) {
@@ -151,42 +98,6 @@ export class SplittermondActorSheet extends ActorSheet {
     actorData.waffen = waffen; 
     actorData.schilde = schilde;
     actorData.ruestungen = ruestungen;
-    // actorData.gear = gear;
-    // actorData.features = features;
-    // actorData.spells = spells;
-
-    // TODO Lokalisierung sollte komplett im HTML mit Handlebars erfolgen
-
-    // Lokalisierung der Waffenliste
-    for (let [key, item] of Object.entries(waffen)){
-      item.data.kampffertigkeit.abk = game.i18n.localize('SPLITTERMOND.Kampffertigkeit.' + item.data.kampffertigkeit.key + '.abk');
-      item.data.attribut1.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + item.data.attribut1.key + '.abk');
-      item.data.attribut2.abk = game.i18n.localize('SPLITTERMOND.Attribut.' + item.data.attribut2.key + '.abk');
-      // Localize Waffenmerkmale
-      for (let [itemKey, merkmal] of Object.entries(item.data.merkmale)){
-        let stufe = merkmal.stufe === undefined ? '' : ' ' + merkmal.stufe;
-        merkmal.nameStufe = game.i18n.localize('SPLITTERMOND.Waffenmerkmal.' + merkmal.key) + stufe;
-      }    
-    }    
-
-    // Lokalisierung der Schildliste
-    for (let [key, item] of Object.entries(schilde)){
-      item.data.kampffertigkeit.abk = game.i18n.localize('SPLITTERMOND.Kampffertigkeit.' + item.data.kampffertigkeit.key + '.abk');
-      // Localize Waffenmerkmale
-      for (let [itemKey, merkmal] of Object.entries(item.data.merkmale)){
-        let stufe = merkmal.stufe === undefined ? '' : ' ' + merkmal.stufe;
-        merkmal.nameStufe = game.i18n.localize('SPLITTERMOND.Waffenmerkmal.' + merkmal.key) + stufe;
-      }    
-    }    
-
-    // Lokalisierung der Ruestungsliste
-    for (let [key, item] of Object.entries(ruestungen)){
-      // Localize Waffenmerkmale
-      for (let [itemKey, merkmal] of Object.entries(item.data.merkmale)){
-        let stufe = merkmal.stufe === undefined ? '' : ' ' + merkmal.stufe;
-        merkmal.nameStufe = game.i18n.localize('SPLITTERMOND.Waffenmerkmal.' + merkmal.key) + stufe;
-      }    
-    }    
 
   }
 
@@ -220,25 +131,6 @@ export class SplittermondActorSheet extends ActorSheet {
       this.actor.deleteOwnedItem(li.data("itemId"));
       li.slideUp(200, () => this.render(false));
     });
-
-    // Add Inventory Item
-    /*
-    html.find(".item-create").click(this._onItemCreate.bind(this));
-
-    // Update Inventory Item
-    html.find(".item-edit").click((ev) => {
-      const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.getOwnedItem(li.data("itemId"));
-      item.sheet.render(true);
-    });
-
-    // Delete Inventory Item
-    html.find(".item-delete").click((ev) => {
-      const li = $(ev.currentTarget).parents(".item");
-      this.actor.deleteOwnedItem(li.data("itemId"));
-      li.slideUp(200, () => this.render(false));
-    });
-    */
 
     // Drag&Drop für Waffenliste
     /*

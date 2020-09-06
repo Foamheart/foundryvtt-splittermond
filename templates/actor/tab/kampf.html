@@ -3,17 +3,17 @@
   <table class="markCol2">
     <thead>
       <tr>
-        <th>{{localize 'SPLITTERMOND.Label.Waffen'}}</th>
-        <th width="05%">{{localize 'SPLITTERMOND.Label.Wert'}}</th>
-        <th width="10%">{{localize 'SPLITTERMOND.Label.Fertigkeit'}}</th>
-        <th width="05%">{{localize 'SPLITTERMOND.Label.Att1'}}</th>
-        <th width="05%">{{localize 'SPLITTERMOND.Label.Att2'}}</th>
-        <th width="05%">{{localize 'SPLITTERMOND.Label.mod'}}</th>
-        <th width="05%">{{localize 'SPLITTERMOND.Label.WGS'}}</th>
-        <th width="10%">{{localize 'SPLITTERMOND.Label.Schaden'}}</th>
-        <th width="5%">{{localize 'SPLITTERMOND.Label.Reichweite'}}</th>
-        <th>{{localize 'SPLITTERMOND.Label.Merkmale'}}</th>
-        <th width="10%"><a class="item-control item-add" title="Waffe hinzufügen" data-type="waffe"><i class="fas fa-plus"></i></a></th>
+        <th>{{label 'Waffen'}}</th>
+        <th width="05%">{{label 'Wert'}}</th>
+        <th width="10%">{{label 'Fertigkeit'}}</th>
+        <th width="05%">{{label 'Att1'}}</th>
+        <th width="05%">{{label 'Att2'}}</th>
+        <th width="05%">{{label 'mod'}}</th>
+        <th width="05%">{{label 'WGS'}}</th>
+        <th width="10%">{{label 'Schaden'}}</th>
+        <th width="5%">{{label 'Reichweite'}}</th>
+        <th>{{label 'Merkmale'}}</th>
+        <th width="10%"><a class="item-control item-add" title="{{label 'Hinzufuegen'}}" data-type="waffe"><i class="fas fa-plus"></i></a></th>
       </tr>
     </thead>
     <tbody class="waffen">
@@ -21,18 +21,18 @@
           <tr class="item waffe {{active item.data.ausgeruestet}}" data-item-id="{{item._id}}">
             <td class="rollable" data-probe="kampffertigkeit" data-name="{{item.name}}" data-wert="{{item.data.kampffertigkeit.wert}}" data-wgs="{{item.data.wgs.wert}}" data-schaden="{{item.data.schaden.wert}}" data-punkte="{{item.data.kampffertigkeit.punkte}}">{{item.name}}</td>
             <td {{#if item.data.minAttributAbzug}}class="malus"{{/if}}>{{item.data.kampffertigkeit.wert}}</td>
-            <td>{{item.data.kampffertigkeit.abk}}</td>
-            <td title="{{item.data.attribut1.abk}}">{{item.data.attribut1.wert}}</td>
-            <td title="{{item.data.attribut2.abk}}">{{item.data.attribut2.wert}}</td>
+            <td>{{loc2 'Kampffertigkeit' item.data.kampffertigkeit.key 'abk'}}</td>
+            <td title="{{loc2 'Attribut' item.data.attribut1.key 'abk'}}">{{item.data.attribut1.wert}}</td>
+            <td title="{{loc2 'Attribut' item.data.attribut2.key 'abk'}}">{{item.data.attribut2.wert}}</td>
             <td>{{item.data.kampffertigkeit.mod}}</td>
             <td {{#if item.data.minAttributAbzug}}class="malus"{{/if}}>{{item.data.wgs.wert}}</td>
             <td>{{item.data.schaden.wert}}</td>
             <td>{{zeroIsDash item.data.reichweite}}</td>
-            <td>{{#each item.data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{merkmal.nameStufe}}</span>{{/each}}</td>
+            <td>{{#each item.data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{waffenmerkmal merkmal}}</span>{{/each}}</td>
             <td>
-              <a class="item-control item-toggle" title="Ausgerüstet"><i class="fas fa-shield-alt"></i></a>
-              <a class="item-control item-edit" title="Waffe bearbeiten"><i class="fas fa-edit"></i></a>
-              <a class="item-control item-delete" title="Waffe löschen"><i class="fas fa-trash"></i></a>
+              <a class="item-control item-toggle" title="{{label 'Ausgeruestet'}}"><i class="fas fa-shield-alt"></i></a>
+              <a class="item-control item-edit" title="{{label 'Bearbeiten'}}"><i class="fas fa-edit"></i></a>
+              <a class="item-control item-delete" title="{{label 'Loeschen'}}"><i class="fas fa-trash"></i></a>
             </td>
           </tr>
       {{/each}}
@@ -42,16 +42,16 @@
   <table class="markCol2">
     <thead>
       <tr>
-        <th>{{localize 'SPLITTERMOND.Label.Schildstoss'}}</th>
-        <th width="05%">{{localize 'SPLITTERMOND.Label.Wert'}}</th>
-        <th width="10%">{{localize 'SPLITTERMOND.Label.Fertigkeit'}}</th>
-        <th width="05%">{{localize 'SPLITTERMOND.Attribut.bew.abk'}}</th>
-        <th width="05%">{{localize 'SPLITTERMOND.Attribut.sta.abk'}}</th>
-        <th width="05%">{{localize 'SPLITTERMOND.Label.mod'}}</th>
-        <th width="05%">{{localize 'SPLITTERMOND.Label.WGS'}}</th>
-        <th width="10%">{{localize 'SPLITTERMOND.Label.Schaden'}}</th>
-        <th>{{localize 'SPLITTERMOND.Label.Merkmale'}}</th>
-        <th width="10%"><a class="item-control item-add" title="Schild hinzufügen" data-type="schild"><i class="fas fa-plus"></i></a></th>
+        <th>{{label 'Schildstoss'}}</th>
+        <th width="05%">{{label 'Wert'}}</th>
+        <th width="10%">{{label 'Fertigkeit'}}</th>
+        <th width="05%">{{loc 'Attribut.bew.abk'}}</th>
+        <th width="05%">{{loc 'Attribut.sta.abk'}}</th>
+        <th width="05%">{{label 'mod'}}</th>
+        <th width="05%">{{label 'WGS'}}</th>
+        <th width="10%">{{label 'Schaden'}}</th>
+        <th>{{label 'Merkmale'}}</th>
+        <th width="10%"><a class="item-control item-add" title="{{label 'Hinzufuegen'}}" data-type="schild"><i class="fas fa-plus"></i></a></th>
       </tr>
     </thead>
     <tbody class="schilde">
@@ -59,17 +59,17 @@
           <tr class="item schild {{active item.data.ausgeruestet}}" data-item-id="{{item._id}}">
             <td class="rollable" data-probe="kampffertigkeit" data-name="{{item.name}}" data-wert="{{item.data.kampffertigkeit.wert}}" data-wgs="7" data-schaden="1W6+1" data-punkte="{{item.data.kampffertigkeit.punkte}}">{{item.name}}</td>
             <td>{{item.data.kampffertigkeit.wert}}</td>
-            <td>{{item.data.kampffertigkeit.abk}}</td>
-            <td title="{{item.data.attribut1.abk}}">{{item.data.attribut1.wert}}</td>
-            <td title="{{item.data.attribut2.abk}}">{{item.data.attribut2.wert}}</td>
+            <td>{{loc2 'Kampffertigkeit' item.data.kampffertigkeit.key 'abk'}}</td>
+            <td title="{{loc2 'Attribut' item.data.attribut1.key 'abk'}}">{{item.data.attribut1.wert}}</td>
+            <td title="{{loc2 'Attribut' item.data.attribut2.key 'abk'}}">{{item.data.attribut2.wert}}</td>
             <td>{{item.data.kampffertigkeit.mod}}</td>
             <td>7</td>
             <td>1W6+1</td>
-            <td>{{#each item.data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{merkmal.nameStufe}}</span>{{/each}}</td>
+            <td>{{#each item.data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{waffenmerkmal merkmal}}</span>{{/each}}</td>
             <td>
-              <a class="item-control item-toggle" title="Ausgerüstet"><i class="fas fa-shield-alt"></i></a>
-              <a class="item-control item-edit" title="Schild bearbeiten"><i class="fas fa-edit"></i></a>
-              <a class="item-control item-delete" title="Schild löschen"><i class="fas fa-trash"></i></a>
+              <a class="item-control item-toggle" title="{{label 'Ausgeruestet'}}"><i class="fas fa-shield-alt"></i></a>
+              <a class="item-control item-edit" title="{{label 'Bearbeiten'}}"><i class="fas fa-edit"></i></a>
+              <a class="item-control item-delete" title="{{label 'Loeschen'}}"><i class="fas fa-trash"></i></a>
             </td>
           </tr>
       {{/each}}
@@ -82,15 +82,15 @@
   <table>
     <thead>
       <tr>
-        <th>{{localize 'SPLITTERMOND.Label.Kampffertigkeiten'}}</th>
-        <th width="10%">{{localize 'SPLITTERMOND.Label.FP'}}</th>
+        <th>{{label 'Kampffertigkeiten'}}</th>
+        <th width="10%">{{label 'FP'}}</th>
       </tr>
     </thead>
     <tbody>
       {{#each data.kampffertigkeiten as |kampffertigkeit key|}}
           <tr>
-            <td>{{kampffertigkeit.name}}</td>
-            <td><input type="text" name="data.kampffertigkeiten.{{key}}.punkte" value="{{kampffertigkeit.punkte}}" data-dtype="Number"/></td>
+            <td>{{loc2 'Kampffertigkeit' key 'name'}}</td>
+            <td><input type="text" name="data.kampffertigkeiten.{{key}}.punkte" value="{{zeroIsEmpty kampffertigkeit.punkte}}" data-dtype="Number"/></td>
           </tr>
       {{/each}}
     </tbody>
@@ -99,13 +99,13 @@
   <table>
     <thead>
       <tr>
-        <th>{{localize 'SPLITTERMOND.Label.Ruestung'}} / {{localize 'SPLITTERMOND.Label.Schild'}}</th>
-        <th width="05%">{{localize 'SPLITTERMOND.Label.VTDplus'}}</th>
-        <th width="10%">{{localize 'SPLITTERMOND.Label.SR'}}</th>
-        <th width="05%">{{localize 'SPLITTERMOND.Label.Behinderung'}}</th>
-        <th width="10%">{{localize 'SPLITTERMOND.Label.Tickzuschlag'}}</th>
-        <th>{{localize 'SPLITTERMOND.Label.Merkmale'}}</th>
-        <th width="10%"><a class="item-control item-add" title="Rüstung hinzufügen" data-type="ruestung"><i class="fas fa-plus"></i></a></th>
+        <th>{{label 'Ruestung'}} / {{label 'Schild'}}</th>
+        <th width="05%">{{label 'VTDplus'}}</th>
+        <th width="10%">{{label 'SR'}}</th>
+        <th width="05%">{{label 'Behinderung'}}</th>
+        <th width="10%">{{label 'Tickzuschlag'}}</th>
+        <th>{{label 'Merkmale'}}</th>
+        <th width="10%"><a class="item-control item-add" title="{{label 'Hinzufuegen'}}" data-type="ruestung"><i class="fas fa-plus"></i></a></th>
       </tr>
     </thead>
     <tbody class="ruestungen">
@@ -116,16 +116,16 @@
         <td>{{item.data.sr.wert}}</td>
         <td {{#if item.data.minAttributAbzug}}class="malus"{{/if}}>{{item.data.behinderung.wert}}</td>
         <td {{#if item.data.minAttributAbzug}}class="malus"{{/if}}>{{item.data.tickzuschlag.wert}}</td>
-        <td>{{#each item.data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{merkmal.nameStufe}}</span>{{/each}}</td>
+        <td>{{#each item.data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{waffenmerkmal merkmal}}</span>{{/each}}</td>
         <td>
-          <a class="item-control item-toggle" title="Ausgerüstet"><i class="fas fa-shield-alt"></i></a>
-          <a class="item-control item-edit" title="Rüstung bearbeiten"><i class="fas fa-edit"></i></a>
-          <a class="item-control item-delete" title="Rüstung löschen"><i class="fas fa-trash"></i></a>
-        </td>
+          <a class="item-control item-toggle" title="{{label 'Ausgeruestet'}}"><i class="fas fa-shield-alt"></i></a>
+          <a class="item-control item-edit" title="{{label 'Bearbeiten'}}"><i class="fas fa-edit"></i></a>
+          <a class="item-control item-delete" title="{{label 'Loeschen'}}"><i class="fas fa-trash"></i></a>
+    </td>
       </tr>
       {{/each}}
       <tr class="summe">
-        <td>{{localize 'SPLITTERMOND.Label.Summe'}}</td>
+        <td>{{label 'Summe'}}</td>
         <td>{{data.vtdPlus}}</td>
         <td>{{data.sr}}</td>
         <td>{{data.behinderung}}</td>

@@ -3,23 +3,23 @@
   <table class="markCol2">
     <thead>
       <tr>
-        <th>{{localize 'SPLITTERMOND.Label.Fertigkeiten'}}</th>
-        <th width="10%">{{localize 'SPLITTERMOND.Label.Wert'}}</th>
-        <th width="10%">{{localize 'SPLITTERMOND.Label.Punkte'}}</th>
-        <th width="10%">{{localize 'SPLITTERMOND.Label.Att1'}}</th>
-        <th width="10%">{{localize 'SPLITTERMOND.Label.Att2'}}</th>
-        <th width="10%">{{localize 'SPLITTERMOND.Label.mod'}}</th>
+        <th>{{label 'Fertigkeiten'}}</th>
+        <th width="10%">{{label 'Wert'}}</th>
+        <th width="10%">{{label 'Punkte'}}</th>
+        <th width="10%">{{label 'Att1'}}</th>
+        <th width="10%">{{label 'Att2'}}</th>
+        <th width="10%">{{label 'mod'}}</th>
       </tr>
     </thead>
     <tbody>
       {{#each data.fertigkeiten as |fertigkeit key|}}
           <tr>
-            <td class="rollable" data-probe="fertigkeit" data-name="{{fertigkeit.name}}" data-wert="{{fertigkeit.wert}}" data-punkte="{{fertigkeit.fp}}">{{fertigkeit.name}}</td>
+            <td class="rollable" data-probe="fertigkeit" data-name="{{loc2 'Fertigkeit' key 'name'}}" data-wert="{{fertigkeit.wert}}" data-punkte="{{fertigkeit.fp}}">{{loc2 'Fertigkeit' key 'name'}}</td>
             <td>{{fertigkeit.wert}}</td>
-            <td><input type="text" name="data.fertigkeiten.{{key}}.fp" value="{{fertigkeit.fp}}" data-dtype="Number"/></td>
-            <td title="{{fertigkeit.att1.abk}}">{{fertigkeit.att1.wert}}</td>
-            <td title="{{fertigkeit.att2.abk}}">{{fertigkeit.att2.wert}}</td>
-            <td><input type="text" name="data.fertigkeiten.{{key}}.mod" value="{{fertigkeit.mod}}" data-dtype="Number"/></td>
+            <td><input type="text" name="data.fertigkeiten.{{key}}.fp" value="{{zeroIsEmpty fertigkeit.fp}}" data-dtype="Number"/></td>
+            <td title="{{loc2 'Attribut' fertigkeit.att1.key 'abk'}}">{{fertigkeit.att1.wert}}</td>
+            <td title="{{loc2 'Attribut' fertigkeit.att2.key 'abk'}}">{{fertigkeit.att2.wert}}</td>
+            <td><input type="text" name="data.fertigkeiten.{{key}}.mod" value="{{zeroIsEmpty fertigkeit.mod}}" data-dtype="Number"/></td>
           </tr>
       {{/each}}
     </tbody>

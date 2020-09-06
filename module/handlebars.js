@@ -1,4 +1,4 @@
-function preloadHandlebarsTemplates() {
+function preloadPartialsTemplates() {
   const templatePaths = [
     "systems/splittermond/templates/actor/tab/grundwerte.html",
     "systems/splittermond/templates/actor/tab/fertigkeiten.html",
@@ -9,6 +9,39 @@ function preloadHandlebarsTemplates() {
 }
 
 function registerHandlebarsHelpers() {
+
+  /*** Lokalisierung  ***/
+
+  Handlebars.registerHelper('label', function(value) {
+    return game.i18n.localize('SPLITTERMOND.Label.' + value);
+  });
+
+  Handlebars.registerHelper('loc', function(value) {
+    return game.i18n.localize('SPLITTERMOND.' + value);
+  });
+
+  Handlebars.registerHelper('loc1', function(prefix, key) {
+    return game.i18n.localize('SPLITTERMOND.' + prefix + '.' + key);
+  });
+
+  Handlebars.registerHelper('loc2', function(prefix, key, postfix) {
+    return game.i18n.localize('SPLITTERMOND.' + prefix + '.' + key + '.' + postfix);
+  });
+
+  Handlebars.registerHelper('waffenmerkmal', function(merkmal) {
+    let stufe = merkmal.stufe === undefined ? '' : ' ' + merkmal.stufe;
+    return game.i18n.localize('SPLITTERMOND.Waffenmerkmal.' + merkmal.key) + stufe;
+  });
+
+  /*** Formatierung ***/
+
+  Handlebars.registerHelper('zeroIsEmpty', function(value) {
+    return value ? value : '';
+  });
+
+  Handlebars.registerHelper('zeroIsDash', function(value) {
+    return value ? value : '-';
+  });
 
   Handlebars.registerHelper('preisFormat', function (value) {
     let telare = parseInt(value);
@@ -26,29 +59,13 @@ function registerHandlebarsHelpers() {
     return solare + lunare + telare;
   });
 
+  /*** CSS ***/
+
   Handlebars.registerHelper('active', function(value) {
     return value ? '' : 'inactive';
   });
 
-  Handlebars.registerHelper('zeroIsEmpty', function(value) {
-    return value ? value : '';
-  });
-
-  Handlebars.registerHelper('zeroIsDash', function(value) {
-    return value ? value : '-';
-  });
-
-  Handlebars.registerHelper('smLocalize', function(value) {
-    return game.i18n.localize('SPLITTERMOND.' + value);
-  });
-
-  Handlebars.registerHelper('smLocalize1', function(prefix, key) {
-    return game.i18n.localize('SPLITTERMOND.' + prefix + '.' + key);
-  });
-
-  Handlebars.registerHelper('smLocalize2', function(prefix, key, postfix) {
-    return game.i18n.localize('SPLITTERMOND.' + prefix + '.' + key + '.' + postfix);
-  });
+  /*** Sonstiges ***/
 
   // TODO unbenutzt?
   Handlebars.registerHelper('concat', function() {
@@ -70,5 +87,5 @@ function registerHandlebarsHelpers() {
 
 export const initializeHandlebars = () => {
   registerHandlebarsHelpers();
-  preloadHandlebarsTemplates();
+  preloadPartialsTemplates();
 };

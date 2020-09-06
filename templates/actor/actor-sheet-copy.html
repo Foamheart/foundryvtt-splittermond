@@ -6,23 +6,23 @@
         <div class="header-fields">
             {{!-- Zeile 1 --}}
             <h1 class="charname">
-              <input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'SPLITTERMOND.ActorName'}}"/>
+              <input name="name" type="text" value="{{actor.name}}" placeholder="{{label 'Name'}}"/>
             </h1>
             {{!-- Zeile 2 --}}
             <div class="grid grid-2col">
               <div class="form-group">
-                <label>{{localize 'SPLITTERMOND.Label.Heldengrad'}}</label>
+                <label>{{label 'Heldengrad'}}</label>
                 <input name="data.hg" type="text" value="{{data.hg}}" data-dtype="Number"/>
               </div>
               <div class="form-group">
-                <label>{{localize 'SPLITTERMOND.Label.Rasse'}}</label>
+                <label>{{label 'Rasse'}}</label>
                 <select name="data.rasse" value="{{data.rasse}}" data-dtype="String">
                   {{#select data.rasse}}
-                  <option value="alb">{{localize 'SPLITTERMOND.Rasse.Alb'}}</option>
-                  <option value="gnom">{{localize 'SPLITTERMOND.Rasse.Gnom'}}</option>
-                  <option value="mensch">{{localize 'SPLITTERMOND.Rasse.Mensch'}}</option>
-                  <option value="varg">{{localize 'SPLITTERMOND.Rasse.Varg'}}</option>
-                  <option value="zwerg">{{localize 'SPLITTERMOND.Rasse.Zwerg'}}</option>
+                  <option value="alb">{{loc 'Rasse.Alb'}}</option>
+                  <option value="gnom">{{loc 'Rasse.Gnom'}}</option>
+                  <option value="mensch">{{loc 'Rasse.Mensch'}}</option>
+                  <option value="varg">{{loc 'Rasse.Varg'}}</option>
+                  <option value="zwerg">{{loc 'Rasse.Zwerg'}}</option>
                   {{/select}}
                 </select>
               </div>
@@ -69,9 +69,9 @@
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-      <a class="item" data-tab="grundwerte">{{localize 'SPLITTERMOND.Label.Grundwerte'}}</a>
-      <a class="item" data-tab="fertigkeiten">{{localize 'SPLITTERMOND.Label.Fertigkeiten'}}</a>
-      <a class="item" data-tab="kampf">{{localize 'SPLITTERMOND.Label.Kampf'}}</a>
+      <a class="item" data-tab="grundwerte">{{label 'Grundwerte'}}</a>
+      <a class="item" data-tab="fertigkeiten">{{label 'Fertigkeiten'}}</a>
+      <a class="item" data-tab="kampf">{{label 'Kampf'}}</a>
       <a class="item" data-tab="description">Description</a>
       <a class="item" data-tab="items">Items</a>
       <a class="item" data-tab="features">Features</a>
@@ -88,11 +88,11 @@
             <table class="markCol4">
               <thead>
                 <tr>
-                  <th>{{localize 'SPLITTERMOND.Label.Attribute'}}</th>
+                  <th>{{label 'Attribute'}}</th>
                   <th width="10%"></th>
-                  <th width="10%">{{localize 'SPLITTERMOND.Label.Start'}}</th>
-                  <th width="10%">{{localize 'SPLITTERMOND.Label.Wert'}}</th>
-                  <th width="10%">{{localize 'SPLITTERMOND.Label.mod'}}</th>
+                  <th width="10%">{{label 'Start'}}</th>
+                  <th width="10%">{{label 'Wert'}}</th>
+                  <th width="10%">{{label 'mod'}}</th>
                 </tr>
               </thead>
               <tbody>
@@ -111,11 +111,11 @@
             <table class="markCol3">
               <thead>
                 <tr>
-                  <th>{{localize 'SPLITTERMOND.Label.AbgeleiteteWerte'}}</th>
+                  <th>{{label 'AbgeleiteteWerte'}}</th>
                   <th width="10%"></th>
-                  <th width="10%">{{localize 'SPLITTERMOND.Label.Wert'}}</th>
-                  <th width="10%">{{localize 'SPLITTERMOND.Label.mod'}}</th>
-                  <th width="10%">{{localize 'SPLITTERMOND.Label.temp'}}</th>
+                  <th width="10%">{{label 'Wert'}}</th>
+                  <th width="10%">{{label 'mod'}}</th>
+                  <th width="10%">{{label 'temp'}}</th>
                 </tr>
               </thead>
               <tbody>
@@ -141,12 +141,12 @@
             <table class="markCol2">
               <thead>
                 <tr>
-                  <th>{{localize 'SPLITTERMOND.Label.Fertigkeiten'}}</th>
-                  <th width="10%">{{localize 'SPLITTERMOND.Label.Wert'}}</th>
-                  <th width="10%">{{localize 'SPLITTERMOND.Label.Punkte'}}</th>
-                  <th width="10%">{{localize 'SPLITTERMOND.Label.Att1'}}</th>
-                  <th width="10%">{{localize 'SPLITTERMOND.Label.Att2'}}</th>
-                  <th width="10%">{{localize 'SPLITTERMOND.Label.mod'}}</th>
+                  <th>{{label 'Fertigkeiten'}}</th>
+                  <th width="10%">{{label 'Wert'}}</th>
+                  <th width="10%">{{label 'Punkte'}}</th>
+                  <th width="10%">{{label 'Att1'}}</th>
+                  <th width="10%">{{label 'Att2'}}</th>
+                  <th width="10%">{{label 'mod'}}</th>
                 </tr>
               </thead>
               <tbody>
@@ -175,8 +175,8 @@
             <table>
               <thead>
                 <tr>
-                  <th>{{localize 'SPLITTERMOND.Label.Kampffertigkeiten'}}</th>
-                  <th width="10%">{{localize 'SPLITTERMOND.Label.FP'}}</th>
+                  <th>{{label 'Kampffertigkeiten'}}</th>
+                  <th width="10%">{{label 'FP'}}</th>
                 </tr>
               </thead>
               <tbody>
@@ -192,14 +192,14 @@
             <table class="markCol2">
               <thead>
                 <tr>
-                  <th>{{localize 'SPLITTERMOND.Label.Waffen'}}</th>
-                  <th width="10%">{{localize 'SPLITTERMOND.Label.Wert'}}</th>
-                  <th width="10%">{{localize 'SPLITTERMOND.Label.Fertigkeit'}}</th>
-                  <th width="10%">{{localize 'SPLITTERMOND.Label.Att1'}}</th>
-                  <th width="10%">{{localize 'SPLITTERMOND.Label.Att2'}}</th>
-                  <th width="10%">{{localize 'SPLITTERMOND.Label.mod'}}</th>
-                  <th width="10%">{{localize 'SPLITTERMOND.Label.WGS'}}</th>
-                  <th width="10%">{{localize 'SPLITTERMOND.Label.Schaden'}}</th>
+                  <th>{{label 'Waffen'}}</th>
+                  <th width="10%">{{label 'Wert'}}</th>
+                  <th width="10%">{{label 'Fertigkeit'}}</th>
+                  <th width="10%">{{label 'Att1'}}</th>
+                  <th width="10%">{{label 'Att2'}}</th>
+                  <th width="10%">{{label 'mod'}}</th>
+                  <th width="10%">{{label 'WGS'}}</th>
+                  <th width="10%">{{label 'Schaden'}}</th>
                   <th><a class="item-control waffe-create" title="Waffe hinzufügen" data-type="waffe"><i class="fas fa-plus"></i></a></th>
                 </tr>
               </thead>

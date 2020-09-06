@@ -2,37 +2,37 @@
 <table class="waffen" data-pack="{{collection}}">
   <thead>
     <tr>
-      <th>{{smLocalize 'Label.Name'}}</th>
-      <th width="10%">{{smLocalize 'Label.Verfuegbarkeit'}}</th>
-      <th width="10%">{{smLocalize 'Label.Preis'}}</th>
-      <th width="5%">{{smLocalize 'Label.Last'}}</th>
-      <th width="5%">{{smLocalize 'Label.Haerte'}}</th>
-      <th width="10%">{{smLocalize 'Label.Komplexitaet'}}</th>
-      <th width="10%">{{smLocalize 'Label.Schaden'}}</th>
-      <th width="5%">{{smLocalize 'Label.WGS'}}</th>
-      <th width="10%">{{smLocalize 'Label.Attribute'}}</th>
-      <th width="10%">{{smLocalize 'Label.Mindestattribute'}}</th>
-      <th>{{smLocalize 'Label.Merkmale'}}</th>
-      <th width="10%">{{smLocalize 'Label.Reichweite'}}</th>
+      <th>{{label 'Name'}}</th>
+      <th width="10%">{{label 'Verfuegbarkeit'}}</th>
+      <th width="10%">{{label 'Preis'}}</th>
+      <th width="5%">{{label 'Last'}}</th>
+      <th width="5%">{{label 'Haerte'}}</th>
+      <th width="10%">{{label 'Komplexitaet'}}</th>
+      <th width="10%">{{label 'Schaden'}}</th>
+      <th width="5%">{{label 'WGS'}}</th>
+      <th width="10%">{{label 'Attribute'}}</th>
+      <th width="10%">{{label 'Mindestattribute'}}</th>
+      <th>{{label 'Merkmale'}}</th>
+      <th width="10%">{{label 'Reichweite'}}</th>
     </tr>
   </thead>
   {{#each groups as |group key|}}
     <tbody>
-      <tr class="entry-group" data-key="{{key}}"><td colspan="12">{{smLocalize2 'Kampffertigkeit' key 'name'}}</td></tr>
+      <tr class="entry-group" data-key="{{key}}"><td colspan="12">{{loc2 'Kampffertigkeit' key 'name'}}</td></tr>
     </tbody>
     <tbody class="directory-list hidden">
     {{#each group}}
       <tr class="directory-item item waffe" data-entry-id="{{this._id}}">
           <td>{{this.name}}</td>
-          <td>{{smLocalize1 'Verfuegbarkeit' this.data.verfuegbarkeit.normal}}</td>
+          <td>{{loc1 'Verfuegbarkeit' this.data.verfuegbarkeit.normal}}</td>
           <td>{{preisFormat this.data.preis.normal}}</td>
           <td>{{zeroIsDash this.data.last.normal}}</td>
           <td>{{zeroIsDash this.data.haerte.normal}}</td>
-          <td>{{smLocalize2 'Komplexitaet' this.data.komplexitaet.normal 'abk'}}</td>
+          <td>{{loc2 'Komplexitaet' this.data.komplexitaet.normal 'abk'}}</td>
           <td>{{this.data.schaden.normal}}</td>
           <td>{{this.data.wgs.normal}}</td>
-          <td>{{smLocalize2 'Attribut' this.data.attribut1.key 'abk'}}+{{smLocalize2 'Attribut' this.data.attribut2.key 'abk'}}</td>
-          <td>{{#if this.data.minAttribut1}}{{smLocalize2 'Attribut' this.data.minAttribut1.key 'abk'}} {{this.data.minAttribut1.wert}}{{#if this.data.minAttribut2}}, {{smLocalize2 'Attribut' this.data.minAttribut2.key 'abk'}} {{this.data.minAttribut2.wert}}{{/if}}{{else}}-{{/if}}</td>
+          <td>{{loc2 'Attribut' this.data.attribut1.key 'abk'}}+{{loc2 'Attribut' this.data.attribut2.key 'abk'}}</td>
+          <td>{{#if this.data.minAttribut1}}{{loc2 'Attribut' this.data.minAttribut1.key 'abk'}} {{this.data.minAttribut1.wert}}{{#if this.data.minAttribut2}}, {{loc2 'Attribut' this.data.minAttribut2.key 'abk'}} {{this.data.minAttribut2.wert}}{{/if}}{{else}}-{{/if}}</td>
           <td>{{#each this.data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{merkmal.nameStufe}}</span>{{/each}}</td>
           <td>{{zeroIsDash this.data.reichweite}}</td>
       </tr>

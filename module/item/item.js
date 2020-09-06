@@ -193,7 +193,8 @@ function allgemeineAusruestungswerteBerechnen(itemDD, qpos, qfunction) {
 
 // (siehe GRW 161 links oben)
 function ermittleSchildstossKampffertigkeit(actorDD) {
-  return Object.keys(actorDD.kampffertigkeiten).reduce((resultKey, currentKey) =>
+  const nahkampffertigkeiten = ['handgemenge', 'hiebwaffen', 'kettenwaffen', 'klingenwaffen', 'stangenwaffen'];
+  return nahkampffertigkeiten.reduce((resultKey, currentKey) =>
       actorDD.kampffertigkeiten[currentKey].punkte > actorDD.kampffertigkeiten[resultKey].punkte ? currentKey : resultKey, 'handgemenge');
 }
 

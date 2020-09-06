@@ -3,22 +3,22 @@
   <table class="markCol2">
     <thead>
       <tr>
-        <th>{{localize 'SPLITTERMOND.Label.Magieschulen'}}</th>
-        <th width="10%">{{localize 'SPLITTERMOND.Label.Wert'}}</th>
-        <th width="10%">{{localize 'SPLITTERMOND.Label.Punkte'}}</th>
-        <th width="10%">{{localize 'SPLITTERMOND.Label.Att1'}}</th>
-        <th width="10%">{{localize 'SPLITTERMOND.Label.Att2'}}</th>
-        <th width="10%">{{localize 'SPLITTERMOND.Label.mod'}}</th>
+        <th>{{label 'Magieschulen'}}</th>
+        <th width="10%">{{label 'Wert'}}</th>
+        <th width="10%">{{label 'Punkte'}}</th>
+        <th width="10%">{{label 'Att1'}}</th>
+        <th width="10%">{{label 'Att2'}}</th>
+        <th width="10%">{{label 'mod'}}</th>
       </tr>
     </thead>
     <tbody>
       {{#each data.magieschulen as |magieschule key|}}
           <tr>
-            <td>{{magieschule.name}}</td>
+            <td>{{loc2 'Magieschule' key 'name'}}</td>
             <td>{{magieschule.wert}}</td>
             <td><input type="text" name="data.magieschulen.{{key}}.fp" value="{{magieschule.fp}}" data-dtype="Number"/></td>
-            <td title="{{magieschule.att1.abk}}">{{magieschule.att1.wert}}</td>
-            <td title="{{magieschule.att2.abk}}">{{magieschule.att2.wert}}</td>
+            <td title="{{loc2 'Attribut' magieschule.att1.key 'abk'}}">{{magieschule.att1.wert}}</td>
+            <td title="{{loc2 'Attribut' magieschule.att2.key 'abk'}}">{{magieschule.att2.wert}}</td>
             <td><input type="text" name="data.magieschulen.{{key}}.mod" value="{{magieschule.mod}}" data-dtype="Number"/></td>
           </tr>
       {{/each}}

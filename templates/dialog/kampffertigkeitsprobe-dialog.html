@@ -1,22 +1,22 @@
 <form>
     <div class="form-group">
-        <label>{{localize 'SPLITTERMOND.Label.Fertigkeitswert'}}</label>
+        <label>{{label 'Fertigkeitswert'}}</label>
         <input type="text" name="fertigkeitswert" value="{{fertigkeitWert}}" disabled/>
     </div>
     <div class="form-group">
-        <label>{{localize 'SPLITTERMOND.Label.Modifikator'}}</label>
+        <label>{{label 'Modifikator'}}</label>
         <input type="text" name="modifikator" value="{{modifikator}}" placeholder="" data-dtype="Number"/>
     </div>
     <div class="form-group">
-        <label>{{localize 'SPLITTERMOND.Label.Gegner'}}</label>
+        <label>{{label 'Gegner'}}</label>
         <input type="text" name="gegner" value="{{gegner}}" placeholder="" disabled/>
     </div>
     <div class="form-group">
-        <label>{{localize 'SPLITTERMOND.AbgeleiteterWert.vtd.name'}}</label>
+        <label>{{loc 'AbgeleiteterWert.vtd.name'}}</label>
         <input type="text" name="schwierigkeit" value="{{schwierigkeit}}" placeholder="" data-dtype="Number" disabled/>
     </div>
     <div class="form-group">
-        <label>{{localize 'SPLITTERMOND.Label.RollMode'}}</label>
+        <label>{{label 'RollMode'}}</label>
         <select name="rollMode">
         {{#select rollMode}}
         {{#each rollModes as |label mode|}}

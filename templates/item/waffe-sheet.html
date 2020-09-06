@@ -3,21 +3,21 @@
         <img class="profile-img" src="{{item.img}}" data-edit="img" title="Waffe"/>
         <div class="header-fields">
             <h1 class="itemname">{{item.name}}</h1>
-            <div class="kampffertigkeit">{{smLocalize2 'Kampffertigkeit' data.kampffertigkeit.key 'name'}}</div>
+            <div class="kampffertigkeit">{{loc2 'Kampffertigkeit' data.kampffertigkeit.key 'name'}}</div>
             <div class="waffenattribute">
-                <span><b>{{smLocalize 'Label.Attribute'}}:</b> {{smLocalize2 'Attribut' data.attribut1.key 'abk'}}+{{smLocalize2 'Attribut' data.attribut2.key 'abk'}}</span>
-                {{#if data.minAttribut1}}<span><b>{{smLocalize 'Label.Mindestattribute'}}:</b> 
-                {{smLocalize2 'Attribut' data.minAttribut1.key 'abk'}} {{data.minAttribut1.wert}}{{#if data.minAttribut2}}, {{smLocalize2 'Attribut' data.minAttribut2.key 'abk'}} {{data.minAttribut2.wert}}{{/if}}</span>{{/if}}
+                <span><b>{{label 'Attribute'}}:</b> {{loc2 'Attribut' data.attribut1.key 'abk'}}+{{loc2 'Attribut' data.attribut2.key 'abk'}}</span>
+                {{#if data.minAttribut1}}<span><b>{{label 'Mindestattribute'}}:</b> 
+                {{loc2 'Attribut' data.minAttribut1.key 'abk'}} {{data.minAttribut1.wert}}{{#if data.minAttribut2}}, {{loc2 'Attribut' data.minAttribut2.key 'abk'}} {{data.minAttribut2.wert}}{{/if}}</span>{{/if}}
             </div>
-            {{#if data.reichweite}}<div><b>{{smLocalize 'Label.Reichweite'}}:</b> {{data.reichweite}}</div>{{/if}}
-            <div>{{#each data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{merkmal.nameStufe}}</span>{{/each}}</div>
+            {{#if data.reichweite}}<div><b>{{label 'Reichweite'}}:</b> {{data.reichweite}}</div>{{/if}}
+            <div>{{#each data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{waffenmerkmal merkmal}}</span>{{/each}}</div>
         </div>
     </header>
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="werte">{{smLocalize 'Label.Werte'}}</a>
-        <a class="item" data-tab="beschreibung">{{smLocalize 'Label.Beschreibung'}}</a>
+        <a class="item" data-tab="werte">{{label 'Werte'}}</a>
+        <a class="item" data-tab="beschreibung">{{label 'Beschreibung'}}</a>
     </nav>
 
     {{!-- Sheet Body --}}
@@ -28,50 +28,50 @@
             <div class="grid grid-2col">
                 <div>
                     <div class="flexrow flex-group-center">
-                        <label>{{smLocalize 'Label.FW'}}</label>
+                        <label>{{label 'FW'}}</label>
                         <input type="text" name="data.kampffertigkeit.wert" value="{{data.kampffertigkeit.wert}}" disabled/>
-                        <input type="text" name="data.kampffertigkeit.mod" value="{{zeroIsEmpty data.kampffertigkeit.mod}}" placeholder="{{smLocalize 'Label.mod'}}" data-dtype="Number"/>
+                        <input type="text" name="data.kampffertigkeit.mod" value="{{zeroIsEmpty data.kampffertigkeit.mod}}" placeholder="{{label 'mod'}}" data-dtype="Number"/>
                     </div>
                     <div class="flexrow flex-group-center">
-                        <label>{{smLocalize 'Label.Schaden'}}</label>
+                        <label>{{label 'Schaden'}}</label>
                         <input type="text" name="data.schaden.wert" value="{{data.schaden.wert}}" disabled/>
-                        <input type="text" name="data.schaden.mod" value="{{zeroIsEmpty data.schaden.mod}}" placeholder="{{smLocalize 'Label.mod'}}" data-dtype="Number"/>
+                        <input type="text" name="data.schaden.mod" value="{{zeroIsEmpty data.schaden.mod}}" placeholder="{{label 'mod'}}" data-dtype="Number"/>
                     </div>
                     <div class="flexrow flex-group-center">
-                        <label>{{smLocalize 'Label.WGS'}}</label>
+                        <label>{{label 'WGS'}}</label>
                         <input type="text" name="data.wgs.wert" value="{{data.wgs.wert}}" disabled/>
-                        <input type="text" name="data.wgs.mod" value="{{zeroIsEmpty data.wgs.mod}}" placeholder="{{smLocalize 'Label.mod'}}" data-dtype="Number"/>
+                        <input type="text" name="data.wgs.mod" value="{{zeroIsEmpty data.wgs.mod}}" placeholder="{{label 'mod'}}" data-dtype="Number"/>
                     </div>
                     <div class="flexrow flex-group-center">
-                        <label>{{smLocalize 'Label.Last'}}</label>
+                        <label>{{label 'Last'}}</label>
                         <input type="text" name="data.last.wert" value="{{data.last.wert}}" disabled/>
-                        <input type="text" name="data.last.mod" value="{{zeroIsEmpty data.last.mod}}" placeholder="{{smLocalize 'Label.mod'}}" data-dtype="Number"/>
+                        <input type="text" name="data.last.mod" value="{{zeroIsEmpty data.last.mod}}" placeholder="{{label 'mod'}}" data-dtype="Number"/>
                     </div>
                     <div class="flexrow flex-group-center">
-                        <label>{{smLocalize 'Label.Haerte'}}</label>
+                        <label>{{label 'Haerte'}}</label>
                         <input type="text" name="data.haerte.wert" value="{{data.haerte.wert}}" disabled/>
-                        <input type="text" name="data.haerte.mod" value="{{zeroIsEmpty data.haerte.mod}}" placeholder="{{smLocalize 'Label.mod'}}" data-dtype="Number"/>
+                        <input type="text" name="data.haerte.mod" value="{{zeroIsEmpty data.haerte.mod}}" placeholder="{{label 'mod'}}" data-dtype="Number"/>
                     </div>
                 </div>
                 <div>
                     <div class="flexrow flex-group-center">
-                        <label>{{smLocalize 'Label.Qualitaet'}}</label>
+                        <label>{{label 'Qualitaet'}}</label>
                         <input type="text" name="data.qualitaet" value="{{data.qualitaet}}" disabled/>
                     </div>
                     <div class="flexrow flex-group-center">
-                        <label>{{smLocalize 'Label.Verfuegbarkeit'}}</label>
-                        <input type="text" name="data.verfuegbarkeit.name" value="{{smLocalize1 'Verfuegbarkeit' data.verfuegbarkeit.berechnet}}" disabled/>
+                        <label>{{label 'Verfuegbarkeit'}}</label>
+                        <input type="text" name="data.verfuegbarkeit.name" value="{{loc1 'Verfuegbarkeit' data.verfuegbarkeit.berechnet}}" disabled/>
                     </div>
                     <div class="flexrow flex-group-center">
-                        <label>{{smLocalize 'Label.Preis'}}</label>
+                        <label>{{label 'Preis'}}</label>
                         <input type="text" name="data.preis.berechnet" value="{{preisFormat data.preis.berechnet}}" disabled/>
                     </div>
                     <div class="flexrow flex-group-center">
-                        <label>{{smLocalize 'Label.Komplexitaet'}}</label>
-                        <input type="text" name="data.komplexitaet.name" value="{{smLocalize2 'Komplexitaet' data.komplexitaet.berechnet 'name'}}" disabled/>
+                        <label>{{label 'Komplexitaet'}}</label>
+                        <input type="text" name="data.komplexitaet.name" value="{{loc2 'Komplexitaet' data.komplexitaet.berechnet 'name'}}" disabled/>
                     </div>
                     <div class="flexrow flex-group-center">
-                        <label>{{smLocalize 'Label.NegativeQualitaet'}}</label>
+                        <label>{{label 'NegativeQualitaet'}}</label>
                         <input type="checkbox" name="data.negativeQualitaet" value="{{data.negativeQualitaet}}" data-dtype="Boolean" {{checked data.negativeQualitaet}}/>
                     </div>
                 </div>

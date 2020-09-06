@@ -1,8 +1,6 @@
 {
     "SPLITTERMOND": {
 
-        "ActorName": "Name der Spielfigur",
-
         "Rasse": {
             "Alb": "Alb",
             "Gnom": "Gnom",
@@ -207,7 +205,11 @@
             "Schild": "Schild",
             "Mindestattribut": "Mindestattribut",
             "Schildstoss": "Schildstoß",
-            "Summe": "Summe"
+            "Summe": "Summe",
+            "Ausgeruestet": "Ausgerüstet",
+            "Hinzufuegen": "Hinzufügen",
+            "Bearbeiten": "Bearbeiten",
+            "Loeschen": "Löschen"
         }
     }
 }

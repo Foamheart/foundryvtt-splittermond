@@ -36,13 +36,9 @@ export class SplittermondItemSheet extends ItemSheet {
     const data = super.getData();
     const dd = data.data;
     data.dtypes = ["String", "Number", "Boolean"];
+  
+    // TODO Aufräumen, weil hier derzeit nichts mehr gemacht wird. Sämtliche Lokalisierung findet mittels Handlebars statt.
 
-    // Localize Waffenmerkmale
-    for (let [key, merkmal] of Object.entries(dd.merkmale)){
-      let stufe = merkmal.stufe === undefined ? '' : ' ' + merkmal.stufe;
-      merkmal.nameStufe = game.i18n.localize('SPLITTERMOND.Waffenmerkmal.' + merkmal.key) + stufe;
-    }    
-    
     return data;
   }
 

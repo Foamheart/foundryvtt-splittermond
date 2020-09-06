@@ -9,26 +9,26 @@
 
             {{!-- Zeile 1 --}}
             <h1 class="charname">
-              <input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'SPLITTERMOND.ActorName'}}"/>
+              <input name="name" type="text" value="{{actor.name}}" placeholder="{{label 'Name'}}"/>
             </h1>
 
             {{!-- Zeile 2 --}}
             <div class="grid grid-2col">
   
               <div class="form-group">
-                <label>{{localize 'SPLITTERMOND.Label.Heldengrad'}}</label>
+                <label>{{label 'Heldengrad'}}</label>
                 <input name="data.hg" type="text" value="{{data.hg}}" data-dtype="Number"/>
               </div>
   
               <div class="form-group">
-                <label>{{localize 'SPLITTERMOND.Label.Rasse'}}</label>
+                <label>{{label 'Rasse'}}</label>
                 <select name="data.rasse" value="{{data.rasse}}" data-dtype="String">
                   {{#select data.rasse}}
-                  <option value="alb">{{localize 'SPLITTERMOND.Rasse.Alb'}}</option>
-                  <option value="gnom">{{localize 'SPLITTERMOND.Rasse.Gnom'}}</option>
-                  <option value="mensch">{{localize 'SPLITTERMOND.Rasse.Mensch'}}</option>
-                  <option value="varg">{{localize 'SPLITTERMOND.Rasse.Varg'}}</option>
-                  <option value="zwerg">{{localize 'SPLITTERMOND.Rasse.Zwerg'}}</option>
+                  <option value="alb">{{loc 'Rasse.Alb'}}</option>
+                  <option value="gnom">{{loc 'Rasse.Gnom'}}</option>
+                  <option value="mensch">{{loc 'Rasse.Mensch'}}</option>
+                  <option value="varg">{{loc 'Rasse.Varg'}}</option>
+                  <option value="zwerg">{{loc 'Rasse.Zwerg'}}</option>
                   {{/select}}
                 </select>
               </div>
@@ -41,10 +41,10 @@
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-      <a class="item" data-tab="grundwerte">{{localize 'SPLITTERMOND.Label.Grundwerte'}}</a>
-      <a class="item" data-tab="fertigkeiten">{{localize 'SPLITTERMOND.Label.Fertigkeiten'}}</a>
-      <a class="item" data-tab="kampf">{{localize 'SPLITTERMOND.Label.Kampf'}}</a>
-      <a class="item" data-tab="zauber">{{localize 'SPLITTERMOND.Label.Zauber'}}</a>
+      <a class="item" data-tab="grundwerte">{{label 'Grundwerte'}}</a>
+      <a class="item" data-tab="fertigkeiten">{{label 'Fertigkeiten'}}</a>
+      <a class="item" data-tab="kampf">{{label 'Kampf'}}</a>
+      <a class="item" data-tab="zauber">{{label 'Zauber'}}</a>
     </nav>
 
     {{!-- Sheet Body --}}

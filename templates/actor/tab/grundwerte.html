@@ -3,21 +3,21 @@
   <table class="markCol4">
     <thead>
       <tr>
-        <th>{{localize 'SPLITTERMOND.Label.Attribute'}}</th>
+        <th>{{label 'Attribute'}}</th>
         <th width="10%"></th>
-        <th width="10%">{{localize 'SPLITTERMOND.Label.Start'}}</th>
-        <th width="10%">{{localize 'SPLITTERMOND.Label.Wert'}}</th>
-        <th width="10%">{{localize 'SPLITTERMOND.Label.mod'}}</th>
+        <th width="10%">{{label 'Start'}}</th>
+        <th width="10%">{{label 'Wert'}}</th>
+        <th width="10%">{{label 'mod'}}</th>
       </tr>
     </thead>
     <tbody>
       {{#each data.attribute as |attribut key|}}
           <tr>
-            <td>{{attribut.name}}</td>
-            <td>{{attribut.abk}}</td>
+            <td>{{loc2 'Attribut' key 'name'}}</td>
+            <td>{{loc2 'Attribut' key 'abk'}}</td>
             <td><input type="text" name="data.attribute.{{key}}.start" value="{{attribut.start}}" data-dtype="Number"/></td>
             <td>{{attribut.wert}}</td>
-            <td><input type="text" name="data.attribute.{{key}}.mod" value="{{attribut.mod}}" data-dtype="Number"/></td>
+            <td><input type="text" name="data.attribute.{{key}}.mod" value="{{zeroIsEmpty attribut.mod}}" data-dtype="Number"/></td>
           </tr>
       {{/each}}
     </tbody>
@@ -26,21 +26,21 @@
   <table class="markCol3">
     <thead>
       <tr>
-        <th>{{localize 'SPLITTERMOND.Label.AbgeleiteteWerte'}}</th>
+        <th>{{label 'AbgeleiteteWerte'}}</th>
         <th width="10%"></th>
-        <th width="10%">{{localize 'SPLITTERMOND.Label.Wert'}}</th>
-        <th width="10%">{{localize 'SPLITTERMOND.Label.mod'}}</th>
-        <th width="10%">{{localize 'SPLITTERMOND.Label.temp'}}</th>
+        <th width="10%">{{label 'Wert'}}</th>
+        <th width="10%">{{label 'mod'}}</th>
+        <th width="10%">{{label 'temp'}}</th>
       </tr>
     </thead>
     <tbody>
       {{#each data.abgeleiteteWerte as |abgeleiteterWert key|}}
-          <tr title="{{abgeleiteterWert.formel}}">
-            <td>{{abgeleiteterWert.name}}</td>
-            <td>{{abgeleiteterWert.abk}}</td>
+          <tr title="{{loc2 'AbgeleiteterWert' key 'formel'}}">
+            <td>{{loc2 'AbgeleiteterWert' key 'name'}}</td>
+            <td>{{loc2 'AbgeleiteterWert' key 'abk'}}</td>
             <td>{{abgeleiteterWert.wert}}</td>
-            <td>{{abgeleiteterWert.mod}}</td>
-            <td>{{abgeleiteterWert.temp}}</td>
+            <td>{{zeroIsEmpty abgeleiteterWert.mod}}</td>
+            <td>{{zeroIsEmpty abgeleiteterWert.temp}}</td>
           </tr>
       {{/each}}
     </tbody>
