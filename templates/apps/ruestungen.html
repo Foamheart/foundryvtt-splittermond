@@ -30,7 +30,7 @@
         <td>{{this.data.behinderung.normal}}</td>
         <td>{{this.data.tickzuschlag.normal}}</td>
         <td>{{#if this.data.minAttribut1}}{{loc2 'Attribut' this.data.minAttribut1.key 'abk'}} {{this.data.minAttribut1.wert}}{{else}}-{{/if}}</td>
-        <td>{{#each this.data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{merkmal.nameStufe}}</span>{{/each}}</td>
+        <td>{{#each this.data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{waffenmerkmal merkmal}}</span>{{/each}}</td>
     </tr>
   {{/each}}
   </tbody>

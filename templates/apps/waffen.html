@@ -33,7 +33,7 @@
           <td>{{this.data.wgs.normal}}</td>
           <td>{{loc2 'Attribut' this.data.attribut1.key 'abk'}}+{{loc2 'Attribut' this.data.attribut2.key 'abk'}}</td>
           <td>{{#if this.data.minAttribut1}}{{loc2 'Attribut' this.data.minAttribut1.key 'abk'}} {{this.data.minAttribut1.wert}}{{#if this.data.minAttribut2}}, {{loc2 'Attribut' this.data.minAttribut2.key 'abk'}} {{this.data.minAttribut2.wert}}{{/if}}{{else}}-{{/if}}</td>
-          <td>{{#each this.data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{merkmal.nameStufe}}</span>{{/each}}</td>
+          <td>{{#each this.data.merkmale as |merkmal key|}}<span class="waffenmerkmal">{{waffenmerkmal merkmal}}</span>{{/each}}</td>
           <td>{{zeroIsDash this.data.reichweite}}</td>
       </tr>
     {{/each}}
