@@ -24,7 +24,7 @@
             <td>{{loc2 'Kampffertigkeit' item.data.kampffertigkeit.key 'abk'}}</td>
             <td title="{{loc2 'Attribut' item.data.attribut1.key 'abk'}}">{{item.data.attribut1.wert}}</td>
             <td title="{{loc2 'Attribut' item.data.attribut2.key 'abk'}}">{{item.data.attribut2.wert}}</td>
-            <td>{{item.data.kampffertigkeit.mod}}</td>
+            <td>{{zeroIsDash item.data.kampffertigkeit.mod}}</td>
             <td {{#if item.data.minAttributAbzug}}class="malus"{{/if}}>{{item.data.wgs.wert}}</td>
             <td>{{item.data.schaden.wert}}</td>
             <td>{{zeroIsDash item.data.reichweite}}</td>

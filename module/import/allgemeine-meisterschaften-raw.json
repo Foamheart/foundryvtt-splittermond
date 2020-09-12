@@ -1,0 +1,2114 @@
+[
+  {
+    "fertigkeit": "akrobatik",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "Ausweichen, Balancieren, Entfesseln, Körperformen, Kunststücke, Sturz abfangen"
+  },
+  {
+    "fertigkeit": "akrobatik",
+    "name": "Antäuschen I",
+    "key": "antaeuschen_1",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Bei einer erfolgreichen <i>Aktiven Abwehr</i> mit der Fertigkeit <i>Akrobatik</i> erhält der Abenteurer 1 zusätzlichen Erfolgsgrad, sofern er ausreichend Platz zur Verfügung hat. Diese Meisterschaft kommt nur zum Tragen, wenn Rüstungen, Schilde, Parierwaffen und sonstige Ausrüstung des Abenteurers eine Gesamt-<i>Behinderung</i> von 1 und einen <i>Tick-Zuschlag</i> von 0 nicht überschreiten. Bei der Berechnung von Gesamt-<i>Behinderung</i> und <i>Tick-Zuschlag</i> werden nur die Werte der Ausrüstung sowie etwaige Verbesserungen durch hohe <i>Gegenstandsqualität</i> betrachtet. Andere Modifikationen, zum Beispiel Verringerungen von Behinderung oder Tick-Zuschlag aus <i>Meisterschaften</i>, <i>Zaubern</i> oder einer <i>Personalisierung</i>, kommen ebenso wenig zum Tragen wie temporäre Erhöhungen, zum Beispiel aus <i>Zuständen</i>."
+  },
+  {
+    "fertigkeit": "akrobatik",
+    "name": "Ausweichen I",
+    "key": "ausweichen_1",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Die <i>Verteidigung</i> des Abenteurers erhöht sich um 2 Punkte, wenn er weder Rüstungen noch Schilde oder Parierwaffen trägt, er sich des Angriffs bewusst ist und ihm ausreichend Platz zur Verfügung steht. Dieser Bonus reduziert sich, je nachdem, wie stark der Abenteurer belastet ist. Trägt er Ausrüstung mit einer Gesamt-<i>Behinderung</i> von maximal 1 und einem <i>Tick-Zuschlag</i> von 0, reduziert sich der Bonus auf 1 Punkt. Belastet ihn seine Ausrüstung noch stärker, kommt diese Meisterschaft nicht zum Tragen. Bei der Berechnung von Gesamt-<i>Behinderung</i> und <i>Tick-Zuschlag</i> werden nur die Werte der Ausrüstung sowie etwaige Verbesserungen durch hohe <i>Gegenstandsqualität</i> betrachtet. Andere Modifikationen, zum Beispiel Verringerungen von Behinderung oder Tick-Zuschlag aus <i>Meisterschaften</i>, <i>Zaubern</i> oder einer <i>Personalisierung</i>, kommen ebenso wenig zum Tragen wie temporäre Erhöhungen, zum Beispiel aus <i>Zuständen</i>."
+  },
+  {
+    "fertigkeit": "akrobatik",
+    "name": "Balance",
+    "key": "balance",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Wenn der Abenteurer über Seile, Balken oder ähnliches balanciert, kann er hierfür seine halbe <i>Geschwindigkeit</i> einsetzen, anstatt sich mit <i>Geschwindigkeit</i> 1 vorsichtig Schritt für Schritt vorzutasten."
+  },
+  {
+    "fertigkeit": "akrobatik",
+    "name": "Blitzreflexe",
+    "key": "blitzreflexe",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Für die Bestimmung der Initiative gilt die <i>Intuition</i> des Abenteurers um 3 Punkte erhöht. Diese Meisterschaft kann bis zu zweimal gewählt werden."
+  },
+  {
+    "fertigkeit": "akrobatik",
+    "name": "Stehaufmännchen",
+    "key": "stehaufmaennchen",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Kaum liegt der Abenteurer am Boden, steht er schon wieder auf den Beinen. <i>Aufstehen</i> kostet ihn nur 3 Ticks und zählt für ihn als <i>sofortige Aktion</i>."
+  },
+  {
+    "fertigkeit": "akrobatik",
+    "name": "Abrollen",
+    "key": "abrollen",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann sich nach einem Sturz besonders gut instinktiv abrollen. <i>Fallschaden</i> ist um eine Stufe reduziert."
+  },
+  {
+    "fertigkeit": "akrobatik",
+    "name": "Antäuschen II",
+    "key": "antaeuschen_2",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:antaeuschen_1",
+    "beschreibung": "Der Bonus aus <i>Antäuschen I </i>steigt auf 2 Erfolgsgrade, sofern er ausreichend Platz zur Verfügung hat. Diese Meisterschaft kommt nur zum Tragen, wenn Rüstungen, Schilde, Parierwaffen und sonstige Ausrüstung des Abenteurers eine Gesamt-<i>Behinderung</i> von 0 und einen <i>Tick-Zuschlag </i>von 0 nicht überschreiten. Bei der Berechnung von Gesamt-<i>Behinderung</i> und <i>Tick-Zuschlag</i> werden nur die Werte der Ausrüstung sowie etwaige Verbesserungen durch hohe <i>Gegenstandsqualität</i> betrachtet. Andere Modifikationen, zum Beispiel Verringerungen von Behinderung oder Tick-Zuschlag aus <i>Meisterschaften</i>, <i>Zaubern</i> oder einer <i>Personalisierung</i>, kommen ebenso wenig zum Tragen wie temporäre Erhöhungen, zum Beispiel aus <i>Zuständen</i>."
+  },
+  {
+    "fertigkeit": "akrobatik",
+    "name": "Ausweichen II",
+    "key": "ausweichen_2",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:ausweichen_1",
+    "beschreibung": "Die <i>Verteidigung</i> des Abenteurers erhöht sich um 4 Punkte, wenn er weder Rüstungen noch Schilde oder Parierwaffen trägt, er sich des Angriffs bewusst ist und ihm ausreichend Platz zur Verfügung steht. Dieser Bonus reduziert sich, je nachdem, wie stark der Abenteurer belastet ist. Trägt er Ausrüstung mit einer Gesamt-<i>Behinderung</i> von maximal 0 und einem <i>Tick-Zuschlag</i> von 0, reduziert sich der Bonus auf 2 Punkte. Belastet ihn seine Ausrüstung noch stärker, kommt diese Meisterschaft nicht zum Tragen. Bei der Berechnung von Gesamt-<i>Behinderung</i> und <i>Tick-Zuschlag</i> werden nur die Werte der Ausrüstung sowie etwaige Verbesserungen durch hohe <i>Gegenstandsqualität</i> betrachtet. Andere Modifikationen, zum Beispiel Verringerungen von Behinderung oder Tick-Zuschlag aus <i>Meisterschaften</i>, <i>Zaubern</i> oder einer <i>Personalisierung</i>, kommen ebenso wenig zum Tragen wie temporäre Erhöhungen, zum Beispiel aus <i>Zuständen</i>."
+  },
+  {
+    "fertigkeit": "akrobatik",
+    "name": "Entfesselungskünstler",
+    "key": "entfesselungskuenstler",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer ist in der Lage, seinen Körper zu verdrehen und sogar gezielt Gelenke auszukugeln. Jede Probe, um sich durch <i>Akrobatik</i> aus Fesseln zu befreien, erhält einen Bonus in Höhe von 6 Punkten."
+  },
+  {
+    "fertigkeit": "akrobatik",
+    "name": "Koordiniertes Ausweichen",
+    "key": "koordiniertes_ausweichen",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:ausweichen_1",
+    "beschreibung": "Der Abenteurer kann eine <i>Aktive Abwehr</i> zur Erhöhung der Verteidigung über <i>Akrobatik</i> ausführen, ohne dass diese eine <i>kontinuierliche Aktion</i>, die er gerade ausführt, abbricht."
+  },
+  {
+    "fertigkeit": "akrobatik",
+    "name": "Meisterhafte Balance",
+    "key": "meisterhafte_balance",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:balance",
+    "beschreibung": "Der Abenteurer kann über wackligen Untergrund so schnell laufen wie über festen Boden. Beim Balancieren kann er seine volle Geschwindigkeit einsetzen."
+  },
+  {
+    "fertigkeit": "akrobatik",
+    "name": "Agiler Rüstungsträger",
+    "key": "agiler_ruestungstraeger",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:ausweichen_2",
+    "beschreibung": "Trägt der Abenteurer Rüstungen, Schilde oder Parierwaffen und erhält dennoch einen <i>Verteidigung</i>Bonus aus den Meisterschaften <i>Ausweichen I </i>oder <i>Ausweichen II</i>, erhöht sich dieser Bonus um insgesamt 1 Punkt."
+  },
+  {
+    "fertigkeit": "akrobatik",
+    "name": "Antäuschen III",
+    "key": "antaeuschen_3",
+    "schwelle": 3,
+    "voraussetzung": "",
+    "beschreibung": "Der Bonus aus <i>Antäuschen I</i> steigt auf 3 Erfolgsgrade, sofern er ausreichend Platz zur Verfügung hat. Trägt der Abenteurer irgendwelche Rüstungen, Schilde oder Parierwaffen, kommt diese Meisterschaft nicht zum Tragen. Dasselbe gilt für sonstige Ausrüstung mit Einfluss auf <i>Behinderung</i> oder <i>Tick-Zuschlag. Voraussetzung</i>: Meisterschaft Antäuschen II"
+  },
+  {
+    "fertigkeit": "akrobatik",
+    "name": "Ausweichbewegungen",
+    "key": "ausweichbewegungen",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:ausweichen_2",
+    "beschreibung": "Der Abenteurer ist in der Lage, Strecken so zurückzulegen, dass ein Angreifer kaum Gelegenheit hat, ihn zu attackieren. Eine Ausweichbewegung zählt als <i>Sprint</i> (siehe S. 159), wobei der Akrobat nur drei Viertel seiner Geschwindigkeit nutzen und keine weiteren Handlungen ausführen kann. Dafür sind <i>Gelegenheitsangriffe</i> gegen ihn nicht möglich."
+  },
+  {
+    "fertigkeit": "akrobatik",
+    "name": "Ausweichen III",
+    "key": "ausweichen_3",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:ausweichen_2",
+    "beschreibung": "Die Verteidigung des Abenteurers erhöht sich um 6 Punkte, wenn er sich des Angriffs bewusst ist und ihm ausreichend Platz zur Verfügung steht. Trägt der Abenteurer irgendwelche Rüstungen, Schilde oder Parierwaffen, kommt diese Meisterschaft nicht zum Tragen. Dasselbe gilt für sonstige Ausrüstung mit Einfluss auf <i>Behinderung</i> oder <i>Tick-Zuschlag</i>."
+  },
+  {
+    "fertigkeit": "akrobatik",
+    "name": "Schlangenmensch",
+    "key": "schlangenmensch",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:entfesselungskuenstler",
+    "beschreibung": "Der Abenteurer kann seinen Körper in fast unmöglichem Maße verdrehen und biegen. Hierzu würfelt er eine <i>Akrobatik</i>-Probe, die Schwierigkeit hängt von dem Vorhaben ab (25, um sich in eine Kiste zu manövrieren, 30, um sich durch Gitterstäbe zu quetschen). Hierfür muss zumindest ein Minimum an Raum vorhanden sein – sich durch ein Schlüsselloch zu drücken, gelingt selbst dem besten Akrobat nicht ohne magische Hilfe."
+  },
+  {
+    "fertigkeit": "alchemie",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "Gifte, Heilmittel, Stärkungsmittel, Zaubermittel"
+  },
+  {
+    "fertigkeit": "alchemie",
+    "name": "Effizienz",
+    "key": "effizienz",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Alchemist arbeitet besonders schnell. Er kann bei der Herstellung von Tränken drei Proben am Tag ablegen, benötigt also ein Drittel eines Tages für eine Probe (statt eines halben Tages)."
+  },
+  {
+    "fertigkeit": "alchemie",
+    "name": "Geselle",
+    "key": "geselle",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Alchemist kann Alchemika der Gegenstandsqualität 1 und 2 herstellen."
+  },
+  {
+    "fertigkeit": "alchemie",
+    "name": "Sparfuchs",
+    "key": "sparfuchs",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Alchemist kann sehr gut mit Material haushalten. Die Herstellungskosten sinken auf ein Viertel des fertigen Preises (statt eines Drittels)."
+  },
+  {
+    "fertigkeit": "alchemie",
+    "name": "Begabter Alchemist",
+    "key": "begabter_alchemist",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Alchemist kann einen Splitterpunkt nachträglich ausgeben, um einen Bonus in Höhe seines <i>Verstandes</i> auf die aktuelle <i>Alchemie</i>-Probe zu erhalten."
+  },
+  {
+    "fertigkeit": "alchemie",
+    "name": "Fachmann",
+    "key": "fachmann",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:geselle",
+    "beschreibung": "Der Alchemist kann Alchemika der Gegenstandsqualität 3 und 4 herstellen."
+  },
+  {
+    "fertigkeit": "alchemie",
+    "name": "Wunderarbeiter",
+    "key": "wunderarbeiter",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:effizienz",
+    "beschreibung": "Der Alchemist ist in der Lage, sehr hart und schnell zu arbeiten. Wenn er Alchemika herstellt, kann er einen Malus in Höhe von 3 Punkten in Kauf nehmen, um die benötigte Zeit aller Proben zu halbieren."
+  },
+  {
+    "fertigkeit": "alchemie",
+    "name": "Abhärtung durch Gewöhnung",
+    "key": "abhaertung_durch_gewoehnung",
+    "schwelle": 3,
+    "voraussetzung": "schwerpunkt:gifte",
+    "beschreibung": "Der Abenteurer ist im Umgang mit toxischen Stoffen abgehärtet. Er erhält einen Bonus in Höhe von 3 Punkten auf seinen <i>Körperlichen Widerstand</i> gegen Gifte."
+  },
+  {
+    "fertigkeit": "alchemie",
+    "name": "Meister",
+    "key": "meister",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:fachmann",
+    "beschreibung": "Der Alchemist kann Alchemika der Gegenstandsqualität 5 und 6 herstellen."
+  },
+  {
+    "fertigkeit": "alchemie",
+    "name": "Meisterwerk",
+    "key": "meisterwerk",
+    "schwelle": 4,
+    "voraussetzung": "meisterschaft:meister",
+    "beschreibung": "Der Alchemist ist eine Legende seines Fachs. Seine Tränke erhalten automatisch eine zusätzliche Stufe <i>Gegenstandsqualität</i> (bis zu einer Qualität von 7), die er bei der Berechnung von Schwierigkeit, Materialkosten und benötigten Fortschrittspunkten nicht berücksichtigen muss."
+  },
+  {
+    "fertigkeit": "anfuehren",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "Einschüchtern, Flammende Rede, Koordinieren, Moral, Taktik, Schlachtpläne"
+  },
+  {
+    "fertigkeit": "anfuehren",
+    "name": "Herausforderung",
+    "key": "herausforderung",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer fordert einen Kampfteilnehmer zum Zweikampf heraus. Es ist eine Probe gegen den <i>Geistigen Widerstand</i> des Gegners nötig (Kont. Aktion, Dau er: 10 Ticks). Wenn sie gelingt, stellt sich der Kontrahent dem Zweikampf. Er nutzt stets seine üblichen Kampfmittel. Sollte ein Kampf aussichtslos sein (etwa im Kampf Bauer gegen Ritter), kann das Ziel zu fliehen versuchen, aber keine aggressiven Handlungen gegen andere Kampfteilnehmer ausführen."
+  },
+  {
+    "fertigkeit": "anfuehren",
+    "name": "Koordinator",
+    "key": "koordinator",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Wenn der Abenteurer Verbündete <i>koordiniert</i>, steigt der Bonus aus <i>Koordinieren</i> um 1 Punkt."
+  },
+  {
+    "fertigkeit": "anfuehren",
+    "name": "Sammeln",
+    "key": "sammeln",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer wendet eine <i>kontinuierliche Aktion</i> (5 Ticks) auf und legt eine <i>Anführen</i>-Probe (Schwierigkeit 20) ab, um die Moral seiner Verbündeten zu stärken. Maßnahmen gegen die Moral oder das Selbstvertrauen von Verbündeten erhalten für 20 Ticks einen Malus in Höhe von 1 Punkt. Wer schon von passenden <i>Zuständen</i> aus solchen Effekten betroffen ist (etwa <i>Angsterfüllt</i>), darf eine Probe auf <i>Entschlossenheit</i> oder <i>Zähigkeit</i> gegen die Schwierigkeit der ursprünglichen Ursache ablegen, um den <i>Zustand</i> abzuschütteln."
+  },
+  {
+    "fertigkeit": "anfuehren",
+    "name": "Inspirieren",
+    "key": "inspirieren",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer hält eine Rede vor einer Gruppe und legt eine Probe auf <i>Anführen</i> ab. Die Schwierigkeit beträgt 25 + 1 pro 10 Personen. Gelingt die Probe, erhalten alle Zuhörer einen Bonus in Höhe von 1 Punkt auf Proben in der nächsten Stunde. Jeder Erfolgsgrad erhöht die Dauer um 1 Stunde."
+  },
+  {
+    "fertigkeit": "anfuehren",
+    "name": "Schlachtplan (Angriff)",
+    "key": "schlachtplan_angriff",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:sammeln",
+    "beschreibung": "Der Abenteurer wendet eine <i>kontinuierliche Aktion</i> (10 Ticks) auf, um die Offensivkraft seiner Gefährten zu bündeln. Er muss eine Probe auf <i>Anführen</i> gegen 20 ablegen. Alle Verbündeten, die ihn hören (maximal seine doppelte <i>Ausstrahlung</i>), erhalten einen Bonus in Höhe von 1 Punkt (+1 pro Erfolgsgrad) auf ihren <i>Angriff</i>. Alle 10 Ticks sinkt der Bonus um 1. Entwirft der Abenteurer einen neuen Schlachtplan, entfällt jeder Bonus des alten."
+  },
+  {
+    "fertigkeit": "anfuehren",
+    "name": "Schlachtplan (Verteidigung)",
+    "key": "schlachtplan_verteidigung",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:sammeln",
+    "beschreibung": "Der Abenteurer bündelt mit einer <i>kontinuierlichen Aktion</i> (10 Ticks) die Verteidigungskraft seiner Gefährten. Er muss eine Probe auf <i>Anführen</i> gegen 20 ablegen. Alle Verbündeten, die ihn hören (maximal seine doppelte <i>Ausstrahlung</i>), erhalten einen Bonus in Höhe von 1 Punkt (+1 pro Erfolgsgrad) auf ihre <i>Verteidigung</i>. Alle 10 Ticks sinkt der Bonus um 1. Entwirft der Abenteurer einen neuen Schlachtplan, entfällt jeder Bonus des alten."
+  },
+  {
+    "fertigkeit": "anfuehren",
+    "name": "Das letzte Aufgebot",
+    "key": "das_letzte_aufgebot",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:inspirieren",
+    "beschreibung": "Mit einer Rede und einer Anführen-Probe gegen 15 kann der Abenteurer eine zahlenmäßig unterlegene Kampfgruppe motivieren. Bei Erfolg werden 1 (+1 pro Erfolgsgrad) Punkte auf die Mannstärke der Gruppe hinzugerechnet, sodass diese einen geringeren Überzahlmalus hinnehmen oder gar in Unterzahl einen Überzahlbonus erhalten kann (siehe S. 170)."
+  },
+  {
+    "fertigkeit": "anfuehren",
+    "name": "Taktisches Genie",
+    "key": "taktisches_genie",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:schlachtplan_angriff,meisterschaft:schlachtplan_verteidigung",
+    "beschreibung": "Der Abenteurer kann die Effekte beider <i>Schlachtpläne</i> kombinieren."
+  },
+  {
+    "fertigkeit": "arkaneKunde",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "Artefakte, Magische Kreaturen, Magische Phänomene, Orientierung in Feenwelten, Rituale, Symbole, Wahrsagung, Zaubersprüche"
+  },
+  {
+    "fertigkeit": "arkaneKunde",
+    "name": "Arkane Verteidigung I",
+    "key": "arkane_verteidigung_1",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Wissen und Ausbildung ermöglichen es dem Abenteurer, sich wirkungsvoll gegen Magie zu schützen. Wenn er einen Zauber, der gegen ihn gewirkt wird, erfolgreich <i>identifiziert</i>, erhält er einen Bonus in Höhe von 3 Punkten auf seinen passenden<i> Widerstandswert</i> gegen diesen."
+  },
+  {
+    "fertigkeit": "arkaneKunde",
+    "name": "Artefaktkunde",
+    "key": "artefaktkunde",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann die Fähigkeiten von Artefakten <i>identifizieren</i>. Hierzu ist eine Probe nötig, deren Schwierigkeit 23 + doppelte Artefaktqualität entspricht. Mehr zu Artefakten finden Sie auf S. 254."
+  },
+  {
+    "fertigkeit": "arkaneKunde",
+    "name": "Schriftrollen erstellen I",
+    "key": "schriftrollen_erstellen_1",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann <i>Schriftrollen</i> der Artefaktqualität 1 und 2 herstellen. Details zu Schriftrollen finden Sie auf S. 254."
+  },
+  {
+    "fertigkeit": "arkaneKunde",
+    "name": "Arkane Verteidigung II",
+    "key": "arkane_verteidigung_2",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:arkane_verteidigung_1",
+    "beschreibung": "Der Abenteurer kann sich besser gegen Magie verteidigen. Wenn er einen Zauber, der gegen ihn gewirkt wird, erfolgreich <i>identifiziert</i>, erhält er einen Bonus in Höhe von 6 Punkten auf eine eventuelle <i>Aktive Abwehr</i>."
+  },
+  {
+    "fertigkeit": "arkaneKunde",
+    "name": "Jäger des Übernatürlichen",
+    "key": "jaeger_des_uebernatuerlichen",
+    "schwelle": 2,
+    "voraussetzung": "schwerpunkt:magische_kreaturen",
+    "beschreibung": "Der Abenteurer wählt eine konkrete Art magischer Wesen aus (Wesen mit mindestens MYS 1 ohne den Typus <i>Humanoid</i>). Gegen diese erhält er einen Bonus in Höhe von 3 Punkten auf <i>Angriffe</i> und Proben auf <i>Wahrnehmung</i> und <i>Überleben</i>. Die Meisterschaft kann mehrfach gewählt werden. Jedes Mal muss eine neue Art ausgesucht werden."
+  },
+  {
+    "fertigkeit": "arkaneKunde",
+    "name": "Schriftrollen erstellen II",
+    "key": "schriftrollen_erstellen_2",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:schriftrollen_erstellen_1",
+    "beschreibung": "Der Abenteurer kann <i>Schriftrollen</i> der Artefaktqualität 3 und 4 herstellen."
+  },
+  {
+    "fertigkeit": "arkaneKunde",
+    "name": "Wahrsager",
+    "key": "wahrsager",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann in die Zukunft blicken, indem er Karten legt, Knochen wirft, die Gestirne betrachtet oder andere Quellen heranzieht. Dies dauert 10 Minuten. Nach einer erfolgreichen Probe auf Arkane Kunde (Schwierigkeit 20) erhält er einen Bonus in Höhe von 1 Punkt (+1 pro Erfolgsgrad), den er in den nächsten 24 Stunden für einen einzigen Wurf nachträglich einsetzen kann. Er kann auch einem Gefährten weissagen. Erst wenn die Weissagung eingetreten ist (also der Bonus genutzt wurde) oder die Zeit verstrichen ist, kann der Abenteurer eine neue Weissagung treffen."
+  },
+  {
+    "fertigkeit": "arkaneKunde",
+    "name": "Bestienjäger",
+    "key": "bestienjaeger",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:jaeger_des_uebernatuerlichen",
+    "beschreibung": "Der Abenteurer wählt eine konkrete Art magischer Wesenheiten, für die er die Meisterschaft <i>Jäger des Übernatürlichen </i>besitzt. Der Bonus erhöht sich auf 5. <i>Bestienjäger</i> kann genau wie <i>Jäger des Übernatürlichen </i>mehrfach gewählt werden."
+  },
+  {
+    "fertigkeit": "arkaneKunde",
+    "name": "Schriftrollen erstellen III",
+    "key": "schriftrollen_erstellen_3",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:schriftrollen_erstellen_2",
+    "beschreibung": "Der Abenteurer kann <i>Schriftrollen</i> der Artefaktqualität 5 und 6 herstellen."
+  },
+  {
+    "fertigkeit": "athletik",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "Klettern, Kraftakt, Laufen, Springen, Werfen"
+  },
+  {
+    "fertigkeit": "athletik",
+    "name": "Kletteraffe",
+    "key": "kletteraffe",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer benötigt beim Klettern nur 1 Fortschrittspunkt pro 5 Meter anstatt pro 3 Meter."
+  },
+  {
+    "fertigkeit": "athletik",
+    "name": "Sprinter",
+    "key": "sprinter",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Die <i>Geschwindigkeit</i> des Abenteurers erhöht sich um 1. Diese Meisterschaft kann bis zu zweimal gewählt werden."
+  },
+  {
+    "fertigkeit": "athletik",
+    "name": "Weitspringer",
+    "key": "weitspringer",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Die Sprungweite des Charakters erhöht sich um 50 %: Die Schwierigkeit einer Springen-Probe erhöht sich nur um 3 pro 50 cm, nicht um 5."
+  },
+  {
+    "fertigkeit": "athletik",
+    "name": "Flinker Verfolger",
+    "key": "flinker_verfolger",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:sprinter",
+    "beschreibung": "Der Abenteurer ist ausgesprochen hartnäckig in der Verfolgung. Bei einer Verfolgungsjagd erhält er pro gelungener Probe automatisch 1 Fortschrittspunkt zusätzlich."
+  },
+  {
+    "fertigkeit": "athletik",
+    "name": "Hindernisläufer",
+    "key": "hindernislaeufer",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer beherrscht spezielle Techniken, im Lauf rasch Hindernisse zu überwinden. Er erhält einen Bonus in Höhe von 3 Punkten auf alle Proben zum <i>Springen</i> und <i>Überwinden von Hindernissen</i>."
+  },
+  {
+    "fertigkeit": "athletik",
+    "name": "Muskelprotz",
+    "key": "muskelprotz",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann seine rohe Kraft besonders gut einsetzen. Bei einem <i>Kraftakt</i> erhält er einen Bonus in Höhe von 5 Punkten."
+  },
+  {
+    "fertigkeit": "athletik",
+    "name": "Freikletterer",
+    "key": "freikletterer",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:kletteraffe",
+    "beschreibung": "Der Abenteurer kann beim Klettern jeden Malus durch fehlende Ausrüstung vollständig ignorieren."
+  },
+  {
+    "fertigkeit": "athletik",
+    "name": "Mauerstürmer",
+    "key": "mauerstuermer",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:hindernislaeufer",
+    "beschreibung": "Der Abenteurer überwindet kleine Hindernisse mit Leichtigkeit. Er erhält einen Bonus in Höhe von weiteren 3 Punkten auf Proben zum Überwinden von Hindernissen und kann Hindernisse bis Brusthöhe bei erfolgreicher Probe nehmen, ohne in der Bewegung verlangsamt zu werden. Wenn er mindestens 3 Meter Anlauf hat, kann er mit einer Athletik-Probe gegen 35 Hindernisse bis zu seiner vollen Größenklasse in Metern (statt wie üblich drei Viertel der GK) überwinden."
+  },
+  {
+    "fertigkeit": "darbietung",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "akrobatische Vorführung, Bauchreden, Dichtkunst, Gaukelei, Instrumentenart (Blasinstrumente, Saiteninstrumente, Schlaginstrumente), Komposition, Öffentliche Rede, Schauspielerei, Singen, Stimmenimitation, Tanzen"
+  },
+  {
+    "fertigkeit": "darbietung",
+    "name": "Einstellung beeinflussen",
+    "key": "einstellung_beeinflussen",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Künstler kann mit seiner Darbietung wie auf S. 147 beschrieben die <i>Einstellung</i> des Publikums beeinflussen."
+  },
+  {
+    "fertigkeit": "darbietung",
+    "name": "Faszinieren",
+    "key": "faszinieren",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Künstler zieht das Publikum mit der Darbietung in seinen Bann. Die Zuschauer erhalten für die Dauer der Darbietung einen Malus auf alle <i>Wahrnehmung</i>-Proben von 1 Punkt (+1 pro Erfolgsgrad)."
+  },
+  {
+    "fertigkeit": "darbietung",
+    "name": "Geselle",
+    "key": "geselle",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Künstler kann bis zu 2 EG bei passenden Proben ansammeln. Die Meisterschaft muss für einen bestimmten Schwerpunkt gewählt werden und gilt nur im Zusammenhang damit. Der Besitz des Schwerpunktes ist keine Voraussetzung für die Wahl dieser Meisterschaft. Die Meisterschaft ist mehrfach wählbar."
+  },
+  {
+    "fertigkeit": "darbietung",
+    "name": "Pass ja auf!",
+    "key": "pass_ja_auf",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer hat (etwa durch Erfahrung im Bühnenfechten) gelernt, bedrohlicher auszusehen als er ist. Das bringt Gegner dazu, seinen eigentlich ungefährlichen Scheinattacken besondere Aufmerksamkeit zu schenken. Bei Verwendung der Regeln zur <i>Zusammenarbeit</i> im Kampf darf er <i>Darbietung</i> anstelle einer <i>Kampffertigkeit</i> einsetzen und kann seine EG voll nutzen."
+  },
+  {
+    "fertigkeit": "darbietung",
+    "name": "Publikumsliebling",
+    "key": "publikumsliebling",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Wenn der Künstler <i>Darbietung</i> nutzt, um Geld zu verdienen, erhält er die doppelte Summe."
+  },
+  {
+    "fertigkeit": "darbietung",
+    "name": "Bannlied",
+    "key": "bannlied",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Künstler füllt mit seiner Darbietung die Herzen seiner Gefährten mit Mut und schützt sie vor auf Musik oder Geräuschen basierenden Effekten (wie dem Gesang einer Sirene). Verbündete, die den Künstler hören, erhalten einen Bonus in Höhe von 1 Punkt (+1 pro Erfolgsgrad) auf entsprechende <i>Widerstandswerte</i> oder dürfen, wenn sie bereits betroffen sind, eine Probe auf <i>Zähigkeit</i> oder <i>Entschlossenheit</i> gegen die Schwierigkeit der ursprünglichen Ursache ablegen. Der Vorteil eines Bannliedes wirkt, solange der Abenteurer musiziert."
+  },
+  {
+    "fertigkeit": "darbietung",
+    "name": "Begabter Künstler",
+    "key": "begabter_kuenstler",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann einen Splitterpunkt nachträglich ausgeben, um einen Bonus in Höhe seiner <i>Ausstrahlung</i> für die aktuelle <i>Darbietung</i>-Probe zu erhalten."
+  },
+  {
+    "fertigkeit": "darbietung",
+    "name": "Fachmann",
+    "key": "fachmann",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:geselle",
+    "beschreibung": "Der Künstler kann bis zu 3 EG bei passenden Proben ansammeln. Die Meisterschaft muss für einen bestimmten Schwerpunkt gewählt werden und gilt nur im Zusammenhang damit. Der Besitz des Schwerpunktes ist keine Voraussetzung für die Wahl dieser Meisterschaft. Die Meisterschaft ist mehrfach wählbar."
+  },
+  {
+    "fertigkeit": "darbietung",
+    "name": "Haha, Schurke!",
+    "key": "haha_schurke",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:pass_ja_auf",
+    "beschreibung": "Der Abenteurer verwirrt Gegner im Kampf mit dramatischen und doch überzeugend wirkenden Kampfbewegungen. Bei der <i>Zusammenarbeit</i> im Kampf kann er sich entscheiden, nicht gegen die um 5 verminderte <i>Verteidigung</i>, sondern gegen den (normalen) <i>Geistigen Widerstand</i> des Gegners zu würfeln."
+  },
+  {
+    "fertigkeit": "darbietung",
+    "name": "Schmählied/Loblied",
+    "key": "schmaehlied_loblied",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:einstellung_beeinflussen",
+    "beschreibung": "Der Künstler kann die <i>Einstellung</i> des Publikums zu einer anderen Person (z.B. dem Stadtvogt) beeinflussen."
+  },
+  {
+    "fertigkeit": "darbietung",
+    "name": "Lachen ist die beste Medizin",
+    "key": "lachen_ist_die_beste_medizin",
+    "schwelle": 3,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer hat gelernt, mit Humor die Selbstheilungskräfte des Körpers zu aktivieren. Er kann eine <i>Darbietung</i>-Probe einsetzen, um Proben zur Heilung zu <i>unterstützen </i>(und kann dabei seine EG voll nutzen). Ist er selbst der Heiler, erhält er einen Bonus in Höhe von 1 Punkt auf seine Proben. In beiden Fällen muss der Patient bei Bewusstsein sein."
+  },
+  {
+    "fertigkeit": "darbietung",
+    "name": "Lied des Aufstandes",
+    "key": "lied_des_aufstandes",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:schmaehlied_loblied",
+    "beschreibung": "Der Künstler stachelt die Menge zu offener Feindseligkeit an. Nachdem er mit <i>Schmählied</i> die <i>Einstellung</i> des Publikums auf <i>Feindselig</i> geändert hat, bringt er es mit einer weiteren erfolgreichen Probe auf <i>Darbietung</i> gegen das Ziel seiner Darbietung auf und sorgt so z.B. für einen wütenden Mob, der das Haus des Stadtvogts stürmt."
+  },
+  {
+    "fertigkeit": "darbietung",
+    "name": "Meister",
+    "key": "meister",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:fachmann",
+    "beschreibung": "Der Künstler kann beliebig viele EG bei passenden Proben ansammeln. Die Meisterschaft muss für einen bestimmten Schwerpunkt gewählt werden und gilt nur im Zusammenhang mit diesem. Der Besitz des Schwerpunktes ist keine Voraussetzung für die Wahl dieser Meisterschaft. Die Meisterschaft ist mehrfach wählbar."
+  },
+  {
+    "fertigkeit": "diplomatie",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "Bekehren, Feilschen, Gerüchte, Heraldik, Informationssuche, Minnekunst, Öffentliche Rede, Politik, Umgangsformen, Verhandeln"
+  },
+  {
+    "fertigkeit": "diplomatie",
+    "name": "Diplomat",
+    "key": "diplomat",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Die <i>Einstellung</i> eines Verhandlungspartners gilt bei der Bestimmung der Schwierigkeit um eine Stufe zugunsten des Abenteurers verschoben (bis maximal <i>aufgeschlossen</i>)."
+  },
+  {
+    "fertigkeit": "diplomatie",
+    "name": "Feilscher",
+    "key": "feilscher",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Die Preise bei Händlern sind für den Abenteurer um 10 % gesenkt."
+  },
+  {
+    "fertigkeit": "diplomatie",
+    "name": "Stil und Grazie",
+    "key": "stil_und_grazie",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Kleidung, Auftreten und Umgang des Diplomaten sind perfekt. Er erhält, sofern er Zeit und Mittel hat, sich zurechtzumachen, einen Bonus in Höhe von 2 Punkten auf alle Proben auf <i>Darbietung</i>, <i>Diplomatie</i> und <i>Redegewandtheit</i> in den oberen Gesellschaftsschichten."
+  },
+  {
+    "fertigkeit": "diplomatie",
+    "name": "Etikette",
+    "key": "etikette",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Diplomat kann den Effekt von <i>Stil und Grazie</i> auf andere ausdehnen. Dazu muss er ihnen im Vorfeld helfen, sich zurecht zu machen und dann anwesend sein, solange seine Gefährten den Bonus nutzen möchten."
+  },
+  {
+    "fertigkeit": "diplomatie",
+    "name": "Missionar",
+    "key": "missionar",
+    "schwelle": 2,
+    "voraussetzung": "staerke:priester",
+    "beschreibung": "Wenn der Abenteurer einen Ungläubigen zu seinem Glauben bekehrt, erhält er einen Splitterpunkt. Dies erhöht sein Maximum nicht permanent."
+  },
+  {
+    "fertigkeit": "diplomatie",
+    "name": "Scharfe Zunge",
+    "key": "scharfe_zunge",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer ist für seine scharfe Zunge berühmt und berüchtigt. Er würfelt eine vergleichende Probe auf <i>Diplomatie</i> gegen den <i>Geistigen Widerstand</i> seines Ziels. Diese <i>kontinuierliche Aktion</i> dauert 10 Ticks. Bei Erfolg verliert das Ziel die Beherrschung und erleidet einen Malus in Höhe von 1 Punkt (+1 pro Erfolgsgrad) auf alle nicht direkt gegen den Abenteurer gerichteten Proben in der Szene. Je nach Ziel kann sich der Abenteurer mit einer Duellforderung konfrontiert sehen."
+  },
+  {
+    "fertigkeit": "diplomatie",
+    "name": "Investor",
+    "key": "investor",
+    "schwelle": 3,
+    "voraussetzung": "ressource:kontakte_3",
+    "beschreibung": "Der Abenteurer kann Geld über seine Kontakte in Karawanen und ähnliches investieren. Nach Ablauf von drei Monaten macht der Abenteurer eine Probe auf <i>Diplomatie</i>. Die Schwierigkeit ist 35. Er erhält bei Erfolg 5 % Gewinn (+5% pro Erfolgsgrad). Ist die Probe knapp misslungen, erhält der Abenteurer sein Geld zurück. Bei einem Misserfolg verliert er für jeden negativen Erfolgsgrad 5 % seiner Investition. Bei einem verheerenden Fehlschlag verliert er alles."
+  },
+  {
+    "fertigkeit": "diplomatie",
+    "name": "Wisst Ihr überhaupt, wer ich bin?",
+    "key": "wisst_ihr_ueberhaupt_wer_ich_bin",
+    "schwelle": 3,
+    "voraussetzung": "ressource:stand_3/fp:redegewandtheit_12",
+    "beschreibung": "Umgangsformen und Auftreten des Diplomaten suggerieren Einfluss und Macht, was ihm beim gemeinen Volk Vorteile verschafft. Er erhält einen Bonus in Höhe von 3 Punkten auf Proben in den Fertigkeiten <i>Anführen</i>, <i>Diplomatie</i> und <i>Redegewandtheit</i> gegenüber jedem, der im Stand unter ihm steht. Außerdem kann er mit einer <i>Diplomatie</i>-Probe gegen die <i>Entschlossenheit</i> seines Gegenübers andere dazu bringen, seinen Stand zu berücksichtigen: Wachen ignorieren leichte Vergehen, der Wirt gibt ihm das beste Zimmer, obwohl es gerade vermietet ist, und so weiter."
+  },
+  {
+    "fertigkeit": "edelhandwerk",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "Architektur, Glasbläserei, Gravur, Juwelier, Kalligraphie, Kartographie, Malerei, weitere nach Spielleitermaßgabe"
+  },
+  {
+    "fertigkeit": "edelhandwerk",
+    "name": "Effizienz",
+    "key": "effizienz",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Edelhandwerker arbeitet besonders schnell. Er kann bei der Herstellung von Gegenständen drei Proben pro Tag ablegen, benötigt also ein Drittel eines Tages für eine Probe (statt eines halben Tages)."
+  },
+  {
+    "fertigkeit": "edelhandwerk",
+    "name": "Geselle",
+    "key": "geselle",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Edelhandwerker kann bis zu 2 EG bei passenden Proben ansammeln und Gegenstände der Gegenstandsqualität 1 und 2 herstellen und reparieren. Die Meisterschaft muss für einen bestimmten Schwerpunkt gewählt werden und gilt nur im Zusammenhang mit diesem. Der Besitz des Schwerpunktes ist keine Voraussetzung für die Wahl dieser Meisterschaft. Die Meisterschaft ist mehrfach wählbar."
+  },
+  {
+    "fertigkeit": "edelhandwerk",
+    "name": "Sparfuchs",
+    "key": "sparfuchs",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Handwerker kann besonders gut mit Material haushalten. Die Herstellungskosten sinken auf ein Viertel des fertigen Preises (statt eines Drittels)."
+  },
+  {
+    "fertigkeit": "edelhandwerk",
+    "name": "Begabter Handwerker",
+    "key": "begabter_handwerker",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Edelhandwerker kann einen Splitterpunkt nachträglich ausgeben, um einen Bonus in Höhe seines <i>Verstandes</i> für die aktuelle <i>Edelhandwerk</i>-Probe zu erhalten."
+  },
+  {
+    "fertigkeit": "edelhandwerk",
+    "name": "Fachmann",
+    "key": "fachmann",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:geselle",
+    "beschreibung": "Der Edelhandwerker kann bis zu 3 EG bei passenden Proben ansammeln und Gegenstände der Gegenstandsqualität 3 und 4 herstellen und reparieren. Die Meisterschaft muss für einen bestimmten Schwerpunkt gewählt werden und gilt nur im Zusammenhang mit diesem. Der Besitz des Schwerpunktes ist keine Voraussetzung für die Wahl dieser Meisterschaft. Die Meisterschaft ist mehrfach wählbar."
+  },
+  {
+    "fertigkeit": "edelhandwerk",
+    "name": "Wunderarbeiter",
+    "key": "wunderarbeiter",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:effizienz",
+    "beschreibung": "Der Edelhandwerker kann besonders fleißig und schnell arbeiten. Wenn er bei Einsatz der Fertigkeit <i>Edelhandwerk</i> einen Gegenstand herstellt oder repariert, kann er einen Malus in Höhe von 3 Punkten in Kauf nehmen, um die benötigte Zeit der Probe zu halbieren."
+  },
+  {
+    "fertigkeit": "edelhandwerk",
+    "name": "Geschickte Rettung",
+    "key": "geschickte_rettung",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:effizienz,meisterschaft:sparfuchs",
+    "beschreibung": "Der Handwerker vermeidet mit Mühe und etwas Material schlimme Fehler in der Herstellung. Wenn er bei der Herstellung eines Gegenstandes ein verheerendes Ergebnis würfelt, kann er Materialkosten in Höhe der doppelten <i>Gegenstandsqualität</i> in Lunaren aufwenden (mindestens 5), um das verheerende Ergebnis zu ignorieren. So verliert er zwar Fortschrittspunkte in Höhe der negativen Erfolgsgrade, verliert aber nicht die ganze Arbeit."
+  },
+  {
+    "fertigkeit": "edelhandwerk",
+    "name": "Meister",
+    "key": "meister",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:fachmann",
+    "beschreibung": "Der Edelhandwerker kann beliebig viele Erfolgsgrade bei passenden Proben ansammeln und Gegenstände der Gegenstandsqualität 5 und 6 herstellen und reparieren.<i> </i>Die Meisterschaft muss für einen bestimmten Schwerpunkt gewählt werden und gilt nur im Zusammenhang damit. Der Besitz des Schwerpunktes ist keine Voraussetzung für die Wahl dieser Meisterschaft. Die Meisterschaft ist mehrfach wählbar."
+  },
+  {
+    "fertigkeit": "edelhandwerk",
+    "name": "Meisterwerk",
+    "key": "meisterwerk",
+    "schwelle": 4,
+    "voraussetzung": "meisterschaft:meister",
+    "beschreibung": "Der Edelhandwerker ist eine Legende in seinem Fachgebiet. Von ihm hergestellte Gegenstände erhalten automatisch eine weitere Stufe <i>Gegenstandsqualität</i> (bis zu einer Qualität von 7), die er bei der Berechnung von Schwierigkeit, Materialkosten und benötigten Fortschrittspunkten nicht berücksichtigen muss. Die Meisterschaft kann mehrfach gewählt werden und gilt dann immer für einen anderen Schwerpunkt."
+  },
+  {
+    "fertigkeit": "empathie",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "Beruhigen, Lügen erkennen, Motivation erkennen, Persönlichkeit einschätzen"
+  },
+  {
+    "fertigkeit": "empathie",
+    "name": "Beruhigen",
+    "key": "beruhigen",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann Zustände wie <i>Angsterfüllt</i>, <i>Rasend</i> oder <i>Panisch</i> beheben. Dies dauert eine Minute. Die Schwierigkeit liegt je nach Trauma zwischen 20 und 25. Mit Ausgabe eines Splitterpunktes können magische Furcht und ähnliches behoben werden, wenn dem Abenteurer eine <i>vergleichende </i><i>Probe</i> gegen das Ergebnis der Zauberprobe gelingt."
+  },
+  {
+    "fertigkeit": "empathie",
+    "name": "Gegner durchschauen I",
+    "key": "gegner_durchschauen_1",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Nachdem er eine <i>kontinuierliche Aktion</i> von 10 Ticks Dauer aufgewandt hat, um einen Gegner zu beobachten, kann der Abenteurer eine Probe gegen dessen <i>Geistigen Widerstand</i> ablegen. Ist er erfolgreich, erhält er gegen diesen Gegner für den Rest des Kampfes einen Bonus in Höhe von 1 Punkt (+1 pro Erfolgsgrad) auf <i>Angriffe</i>. Alternativ erhält der Gegner einen entsprechenden Malus auf seine <i>Angriffe </i>auf den Abenteurer. Dies ist pro Kampf nur einmal pro Gegner möglich."
+  },
+  {
+    "fertigkeit": "empathie",
+    "name": "Rede mit mir",
+    "key": "rede_mit_mir",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Nachdem er erfolgreich die Persönlichkeit seines Gegenübers <i>eingeschätzt</i> hat, erhält der Abenteurer für die laufende Szene einen Bonus in Höhe von 2 Punkten auf alle Proben auf <i>Diplomatie</i> und <i>Redegewandtheit</i> gegen sein Gegenüber."
+  },
+  {
+    "fertigkeit": "empathie",
+    "name": "Begabter Menschenkenner",
+    "key": "begabter_menschenkenner",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann einen Splitterpunkt nachträglich ausgeben, um einen Bonus in Höhe seines <i>Verstandes</i> für die aktuelle <i>Empathie</i>-Probe zu erhalten."
+  },
+  {
+    "fertigkeit": "empathie",
+    "name": "Gegner durchschauen II",
+    "key": "gegner_durchschauen_2",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:gegner_durchschauen_1",
+    "beschreibung": "Es gelten sowohl der Angriffsbonus für den Abenteurer als auch der Angriffsmalus für den Gegner aus <i>Gegner durchschauen I</i>."
+  },
+  {
+    "fertigkeit": "empathie",
+    "name": "Werte einschätzen",
+    "key": "werte_einschaetzen",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Anstelle einer Persönlichkeit kann der Abenteurer ein Attribut (auf +/- 1 genau) oder eine Fertigkeit (auf +/-2 genau) einschätzen. Bei einem <i>herausragenden</i> Erfolg schätzt er den genauen Wert."
+  },
+  {
+    "fertigkeit": "empathie",
+    "name": "Herr über den Geist",
+    "key": "herr_ueber_den_geist",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:beruhigen",
+    "beschreibung": "Alle Proben des Abenteurers auf Zauber der Typen <i>Mental</i>, <i>Gedanken</i> oder <i>Moral</i> erhalten einen Bonus in Höhe von 2 Punkten."
+  },
+  {
+    "fertigkeit": "empathie",
+    "name": "Hypnose",
+    "key": "hypnose",
+    "schwelle": 3,
+    "voraussetzung": "",
+    "beschreibung": "Mit einer Probe gegen den <i>Geistigen Widerstand</i> kann der Abenteurer sein Ziel hypnotisieren, um an Informationen zu gelangen. Die Trance herzustellen, dauert fünf Minuten. In diesem Zustand kann das Ziel ausgehorcht werden: Widerstand ist nur bei wichtigen Geheimnissen zu erwarten. Selbst dann erhält das Ziel die Erfolgsgrade als Malus auf etwaige Proben. Alternativ können die Erfolgsgrade als Bonus gewährt werden, um sich an etwas zu erinnern."
+  },
+  {
+    "fertigkeit": "entschlossenheit",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "Beherrschungsmagie widerstehen, Furcht widerstehen, Prinzipien einhalten, Redegewandtheit widerstehen, Unterbrechungen widerstehen"
+  },
+  {
+    "fertigkeit": "entschlossenheit",
+    "name": "Eiserner Wille",
+    "key": "eiserner_wille",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann sich auch unter schwierigen Umständen auf sein Handeln konzentrieren. Er erhält einen Bonus in Höhe von 3 Punkten auf <i>Entschlossenheit</i>-Proben zur Abwehr von Störungen bei <i>kontinuierlichen Aktionen</i>."
+  },
+  {
+    "fertigkeit": "entschlossenheit",
+    "name": "Kühler Kopf I",
+    "key": "kuehler_kopf_1",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer behält auch in schwierigen Situationen einen kühlen Kopf. Er kann 1 Punkt Malus, der durch äußere Umstände wie Wetter, Sicht oder andere Störungen zustande käme, bei seinen Fertigkeitsproben ignorieren."
+  },
+  {
+    "fertigkeit": "entschlossenheit",
+    "name": "Unbeirrbar",
+    "key": "unbeirrbar",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer ist von einem Ziel fest überzeugt. Der Spieler muss für seinen Abenteurer ein reales Ziel festlegen. Erreicht er das Ziel, kann er ein neues bestimmen (dies ist maximal einmal pro Woche möglich). Alle <i>Entschlossenheit</i>-Proben, deren Misslingen ihm das Erreichen seines Zieles erschweren würden, kann der Abenteurer mit einem Bonus in Höhe von 3 Punkten ausführen."
+  },
+  {
+    "fertigkeit": "entschlossenheit",
+    "name": "Begabter Sturkopf",
+    "key": "begabter_sturkopf",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann einen Splitterpunkt nachträglich ausgeben, um einen Bonus in Höhe seiner <i>Willenskraft</i> auf die aktuelle <i>Entschlossenheit</i>-Probe zu erhalten."
+  },
+  {
+    "fertigkeit": "entschlossenheit",
+    "name": "Undurchschaubar",
+    "key": "undurchschaubar",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer ist von seinen Gegnern schwer zu durchschauen. Auf Proben, um andere zu belügen oder einfach nur seine wahren Motive oder Emotionen zu bewahren, erhält er einen Bonus in Höhe von 3 Punkten."
+  },
+  {
+    "fertigkeit": "entschlossenheit",
+    "name": "Willensanstrengung",
+    "key": "willensanstrengung",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:unbeirrbar",
+    "beschreibung": "Der Abenteurer kann einen Splitterpunkt ausgeben, um mit großem Elan zu Werke zu gehen. Er erhält für 30 Ticks einen Bonus in Höhe von 3 Punkten auf alle Fertigkeiten, in die seine WIL eingeht. Nach Ablauf dieser Zeit erhält er aber für eine Stunde den Zustand <i>Erschöpft I</i>."
+  },
+  {
+    "fertigkeit": "entschlossenheit",
+    "name": "Gesundes Misstrauen",
+    "key": "gesundes_misstrauen",
+    "schwelle": 3,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer hat gelernt, nicht jedem und allem sofort zu trauen. Er erhält einen Bonus in Höhe von 3 Punkten auf Proben, um Lügen zu durchschauen. Falls ihm eine <i>Wahrnehmung</i>-Probe zusteht, um Illusionen zu durchschauen (siehe S. 208), erhält er hier ebenfalls einen Bonus in Höhe von 3 Punkten."
+  },
+  {
+    "fertigkeit": "entschlossenheit",
+    "name": "Kühler Kopf II",
+    "key": "kuehler_kopf_2",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:kuehler_kopf_1",
+    "beschreibung": "Der Abenteurer kann bis zu 3 Punkte Malus, die durch äußere Umstände wie Wetter, Sicht oder andere Störungen zustande kommen, bei seinen Fertigkeitsproben ignorieren."
+  },
+  {
+    "fertigkeit": "fingerfertigkeit",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "Entfesseln, Falschspiel, Fesseln, Gegenstand verstecken, Taschendiebstahl, Taschenspielertricks"
+  },
+  {
+    "fertigkeit": "fingerfertigkeit",
+    "name": "Knotenlöser",
+    "key": "knotenloeser",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer ist von Fesseln schwer zu halten. Er löst selbst die kompliziertesten Knoten. Jede Probe, um sich mit <i>Fingerfertigkeit</i> zu entfesseln, erhält einen Bonus in Höhe von 3 Punkten."
+  },
+  {
+    "fertigkeit": "fingerfertigkeit",
+    "name": "Kreative Ablenkung",
+    "key": "kreative_ablenkung",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer hat immer eine gute Idee, um jemanden abzulenken. Benutzt er eine Fertigkeit, um für eine <i>Ablenkung</i> zu sorgen, steigt der Bonus auf 5."
+  },
+  {
+    "fertigkeit": "fingerfertigkeit",
+    "name": "Schnellziehen",
+    "key": "schnellziehen",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann verborgene Waffen so ziehen, als würde er sie an der Seite tragen. Trägt er die Waffe schon greifbar, kann er sie um 2 Ticks schneller ziehen. Für das <i>Bereitmachen</i> einer Wurfwaffe benötigt er einen Tick weniger."
+  },
+  {
+    "fertigkeit": "fingerfertigkeit",
+    "name": "Begabter Fingerkünstler",
+    "key": "begabter_fingerkuenstler",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann einen Splitterpunkt nachträglich ausgeben, um einen Bonus in Höhe seiner <i>Beweglichkeit</i> für die aktuelle <i>Fingerfertigkeit</i>-Probe zu erhalten."
+  },
+  {
+    "fertigkeit": "fingerfertigkeit",
+    "name": "Ruhige Hand",
+    "key": "ruhige_hand",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer hat eine besonders ruhige Hand. Wenn er mit der Fertigkeit <i>Schlösser und Fallen</i> versucht, Fallen zu entschärfen, oder mit <i>Heilkunde</i> chirurgische Eingriffe ausführt, erhält er einen Bonus in Höhe von 3 Punkten."
+  },
+  {
+    "fertigkeit": "fingerfertigkeit",
+    "name": "Zaubergesten verbergen",
+    "key": "zaubergesten_verbergen",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer benutzt seine Fingerfertigkeit, um beim Zaubern die <i>Gesten</i> zu tarnen. Es dauert 2 Ticks länger, den Zauber vorzubereiten. Ein Versuch, den Zauber während der Wirkung zu identifizieren (S. 150), erhält den Malus für fehlende <i>Gesten</i> von 3 Punkten. Sollte außerdem die Komponente Formel weggelassen werden, ist der Zaubervorgang nicht als solcher zu erkennen."
+  },
+  {
+    "fertigkeit": "fingerfertigkeit",
+    "name": "Ich war‘s nicht",
+    "key": "ich_wars_nicht",
+    "schwelle": 3,
+    "voraussetzung": "schwerpunkt:taschendiebstahl",
+    "beschreibung": "Der Abenteurer ist so geübt mit den Fingern, dass misslungene Proben zum Taschendiebstahl nur bemerkt werden, wenn das Opfer zwei Erfolgsgrade besser ist als der Dieb."
+  },
+  {
+    "fertigkeit": "fingerfertigkeit",
+    "name": "Waffe aus dem Nichts",
+    "key": "waffe_aus_dem_nichts",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:schnellziehen",
+    "beschreibung": "Mit einer unerwarteten Bewegung kann der Abenteurer eine versteckte Waffe (bis maximal <i>Last 1</i>) ziehen, was die üblichen Ticks benötigt. Ein Gegner ist von einem etwaigen folgenden Nahkampfangriff mit dieser Waffe <i>überrascht </i>(der Angreifer erhält für die erste Aktion einen <i>Taktischen Vorteil</i>, der Gegner verliert 10 Ticks zur Orientierung, siehe S. 170). Dieser Trick funktioniert nur einmal pro Kampf."
+  },
+  {
+    "fertigkeit": "geschichteUndMythen",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "einzelne Epoche, einzelnes Pantheon, einzelne Region, einzelner Themenbereich, einzelnes Volk, Legendäre Kreaturen, Prophezeiungen, Schöpfungsmythen"
+  },
+  {
+    "fertigkeit": "geschichteUndMythen",
+    "name": "Büchernarr",
+    "key": "buechernarr",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Gelehrte ist besonders gut bei der Recherche. Wenn er in einer Bibliothek recherchiert oder forscht, sinkt die Dauer einer Probe auf 1 Stunde (statt 2)."
+  },
+  {
+    "fertigkeit": "geschichteUndMythen",
+    "name": "Feldforschung",
+    "key": "feldforschung",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer geht alten Geheimnissen lieber vor Ort auf die Spur, anstatt in einer Bibliothek zu sitzen. In Ruinen erhält er durch tiefgreifenden Kenntnisse alter Legenden einen Bonus in Höhe von 3 Punkten auf <i>Schlösser und Fallen</i>Proben."
+  },
+  {
+    "fertigkeit": "geschichteUndMythen",
+    "name": "Legendensänger",
+    "key": "legendensaenger",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Das Wissen des Abenteurers macht ihn zu einem gerngesehenen Gast in Tavernen und an den Höfen. Er erhält einen Bonus in Höhe von 3 Punkten auf <i>Darbietung</i>-Proben, wenn er Epen und Legenden vorträgt."
+  },
+  {
+    "fertigkeit": "geschichteUndMythen",
+    "name": "Begabter Historiker",
+    "key": "begabter_historiker",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann einen Splitterpunkt nachträglich ausgeben, um einen Bonus in Höhe seines <i>Verstandes</i> auf die aktuelle <i>Geschichte und Mythen</i>-Probe zu erhalten."
+  },
+  {
+    "fertigkeit": "geschichteUndMythen",
+    "name": "Bibliothekar",
+    "key": "bibliothekar",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:buechernarr",
+    "beschreibung": "Der Gelehrte ist in Bibliotheken geradezu zu Hause. Die Dauer einer Probe bei einer Bibliotheksrecherche sinkt auf eine halbe Stunde."
+  },
+  {
+    "fertigkeit": "geschichteUndMythen",
+    "name": "Jäger des Sagenhaften",
+    "key": "jaeger_des_sagenhaften",
+    "schwelle": 2,
+    "voraussetzung": "schwerpunkt:legendaere_kreaturen",
+    "beschreibung": "Der Abenteurer wählt eine konkrete Art von Sagenkreatur aus (Wesen des Typus <i>Geisterwesen</i>, <i>Monster</i>, <i>Untoter</i> oder <i>Feenwesen</i>). Gegen diese erhält er einen Bonus in Höhe von 3 Punkten auf <i>Angriffe </i>und Proben auf <i>Wahrnehmung</i> und <i>Überleben</i>. Diese Meisterschaft kann mehrfach gewählt werden. Jedes Mal muss eine neue Art gewählt werden."
+  },
+  {
+    "fertigkeit": "geschichteUndMythen",
+    "name": "Der Sage wahrer Kern",
+    "key": "der_sage_wahrer_kern",
+    "schwelle": 3,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer findet Wege, sein umfangreiches Geschichtswissen praktisch umzusetzen. Einmal pro Spielsitzung kann er eine Probe auf <i>Geschichte und Mythen</i> (Schwierigkeit 20) machen. Er erhält einen Bonus in Höhe von 1 (+1 pro EG) auf eine anschließende passende Fertigkeitsprobe."
+  },
+  {
+    "fertigkeit": "geschichteUndMythen",
+    "name": "Legendenjäger",
+    "key": "legendenjaeger",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:jaeger_des_sagenhaften",
+    "beschreibung": "Der Abenteurer wählt eine Gruppe Sagenkreaturen, für die er die Meisterschaft <i>Jäger des Sagenhaften</i> besitzt. Der Bonus erhöht sich auf 5. <i>Legendenjäger</i> kann genau wie <i>Jäger </i><i>des Sagenhaften</i> mehrfach gewählt werden."
+  },
+  {
+    "fertigkeit": "handwerk",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "Holzbearbeitung, Schneiderei/Lederverarbeitung, Schmiedekunst, Steinbearbeitung, weitere Schwerpunkte je nach Präferenz des Spielers denkbar"
+  },
+  {
+    "fertigkeit": "handwerk",
+    "name": "Effizienz",
+    "key": "effizienz",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Handwerker arbeitet besonders schnell. Er kann bei der Herstellung von Gegenständen drei Proben pro Tag ablegen, benötigt also nur ein Drittel eines Tages für eine Probe (statt eines halben Tages)."
+  },
+  {
+    "fertigkeit": "handwerk",
+    "name": "Geselle",
+    "key": "geselle",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Handwerker kann bis zu 2 EG bei passenden Proben ansammeln und Gegenstände der Gegenstandsqualität 1 und 2 herstellen und reparieren. Die Meisterschaft muss für einen bestimmten Schwerpunkt gewählt werden und gilt nur im Zusammenhang mit diesem. Der Besitz des Schwerpunktes ist keine Voraussetzung für die Wahl dieser Meisterschaft. Die Meisterschaft ist mehrfach wählbar."
+  },
+  {
+    "fertigkeit": "handwerk",
+    "name": "Sparfuchs",
+    "key": "sparfuchs",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Handwerker kann besonders gut mit Material haushalten. Die Herstellungskosten sinken auf ein Viertel des fertigen Preises (statt eines Drittels)."
+  },
+  {
+    "fertigkeit": "handwerk",
+    "name": "Begabter Handwerker",
+    "key": "begabter_handwerker",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Handwerker kann einen Splitterpunkt nachträglich ausgeben, um einen Bonus in Höhe seines <i>Verstandes</i> für die aktuelle <i>Handwerk</i>-Probe zu erhalten."
+  },
+  {
+    "fertigkeit": "handwerk",
+    "name": "Fachmann",
+    "key": "fachmann",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:geselle",
+    "beschreibung": "Der Handwerker kann bis zu 3 EG bei passenden Proben ansammeln und Gegenstände der Gegenstandsqualität 3 und 4 herstellen und reparieren. Die Meisterschaft muss für einen bestimmten Schwerpunkt gewählt werden und gilt nur im Zusammenhang mit diesem. Der Besitz des Schwerpunktes ist keine Voraussetzung für die Wahl dieser Meisterschaft. Die Meisterschaft ist mehrfach wählbar."
+  },
+  {
+    "fertigkeit": "handwerk",
+    "name": "Wunderarbeiter",
+    "key": "wunderarbeiter",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:effizienz",
+    "beschreibung": "Der Handwerker ist in der Lage, besonders hart und schnell zu arbeiten. Wenn er bei Einsatz der Fertigkeit <i>Handwerk</i> einen Gegenstand herstellt oder repariert, kann er einen Malus in Höhe von 3 Punkten in Kauf nehmen, um die benötigte Zeit der Probe zu halbieren."
+  },
+  {
+    "fertigkeit": "handwerk",
+    "name": "Geschickte Rettung",
+    "key": "geschickte_rettung",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:effizienz,meisterschaft:sparfuchs",
+    "beschreibung": "Der Handwerker kann mit Mühe und etwas Material auch schlimme Fehler in der Herstellung vermeiden. Wenn er bei der Herstellung eines Gegenstandes ein verheerendes Ergebnis würfelt, kann er Materialkosten in Höhe der doppelten <i>Gegenstandsqualität</i> in Lunaren aufwenden (mindestens 5), um das verheerende Ergebnis zu ignorieren. In diesem Fall verliert er zwar Fortschrittspunkte in Höhe der negativen Erfolgsgrade, verliert aber nicht die ganze Arbeit."
+  },
+  {
+    "fertigkeit": "handwerk",
+    "name": "Meister",
+    "key": "meister",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:fachmann",
+    "beschreibung": "Der Handwerker kann beliebig viele EG bei passenden Proben ansammeln und Gegenstände der Gegenstandsqualität 5 und 6 herstellen und reparieren.<i> </i>Die Meisterschaft muss für einen bestimmten Schwerpunkt gewählt werden und gilt nur im Zusammenhang mit diesem. Der Besitz des Schwerpunktes ist keine Voraussetzung für die Wahl dieser Meisterschaft. Die Meisterschaft ist mehrfach wählbar."
+  },
+  {
+    "fertigkeit": "handwerk",
+    "name": "Meisterwerk",
+    "key": "meisterwerk",
+    "schwelle": 4,
+    "voraussetzung": "meisterschaft:meister",
+    "beschreibung": "Der Handwerker ist eine Legende in seinem Fachgebiet. Von ihm hergestellte Gegenstände erhalten automatisch eine zusätzliche Stufe <i>Gegenstandsqualität</i> (bis zu einer Qualität von 7), die er bei der Berechnung von Schwierigkeit, Materialkosten und benötigten Fortschrittspunkten nicht berücksichtigen muss. Die Meisterschaft kann mehrfach gewählt werden und gilt dann immer für einen anderen Schwerpunkt."
+  },
+  {
+    "fertigkeit": "heilkunde",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "Gifte, Heilkräuter bestimmen, Krankheiten, Wunden, Zustände"
+  },
+  {
+    "fertigkeit": "heilkunde",
+    "name": "Felddiagnose",
+    "key": "felddiagnose",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Heiler kann den Zustand eines Patienten besonders gut einschätzen. Nimmt er sich 5 Minuten Zeit, um den Patienten zunächst gründlich zu untersuchen, erhält er bei der Behandlung durch <i>Heilkunde</i> einen Bonus in Höhe von 3 Punkten."
+  },
+  {
+    "fertigkeit": "heilkunde",
+    "name": "Heilungsgeschick",
+    "key": "heilungsgeschick",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Dem Abenteurer unterlaufen kaum noch Fehler. Die Ergebnisse <i>Misslungen</i> und <i>Verheerend</i> verursachen 3 Schadenspunkte weniger."
+  },
+  {
+    "fertigkeit": "heilkunde",
+    "name": "Lebensretter",
+    "key": "lebensretter",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Wenn der Abenteurer den Zustand <i>Sterbend</i> behandelt, senkt er die Stufe des Zustands bei Gelingen um 1 Stufe +1 pro Erfolgsgrad (nicht wie normalerweise pro 2 Erfolgsgrade). Die Behandlung kostet ihn außerdem nur 20 Ticks."
+  },
+  {
+    "fertigkeit": "heilkunde",
+    "name": "Begabter Heiler",
+    "key": "begabter_heiler",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann einen Splitterpunkt nachträglich ausgeben, um einen Bonus in Höhe seines <i>Verstandes</i> für die aktuelle <i>Heilkunde</i>-Probe zu erhalten."
+  },
+  {
+    "fertigkeit": "heilkunde",
+    "name": "Heilung fördern",
+    "key": "heilung_foerdern",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:heilungsgeschick",
+    "beschreibung": "Wenn der Heiler einen Patienten behandelt, erhält dieser in der nächsten Nacht 2 zusätzliche Lebenspunkte zurück."
+  },
+  {
+    "fertigkeit": "heilkunde",
+    "name": "Tierarzt",
+    "key": "tierarzt",
+    "schwelle": 2,
+    "voraussetzung": "fp:naturkunde_6",
+    "beschreibung": "Der Heiler kann die Erhöhung der Schwierigkeit bei der Behandlung von Wesen mit dem Typus <i>Tier</i> ignorieren."
+  },
+  {
+    "fertigkeit": "heilkunde",
+    "name": "Spezialist für alle Wesen",
+    "key": "spezialist_fuer_alle_wesen",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:tierarzt,fp:arkaneKunde_6/fp:geschichteUndMythen_6",
+    "beschreibung": "Der Heiler kann die Erhöhung der Schwierigkeit bei sämtlichen ungewöhnlichen Lebewesen (Tiere, Monstren, Feenwesen, etc.) vollständig ignorieren."
+  },
+  {
+    "fertigkeit": "heilkunde",
+    "name": "Wundarzt",
+    "key": "wundarzt",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:lebensretter",
+    "beschreibung": "Wenn der Abenteurer die Zustände <i>Blutend</i> oder <i>Verwundet</i> behandelt, senkt er die Stufe des Zustands bei Gelingen um 1 Stufe +1 pro Erfolgsgrad (nicht wie normalerweise pro 2 Erfolgsgrade)."
+  },
+  {
+    "fertigkeit": "heimlichkeit",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "Beschatten, Hinterhalt, Natürliche Umgebung, Schleichen, Spuren verwischen, Städtische Umgebung, Verstecken"
+  },
+  {
+    "fertigkeit": "heimlichkeit",
+    "name": "Leisetreter",
+    "key": "leisetreter",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann sich schnell leise bewegen und daher bei <i>Heimlichkeit</i>-Proben jeden Malus aus den Umständen Laufen und Sprinten ignorieren. <i>Beschattet</i> er jemanden (siehe unten), muss der Abenteurer nur alle 1000 m eine Probe ablegen."
+  },
+  {
+    "fertigkeit": "heimlichkeit",
+    "name": "Überraschungsangriff I",
+    "key": "ueberraschungsangriff_1",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann einen Gegner, den er <i>überrascht </i>(siehe S. 158), mit einer einhändigen Waffe oder einer Fernkampfwaffe empfindlich treffen. In diesem Fall richtet er 6 Punkte zusätzlichen Schaden an. Der Abenteurer kann ein ahnungsloses Ziel mit einem Fernkampfangriff auf bis 10 m Entfernung angreifen."
+  },
+  {
+    "fertigkeit": "heimlichkeit",
+    "name": "Unauffällig",
+    "key": "unauffaellig",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann in passenden Situationen, wenn er aufgrund einer misslungenen Probe beim Versuch. jemanden zu beschatten, entdeckt wurde, ohne Probe in der Menge untertauchen. Proben, um sich an ihn zu erinnern, erhalten zudem einen Malus in Höhe von 3 Punkten."
+  },
+  {
+    "fertigkeit": "heimlichkeit",
+    "name": "Begabter Schleicher",
+    "key": "begabter_schleicher",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann einen Splitterpunkt nachträglich ausgeben, um einen Bonus in Höhe seiner <i>Beweglichkeit</i> für die aktuelle <i>Heimlichkeit</i>-Probe zu erhalten."
+  },
+  {
+    "fertigkeit": "heimlichkeit",
+    "name": "Hinterhalt",
+    "key": "hinterhalt",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer ist gut darin, den Hinterhalt einer ganzen Gruppe vorzubereiten. Er kann problemlos eine Anzahl von Leuten koordinieren, die maximal seiner doppelten <i>Ausstrahlung</i> entspricht, für jeden zusätzlichen Teilnehmer erhält er einen Malus in Höhe von -1 auf die Probe. Wenn er den Hinterhalt vorbereitet, müssen die anderen Teilnehmer nicht mehr würfeln, sondern können sein Probenergebnis verwenden. Ist er bei einem Hinterhalt alleine, erhält er einen Bonus in Höhe von 3 Punkten auf seine Probe."
+  },
+  {
+    "fertigkeit": "heimlichkeit",
+    "name": "Überraschungsangriff II",
+    "key": "ueberraschungsangriff_2",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:ueberraschungsangriff_1",
+    "beschreibung": "Siehe <i>Überraschungsangriff I</i>, allerdings erhöht sich der Bonusschaden auf 10 und ein Fernkampfangriff ist auf 20 m Reichweite möglich."
+  },
+  {
+    "fertigkeit": "heimlichkeit",
+    "name": "Lautlosigkeit",
+    "key": "lautlosigkeit",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:leisetreter",
+    "beschreibung": "Das Schleichen ist dem Abenteurer ins Blut übergegangen. Er bewegt sich stets leise, selbst wenn der Spieler es nicht angesagt hat. Sollten unerwartete Feinde oder Wachen auftauchen, kann er nachträglich eine <i>Heimlichkeit</i>-Probe ablegen, als hätte er sich von vorneherein darauf konzentriert."
+  },
+  {
+    "fertigkeit": "heimlichkeit",
+    "name": "Überraschungsangriff III",
+    "key": "ueberraschungsangriff_3",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:ueberraschungsangriff_2",
+    "beschreibung": "Siehe <i>Überraschungsangriff II</i>, nur dass der Abenteurer nun auch auf bis zu 30 m Entfernung angreifen kann. Greift der Abenteurer seinen Gegner im Nahkampf an, darf er seinem Opfer anstelle des zusätzlichen Schadens einen <i>Zustand</i> zufügen. Zur Auswahl stehen (siehe S. 168): <i>Benommen </i><i>2, Blutend 1, Geblendet 4, Verwundet 1.</i>"
+  },
+  {
+    "fertigkeit": "jagdkunst",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "Fallen stellen, Nahrungssuche, Spurensuche, einzelner Typus (wählbar sind: Bärenartiger, Fisch, Großwild, Hundeartiger, Insekt, Katzenartiger, Kleinwild, Reptil, Spinnentier, Vogel), Verarbeitung"
+  },
+  {
+    "fertigkeit": "jagdkunst",
+    "name": "Tierkenner",
+    "key": "tierkenner",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer wählt einen der folgenden Typen aus: Bärenartiger, Fisch, Großwild, Hundeartiger, Insekt, Katzenartiger, Kleinwild, Reptil, Spinnentier, Vogel. Gegen Wesen, die den Typus <i>Tier</i> und diesen Typus aufweisen, erhält er einen Bonus in Höhe von 3 Punkten auf <i>Angriffe</i>. Diese Meisterschaft kann mehrfach gewählt werden. Jedes Mal muss ein neuer Typus gewählt werden."
+  },
+  {
+    "fertigkeit": "jagdkunst",
+    "name": "Unermüdlicher Verfolger",
+    "key": "unermuedlicher_verfolger",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Es ist nur eine Frage der Zeit, bis der Jäger seine Beute gefunden hat. Beim Verfolgen von Spuren (siehe unten) benötigt er nur 1 Fortschrittspunkt pro Kilometer (nicht pro halbem Kilometer) Abstand."
+  },
+  {
+    "fertigkeit": "jagdkunst",
+    "name": "Waidmann",
+    "key": "waidmann",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Jäger kennt Techniken, um die Haltbarkeit von Tierprodukten zu erhöhen. Produkte aus von ihm ausgeweideten Tieren haben automatisch verdreifachte Haltbarkeit."
+  },
+  {
+    "fertigkeit": "jagdkunst",
+    "name": "Begabter Spurenleser",
+    "key": "begabter_spurenleser",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann einen Splitterpunkt nachträglich ausgeben, um einen Bonus in Höhe seines <i>Verstandes</i> für die aktuelle <i>Jagdkunst</i>-Probe zu erhalten."
+  },
+  {
+    "fertigkeit": "jagdkunst",
+    "name": "Schneller Jäger",
+    "key": "schneller_jaeger",
+    "schwelle": 2,
+    "voraussetzung": "schwerpunkt:nahrungssuche",
+    "beschreibung": "Der Jäger ist besonders effizient, seine Proben zur Nahrungssuche benötigen nur 1 Stunde (statt 3)."
+  },
+  {
+    "fertigkeit": "jagdkunst",
+    "name": "Tierexperte",
+    "key": "tierexperte",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:tierkenner",
+    "beschreibung": "Der Abenteurer wählt einen Typus, für den er die Meisterschaft <i>Tierkenner</i> besitzt. Der Bonus erhöht sich auf 5. <i>Tierexperte</i> kann unter den Bedingungen wie <i>Tierkenner</i> mehrfach gewählt werden."
+  },
+  {
+    "fertigkeit": "jagdkunst",
+    "name": "Blattschuss",
+    "key": "blattschuss",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:tierexperte",
+    "beschreibung": "Der Abenteurer wählt eine Tierart, für die er die Meisterschaft <i>Tierexperte</i> besitzt. Alle <i>Fernkampfangriffe</i>, bei denen er mindestens 2 Ticks <i>zielen</i> kann, richten gegen diese Tierart 5 Punkte zusätzlichen Schaden an."
+  },
+  {
+    "fertigkeit": "jagdkunst",
+    "name": "Effizienter Jäger",
+    "key": "effizienter_jaeger",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:waidmann",
+    "beschreibung": "Der Jäger kann ein Tier perfekt verwerten. Er erhält von einem Tier 50 % mehr Nahrung und Beute (ausgenommen Einzelstücke wie das Horn eines Einhorns)."
+  },
+  {
+    "fertigkeit": "laenderkunde",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "einzelne Kulturen oder Völker, einzelne Regionen, Geographie, Philosophie, Recht"
+  },
+  {
+    "fertigkeit": "laenderkunde",
+    "name": "Schnellleser",
+    "key": "schnellleser",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann besonders schnell lesen. Wenn er ein Schriftstück in Händen hält, kann er durch kurzes Überfliegen den Inhalt viermal so schnell erfassen wie andere (siehe auch die Regeln zur <i>Recherche</i>, S. 149)."
+  },
+  {
+    "fertigkeit": "laenderkunde",
+    "name": "Sprachbegabt",
+    "key": "sprachbegabt",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer hat ein gutes Gefühl für Fremdsprachen. Mit einer Probe auf <i>Länderkunde</i> (Schwierigkeit 25 bis 35 je nach Komplexität des Inhalts, Fremdartigkeit der Sprache und Verständlichkeit des Sprechers) kann er grundsätzliche Inhalte einer ihm unbekannten Sprache verstehen und entschlüsseln."
+  },
+  {
+    "fertigkeit": "laenderkunde",
+    "name": "Universalgelehrter",
+    "key": "universalgelehrter",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Gelehrte ist umfassend gebildet. Einmal pro Spielsitzung kann er eine Probe auf <i>Länderkunde</i> ablegen (Schwierigkeit 20), um vom Spielleiter eine obskure, aber nützliche Information zu einem passenden Thema zu erhalten."
+  },
+  {
+    "fertigkeit": "laenderkunde",
+    "name": "Begabter Gelehrter",
+    "key": "begabter_gelehrter",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann einen Splitterpunkt nachträglich ausgeben, um einen Bonus in Höhe seines <i>Verstandes</i> für die aktuelle <i>Länderkunde</i>-Probe zu erhalten."
+  },
+  {
+    "fertigkeit": "laenderkunde",
+    "name": "Gute Allgemeinbildung",
+    "key": "gute_allgemeinbildung",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:universalgelehrter",
+    "beschreibung": "Der Abenteurer kann seine Gesellschaft mit seinem Wissen beeindrucken. Er erhält einen Bonus in Höhe von 3 Punkten auf <i>Diplomatie</i> und <i>Redegewandtheit</i>, wenn er in einer passenden Situation ist, mit seinem Wissen zu glänzen."
+  },
+  {
+    "fertigkeit": "laenderkunde",
+    "name": "Philosoph",
+    "key": "philosoph",
+    "schwelle": 2,
+    "voraussetzung": "schwerpunkt:philosophie",
+    "beschreibung": "Seine Kenntnis der Philosophie ermöglicht dem Abenteurer einen tiefen Einblick in das Verhalten seiner Mitmenschen. Er erhält einen Bonus in Höhe von 3 Punkten auf <i>Empathie</i>, wenn es darum geht, eine Person einzuschätzen."
+  },
+  {
+    "fertigkeit": "laenderkunde",
+    "name": "Das Wesen der Welt",
+    "key": "das_wesen_der_welt",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:universalgelehrter",
+    "beschreibung": "Der Abenteurer hat gelernt, tiefe Geheimnisse zum Wesen der Welt auf andere Wissensgebieten anzuwenden. Er kann eine <i>Länderkunde</i>-Probe einsetzen, um Proben auf <i>Arkane Kunde</i>, <i>Geschichte und Mythen</i> oder <i>Naturkunde</i> zu <i>unterstützen</i>."
+  },
+  {
+    "fertigkeit": "laenderkunde",
+    "name": "Praktisches Wissen",
+    "key": "praktisches_wissen",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:universalgelehrter",
+    "beschreibung": "Der Abenteurer findet Wege, sein umfangreiches Wissen praktisch umzusetzen. Einmal pro Spielsitzung kann er eine Probe auf <i>Länderkunde</i> (Schwierigkeit 20) machen. Er erhält einen Bonus in Höhe von 1 (+1 pro EG) auf eine anschließende passende Fertigkeitsprobe."
+  },
+  {
+    "fertigkeit": "naturkunde",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "Drachen, einzelnes Terrain, Gesteinskunde, Kräutersuche/Zutaten sammeln, Kreaturen der Finsternis, Nahrungssuche, Pflanzenkunde, Sternkunde, Tierkunde, Wettervorhersage"
+  },
+  {
+    "fertigkeit": "naturkunde",
+    "name": "Des Alchemisten Helfer",
+    "key": "des_alchemisten_helfer",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Sammler ist besonders geschickt darin, Zutaten für alchemistische Produkte zu sammeln (siehe unten): Beim Sammeln von Zutaten beträgt der Aufschlag auf seine Schwierigkeit nur die halbe Qualität des Produkts (anstelle der vollen), und er benötigt nur Fortschrittspunkte in Höhe der halben Qualität."
+  },
+  {
+    "fertigkeit": "naturkunde",
+    "name": "Jäger",
+    "key": "jaeger",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer wählt einen Typus aus der folgenden Liste aus: Bärenartiger, Fisch, Großwild, Hundeartiger, Insekt, Katzenartiger, Kleinwild, Reptil, Spinnentier, Vogel. Gegen Wesen, die den Typus <i>Tier</i> und diesen Typus besitzen, erhält er einen Bonus in Höhe von 3 Punkten auf alle Proben auf <i>Naturkunde</i>, <i>Wahrnehmung</i>, <i>Jagdkunst</i> und <i>Heimlichkeit</i>. Diese Meisterschaft kann mehrfach gewählt werden. Jedes Mal muss ein neuer Typus gewählt werden."
+  },
+  {
+    "fertigkeit": "naturkunde",
+    "name": "Konservierung",
+    "key": "konservierung",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Sammler kennt Techniken, um die Haltbarkeit von Kräutern zu erhöhen. Von ihm gesammelte Kräuter haben automatisch eine verdreifachte Haltbarkeit."
+  },
+  {
+    "fertigkeit": "naturkunde",
+    "name": "Feind",
+    "key": "feind",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer wählt eine bestimmte Art intelligenter Kreaturen aus (VER mindestens 2, Spielerrassen aus dem Grundregelwerk sind nicht wählbar). Gegen diese erhält er einen Bonus in Höhe von 3 Punkten auf <i>Angriffe</i>. Diese Meisterschaft kann mehrfach gewählt werden. Jedes Mal muss eine neue Art gewählt werden."
+  },
+  {
+    "fertigkeit": "naturkunde",
+    "name": "Meisterjäger",
+    "key": "meisterjaeger",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:jaeger",
+    "beschreibung": "Der Abenteurer wählt einen Typus, für den er die Meisterschaft <i>Jäger</i> besitzt. Der Bonus erhöht sich auf 5. <i>Meisterjäger</i> kann genau wie <i>Jäger</i> mehrfach gewählt werden."
+  },
+  {
+    "fertigkeit": "naturkunde",
+    "name": "Schneller Sammler",
+    "key": "schneller_sammler",
+    "schwelle": 2,
+    "voraussetzung": "schwerpunkt:kraeutersuche/schwerpunkt:nahrungssuche",
+    "beschreibung": "Der Sammler ist besonders effizient. Seine Proben zum Suchen von Kräutern, Nahrung oder Zutaten benötigen nur 1 Stunde (statt 3)."
+  },
+  {
+    "fertigkeit": "naturkunde",
+    "name": "Erzfeind",
+    "key": "erzfeind",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:feind",
+    "beschreibung": "Der Abenteurer wählt eine Gruppe aus, für die er die Meisterschaft <i>Feind</i> besitzt. Der Bonus erhöht sich auf 5. <i>Erzfeind</i> kann nicht mehrfach gewählt werden."
+  },
+  {
+    "fertigkeit": "naturkunde",
+    "name": "Kräuterhexe",
+    "key": "kraeuterhexe",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:konservierung",
+    "beschreibung": "Der Sammler ist besonders geschickt darin, die Wirkung von Kräutern beim Sammeln zu bewahren. Seine Kräuter besitzen eine um 50 % erhöhte Wirkung."
+  },
+  {
+    "fertigkeit": "redegewandtheit",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "Feilschen, Lügen & Betrügen, Überreden, Verführen, Verkleiden"
+  },
+  {
+    "fertigkeit": "redegewandtheit",
+    "name": "Ablenken",
+    "key": "ablenken",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer hat gelernt, sich <i>aus dem Kampf </i><i>zu lösen</i> (S. 159), indem er seinen Gegner kurzzeitig ablenkt. Er kann zu diesem Zweck statt der üblichen <i>Akrobatik</i>-Probe eine Probe auf Redegewandtheit ablegen."
+  },
+  {
+    "fertigkeit": "redegewandtheit",
+    "name": "Beißender Spott",
+    "key": "beissender_spott",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer ist für seine scharfe Zunge berühmt und berüchtigt. Er würfelt eine vergleichende Probe auf <i>Redegewandtheit</i> gegen den <i>Geistigen Widerstand</i> seines Ziels. Diese <i>kontinuierliche Aktion</i> dauert 10 Ticks. Bei einem Erfolg verliert das Ziel die Beherrschung und erleidet einen Malus in Höhe von 1 Punkt (+1 pro Erfolgsgrad) auf alle nicht direkt gegen den Abenteurer gerichteten Proben in der Szene. Je nach Ziel kann sich der Abenteurer mit einer Duellforderung konfrontiert sehen."
+  },
+  {
+    "fertigkeit": "redegewandtheit",
+    "name": "Improvisierte Verkleidung",
+    "key": "improvisierte_verkleidung",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer erhält keinen Malus, wenn er eine Verkleidung improvisieren muss."
+  },
+  {
+    "fertigkeit": "redegewandtheit",
+    "name": "Begabter Lügner",
+    "key": "begabter_luegner",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann einen Splitterpunkt nachträglich ausgeben, um einen Bonus in Höhe seiner <i>Ausstrahlung</i> auf die aktuelle <i>Redegewandtheit</i>-Probe zu erhalten."
+  },
+  {
+    "fertigkeit": "redegewandtheit",
+    "name": "Nicht ins Gesicht!",
+    "key": "nicht_ins_gesicht",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann seinen Gegner im Kampf verwirren. Gelingt ihm eine <i>Redegewandtheit</i>-Probe gegen den <i>Geistigen Widerstand</i> des Gegners, erhält dieser auf seinen <i>Angriff</i> gegen den Abenteurer einen Malus in Höhe von 1 Punkt (+1 pro Erfolgsgrad). Diese <i>sofortige Reaktion</i> dauert 3 Ticks."
+  },
+  {
+    "fertigkeit": "redegewandtheit",
+    "name": "Tarnidentität",
+    "key": "tarnidentitaet",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer besitzt eine Identität, die er so gut beherrscht, dass er einen Bonus in Höhe von 5 Punkten auf alle Proben erhält, andere von seiner Identität zu überzeugen."
+  },
+  {
+    "fertigkeit": "redegewandtheit",
+    "name": "Können diese Augen lügen?",
+    "key": "koennen_diese_augen_luegen",
+    "schwelle": 3,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer schafft es mühelos, sich das Vertrauen anderer zu erschleichen. Für alle Proben zur <i>sozialen Interaktion</i> zählt die <i>Einstellung</i> von Spielleitercharakteren um eine Stufe besser."
+  },
+  {
+    "fertigkeit": "redegewandtheit",
+    "name": "Ohne Worte",
+    "key": "ohne_worte",
+    "schwelle": 3,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann auch ohne Worte und rein durch Gestik und Mimik seine Ziele und Wünsche deutlich machen, etwa wenn er nicht in der Lage oder willens ist zu sprechen oder wenn sein Gegenüber seine Sprache nicht versteht. Er kann den Umstand <i>Nicht sprechen können</i> ignorieren."
+  },
+  {
+    "fertigkeit": "schloesserUndFallen",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "Fallen entdecken, Fallen entschärfen, Fallen konstruieren, Mechanik, Schlösser öffnen"
+  },
+  {
+    "fertigkeit": "schloesserUndFallen",
+    "name": "Aufmerksam",
+    "key": "aufmerksam",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer hat die Begabung, schnell seine Umgebung zu erfassen. Wenn er einen Raum betritt, kann er sofort eine <i>Wahrnehmung</i>-Probe (Schwierigkeit 20) ablegen. Sucht er später in diesem Raum nach Fallen, erhält er einen Bonus in Höhe von 1 Punkt (+1 pro Erfolgsgrad) auf das Entdecken."
+  },
+  {
+    "fertigkeit": "schloesserUndFallen",
+    "name": "Improvisationskünstler",
+    "key": "improvisationskuenstler",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer erleidet keinen Abzug, wenn er versucht, ein Schloss (maximal ein <i>gutes</i> Schloss) mit improvisierten Hilfsmitteln zu knacken."
+  },
+  {
+    "fertigkeit": "schloesserUndFallen",
+    "name": "Vorsicht I",
+    "key": "vorsicht_1",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer geht vorsichtig vor. Gegen Fallen erhält er einen Bonus in Höhe von 3 Punkten auf seine <i>Widerstandswerte</i> und einen Bonus in Höhe von 3 Punkten auf Fertigkeitsproben, um etwaigen Effekten zu entgehen."
+  },
+  {
+    "fertigkeit": "schloesserUndFallen",
+    "name": "Flinke Dietriche",
+    "key": "flinke_dietriche",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer benötigt nur 10 Ticks, um eine Probe auf <i>Schlösser und Fallen</i> abzulegen."
+  },
+  {
+    "fertigkeit": "schloesserUndFallen",
+    "name": "Gute Reflexe",
+    "key": "gute_reflexe",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:vorsicht_1",
+    "beschreibung": "Die Reflexe des Abenteurers sind durch den Umgang mit Fallen so geschult, dass sie ihm in anderen Situationen zugute kommen. Die Verteidigung des Abenteurers erhöht sich um 1."
+  },
+  {
+    "fertigkeit": "schloesserUndFallen",
+    "name": "Schlösserhammer",
+    "key": "schloesserhammer",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Mit Vorsicht hat der Abenteurer nicht viel am Hut. Er kann ein Schloss gewaltsam mit einem Bonus in Höhe von 3 Punkten öffnen. Dies dauert nur 5 Ticks. Danach ist das Schloss unbrauchbar und die Manipulation offensichtlich. Dieser Trick funktioniert nur bei maximal <i>guten</i> Schlössern."
+  },
+  {
+    "fertigkeit": "schloesserUndFallen",
+    "name": "Magische Tricks",
+    "key": "magische_tricks",
+    "schwelle": 3,
+    "voraussetzung": "fp:arkaneKunde_6",
+    "beschreibung": "Der Abenteurer kennt sich gut mit magischen Fallen aus. Er erhält einen Bonus in Höhe von 3 Punkten auf das Entdecken und Entschärfen von magischen Fallen."
+  },
+  {
+    "fertigkeit": "schloesserUndFallen",
+    "name": "Vorsicht II",
+    "key": "vorsicht_2",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:vorsicht_1",
+    "beschreibung": "Der Abenteurer setzt sich beim Entschärfen einer Falle geringerem Risiko aus. Er verliert bei einem Misserfolg nur 1 Erfolgsgrad. Die gesamte Probe scheitert erst, wenn er keine Erfolge mehr besitzt, nicht nach der ersten misslungenen Probe."
+  },
+  {
+    "fertigkeit": "schwimmen",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "Kurzstrecke, Langstrecke, Tauchen, Wasser treten"
+  },
+  {
+    "fertigkeit": "schwimmen",
+    "name": "Arbeit unter Wasser",
+    "key": "arbeit_unter_wasser",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Handlungen unter Wasser erleiden normalerweise einen Malus in Höhe von 6 Punkten. Ein Abenteurer mit dieser Meisterschaft ist so geübt darin, dass er die Erschwernis für Nicht-Kampfhandlungen halbiert. Für Arbeit in hüfthohem Wasser kann er den Malus komplett ignorieren."
+  },
+  {
+    "fertigkeit": "schwimmen",
+    "name": "Flusstaucher",
+    "key": "flusstaucher",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Schwimmer ist gut darin, besonders tief zu tauchen. Er erreicht beim Tauchen eine Tiefe von 4 m pro Fortschrittspunkt (statt 3 m)."
+  },
+  {
+    "fertigkeit": "schwimmen",
+    "name": "Langstreckenschwimmer",
+    "key": "langstreckenschwimmer",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Schwimmer erreicht beim Langstreckenschwimmen eine Strecke von 4 km pro Erfolgsgrad (statt 2 km)."
+  },
+  {
+    "fertigkeit": "schwimmen",
+    "name": "Begabter Schwimmer",
+    "key": "begabter_schwimmer",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann einen Splitterpunkt nachträglich ausgeben, um einen Bonus in Höhe seiner <i>Stärke</i> für die aktuelle <i>Schwimmen</i>-Probe zu erhalten."
+  },
+  {
+    "fertigkeit": "schwimmen",
+    "name": "Kampf unter Wasser",
+    "key": "kampf_unter_wasser",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:arbeit_unter_wasser",
+    "beschreibung": "Kampfhandlungen unter Wasser sind normalerweise um 6 erschwert. Ein Abenteurer mit dieser Meisterschaft ist so geübt darin, dass er die Erschwernis für Kampfhandlungen halbiert. Beim Kampf in hüfthohem Wasser kann er den Malus komplett ignorieren."
+  },
+  {
+    "fertigkeit": "schwimmen",
+    "name": "Meerestaucher",
+    "key": "meerestaucher",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:flusstaucher",
+    "beschreibung": "Der Schwimmer erreicht beim Tauchen eine Tiefe von 5 m pro Fortschrittspunkt (statt 4 m)."
+  },
+  {
+    "fertigkeit": "schwimmen",
+    "name": "Apnoe",
+    "key": "apnoe",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:langstreckenschwimmer,meisterschaft:meerestaucher,fp:zaehigkeit_6",
+    "beschreibung": "Der Schwimmer kennt Techniken, seinen Atemverbrauch zu minimieren und die Luft besonders lange anzuhalten. Beim <i>Luft </i><i>anhalten</i> (gleich ob über <i>Schwimmen</i> oder über <i>Zähigkeit</i>) kann er pro Punkt <i>Konstitution</i> 90 Sekunden lang die Luft anhalten, die Schwierigkeit für weitere Proben steigt außerdem (beginnend bei 15) nur um 3 pro 10 Sekunden (nicht um 5 pro 10 Sekunden). Weiterhin kann ein <i>Apnoe</i>-Taucher beim Tauchen zusätzlich eine Anzahl von Proben in Höhe seiner <i>Konstitution</i> ablegen (also STÄ + KON + KON Proben)."
+  },
+  {
+    "fertigkeit": "schwimmen",
+    "name": "Tiefseetaucher",
+    "key": "tiefseetaucher",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:meerestaucher",
+    "beschreibung": "Der Schwimmer erreicht beim Tauchen eine Tiefe von 7 m pro Fortschrittspunkt (statt 5 m)."
+  },
+  {
+    "fertigkeit": "seefahrt",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "Boote fahren, Fesseln/Knoten, Fischen, Flussschifffahrt, Navigation, Ruderschiffe, Seeschifffahrt, Segelschiffe"
+  },
+  {
+    "fertigkeit": "seefahrt",
+    "name": "Beine des Seemanns",
+    "key": "beine_des_seemanns",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Proben, um das Gleichgewicht zu halten oder zu Balancieren, erhalten einen Bonus in Höhe von 3 Punkten."
+  },
+  {
+    "fertigkeit": "seefahrt",
+    "name": "Blick auf die Sterne",
+    "key": "blick_auf_die_sterne",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer erhält, sofern die Sterne sichtbar sind, einen Bonus in Höhe von 3 Punkten auf alle Proben zur Orientierung."
+  },
+  {
+    "fertigkeit": "seefahrt",
+    "name": "Seebär",
+    "key": "seebaer",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer erhält auf <i>Überleben</i> und <i>Jagdkunst</i> einen Bonus in Höhe von 3 Punkten, wenn er sich auf hoher See befindet."
+  },
+  {
+    "fertigkeit": "seefahrt",
+    "name": "Begabter Seemann",
+    "key": "begabter_seemann",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann einen Splitterpunkt nachträglich ausgeben, um einen Bonus in Höhe seiner <i>Konstitution</i> für die aktuelle <i>Seefahrt</i>-Probe zu erhalten."
+  },
+  {
+    "fertigkeit": "seefahrt",
+    "name": "Kapitän der verfaulten Nussschale",
+    "key": "kapitaen_der_verfaulten_nussschale",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteuer kann auf kaum noch fahrbaren Schiffen die <i>Seefahrt</i>-Abzüge durch Beschädigungen ignorieren."
+  },
+  {
+    "fertigkeit": "seefahrt",
+    "name": "Korsar",
+    "key": "korsar",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Bei einer Verfolgungsjagd mit Schiffen und Booten erhält der Abenteurer automatisch 1 Fortschrittspunkt pro gelungener Probe zusätzlich."
+  },
+  {
+    "fertigkeit": "seefahrt",
+    "name": "Fesseln",
+    "key": "fesseln",
+    "schwelle": 3,
+    "voraussetzung": "",
+    "beschreibung": "Diese Anwendung der Fertigkeit <i>Seefahrt</i> funktioniert exakt wie die entsprechende Anwendung der Fertigkeit <i>Fingerfertigkeit</i>, mit der Ausnahme, dass in diesem Fall <i>Seefahrt</i> für die Probe genutzt wird. Die Details finden Sie auf S. 115. Ein Entfesseln ist über <i>Seefahrt</i> nicht möglich."
+  },
+  {
+    "fertigkeit": "seefahrt",
+    "name": "Held der Meere",
+    "key": "held_der_meere",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:seebaer",
+    "beschreibung": "An Bord von Wasserfahrzeugen auf hoher See erhält der Abenteurer einen Bonus in Höhe von 1 Punkt auf <i>Angriffe</i> und Proben auf <i>Akrobatik</i>, <i>Anführen</i>, <i>Diplomatie</i> und <i>Entschlossenheit</i>."
+  },
+  {
+    "fertigkeit": "seefahrt",
+    "name": "Meine Karte ist das Firmament",
+    "key": "meine_karte_ist_das_firmament",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:blick_auf_die_sterne",
+    "beschreibung": "Der Abenteurer kann eine <i>Seefahrt</i>-Probe gegen Schwierigkeit 30 ablegen, um zu wissen, wo ungefähr auf Lorakis er sich gerade befindet. Er kann mit freier Sicht auf den Nachthimmel ohne Seekarten navigieren."
+  },
+  {
+    "fertigkeit": "strassenkunde",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "Bestimmte Stadt, Gerüchte, Orientierung, Schwarzmarkt, Tatorte, Zurechtfinden"
+  },
+  {
+    "fertigkeit": "strassenkunde",
+    "name": "Gerüchte aufschnappen",
+    "key": "geruechte_aufschnappen",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer hat ein offenes Ohr für Gerüchte, die in einer Stadt umgehen, und vermag es, falsche von richtigen zu unterscheiden. Der Abenteurer erhält einen Bonus in Höhe von 3 Punkten, wenn er <i>Straßenkunde</i> einsetzt, um Gerüchte aufzuschnappen."
+  },
+  {
+    "fertigkeit": "strassenkunde",
+    "name": "Glücksspieler",
+    "key": "gluecksspieler",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer hat ein Händchen für Glücksspiele. Wenn er einen Würfelwurf macht (keine Probe, sondern ein reiner Zufallswurf, z.B. beim Münzwurf oder beim Würfelspiel), um ein Glücksspiel zu gewinnen, darf er zweimal würfeln und das bessere Ergebnis nutzen."
+  },
+  {
+    "fertigkeit": "strassenkunde",
+    "name": "Schwarzmarkt",
+    "key": "schwarzmarkt",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kennt sich damit aus, Diebesgut zu verkaufen oder illegale Dinge zu kaufen. Kauft oder verkauft er auf dem Schwarzmarkt, verändert er den Preis bei Gelingen um 10 % +10 % pro Erfolgsgrad statt um 5 % (siehe S. 110)."
+  },
+  {
+    "fertigkeit": "strassenkunde",
+    "name": "Begabter Straßenwanderer",
+    "key": "begabter_strassenwanderer",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann einen Splitterpunkt nachträglich ausgeben, um einen Bonus in Höhe seiner <i>Intuition</i> auf die aktuelle <i>Straßenkunde</i>-Probe zu erhalten."
+  },
+  {
+    "fertigkeit": "strassenkunde",
+    "name": "Der richtige Ton",
+    "key": "der_richtige_ton",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:schwarzmarkt",
+    "beschreibung": "Der Abenteurer nutzt seine Kenntnisse über die Unterwelt. Wenn er es mit zwielichtigen Personen zu tun hat, erhält der Abenteurer einen Bonus in Höhe von 3 Punkten auf <i>Redegewandtheit</i> und <i>Diplomatie</i>."
+  },
+  {
+    "fertigkeit": "strassenkunde",
+    "name": "Überall zu Hause",
+    "key": "ueberall_zu_hause",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kommt in fremden Städten gut zurecht. Er kann den Malus für unbekannte Städte ignorieren."
+  },
+  {
+    "fertigkeit": "strassenkunde",
+    "name": "Gerüchte verbreiten",
+    "key": "geruechte_verbreiten",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:geruechte_aufschnappen",
+    "beschreibung": "Der Abenteurer versteht es, Gerüchte aufzuschnappen und sie in die Welt zu setzen. Wenn er sich sechs Stunden Zeit nimmt und eine <i>Straßenkunde</i>-Probe gegen 30 ablegt, kann er ein beliebiges Gerücht in Umlauf bringen. Ein solches Gerücht bleibt für etwa einen Tag (+1 pro Erfolgsgrad) bestehen, besonders absurde oder besonders plausible Gerüchte können sich nach Spielleiterentscheid auch deutlich kürzer oder länger halten."
+  },
+  {
+    "fertigkeit": "strassenkunde",
+    "name": "Wie meine Westentasche",
+    "key": "wie_meine_westentasche",
+    "schwelle": 3,
+    "voraussetzung": "schwerpunkt:stadt",
+    "beschreibung": "In allen Städten, in denen der Abenteurer einen Schwerpunkt gewählt hat, erhält er einen Bonus in Höhe von 3 Punkten auf <i>Fingerfertigkeit</i>- und <i>Heimlichkeit</i>-Proben."
+  },
+  {
+    "fertigkeit": "tierfuehrung",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "Abrichten, einzelne Tierart, Fahrzeug lenken, Reiten, Tier beruhigen, Tier einschüchtern"
+  },
+  {
+    "fertigkeit": "tierfuehrung",
+    "name": "Dompteur",
+    "key": "dompteur",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer ist in der Lage, domestizierten Tieren (Wesen mit Merkmal <i>Kreatur</i>) einfache Befehle und Verhaltensweisen beizubringen. Er kann sie, nachdem er sich mit ihnen vertraut gemacht und sie an sich gewöhnt hat, in einen Kampf oder auf die Jagd schicken und ihnen kleinere Tricks vermitteln."
+  },
+  {
+    "fertigkeit": "tierfuehrung",
+    "name": "Reiterkampf",
+    "key": "reiterkampf",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer hat, wenn er vom Rücken seines Reittiers aus kämpft, immer einen <i>Taktischen Vorteil</i>. Außerdem kann er den zusätzlichen Schaden von Waffen mit dem <i>Merkmal Reiterwaffe</i> nutzen."
+  },
+  {
+    "fertigkeit": "tierfuehrung",
+    "name": "Tier einschätzen",
+    "key": "tier_einschaetzen",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer verwendet eine <i>kontinuierliche Aktion</i> (10 Ticks), um eine Probe auf <i>Tierführung </i>gegen Schwierigkeit 20 gegen ein anwesendes Wesen des Typus <i>Tier</i> zu würfeln. Gelingt dies, erhält er einen Bonus in Höhe von 1 Punkt (+1 pro Erfolgsgrad) auf Proben zur Besänftigung des Tieres. Das Tier erhält gleichzeitig dieselben Punkte als Malus auf <i>Angriffe</i> gegen den Abenteurer."
+  },
+  {
+    "fertigkeit": "tierfuehrung",
+    "name": "Herr der Bestien",
+    "key": "herr_der_bestien",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:dompteur",
+    "beschreibung": "Der Abenteurer kann nun wilde Tiere (Wesen ohne Merkmal <i>Kreatur</i> aber mit Typus <i>Tier</i>) ausbilden und ihnen einfache Befehle vermitteln."
+  },
+  {
+    "fertigkeit": "tierfuehrung",
+    "name": "Schlachtreiter",
+    "key": "schlachtreiter",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:reiterkampf",
+    "beschreibung": "Wenn der Abenteurer im Kampf an der Reihe ist, kann er, anstatt selbst zu handeln, besondere <i>Angriffe</i> seines Reittiers als eigene Aktionen einsetzen. Außerdem kann er Waffen mit dem <i>Merkmal Zweihändig</i> vom Rücken seines Reittiers mit nur einer Hand vollumfänglich nutzen, sofern sie das <i>Merkmal Reiterwaffe</i> tragen."
+  },
+  {
+    "fertigkeit": "tierfuehrung",
+    "name": "Veteran der Arena",
+    "key": "veteran_der_arena",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Bei Verfolgungsjagden mit Kutschen oder Streitwägen erhält der Abenteurer automatisch 1 zusätzlichen Fortschrittspunkt pro gelungener Probe."
+  },
+  {
+    "fertigkeit": "tierfuehrung",
+    "name": "Freihändigkeit",
+    "key": "freihaendigkeit",
+    "schwelle": 3,
+    "voraussetzung": "",
+    "beschreibung": "Als Reiter oder Kutscher hat der Abenteuer erlernt, mit Schenkeldruck, Pfiffen, Befehlen und minimalen Einwirkungen seine Tiere zu lenken, sodass er beide Hände frei hat. Dadurch kann er Waffen mit dem <i>Merkmal Zweihändig</i> vom Rücken seines Reittiers aus einsetzen."
+  },
+  {
+    "fertigkeit": "tierfuehrung",
+    "name": "Zwei Geister, ein Gedanke",
+    "key": "zwei_geister_ein_gedanke",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:schlachtreiter",
+    "beschreibung": "Der Abenteurer kann sein Reittier eigenständig am Kampf teilnehmen lassen, während er weiterhin alle Vorteile der Meisterschaft <i>Schlachtreiter</i> genießt."
+  },
+  {
+    "fertigkeit": "ueberleben",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "Feuer entzünden, Lagerbereitung, Orientierung, Wettervorhersage, Wildnisführung"
+  },
+  {
+    "fertigkeit": "ueberleben",
+    "name": "Geländekunde",
+    "key": "gelaendekunde",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kennt sich in einer bestimmten Art von natürlichem Gelände (Wald, Gebirge, Wüste etc.) gut aus. Er erhält einen Bonus in Höhe von 2 Punkten auf alle passenden Proben in diesem Gelände. Die Meisterschaft kann mehrfach gewählt werden (jedes Mal für ein neues Gelände)."
+  },
+  {
+    "fertigkeit": "ueberleben",
+    "name": "Meteorologe",
+    "key": "meteorologe",
+    "schwelle": 1,
+    "voraussetzung": "schwerpunkt:wettervorhersage",
+    "beschreibung": "Der Naturkundige ist besonders gut darin, das Wetter vorherzusagen. Bei einer gelungenen Vorhersage kann er das Wetter statt nach den üblichen Regeln für 2 Tage grob bestimmen (+1 Tag pro Erfolgsgrad)."
+  },
+  {
+    "fertigkeit": "ueberleben",
+    "name": "Wildnisläufer",
+    "key": "wildnislaeufer",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Die Reisegeschwindigkeit des Abenteurers erhöht sich außerhalb von ausgebauten Straßen um 20 %. Dies gilt auch für eine Gruppe, die er führt."
+  },
+  {
+    "fertigkeit": "ueberleben",
+    "name": "Sparsame Reise",
+    "key": "sparsame_reise",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Bei der Reduzierung von Reisekosten (siehe S. 152) kann der Wildniskundige pro Punkt 10 % anstatt 5 % von den endgültigen Kosten abziehen."
+  },
+  {
+    "fertigkeit": "ueberleben",
+    "name": "Vorausschauender Führer",
+    "key": "vorausschauender_fuehrer",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Wildniskundige ist gut darin, Gefahren und Hindernisse rechtzeitig zu erkennen. Bei einer gelungenen Probe zur <i>Wildnisführung</i> (siehe S. 153) kostet es ihn nur 1 EG (statt 2), um die Ereigniskategorie zu beeinflussen, und er kann die Kategorie um bis zu 2 Stufen verändern."
+  },
+  {
+    "fertigkeit": "ueberleben",
+    "name": "Wetterfest",
+    "key": "wetterfest",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:meteorologe",
+    "beschreibung": "Der Wildniskundige ist besonders geschickt darin, ein wetterfestes Lager zu errichten. Seine Lager werden nie überschwemmt und er ignoriert Erschwernisse durch schlechtes Wetter bei der Lagersuche."
+  },
+  {
+    "fertigkeit": "ueberleben",
+    "name": "Unfehlbare Orientierung",
+    "key": "unfehlbare_orientierung",
+    "schwelle": 3,
+    "voraussetzung": "schwerpunkt:orientierung",
+    "beschreibung": "Der Wildniskundige hat einen sechsten Sinn für Richtungen. Alle Proben zur Orientierung erhalten einen Bonus in Höhe von 6 Punkten."
+  },
+  {
+    "fertigkeit": "ueberleben",
+    "name": "Wanderer im Schatten",
+    "key": "wanderer_im_schatten",
+    "schwelle": 3,
+    "voraussetzung": "fp:heimlichkeit_6",
+    "beschreibung": "Der Wildniskundige ist ein Phantom, ein Schatten zwischen den Bäumen, der ungesehen umherstreift. Wenn der Abenteurer einen Lagerplatz bereitet, erhält jede Probe, um das Lager zu entdecken, automatisch einen Malus in Höhe von 3 Punkten."
+  },
+  {
+    "fertigkeit": "wahrnehmung",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "Durchsuchung, Hinterhalte, Hören, Riechen, Schmecken, Sehen, Tasten"
+  },
+  {
+    "fertigkeit": "wahrnehmung",
+    "name": "Absolutes Gehör",
+    "key": "absolutes_gehoer",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer ist in der Lage, die Höhe eines gehörten Tons unfehlbar zu bestimmen. Dadurch erhält er einen Bonus in Höhe von 3 Punkten auf alle <i>Darbietung</i>-Proben zum Musizieren und Singen."
+  },
+  {
+    "fertigkeit": "wahrnehmung",
+    "name": "Perfekter Gaumen",
+    "key": "perfekter_gaumen",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann Geschmäcker perfekt voneinander unterscheiden. Dies gibt ihm nicht nur einen Bonus in Höhe von 3 Punkten auf <i>Wahrnehmung</i>-Proben zum Erkennen von Gift im Essen, sondern auf <i>alle </i>Proben zum Zubereiten von Nahrung."
+  },
+  {
+    "fertigkeit": "wahrnehmung",
+    "name": "Umgebungssinne",
+    "key": "umgebungssinne",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kennt Sinneswahrnehmungen einer bestimmten Umgebung (Stadt, Wald, Steppe, Wüste, Sumpf etc.) besonders gut. In einer solchen Umgebung erhält er einen Bonus in Höhe von 3 Punkten auf <i>Wahrnehmung</i>-Proben, da er genau weiß, worauf er achten muss. Diese Meisterschaft kann mehrfach gewählt werden, je einmal für jede Umgebung."
+  },
+  {
+    "fertigkeit": "wahrnehmung",
+    "name": "Begabter Späher",
+    "key": "begabter_spaeher",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann einen Splitterpunkt nachträglich ausgeben, um einen Bonus in Höhe seiner <i>Intuition</i> für die aktuelle <i>Wahrnehmung</i>-Probe zu erhalten."
+  },
+  {
+    "fertigkeit": "wahrnehmung",
+    "name": "Schnelle Durchsuchung",
+    "key": "schnelle_durchsuchung",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann mit einem Blick einen ganzen Raum erfassen. Er benötigt nur 5 Minuten (statt 10) für eine Probe zur Durchsuchung."
+  },
+  {
+    "fertigkeit": "wahrnehmung",
+    "name": "Veränderte Umgebung",
+    "key": "veraenderte_umgebung",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer nimmt kleinste Veränderungen in der Umgebung wahr, beispielsweise, ob jemand in seiner Abwesenheit etwas im Zimmer verändert hat. Kommt er in eine entsprechende Situation, steht ihm automatisch eine <i>Wahrnehmung</i>Probe (Schwierigkeit 25) zu, um zu bemerken, was verändert wurde."
+  },
+  {
+    "fertigkeit": "wahrnehmung",
+    "name": "Niemand war hier",
+    "key": "niemand_war_hier",
+    "schwelle": 3,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann eine Durchsuchung so ausführen, dass man kaum bemerkt, dass jemand hier war. Wenn er sich für die Durchsuchung doppelt so lange Zeit nimmt, erleiden alle Proben (auch die automatische aus <i>Veränderte Umgebung</i>), um die Untersuchung zu bemerken, einen Malus in Höhe von 6 Punkten."
+  },
+  {
+    "fertigkeit": "wahrnehmung",
+    "name": "Unterschwellige Warnung",
+    "key": "unterschwellige_warnung",
+    "schwelle": 3,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer verfügt über einen Sinn für Gefahren. Wenn ihm eine <i>Wahrnehmung</i>-Probe (Schwierigkeit 25) gelingt, kann er bei einem Hinterhalt rechtzeitig reagieren, ohne <i>überrascht</i> zu werden."
+  },
+  {
+    "fertigkeit": "zaehigkeit",
+    "name": "Schwerpunkt",
+    "key": "schwerpunkt",
+    "schwelle": 0,
+    "voraussetzung": "",
+    "beschreibung": "Erschöpfung widerstehen, Gift widerstehen, Krankheiten widerstehen, Zaubern widerstehen, Zechen"
+  },
+  {
+    "fertigkeit": "zaehigkeit",
+    "name": "Rüstungsträger I",
+    "key": "ruestungstraeger_1",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer ist es gewohnt, sich in schwerer Rüstung zu bewegen. Die <i>Behinderung</i> von Rüstung ist um 1 reduziert."
+  },
+  {
+    "fertigkeit": "zaehigkeit",
+    "name": "Schnell wieder auf den Beinen",
+    "key": "schnell_wieder_auf_den_beinen",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer regeneriert Schadenspunkte schneller. Immer wenn er durch eine <i>Ruhephase</i> Lebenspunkte zurück erhält, bekommt ein Abenteurer mit dieser Meisterschaft 1 zusätzlichen Punkt."
+  },
+  {
+    "fertigkeit": "zaehigkeit",
+    "name": "Starker Schildarm I",
+    "key": "starker_schildarm_1",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Die <i>Behinderung</i> eines Schildes ist für den Abenteurer um 1 Punkt gesenkt."
+  },
+  {
+    "fertigkeit": "zaehigkeit",
+    "name": "Wachsamkeit",
+    "key": "wachsamkeit",
+    "schwelle": 1,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann ohne Probleme eine Nacht wach bleiben und zum Beispiel Wache schieben. Erst bei einer weiteren Nacht ohne Schlaf muss er eine <i>Zähigkeit-</i>Probe ablegen."
+  },
+  {
+    "fertigkeit": "zaehigkeit",
+    "name": "Rüstungsträger II",
+    "key": "ruestungstraeger_2",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:ruestungstraeger_1",
+    "beschreibung": "Der Abenteurer kann sich noch besser in schwerer Rüstung bewegen. Jeder durch Rüstung erhaltene <i>Tick-Zuschlag</i> ist um 1 reduziert."
+  },
+  {
+    "fertigkeit": "zaehigkeit",
+    "name": "Schmerzwiderstand I",
+    "key": "schmerzwiderstand_1",
+    "schwelle": 2,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer kann Schmerzen ignorieren. <i>Wundabzüge</i> (siehe S. 172) sind für ihn stets um 1 Punkt verringert."
+  },
+  {
+    "fertigkeit": "zaehigkeit",
+    "name": "Schnelle Schildabwehr",
+    "key": "schnelle_schildabwehr",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:starker_schildarm_1",
+    "beschreibung": "Wenn der Abenteurer einen Schild führt, benötigt er für eine <i>Aktive Abwehr </i>mit diesem nur noch 2 Ticks."
+  },
+  {
+    "fertigkeit": "zaehigkeit",
+    "name": "Starker Schildarm II",
+    "key": "starker_schildarm_2",
+    "schwelle": 2,
+    "voraussetzung": "meisterschaft:starker_schildarm_1",
+    "beschreibung": "Der <i>Tick-Zuschlag</i> eines Schildes ist für den Abenteurer um 1 Tick gesenkt."
+  },
+  {
+    "fertigkeit": "zaehigkeit",
+    "name": "Dickschädel",
+    "key": "dickschaedel",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:wachsamkeit",
+    "beschreibung": "Der Abenteurer ist so abgehärtet, dass er schnell wieder zu sich kommt. Die Dauer der Zustände <i>Benommen</i> und <i>Bewusstlos</i> ist für ihn halbiert. Außerdem benötigt er nur 15 Minuten (statt die 30 Minuten der <i>Verschnaufpause</i>), um eine Stufe des Zustands <i>Erschöpft</i> abzubauen."
+  },
+  {
+    "fertigkeit": "zaehigkeit",
+    "name": "Schmerzwiderstand II",
+    "key": "schmerzwiderstand_2",
+    "schwelle": 3,
+    "voraussetzung": "meisterschaft:schmerzwiderstand_1",
+    "beschreibung": "Der Abenteurer ist noch stärker daran gewöhnt, Schmerzen ohne Murren zu ertragen. <i>Wundabzüge</i> (siehe S. 172) sind für ihn stets um 1 weiteren Punkt verringert."
+  },
+  {
+    "fertigkeit": "alle",
+    "name": "Großmeister",
+    "key": "grossmeister",
+    "schwelle": 4,
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer ist ein vollendeter Großmeister. Bei jeder Probe in dieser Fertigkeit darf er einen zusätzlichen W10 werfen. Dieser Würfel wird <i>nicht</i> für die Ermittlung eines Patzers gewertet und kann nur genutzt werden, wenn kein Patzer vorliegt. Entsprechend muss der Würfel klar von den anderen Würfeln unterscheidbar sein (etwa indem er separat geworfen wird oder eine andere Farbe hat). Ein Großmeister hat bei einem <i>Standardwurf</i> also 3 Würfel, von denen die höchsten 2 gewertet werden, bei einem <i>Risikowurf</i> 5 Würfel, von denen die höchsten 2 gewertet werden, und bei einem <i>Sicherheitswurf</i> 3 Würfel, von denen der höchste gewertet wird. Ein Patzer trifft bei Standard- und Risikowurf nur auf, wenn die 2 bzw. 4 normalen Würfel ihn anzeigen. Bei einem Sicherheitswurf ist wie üblich kein Patzer möglich."
+  }
+]

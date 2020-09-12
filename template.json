@@ -309,7 +309,9 @@
       "waffe",
       "ruestung",
       "schild",
-      "meisterschaft"
+      "kampfmeisterschaft",
+      "allgemeineMeisterschaft",
+      "zaubermeisterschaft"
     ],
     "templates": {
       "base": {
@@ -349,6 +351,13 @@
           "normal": 0,
           "mod": 0
         }
+      },
+      "meisterschaft": {
+        "key": "",
+        "fertigkeit": "",
+        "schwerpunkt": false,
+        "schwelle": 1,
+        "voraussetzung": ""
       }
     },
     "waffe": {
@@ -409,16 +418,24 @@
       },
       "merkmale": []
     },
-    "meisterschaft": {
+    "kampfmeisterschaft": {
       "templates": [
-        "base"
+        "base",
+        "meisterschaft"
       ],
-      "key": "",
-      "fertigkeit": "",
-      "schwerpunkt": false,
-      "schwelle": 1,
-      "manoever": false,
-      "voraussetzung": ""
+      "manoever": false
+    },
+    "allgemeineMeisterschaft": {
+      "templates": [
+        "base",
+        "meisterschaft"
+      ]
+    },
+    "zaubermeisterschaft": {
+      "templates": [
+        "base",
+        "meisterschaft"
+      ]
     }
   }
 }

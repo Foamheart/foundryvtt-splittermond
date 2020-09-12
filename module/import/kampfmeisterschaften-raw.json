@@ -637,5 +637,14 @@
     "manoever": "manoever",
     "voraussetzung": "meisterschaft:scharfschuetze",
     "beschreibung": "Wenn der Abenteurer dieses <i>Manöver</i> nutzen möchte, muss er mindestens eine <i>Zielen</i>-Aktion ausführen. Dafür richtet sein <i>Fernkampfangriff</i> zusätzlichen Schaden in Höhe seiner <i>Intuition</i> an."
+  },
+  {
+    "name": "Großmeister",
+    "key": "grossmeister",
+    "fertigkeit": "alle",
+    "schwelle": 4,
+    "manoever": "",
+    "voraussetzung": "",
+    "beschreibung": "Der Abenteurer ist ein vollendeter Großmeister. Bei jeder Probe in dieser Fertigkeit darf er einen zusätzlichen W10 werfen. Dieser Würfel wird <i>nicht</i> für die Ermittlung eines Patzers gewertet und kann nur genutzt werden, wenn kein Patzer vorliegt. Entsprechend muss der Würfel klar von den anderen Würfeln unterscheidbar sein (etwa indem er separat geworfen wird oder eine andere Farbe hat). Ein Großmeister hat bei einem <i>Standardwurf</i> also 3 Würfel, von denen die höchsten 2 gewertet werden, bei einem <i>Risikowurf</i> 5 Würfel, von denen die höchsten 2 gewertet werden, und bei einem <i>Sicherheitswurf</i> 3 Würfel, von denen der höchste gewertet wird. Ein Patzer trifft bei Standard- und Risikowurf nur auf, wenn die 2 bzw. 4 normalen Würfel ihn anzeigen. Bei einem Sicherheitswurf ist wie üblich kein Patzer möglich."
   }
 ]

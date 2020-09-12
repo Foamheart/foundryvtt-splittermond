@@ -1,0 +1,12 @@
+<h1>{{label 'Kampfmeisterschaften'}}</h1>
+{{#each groups as |group key|}}
+<h2 class="entry-group">{{loc2 'Kampffertigkeit' key 'name'}}</h2>
+<div class="directory-list hidden">
+  {{#each group as |schwelle key|}}
+  <h3>{{label 'Schwelle'}} {{@index}}</h3>
+    {{#each schwelle as |meisterschaft key|}}
+    <div class="directory-item item kampfmeisterschaft entry" data-entry-id="{{this._id}}">{{this.name}}{{#if this.data.manoever}} ({{label 'Manoever'}}){{/if}}<span class="beschreibung hidden">: {{{this.data.beschreibung}}}</span></div>
+    {{/each}}
+  {{/each}}
+</div>
+{{/each}}

@@ -1,3 +1,6 @@
+import { RASSEN } from "../const.js";
+import { FERTIGKEITEN } from "../const.js";
+import { MAGIESCHULEN } from "../const.js";
 import { checkValueRange } from "../utils.js";
 
 /**
@@ -52,7 +55,7 @@ export class SplittermondActor extends Actor {
 
     // Abgeleitete Werte berechnen
     const awerte = actorDD.abgeleiteteWerte;
-    awerte.gk.wert = RASSE_GK[rasse] + awerte.gk.mod;
+    awerte.gk.wert = RASSEN[rasse].gk + awerte.gk.mod;
     awerte.gsw.wert = awerte.gk.wert + attribute.bew.wert + awerte.gsw.mod;
     awerte.ini.wert = 10 - attribute.int.wert + awerte.ini.mod;
     awerte.lp.wert = awerte.gk.wert + attribute.kon.wert + awerte.lp.mod;
@@ -64,8 +67,8 @@ export class SplittermondActor extends Actor {
     // Fertigkeiten berechnen
     const fertigkeiten = actorDD.fertigkeiten;
     for (let [key, fertigkeit] of Object.entries(fertigkeiten)) {
-      const att1_key = FERTIGKEITEN_ATTRIBUTE[key].att1;
-      const att2_key = FERTIGKEITEN_ATTRIBUTE[key].att2;
+      const att1_key = FERTIGKEITEN[key].att1;
+      const att2_key = FERTIGKEITEN[key].att2;
       fertigkeit.att1 = {key: att1_key, wert: attribute[att1_key].wert};
       fertigkeit.att2 = {key: att2_key, wert: attribute[att2_key].wert};
       fertigkeit.fp = checkValueRange(fertigkeit.fp, 0, maxFP);
@@ -82,7 +85,7 @@ export class SplittermondActor extends Actor {
     const magieschulen = actorDD.magieschulen;
     for (let [key, magieschule] of Object.entries(magieschulen)) {
       const att1_key = 'mys';
-      const att2_key = MAGIESCHULEN_ATTRIBUT[key];
+      const att2_key = MAGIESCHULEN[key].att2;
       magieschule.att1 = {key: att1_key, wert: attribute[att1_key].wert};
       magieschule.att2 = {key: att2_key, wert: attribute[att2_key].wert};
       magieschule.fp = checkValueRange(magieschule.fp, 0, maxFP);
@@ -107,78 +110,16 @@ export class SplittermondActor extends Actor {
       actorDD.tickzuschlag += item.data.tickzuschlag.wert;
     });
 
-    // VTD korrigieren
+    // VTD korrigieren wegen getragener Rüstung
     awerte.vtd.temp = actorDD.vtdPlus;
     awerte.vtd.wert += awerte.vtd.temp;
 
-    // GSW korrigieren
+    // GSW korrigieren wegen getragener Rüstung
     awerte.gsw.temp = -Math.floor(actorDD.behinderung/2);
     awerte.gsw.wert += awerte.gsw.temp;
 
   }
 
-}
-
-/****** KONSTANTEN ******/
-
-const RASSE_GK = {
-  alb: 5,
-  gnom: 3,
-  mensch: 5,
-  varg: 6,
-  zwerg: 4
-};
-
-const FERTIGKEITEN_ATTRIBUTE = {
-  akrobatik: {att1: 'bew', att2: 'sta'},
-  alchemie: {att1: 'mys', att2: 'ver'},
-  anfuehren: {att1: 'aus', att2: 'wil'},
-  arkaneKunde: {att1: 'mys', att2: 'ver'},
-  athletik: {att1: 'bew', att2: 'sta'},
-  darbietung: {att1: 'aus', att2: 'wil'},
-  diplomatie: {att1: 'aus', att2: 'ver'},
-  edelhandwerk: {att1: 'int', att2: 'ver'},
-  empathie: {att1: 'int', att2: 'ver'},
-  entschlossenheit: {att1: 'aus', att2: 'wil'},
-  fingerfertigkeit: {att1: 'aus', att2: 'bew'},
-  geschichteUndMythen: {att1: 'mys', att2: 'ver'},
-  handwerk: {att1: 'kon', att2: 'ver'},
-  heilkunde: {att1: 'int', att2: 'ver'},
-  heimlichkeit: {att1: 'bew', att2: 'int'},
-  jagdkunst: {att1: 'kon', att2: 'ver'},
-  laenderkunde: {att1: 'int', att2: 'ver'},
-  naturkunde: {att1: 'int', att2: 'ver'},
-  redegewandtheit: {att1: 'aus', att2: 'wil'},
-  schloesserUndFallen: {att1: 'int', att2: 'bew'},
-  schwimmen: {att1: 'sta', att2: 'kon'},
-  seefahrt: {att1: 'bew', att2: 'kon'},
-  strassenkunde: {att1: 'aus', att2: 'int'},
-  tierfuehrung: {att1: 'aus', att2: 'bew'},
-  ueberleben: {att1: 'int', att2: 'kon'},
-  wahrnehmung: {att1: 'int', att2: 'wil'},
-  zaehigkeit: {att1: 'kon', att2: 'wil'}
-}
-
-const MAGIESCHULEN_ATTRIBUT = {
-  bann: 'wil',
-  beherrschung: 'wil',
-  bewegung: 'bew',
-  erkenntnis: 'ver',
-  fels: 'kon',
-  feuer: 'aus',
-  heilung: 'aus',
-  illusion: 'aus',
-  kampf: 'sta',
-  licht: 'aus',
-  natur: 'aus',
-  schatten: 'int',
-  schicksal: 'aus',
-  schutz: 'aus',
-  staerkung: 'sta',
-  tod: 'ver',
-  verwandlung: 'kon',
-  wasser: 'int',
-  wind: 'ver'
 }
 
 /****** HILFSFUNKTIONEN ******/

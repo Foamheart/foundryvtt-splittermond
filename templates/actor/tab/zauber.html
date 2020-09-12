@@ -16,10 +16,10 @@
           <tr>
             <td>{{loc2 'Magieschule' key 'name'}}</td>
             <td>{{magieschule.wert}}</td>
-            <td><input type="text" name="data.magieschulen.{{key}}.fp" value="{{magieschule.fp}}" data-dtype="Number"/></td>
+            <td><input type="text" name="data.magieschulen.{{key}}.fp" value="{{zeroIsEmpty magieschule.fp}}" data-dtype="Number"/></td>
             <td title="{{loc2 'Attribut' magieschule.att1.key 'abk'}}">{{magieschule.att1.wert}}</td>
             <td title="{{loc2 'Attribut' magieschule.att2.key 'abk'}}">{{magieschule.att2.wert}}</td>
-            <td><input type="text" name="data.magieschulen.{{key}}.mod" value="{{magieschule.mod}}" data-dtype="Number"/></td>
+            <td><input type="text" name="data.magieschulen.{{key}}.mod" value="{{zeroIsEmpty magieschule.mod}}" data-dtype="Number"/></td>
           </tr>
       {{/each}}
     </tbody>

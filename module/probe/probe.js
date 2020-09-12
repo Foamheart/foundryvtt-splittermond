@@ -236,8 +236,8 @@ export function schadenswurfNachProbe(probe) {
         let schadenswurf = game.i18n.localize('SPLITTERMOND.Label.Schadenswurf');
         let mit = game.i18n.localize('SPLITTERMOND.Label.mit');
         messageData.flavor = `${schadenswurf} ${mit} <b>${probe.fertigkeitName}</b>.`;
-        // TODO Schadensreduktion von target berücksichtigen
-        messageData.roll.dice[0].options.schadenswurf = {ergebnisText: probe.target.name + ' nimmt ' + roll.total + ' Schaden.'};
+        let schaden = Math.max(0, roll.total - probe.target.data.sr);
+        messageData.roll.dice[0].options.schadenswurf = {ergebnisText: probe.target.name + ' nimmt ' + schaden + ' Schaden.'};
         ChatMessage.create(messageData, {rollMode: probe.rollMode});
         // TODO Schaden vom target abziehen
 }

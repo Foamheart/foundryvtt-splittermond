@@ -7,6 +7,7 @@ import { SplittermondItemSheet } from "./item/item-sheet.js";
 import { importAusruestung } from "./import/import.js";
 import { importMeisterschaften } from "./import/import.js";
 import { renderAusruestungCompendium } from "./compendium.js";
+import { renderMeisterschaftenCompendium } from "./compendium.js";
 import { initializeHandlebars } from "./handlebars.js";
 import { schadenswurfNachProbe } from "./probe/probe.js";
 
@@ -63,12 +64,18 @@ Hooks.once("ready", async function() {
   // importAusruestung();
   // importMeisterschaften();
 
-  // Individuelles Template für Compendium "Ausrüstung"
+  // Individuelle Einstellungen für Compendium "Ausrüstung"
   const ausruestung = game.packs.get('splittermond.ausruestung');
   ausruestung.options.resizable = true;
+  // TODO Größenangaben funktionieren noch nicht
   ausruestung.options.width = 1280;
   ausruestung.options.height = 1000;
 
+  // Individuelle Einstellungen für Compendium "Ausrüstung"
+  const meisterschaften = game.packs.get('splittermond.meisterschaften');
+  meisterschaften.options.resizable = true;
+  meisterschaften.options.width = 1280;
+  meisterschaften.options.height = 1000;
 });
 
 /* -------------------------------------------- */
@@ -79,6 +86,8 @@ Hooks.on("renderCompendium", async (compendium, html, data) => {
 
   if (data.collection == 'splittermond.ausruestung') {
     renderAusruestungCompendium(compendium, html, data);
+  } else if (data.collection == 'splittermond.meisterschaften') {
+    renderMeisterschaftenCompendium(compendium, html, data);
   }
 
 });

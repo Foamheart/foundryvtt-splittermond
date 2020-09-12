@@ -1,3 +1,6 @@
+import { VERFUEGBARKEIT } from "../const.js";
+import { PREIS_AUFSCHLAG } from "../const.js";
+import { KOMPLEXITAET } from "../const.js";
 import { checkValueRange } from "../utils.js";
 import { modifikatorString } from "../utils.js";
 
@@ -258,10 +261,6 @@ function berechneKomplexitaet(normalkomplexitaet, qualitaet) {
   let index2 = Math.min(Math.ceil(qualitaet/2), 4);
   return KOMPLEXITAET[Math.max(index1, index2)];
 }
-
-const VERFUEGBARKEIT = ['dorf', 'kleinstadt', 'grossstadt', 'metropole'];
-const PREIS_AUFSCHLAG = [0, 1500, 3000, 6000, 9000, 15000, 21000];
-const KOMPLEXITAET = ['u', 'g', 'f', 'm', 'a'];
 
 /**
  * 

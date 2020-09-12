@@ -259,6 +259,13 @@
 }
 */
 
+/* Eigenes Hintergrundbild
+
+.window-app .window-content {
+  background: url("../ui/parchment.jpg") repeat;
+}
+*/
+
 .splittermond a:hover {
   text-shadow: 0 0 8px #009CE9;
 }
@@ -403,20 +410,23 @@ table input[type="text"]:focus {
 
 /*** Compendium ****/
 
-.compendium h1 {
-  flex: none;
-  margin-top: 24px;
-}
-
 .compendium {
   display: contents;
 }
 
-.compendium .directory-list .directory-item {
+.compendium .hidden {
+  display: none;
+}
+
+.compendium h1 {
+  margin-top: 24px;
+}
+
+.compendium.ausruestung .directory-list .directory-item {
   line-height: 16px;
 }
 
-.compendium table thead th {
+.compendium.ausruestung table thead th {
 	background-color: #5DC3F3;
 	color: #000000;
   font-weight: bold;
@@ -426,13 +436,35 @@ table input[type="text"]:focus {
   border-width: 0 thin;
 }
 
-.compendium .entry-group {
+.compendium.ausruestung .entry-group {
 	background-color: #009CE9;
 	color: #ffffff;
   font-weight: bold;
   padding: 0.3em;
 }
 
-.compendium .hidden {
-  display: none;
+.compendium.meisterschaften h2 {
+  margin-top: 16px;
+  color: #25408F;
+  font-weight: bold;
+}
+
+.compendium.meisterschaften h3 {
+  margin-top: 16px;
+  color: #25408F;
+  font-weight: bold;
+}
+
+.compendium.meisterschaften .directory-list {
+  overflow-y: initial;
+}
+
+.compendium.meisterschaften .directory-list .directory-item {
+  margin-top: 4px;
+  line-height: 16px;
+  font-weight: bold;
+}
+
+.compendium.meisterschaften .beschreibung {
+  font-weight: normal;
 }

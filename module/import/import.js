@@ -1,3 +1,6 @@
+import { KAMPFFERTIGKEITEN } from "../const.js";
+import { NAHKAMPFFERTIGKEITEN } from "../const.js";
+import { FERTIGKEITEN } from "../const.js";
 import { SplittermondItem } from "../item/item.js";
 
 export async function importAusruestung() {
@@ -9,6 +12,7 @@ export async function importAusruestung() {
 export async function importMeisterschaften() {
     const pack = await createCompendium('meisterschaften', 'Meisterschaften');
     await importKampfmeisterschaften(pack);
+    await importAllgemeineMeisterschaften(pack);
 }
 
 async function createCompendium(packName, packLabel) {
@@ -126,7 +130,11 @@ async function importKampfmeisterschaften(pack) {
     for (let rawData of rawArray) {
         const fertigkeit = rawData.fertigkeit;
         if (fertigkeit == 'nahkampf') {
-            ['handgemenge', 'hiebwaffen', 'kettenwaffen', 'klingenwaffen', 'stangenwaffen'].forEach((key) => {
+            NAHKAMPFFERTIGKEITEN.forEach((key) => {
+                importKampfmeisterschaft(pack, rawData, key);
+            });
+        } else if (fertigkeit == 'alle') {
+            KAMPFFERTIGKEITEN.forEach((key) => {
                 importKampfmeisterschaft(pack, rawData, key);
             });
         } else {
@@ -136,7 +144,7 @@ async function importKampfmeisterschaften(pack) {
 }
 
 async function importKampfmeisterschaft(pack, rawData, fertigkeit) {
-    let itemData = {name: rawData.name, type: 'meisterschaft', img: ITEM_IMG.kampfmeisterschaft};
+    let itemData = {name: rawData.name, type: 'kampfmeisterschaft', img: ITEM_IMG.kampfmeisterschaft};
     let item = await SplittermondItem.create(itemData, {temporary: true});
     let data = item.data.data;
 
@@ -152,9 +160,43 @@ async function importKampfmeisterschaft(pack, rawData, fertigkeit) {
     console.log('>>> Kampfmeisterschaft importiert: ' + fertigkeit + ' ' + itemData.name);
 }
 
+async function importAllgemeineMeisterschaften(pack) {
+
+    const response = await fetch("systems/splittermond/module/import/allgemeine-meisterschaften-raw.json");
+    const rawArray = await response.json();
+    
+    for (let rawData of rawArray) {
+        const fertigkeit = rawData.fertigkeit;
+        if (fertigkeit == 'alle') {
+            Object.keys(FERTIGKEITEN).forEach((key) => {
+                importAllgemeineMeisterschaft(pack, rawData, key);
+            });
+        } else {
+            importAllgemeineMeisterschaft(pack, rawData, fertigkeit);
+        }
+    }
+}
+
+async function importAllgemeineMeisterschaft(pack, rawData, fertigkeit) {
+    let itemData = {name: rawData.name, type: 'allgemeineMeisterschaft', img: ITEM_IMG.allgemeineMeisterschaft};
+    let item = await SplittermondItem.create(itemData, {temporary: true});
+    let data = item.data.data;
+
+    data.key = rawData.key;
+    data.fertigkeit = fertigkeit;
+    data.schwerpunkt = rawData.key == 'schwerpunkt';
+    data.schwelle = Number(rawData.schwelle);
+    data.voraussetzung = rawData.voraussetzung;
+    data.beschreibung = rawData.beschreibung;
+
+    await pack.importEntity(item);
+    console.log('>>> Allgemeine Meisterschaft importiert: ' + fertigkeit + ' ' + itemData.name);
+}
+
 const ITEM_IMG = {
     waffe: 'modules/game-icons-net/whitetransparent/axe-sword.svg',
     ruestung: 'modules/game-icons-net/whitetransparent/chest-armor.svg',
     schild: 'modules/game-icons-net/whitetransparent/attached-shield.svg',
-    kampfmeisterschaft: 'modules/game-icons-net/whitetransparent/master-of-arms.svg'
+    kampfmeisterschaft: 'modules/game-icons-net/whitetransparent/master-of-arms.svg',
+    allgemeineMeisterschaft: 'modules/game-icons-net/whitetransparent/master-of-arms.svg'
 }

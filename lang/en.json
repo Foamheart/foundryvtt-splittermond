@@ -209,7 +209,13 @@
             "Ausgeruestet": "Ausgerüstet",
             "Hinzufuegen": "Hinzufügen",
             "Bearbeiten": "Bearbeiten",
-            "Loeschen": "Löschen"
+            "Loeschen": "Löschen",
+            "Ruestungen": "Rüstungen",
+            "Schilde": "Schilde",
+            "Kampfmeisterschaften": "Kampfmeisterschaften",
+            "AllgemeineMeisterschaften": "Allgemeine Meisterschaften",
+            "Schwelle": "Schwelle",
+            "Manoever": "Manöver"
         }
     }
 }
