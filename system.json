@@ -37,8 +37,8 @@
   "gridUnits": "m",
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "power",
-  "url": "",
-  "manifest": "",
+  "url": "https://github.com/Foamheart/foundryvtt-splittermond",
+  "manifest": "https://raw.githubusercontent.com/Foamheart/foundryvtt-splittermond/master/system.json",
   "download": "",
   "license": "LICENSE.txt"
 }
