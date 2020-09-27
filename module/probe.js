@@ -82,8 +82,13 @@ class Probenkontext { // "Abstrakte" Oberklasse
         return this.actor.data.data;
     }
 
-    // Die ChatMessage welche diese Probenkontext-Instanz wiederbelebt hat.
-    // Erhält bei einer Änderung des Probenkontext ein Update.
+    
+    /**
+     * Die ChatMessage welche diese Probenkontext-Instanz wiederbelebt hat.
+     * Erhält bei einer Änderung des Probenkontext ein Update.
+     * 
+     * @param {ChatMessage} message
+     */
     set message(message) {
         this._message = message;
     }
@@ -157,11 +162,13 @@ class Probenkontext { // "Abstrakte" Oberklasse
         ChatMessage.create(messageData, {rollMode: this.rollMode});
     }
     
-    _createRollTableMessage(roll, results) {
+    _createRollTableMessage(table, roll, results) {
         const messageData = {};
         messageData.speaker = ChatMessage.getSpeaker({ actor: this.actor });
+        messageData.flavor = `Wurf auf <b>${table.name}</b>.`;
         setProperty(messageData, 'flags.splittermond.wurfart', WURFART.PATZERWURF);
         setProperty(messageData, 'flags.splittermond.kontext', this.toJSON());
+        table.data.description = null;
         table.toMessage(results, {roll: roll, messageData: messageData, messageOptions: {rollMode: this.rollMode}});
     }
 
@@ -400,7 +407,7 @@ class Angriff extends Probenkontext {
 
         // TODO Auswirkungen des Patzer verarbeiten
 
-        this._createRollTableMessage(roll, results);
+        this._createRollTableMessage(table, roll, results);
         this._onAngriffBeendet();
     }
 
@@ -725,7 +732,7 @@ class AktiveAbwehr extends Probenkontext {
 
         // TODO Auswirkungen des Patzer verarbeiten
 
-        this._createRollTableMessage(roll, results);
+        this._createRollTableMessage(table, roll, results);
     }
 
     /*** ChatMessage Rendering ***/

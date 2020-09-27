@@ -36,6 +36,8 @@ Hooks.once('init', async function() {
    * Eigenes Dice template setzen.
    */
   CONFIG.Dice.template = "systems/splittermond/templates/dice/roll.html";
+  CONFIG.RollTable.resultTemplate = "systems/splittermond/templates/dice/table-result.html";
+
 
   // Define custom Entity classes
   CONFIG.Actor.entityClass = SplittermondActor;
