@@ -1,5 +1,6 @@
 import { RASSEN } from "../const.js";
 import { FERTIGKEITEN } from "../const.js";
+import { NAHKAMPFFERTIGKEITEN } from "../const.js";
 import { MAGIESCHULEN } from "../const.js";
 import { checkValueRange } from "../utils.js";
 
@@ -118,6 +119,11 @@ export class SplittermondActor extends Actor {
     awerte.gsw.temp = -Math.floor(actorDD.behinderung/2);
     awerte.gsw.wert += awerte.gsw.temp;
 
+  }
+
+  // Wird für Aktive Abwehr benötigt
+  nahkampfItems() {
+    return this.data.items.filter(item => item.data.ausgeruestet && (item.type == 'waffe' || item.type == 'schild') && NAHKAMPFFERTIGKEITEN.includes(item.data.kampffertigkeit.key));
   }
 
 }

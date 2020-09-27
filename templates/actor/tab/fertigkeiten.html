@@ -14,7 +14,7 @@
     <tbody>
       {{#each data.fertigkeiten as |fertigkeit key|}}
           <tr>
-            <td class="rollable" data-probe="fertigkeit" data-name="{{loc2 'Fertigkeit' key 'name'}}" data-wert="{{fertigkeit.wert}}" data-punkte="{{fertigkeit.fp}}">{{loc2 'Fertigkeit' key 'name'}}</td>
+            <td class="rollable" data-probe="fertigkeit" data-fertigkeit="{{key}}" data-name="{{loc2 'Fertigkeit' key 'name'}}" data-wert="{{fertigkeit.wert}}" data-fp="{{fertigkeit.fp}}">{{loc2 'Fertigkeit' key 'name'}}</td>
             <td>{{fertigkeit.wert}}</td>
             <td><input type="text" name="data.fertigkeiten.{{key}}.fp" value="{{zeroIsEmpty fertigkeit.fp}}" data-dtype="Number"/></td>
             <td title="{{loc2 'Attribut' fertigkeit.att1.key 'abk'}}">{{fertigkeit.att1.wert}}</td>

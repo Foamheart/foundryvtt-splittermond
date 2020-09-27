@@ -1,5 +1,6 @@
 import { modifikatorString } from "../utils.js";
 
+// 'actor' ist actor.data
 export async function oeffneDialogFertigkeitsprobe(actor, dataset) {
 
     if (dataset.probe === 'fertigkeit') {
@@ -10,6 +11,7 @@ export async function oeffneDialogFertigkeitsprobe(actor, dataset) {
     
 }
 
+// 'actor' ist actor.data
 async function oeffneDialogAllgemeineFertigkeitsprobe(actor, dataset) {
 
     // TODO Modifikator aufgrund von Behinderung berücksichtigen (siehe GRW 165 links)
@@ -27,6 +29,7 @@ async function oeffneDialogAllgemeineFertigkeitsprobe(actor, dataset) {
     oeffneDialog(actor, null, dataset, title, html);
 }
 
+// 'actor' ist actor.data
 async function oeffneDialogKampffertigkeitsprobe(actor, dataset) {
 
     // TODO Tickzuschlag berücksichtigen (siehe GRW 165 links)
@@ -43,7 +46,6 @@ async function oeffneDialogKampffertigkeitsprobe(actor, dataset) {
         fertigkeitWert: Number(dataset.wert),
         modifikator: 0,
         gegner: target.name,
-        schwierigkeit: target.data.abgeleiteteWerte.vtd.wert,
         rollMode: game.settings.get("core", "rollMode"),
         rollModes: CONFIG.Dice.rollModes,
        };
@@ -71,9 +73,14 @@ function oeffneDialog(actor, target, dataset, title, html) {
          callback: html => new Sicherheitswurf(actor, target, dataset, html[0].querySelector("form")).execute()
         }
        },
-        default: 'standard'
+        default: 'standard',
+        close: () => onDialogClose()
        });
     d.render(true);
+}
+
+function onDialogClose() {
+    console.log('onDialogClose');
 }
 
 /**
@@ -87,11 +94,11 @@ class Probe {
         this.target = target;
         this.fertigkeitName = dataset.name;
         this.fertigkeitWert = Number(dataset.wert);
-        this.fertigkeitPunkte = Number(dataset.punkte);
+        this.fertigkeitPunkte = Number(dataset.fp);
         this.wgs = Number(dataset.wgs);
         this.schaden = dataset.schaden;
         this.modifikator = Number(form.modifikator.value);
-        this.schwierigkeit = Number(form.schwierigkeit.value);
+        this.schwierigkeit = target ? target.data.abgeleiteteWerte.vtd.wert : Number(form.schwierigkeit.value);
         this.rollMode = form.rollMode.value;
     }
 
@@ -99,9 +106,7 @@ class Probe {
         let messageData = this.wuerfeln();
 
         messageData.speaker = ChatMessage.getSpeaker({ actor: this.actor });
-        let auf = game.i18n.localize('SPLITTERMOND.Label.auf');
-        let gegen = game.i18n.localize('SPLITTERMOND.Label.gegen')
-        messageData.flavor = `${this.wurfartString()} ` + auf + ` <b>${this.fertigkeitName}</b> ` + gegen + ` ${this.schwierigkeit}.`;
+        messageData.flavor = this.text; // this.flavorText();
         
         // Erfolgsgrade (GRW 17)
         this.differenz = this.probenergebnis - this.schwierigkeit;
@@ -114,9 +119,21 @@ class Probe {
     
         this.patzerUndTriumphBehandeln();
         this.probenergebnisTextErmitteln();
-
+        
         messageData.roll.dice[0].options.probe = this;
         ChatMessage.create(messageData, {rollMode: this.rollMode});
+    }
+
+    get text() {
+        var text;
+        let auf = game.i18n.localize('SPLITTERMOND.Label.auf');
+        let gegen = game.i18n.localize('SPLITTERMOND.Label.gegen');
+        if(this.target) {
+            text = `${this.wurfartString()} ${auf} <b>${this.fertigkeitName}</b> ${gegen} <b>${this.target.name}</b>.`;
+        } else {
+            text = `${this.wurfartString()} ${auf} <b>${this.fertigkeitName}</b> ${gegen} <b>${this.schwierigkeit}</b>.`;
+        }
+        return text;
     }
 
     wuerfeln() {
@@ -166,8 +183,30 @@ class Probe {
         }
         let erfolgsgradText = (Math.abs(this.erfolgsgrade) == 1 ? game.i18n.localize('SPLITTERMOND.Label.Erfolgsgrad') : game.i18n.localize('SPLITTERMOND.Label.Erfolgsgrade')) + '.';
         this.ergebnisText = text + ' ' + this.erfolgsgrade + ' ' + erfolgsgradText;
-      }
-      
+    }
+    
+    toJSON() {
+        return {
+            class: this.constructor.name,
+            actor: this.actor,
+            target: this.target,
+            fertigkeitName: this.fertigkeitName,
+            fertigkeitWert: this.fertigkeitWert,
+            fertigkeitPunkte: this.fertigkeitPunkte,
+            wgs: this.wgs,
+            schaden: this.schaden,
+            modifikator: this.modifikator,
+            schwierigkeit: this.schwierigkeit,
+            rollMode: this.rollMode,
+            niedrigeWuerfelsumme: this.niedrigeWuerfelsumme,
+            hoheWuerfelsumme: this.hoheWuerfelsumme,
+            kritisch: this.kritisch,
+            differenz: this.differenz,
+            erfolgsgrade: this.erfolgsgrade,
+            ergebnisText: this.ergebnisText
+        }
+    }
+
 }
 
 class Standardwurf extends Probe {
@@ -224,6 +263,32 @@ class Sicherheitswurf extends Probe {
     }
 }
 
+const PROBENARTEN = { Standardwurf, Risikowurf, Sicherheitswurf }
+
+// TEST
+export function createProbe(data) {
+    const dataset = {
+        name: data.fertigkeitName,
+        wert: data.fertigkeitWert,
+        fp: data.fertigkeitPunkte,
+        wgs: data.wgs,
+        schaden: data.schaden,
+    }
+    const form = {
+        modifikator: {value: data.modifikator},
+        schwierigkeit: {value: data.schwierigkeit},
+        rollMode: {value: data.rollMode}
+    }
+    const probe = new PROBENARTEN[data.class](data.actor, data.target, dataset, form);
+    probe.niedrigeWuerfelsumme = data.niedrigeWuerfelsumme;
+    probe.hoheWuerfelsumme = data.hoheWuerfelsumme;
+    probe.kritisch = data.kritisch;
+    probe.differenz = data.differenz;
+    probe.erfolgsgrade = data.erfolgsgrade;
+    probe.ergebnisText = data.ergebnisText;
+    return probe;
+}
+
 /***** Schadenswurf *****/
 
 export function schadenswurfNachProbe(probe) {
@@ -241,39 +306,3 @@ export function schadenswurfNachProbe(probe) {
         ChatMessage.create(messageData, {rollMode: probe.rollMode});
         // TODO Schaden vom target abziehen
 }
-
-
-/******* Angriff ******/
-
-/**
- * Ein Angriff wird durch Bestätigen des Angriffsdialogs erzeugt.
- * Ein Angriff hat einen Zustand, der bestimmt, was als nächstes passiert.
- * 
- * Einfacher Fall des Ablaufs eines Angriffs:
- * Angriffsprobe ---> (Aktive Abwehr Probe) ---> Schadenswurf
- * 
- */
-
-/*
-const AngriffState = { IN_VORBEREITUNG: 0, PROBE_GEWUERFELT: 1, AKTIVE_ABWEHR_GEWUERFELT: 2, SCHADEN_GEWUERFELT: 3 };
-
-class Angriff {
-
-    constructor(actor, waffe, target, form) {
-        this.state = AngriffState.IN_VORBEREITUNG;
-    }
-
-    continue() {
-
-        switch(this.state) {
-            case AngriffState.IN_VORBEREITUNG: {
-
-            }
-            default: {
-
-            }            
-        }
-    }
-}
-
-*/

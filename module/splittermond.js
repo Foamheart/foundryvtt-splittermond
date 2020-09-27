@@ -9,7 +9,7 @@ import { importMeisterschaften } from "./import/import.js";
 import { renderAusruestungCompendium } from "./compendium.js";
 import { renderMeisterschaftenCompendium } from "./compendium.js";
 import { initializeHandlebars } from "./handlebars.js";
-import { schadenswurfNachProbe } from "./probe/probe.js";
+import { createProbenkontext } from "./probe.js";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -96,39 +96,28 @@ Hooks.on("renderCompendium", async (compendium, html, data) => {
 /*  RenderChatMessage Hook                      */
 /* -------------------------------------------- */
 
+/*
+Hooks.on('createChatMessage', (data, options, id) => {
+  console.log('>>>>> createChatMessage');
+  // Holen der Probenkontext data aus den options.
+  if (options.kontext) {
+    data.data.kontext = options.kontext;
+  }
+});
+*/
+
 Hooks.on("renderChatMessage", (message, html, data) => {
+  console.log('>>>>> renderChatMessage');
   if ( message.isRoll && message.isContentVisible) {
-    let options = message.roll.dice[0].options;
-    let probe = options.probe;
-    let schadenswurf = options.schadenswurf;
-    if (probe) {
-      if (probe.kritisch) {
-        html.find(".dice-total").addClass(probe.kritisch);
-      } else if (probe.differenz >= 0) {
-        html.find(".dice-total").addClass('gelungen');
-      }
-      // TODO Button: Splitterpunkt einsetzen für 3 Punkte Bonus?
-      // TODO Button: Wenn gegnerischer Angriff: Splitterpunkt einsetzen für 3 Punkte auf Widerstandswert?
-      // TODO Button: Aktive Abwehr würfeln
-      renderSchadenButton(html, probe);
-      html.find(".ergebnis").text(probe.ergebnisText);
-    } else if (schadenswurf) {
-      html.find(".ergebnis").text(schadenswurf.ergebnisText);
+    const wurfart = message.getFlag('splittermond', 'wurfart');
+    const kontextData = message.getFlag('splittermond', 'kontext');
+    if (kontextData) {
+        // Wiederbeleben der Probenkontext-Instanz.
+        const probenkontext = createProbenkontext(kontextData, message);
+        probenkontext.renderChatMessage(html, wurfart);
     }
   }
 });
-
-function renderSchadenButton(html, probe) {
-  if (probe.schaden && probe.differenz >= 0) {
-    html.find(".dice-buttons").attr("hidden", false);
-    html.find(".schaden").attr("hidden", false);
-    html.on('click', '.schaden', onClickSchadenButton.bind(probe));
-  }
-}
-
-function onClickSchadenButton() {
-  schadenswurfNachProbe(this);
-}
 
 /* -------------------------------------------- */
 /*  Hotbar Macros                               */

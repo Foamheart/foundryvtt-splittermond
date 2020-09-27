@@ -1,3 +1,4 @@
+import { NAHKAMPFFERTIGKEITEN } from "../const.js";
 import { VERFUEGBARKEIT } from "../const.js";
 import { PREIS_AUFSCHLAG } from "../const.js";
 import { KOMPLEXITAET } from "../const.js";
@@ -43,14 +44,14 @@ export class SplittermondItem extends Item {
     itemDD.kampffertigkeit.mod = qpos ? checkValueRange(itemDD.kampffertigkeit.mod, 0, 3) : checkValueRange(itemDD.kampffertigkeit.mod, -3, 0);
     if (actorDD) {
       const kampffertigkeit = itemDD.kampffertigkeit.key;
-      const fp = actorDD.kampffertigkeiten[kampffertigkeit].punkte;
+      const fp = actorDD.kampffertigkeiten[kampffertigkeit].fp;
       const attribut1 = actorDD.attribute[itemDD.attribut1.key];
       const attribut2 = actorDD.attribute[itemDD.attribut2.key];
       itemDD.attribut1.wert = attribut1.wert;
       itemDD.attribut2.wert = attribut2.wert;
       itemDD.minAttributAbzug = mindestAttributAbzugBerechnen(itemDD, actorDD);
       itemDD.kampffertigkeit.wert = fp + itemDD.attribut1.wert + itemDD.attribut2.wert + itemDD.kampffertigkeit.mod - itemDD.minAttributAbzug;
-      itemDD.kampffertigkeit.punkte = fp;
+      itemDD.kampffertigkeit.fp = fp;
     } else {
       itemDD.kampffertigkeit.wert = '???';
     }
@@ -116,15 +117,15 @@ export class SplittermondItem extends Item {
     // Fertigkeitswert berechnen
     itemDD.kampffertigkeit.mod = qpos ? checkValueRange(itemDD.kampffertigkeit.mod, 0, 3) : checkValueRange(itemDD.kampffertigkeit.mod, -3, 0);
     if (actorDD) {
-      const kampffertigkeit = itemDD.kampffertigkeit.key = ermittleSchildstossKampffertigkeit(actorDD);
-      const fp = actorDD.kampffertigkeiten[kampffertigkeit].punkte;
+      const kampffertigkeit = itemDD.kampffertigkeit.key = ermittleSchildKampffertigkeit(actorDD);
+      const fp = actorDD.kampffertigkeiten[kampffertigkeit].fp;
       const attribut1 = actorDD.attribute.bew; // BEW
       const attribut2 = actorDD.attribute.sta; // STÄ
       itemDD.attribut1.wert = attribut1.wert;
       itemDD.attribut2.wert = attribut2.wert;
       itemDD.minAttributAbzug = mindestAttributAbzugBerechnen(itemDD, actorDD);
       itemDD.kampffertigkeit.wert = fp + itemDD.attribut1.wert + itemDD.attribut2.wert + itemDD.kampffertigkeit.mod;
-      itemDD.kampffertigkeit.punkte = fp;
+      itemDD.kampffertigkeit.fp = fp;
     } else {
       itemDD.kampffertigkeit.wert = '???';
     }
@@ -152,7 +153,6 @@ export class SplittermondItem extends Item {
     // TODO Machen wir hier irgendwas?
 
   }
-
 
   /**
    * Handle clickable rolls.
@@ -208,10 +208,9 @@ function allgemeineAusruestungswerteBerechnen(itemDD, qpos, qfunction) {
 }
 
 // (siehe GRW 161 links oben)
-function ermittleSchildstossKampffertigkeit(actorDD) {
-  const nahkampffertigkeiten = ['handgemenge', 'hiebwaffen', 'kettenwaffen', 'klingenwaffen', 'stangenwaffen'];
-  return nahkampffertigkeiten.reduce((resultKey, currentKey) =>
-      actorDD.kampffertigkeiten[currentKey].punkte > actorDD.kampffertigkeiten[resultKey].punkte ? currentKey : resultKey, 'handgemenge');
+function ermittleSchildKampffertigkeit(actorDD) {
+  return NAHKAMPFFERTIGKEITEN.reduce((resultKey, currentKey) =>
+      actorDD.kampffertigkeiten[currentKey].fp > actorDD.kampffertigkeiten[resultKey].fp ? currentKey : resultKey, 'handgemenge');
 }
 
 // (siehe GRW 186 links oben)

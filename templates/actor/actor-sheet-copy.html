@@ -183,7 +183,7 @@
                 {{#each data.kampffertigkeiten as |kampffertigkeit key|}}
                     <tr>
                       <td>{{kampffertigkeit.name}}</td>
-                      <td><input type="text" name="data.kampffertigkeiten.{{key}}.punkte" value="{{kampffertigkeit.punkte}}" data-dtype="Number"/></td>
+                      <td><input type="text" name="data.kampffertigkeiten.{{key}}.fp" value="{{kampffertigkeit.fp}}" data-dtype="Number"/></td>
                     </tr>
                 {{/each}}
               </tbody>
@@ -206,7 +206,7 @@
               <tbody class="waffen">
                 {{#each actor.waffen as |waffe key|}}
                     <tr class="waffe" data-item-id="{{waffe._id}}">
-                      <td class="rollable" data-probe="kampffertigkeit" data-name="{{waffe.name}}" data-wert="{{waffe.data.kampffertigkeit.wert}}" data-wgs="{{waffe.data.wgs.wert}}" data-schaden="{{waffe.data.schaden.wert}}" data-punkte="{{waffe.data.kampffertigkeit.punkte}}">{{waffe.name}}</td>
+                      <td class="rollable" data-probe="kampffertigkeit" data-name="{{waffe.name}}" data-wert="{{waffe.data.kampffertigkeit.wert}}" data-wgs="{{waffe.data.wgs.wert}}" data-schaden="{{waffe.data.schaden.wert}}" data-punkte="{{waffe.data.kampffertigkeit.fp}}">{{waffe.name}}</td>
                       <td>{{waffe.data.kampffertigkeit.wert}}</td>
                       <td>{{waffe.data.kampffertigkeit.abk}}</td>
                       <td title="{{waffe.data.attribut1.abk}}">{{waffe.data.attribut1.wert}}</td>

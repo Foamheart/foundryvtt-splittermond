@@ -19,7 +19,7 @@
     <tbody class="waffen">
       {{#each actor.waffen as |item key|}}
           <tr class="item waffe {{active item.data.ausgeruestet}}" data-item-id="{{item._id}}">
-            <td class="rollable" data-probe="kampffertigkeit" data-name="{{item.name}}" data-wert="{{item.data.kampffertigkeit.wert}}" data-wgs="{{item.data.wgs.wert}}" data-schaden="{{item.data.schaden.wert}}" data-punkte="{{item.data.kampffertigkeit.punkte}}">{{item.name}}</td>
+            <td class="rollable" data-probe="kampffertigkeit" data-fertigkeit="{{item.data.kampffertigkeit.key}}" data-name="{{item.name}}" data-wert="{{item.data.kampffertigkeit.wert}}" data-wgs="{{item.data.wgs.wert}}" data-schaden="{{item.data.schaden.wert}}" data-fp="{{item.data.kampffertigkeit.fp}}">{{item.name}}</td>
             <td {{#if item.data.minAttributAbzug}}class="malus"{{/if}}>{{item.data.kampffertigkeit.wert}}</td>
             <td>{{loc2 'Kampffertigkeit' item.data.kampffertigkeit.key 'abk'}}</td>
             <td title="{{loc2 'Attribut' item.data.attribut1.key 'abk'}}">{{item.data.attribut1.wert}}</td>
@@ -57,7 +57,7 @@
     <tbody class="schilde">
       {{#each actor.schilde as |item key|}}
           <tr class="item schild {{active item.data.ausgeruestet}}" data-item-id="{{item._id}}">
-            <td class="rollable" data-probe="kampffertigkeit" data-name="{{item.name}}" data-wert="{{item.data.kampffertigkeit.wert}}" data-wgs="7" data-schaden="1W6+1" data-punkte="{{item.data.kampffertigkeit.punkte}}">{{item.name}}</td>
+            <td class="rollable" data-probe="kampffertigkeit" data-name="{{item.name}}" data-wert="{{item.data.kampffertigkeit.wert}}" data-wgs="7" data-schaden="1W6+1" data-punkte="{{item.data.kampffertigkeit.fp}}">{{item.name}}</td>
             <td>{{item.data.kampffertigkeit.wert}}</td>
             <td>{{loc2 'Kampffertigkeit' item.data.kampffertigkeit.key 'abk'}}</td>
             <td title="{{loc2 'Attribut' item.data.attribut1.key 'abk'}}">{{item.data.attribut1.wert}}</td>
@@ -90,7 +90,7 @@
       {{#each data.kampffertigkeiten as |kampffertigkeit key|}}
           <tr>
             <td>{{loc2 'Kampffertigkeit' key 'name'}}</td>
-            <td><input type="text" name="data.kampffertigkeiten.{{key}}.punkte" value="{{zeroIsEmpty kampffertigkeit.punkte}}" data-dtype="Number"/></td>
+            <td><input type="text" name="data.kampffertigkeiten.{{key}}.fp" value="{{zeroIsEmpty kampffertigkeit.fp}}" data-dtype="Number"/></td>
           </tr>
       {{/each}}
     </tbody>

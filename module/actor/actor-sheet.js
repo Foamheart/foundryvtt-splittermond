@@ -1,4 +1,4 @@
-import { oeffneDialogFertigkeitsprobe } from "../probe/probe.js";
+import { oeffneDialogFertigkeitsprobe } from "../probe.js";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -238,6 +238,7 @@ export class SplittermondActorSheet extends ActorSheet {
     event.preventDefault();
     const element = event.currentTarget;
     const dataset = element.dataset;
+
     oeffneDialogFertigkeitsprobe(this.actor, dataset);
   }
 

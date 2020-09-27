@@ -1,0 +1,20 @@
+<form>
+    <div class="form-group">
+        <label>{{label 'Verteidigung'}}</label>
+        <select name="verteidigungsart">
+        {{#select verteidigungsart}}
+        {{#each verteidigungsarten as |item id|}}
+            <option value="{{id}}">{{item.name}}</option>
+        {{/each}}
+        {{/select}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label>{{label 'Modifikator'}}</label>
+        <input type="text" name="modifikator" value="{{modifikator}}" placeholder="" data-dtype="Number"/>
+    </div>
+    <div class="form-group">
+        <label>{{label 'Schwierigkeit'}}</label>
+        <input type="text" name="schwierigkeit" value="{{schwierigkeit}}" placeholder="" disabled/>
+    </div>
+</form>

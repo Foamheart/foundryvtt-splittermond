@@ -215,7 +215,16 @@
             "Kampfmeisterschaften": "Kampfmeisterschaften",
             "AllgemeineMeisterschaften": "Allgemeine Meisterschaften",
             "Schwelle": "Schwelle",
-            "Manoever": "Manöver"
+            "Manoever": "Manöver",
+            "AktiveAbwehr": "Aktive Abwehr",
+            "Verteidigung": "Verteidigung"
+        },
+
+        "Button": {
+            "patzer": "Patzer würfeln",
+            "aktiveAbwehr": "Aktive Abwehr",
+            "weiter": "Weiter",
+            "schaden": "Schaden würfeln"
         }
     }
 }
